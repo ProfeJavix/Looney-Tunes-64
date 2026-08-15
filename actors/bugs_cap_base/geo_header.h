@@ -1,0 +1,16 @@
+extern const GeoLayout Carrotbase_6_Cap_Anim_State_Switch_opt1[];
+extern const GeoLayout Carrotbase_geo[];
+extern Lights1 Carrotbase_Carrot_lights;
+extern Lights1 Carrotbase_Grass_lights;
+extern u8 Carrotbase_grass_ci8[];
+extern u8 Carrotbase_grass_pal_rgba16[];
+extern Vtx Carrotbase_Cap_DL_mesh_layer_1_vtx_0[55];
+extern Gfx Carrotbase_Cap_DL_mesh_layer_1_tri_0[];
+extern Vtx Carrotbase_Cap_DL_mesh_layer_1_vtx_1[12];
+extern Gfx Carrotbase_Cap_DL_mesh_layer_1_tri_1[];
+extern Gfx mat_Carrotbase_Carrot[];
+extern Gfx mat_revert_Carrotbase_Carrot[];
+extern Gfx mat_Carrotbase_Grass[];
+extern Gfx mat_revert_Carrotbase_Grass[];
+extern Gfx Carrotbase_Cap_DL_mesh_layer_1[];
+extern Gfx Carrotbase_material_revert_render_settings[];

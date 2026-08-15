@@ -1,0 +1,11 @@
+extern const GeoLayout tweetymetal_6_Cap_Anim_State_Switch_opt1[];
+extern const GeoLayout tweetymetal_geo[];
+extern Lights1 tweetymetal_Metal__METAL__lights;
+extern u8 tweetymetal_Metal_Shade_rgba16_rgba16[];
+extern u8 tweetymetal_Metal_Light_rgba16_rgba16[];
+extern Vtx tweetymetal_Metal_Cap_DL_mesh_layer_1_vtx_0[727];
+extern Gfx tweetymetal_Metal_Cap_DL_mesh_layer_1_tri_0[];
+extern Gfx mat_tweetymetal_Metal__METAL_[];
+extern Gfx mat_revert_tweetymetal_Metal__METAL_[];
+extern Gfx tweetymetal_Metal_Cap_DL_mesh_layer_1[];
+extern Gfx tweetymetal_material_revert_render_settings[];

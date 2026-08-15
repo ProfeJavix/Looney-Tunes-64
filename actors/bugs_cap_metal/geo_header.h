@@ -1,0 +1,11 @@
+extern const GeoLayout Carrotmetal_6_Cap_Anim_State_Switch_opt1[];
+extern const GeoLayout Carrotmetal_geo[];
+extern Lights1 Carrotmetal_Metal__METAL__lights;
+extern u8 Carrotmetal_Metal_Shade_rgba16_rgba16[];
+extern u8 Carrotmetal_Metal_Light_rgba16_rgba16[];
+extern Vtx Carrotmetal_Metal_Cap_DL_mesh_layer_1_vtx_0[69];
+extern Gfx Carrotmetal_Metal_Cap_DL_mesh_layer_1_tri_0[];
+extern Gfx mat_Carrotmetal_Metal__METAL_[];
+extern Gfx mat_revert_Carrotmetal_Metal__METAL_[];
+extern Gfx Carrotmetal_Metal_Cap_DL_mesh_layer_1[];
+extern Gfx Carrotmetal_material_revert_render_settings[];

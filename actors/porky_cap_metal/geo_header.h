@@ -1,0 +1,15 @@
+extern const GeoLayout capmetal_6_Cap_Anim_State_Switch_opt1[];
+extern const GeoLayout capmetal_geo[];
+extern Lights1 capmetal_Metal__METAL__lights;
+extern Lights1 capmetal_black_lights;
+extern u8 capmetal_Metal_Shade_rgba16_rgba16[];
+extern u8 capmetal_Metal_Light_rgba16_rgba16[];
+extern Vtx capmetal_Metal_Cap_DL_mesh_layer_1_vtx_0[88];
+extern Gfx capmetal_Metal_Cap_DL_mesh_layer_1_tri_0[];
+extern Vtx capmetal_Metal_Cap_DL_mesh_layer_1_vtx_1[20];
+extern Gfx capmetal_Metal_Cap_DL_mesh_layer_1_tri_1[];
+extern Gfx mat_capmetal_Metal__METAL_[];
+extern Gfx mat_revert_capmetal_Metal__METAL_[];
+extern Gfx mat_capmetal_black[];
+extern Gfx mat_revert_capmetal_black[];
+extern Gfx capmetal_Metal_Cap_DL_mesh_layer_1[];

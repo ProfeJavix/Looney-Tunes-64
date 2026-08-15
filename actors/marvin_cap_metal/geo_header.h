@@ -1,0 +1,10 @@
+extern const GeoLayout helmetmetal_6_Cap_Anim_State_Switch_opt1[];
+extern const GeoLayout helmetmetal_geo[];
+extern Lights1 helmetmetal_Metal__METAL__lights;
+extern u8 helmetmetal_Metal_Shade_rgba16_rgba16[];
+extern u8 helmetmetal_Metal_Light_rgba16_rgba16[];
+extern Vtx helmetmetal_Metal_Cap_DL_mesh_layer_1_vtx_0[211];
+extern Gfx helmetmetal_Metal_Cap_DL_mesh_layer_1_tri_0[];
+extern Gfx mat_helmetmetal_Metal__METAL_[];
+extern Gfx mat_revert_helmetmetal_Metal__METAL_[];
+extern Gfx helmetmetal_Metal_Cap_DL_mesh_layer_1[];

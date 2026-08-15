@@ -1,0 +1,13 @@
+extern const GeoLayout capbase_6_Cap_Anim_State_Switch_opt1[];
+extern const GeoLayout capbase_geo[];
+extern Lights1 capbase_Vest__SHIRT__lights;
+extern Lights1 capbase_black_lights;
+extern Vtx capbase_Cap_DL_mesh_layer_1_vtx_0[88];
+extern Gfx capbase_Cap_DL_mesh_layer_1_tri_0[];
+extern Vtx capbase_Cap_DL_mesh_layer_1_vtx_1[20];
+extern Gfx capbase_Cap_DL_mesh_layer_1_tri_1[];
+extern Gfx mat_capbase_Vest__SHIRT_[];
+extern Gfx mat_revert_capbase_Vest__SHIRT_[];
+extern Gfx mat_capbase_black[];
+extern Gfx mat_revert_capbase_black[];
+extern Gfx capbase_Cap_DL_mesh_layer_1[];

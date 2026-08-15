@@ -1,0 +1,11 @@
+extern const GeoLayout beakmetal_6_Cap_Anim_State_Switch_opt1[];
+extern const GeoLayout beakmetal_geo[];
+extern Lights1 beakmetal_Metal__METAL__lights;
+extern u8 beakmetal_Metal_Shade_rgba16_rgba16[];
+extern u8 beakmetal_Metal_Light_rgba16_rgba16[];
+extern Vtx beakmetal_Metal_Cap_DL_mesh_layer_1_vtx_0[42];
+extern Gfx beakmetal_Metal_Cap_DL_mesh_layer_1_tri_0[];
+extern Gfx mat_beakmetal_Metal__METAL_[];
+extern Gfx mat_revert_beakmetal_Metal__METAL_[];
+extern Gfx beakmetal_Metal_Cap_DL_mesh_layer_1[];
+extern Gfx beakmetal_material_revert_render_settings[];

@@ -1,0 +1,14 @@
+extern const GeoLayout beakbase_6_Cap_Anim_State_Switch_opt1[];
+extern const GeoLayout beakbase_geo[];
+extern Lights1 beakbase_Orange_lights;
+extern Lights1 beakbase_Mouf_lights;
+extern Vtx beakbase_Cap_DL_mesh_layer_1_vtx_0[42];
+extern Gfx beakbase_Cap_DL_mesh_layer_1_tri_0[];
+extern Vtx beakbase_Cap_DL_mesh_layer_1_vtx_1[4];
+extern Gfx beakbase_Cap_DL_mesh_layer_1_tri_1[];
+extern Gfx mat_beakbase_Orange[];
+extern Gfx mat_revert_beakbase_Orange[];
+extern Gfx mat_beakbase_Mouf[];
+extern Gfx mat_revert_beakbase_Mouf[];
+extern Gfx beakbase_Cap_DL_mesh_layer_1[];
+extern Gfx beakbase_material_revert_render_settings[];
