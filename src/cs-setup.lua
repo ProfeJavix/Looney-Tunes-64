@@ -297,6 +297,84 @@ CT_PORKY = addLooneyTunesChar({
     }
 })
 
+CT_ELMER = addLooneyTunesChar({
+    id = 'elmer',
+    name = 'Elmer Fudd',
+    description = "Be vewy, vewy quiet...",
+    author = 'ThaGurlTilly',
+    menuColor = '8b8b8b',
+    model = smlua_model_util_get_id("elmer_fudd_geo"),
+    charType = CT_TOAD,
+    palettes = {
+        {
+            palette = {
+                [PANTS]  = "aa6838",
+                [SHIRT]  = "163fb5",
+                [GLOVES] = "202020",
+                [SHOES]  = "3a160f",
+                [HAIR]   = "0d0d0d",
+                [SKIN]   = "f8bc9f",
+                [CAP]    = "ff1714",
+                [EMBLEM] = "ffffff"
+            }
+        }
+    },
+    animData = {
+        animTable = {
+            [_G.charSelect.CS_ANIM_MENU] = ANIM_ELMER_CS_MENU
+        }
+    },
+    voices = {
+        [CHAR_SOUND_OKEY_DOKEY] = { 'Elmer Okey Dokey.ogg', 'Elmer Hello.ogg', 'Elmer Itsa Me.ogg' }, -- Starting game
+        [CHAR_SOUND_LETS_A_GO] = 'Elmer Letsa Go.ogg',                                                -- Starting level
+        [CHAR_SOUND_GAME_OVER] = 'Elmer Game Over.ogg',                                               -- Game Overed
+        [CHAR_SOUND_PUNCH_YAH] = 'Elmer Yah.ogg',                                                     -- Punch 1
+        [CHAR_SOUND_PUNCH_WAH] = 'Elmer Wah.ogg',                                                     -- Punch 2
+        [CHAR_SOUND_PUNCH_HOO] = 'Elmer Hoo.ogg',                                                     -- Punch 3
+        [CHAR_SOUND_YAH_WAH_HOO] = 'Elmer Yah Wah Hoo.ogg',                                           -- First Jump Sounds
+        [CHAR_SOUND_HOOHOO] = 'Elmer Hoohoo.ogg',                                                     -- Second jump sound
+        [CHAR_SOUND_YAHOO_WAHA_YIPPEE] = { 'Elmer Yahoo.ogg', 'Elmer Waha.ogg', 'Elmer Yippee.ogg' }, -- Triple jump sounds
+        [CHAR_SOUND_UH] = 'Elmer Uh.ogg',                                                             -- Soft wall bonk
+        [CHAR_SOUND_UH2] = 'Elmer Uh2.ogg',                                                           -- Quick ledge get up
+        [CHAR_SOUND_UH2_2] = 'Elmer Uh2_2.ogg',                                                       -- Landing after long jump
+        [CHAR_SOUND_DOH] = 'Elmer Doh.ogg',                                                           -- Hard wall bonk
+        [CHAR_SOUND_OOOF] = 'Elmer Ooof.ogg',                                                         -- Attacked in air
+        [CHAR_SOUND_OOOF2] = 'Elmer Uh.ogg',                                                          -- Land from hard bonk
+        [CHAR_SOUND_HAHA] = 'Elmer Haha.ogg',                                                         -- Landing triple jump
+        [CHAR_SOUND_HAHA_2] = 'Elmer Haha.ogg',                                                       -- Landing in water from big fall
+        [CHAR_SOUND_YAHOO] = 'Elmer Yahoo.ogg',                                                       -- Long jump
+        [CHAR_SOUND_DOH] = 'Elmer Doh.ogg',                                                           -- Long jump wall bonk
+        [CHAR_SOUND_WHOA] = 'Elmer Whoa.ogg',                                                         -- Grabbing ledge
+        [CHAR_SOUND_EEUH] = 'Elmer Eeuh.ogg',                                                         -- Climbing over ledge
+        [CHAR_SOUND_WAAAOOOW] = 'Elmer Waaaooow.ogg',                                                 -- Falling a long distance
+        [CHAR_SOUND_TWIRL_BOUNCE] = 'Elmer Boing.ogg',                                                -- Bouncing off of a flower spring
+        [CHAR_SOUND_GROUND_POUND_WAH] = 'Elmer Wah.ogg',                                              -- Ground Pound after startup
+        [CHAR_SOUND_WAH2] = 'Elmer Wah2.ogg',                                                         -- Throwing something
+        [CHAR_SOUND_HRMM] = 'Elmer Hrmm.ogg',                                                         -- Lifting something
+        [CHAR_SOUND_HERE_WE_GO] = 'Elmer Here We Go.ogg',                                             -- Star get
+        [CHAR_SOUND_SO_LONGA_BOWSER] = 'Elmer So Longa Bowser.ogg',                                   -- Throwing Bowser
+        --DAMAGE
+        [CHAR_SOUND_ATTACKED] = 'Elmer Attacked.ogg',                                                 -- Damaged
+        [CHAR_SOUND_PANTING] = 'Elmer Panting.ogg',                                                   -- Low health
+        [CHAR_SOUND_PANTING_COLD] = 'Elmer Panting.ogg',                                              -- Getting cold
+        [CHAR_SOUND_ON_FIRE] = 'Elmer On Fire.ogg',                                                   -- Burned
+        --SLEEP SOUNDS
+        [CHAR_SOUND_IMA_TIRED] = 'Elmer Ima Tired.ogg',                                               -- Mario feeling tired
+        [CHAR_SOUND_YAWNING] = 'Elmer Yawn.ogg',                                                      -- Mario yawning before he sits down to sleep
+        [CHAR_SOUND_SNORING1] = 'Elmer Snore1.ogg',                                                   -- Snore Inhale
+        [CHAR_SOUND_SNORING2] = 'Elmer Snore2.ogg',                                                   -- Exhale
+        [CHAR_SOUND_SNORING3] = 'Elmer Snore3.ogg',                                                   -- Sleep talking / mumbling
+        --COUGHING (USED IN THE GAS MAZE)
+        [CHAR_SOUND_COUGHING1] = 'Elmer Cough.ogg',                                                   -- Cough take 1
+        [CHAR_SOUND_COUGHING2] = 'Elmer Cough.ogg',                                                   -- Cough take 2
+        [CHAR_SOUND_COUGHING3] = 'Elmer Cough.ogg',                                                   -- Cough take 3
+        --DEATH
+        [CHAR_SOUND_DYING] = 'Elmer Dying.ogg',                                                       -- Dying from damage
+        [CHAR_SOUND_DROWNING] = 'Elmer Drowning.ogg',                                                 -- Running out of air underwater
+        [CHAR_SOUND_MAMA_MIA] = 'Elmer Mama Mia.ogg'                                                  -- Booted out of level
+    }
+})
+
 CT_SYLVESTER = addLooneyTunesChar({
     id = 'sylvester',
     name = 'Sylvester The Cat',

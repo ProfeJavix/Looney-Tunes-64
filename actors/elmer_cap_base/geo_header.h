@@ -1,0 +1,18 @@
+extern const GeoLayout elmer_base_6_Cap_Anim_State_Switch_opt1[];
+extern const GeoLayout elmer_base_geo[];
+extern Lights1 elmer_base_BrownBits__PANTS__lights;
+extern Lights1 elmer_base_RedBits__CAP__lights;
+extern Lights1 elmer_base_black_lights;
+extern Vtx elmer_base_Cap_DL_mesh_layer_1_vtx_0[41];
+extern Gfx elmer_base_Cap_DL_mesh_layer_1_tri_0[];
+extern Vtx elmer_base_Cap_DL_mesh_layer_1_vtx_1[27];
+extern Gfx elmer_base_Cap_DL_mesh_layer_1_tri_1[];
+extern Vtx elmer_base_Cap_DL_mesh_layer_1_vtx_2[16];
+extern Gfx elmer_base_Cap_DL_mesh_layer_1_tri_2[];
+extern Gfx mat_elmer_base_BrownBits__PANTS_[];
+extern Gfx mat_revert_elmer_base_BrownBits__PANTS_[];
+extern Gfx mat_elmer_base_RedBits__CAP_[];
+extern Gfx mat_revert_elmer_base_RedBits__CAP_[];
+extern Gfx mat_elmer_base_black[];
+extern Gfx mat_revert_elmer_base_black[];
+extern Gfx elmer_base_Cap_DL_mesh_layer_1[];

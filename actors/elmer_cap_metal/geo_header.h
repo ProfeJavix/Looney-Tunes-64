@@ -1,0 +1,15 @@
+extern const GeoLayout elmer_metal_6_Cap_Anim_State_Switch_opt1[];
+extern const GeoLayout elmer_metal_geo[];
+extern Lights1 elmer_metal_Metal__METAL__lights;
+extern Lights1 elmer_metal_black_lights;
+extern u8 elmer_metal_Metal_Shade_rgba16_rgba16[];
+extern u8 elmer_metal_Metal_Light_rgba16_rgba16[];
+extern Vtx elmer_metal_Metal_Cap_DL_mesh_layer_1_vtx_0[71];
+extern Gfx elmer_metal_Metal_Cap_DL_mesh_layer_1_tri_0[];
+extern Vtx elmer_metal_Metal_Cap_DL_mesh_layer_1_vtx_1[16];
+extern Gfx elmer_metal_Metal_Cap_DL_mesh_layer_1_tri_1[];
+extern Gfx mat_elmer_metal_Metal__METAL_[];
+extern Gfx mat_revert_elmer_metal_Metal__METAL_[];
+extern Gfx mat_elmer_metal_black[];
+extern Gfx mat_revert_elmer_metal_black[];
+extern Gfx elmer_metal_Metal_Cap_DL_mesh_layer_1[];
