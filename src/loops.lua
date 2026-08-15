@@ -35,7 +35,7 @@ end
 
 ---@param o Object
 function loops.bhv_marvin_laser_loop(o)
-    cur_obj_scale(5)
+
 end
 
 ---@param m MarioState
