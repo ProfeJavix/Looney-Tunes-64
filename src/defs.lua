@@ -18,6 +18,7 @@
 ---@field palettes? PaletteData[]
 ---@field animData? AnimData
 ---@field voices? table
+---@field thanksForPlayingClip? string
 ---@field hasPowerMeter? boolean
 
 ---@class PaletteData

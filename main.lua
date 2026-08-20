@@ -19,5 +19,6 @@ id_bhvMarvinLaser = hook_behavior(nil, OBJ_LIST_GENACTOR, true, loops.bhv_marvin
 hook_mario_action(ACT_BUGS_HOVER, loops.act_bugs_hover)
 
 hook_event(HOOK_ON_SEQ_LOAD, hooks.on_seq_load)
+hook_event(HOOK_ON_PLAY_SOUND, hooks.on_play_sound)
 _G.charSelect.character_hook_moveset(CT_BUGS, HOOK_BEFORE_SET_MARIO_ACTION, hooks.bugs_before_set_mario_action)
 _G.charSelect.character_hook_moveset(CT_BUGS, HOOK_ON_SET_MARIO_ACTION, hooks.bugs_on_set_mario_action)

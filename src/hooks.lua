@@ -6,10 +6,24 @@ function hooks.on_seq_load(player, seqId)
 
     audio_stream_stop(STREAM_CREDITS)
 
-    if seqId == SEQ_EVENT_CUTSCENE_ENDING then
+    if seqId == SEQ_EVENT_CUTSCENE_CREDITS then
         audio_stream_set_looping(STREAM_CREDITS, true)
         audio_stream_play(STREAM_CREDITS, true, 1)
         return 0
+    end
+end
+
+---@param soundId integer
+---@param pos Vec3f
+function hooks.on_play_sound(soundId, pos)
+
+    if soundId == SOUND_MENU_THANK_YOU_PLAYING_MY_GAME then
+        local clip = CT_THANKS_FOR_PLAYING_CLIPS[_G.charSelect.character_get_current_number()]
+
+        if clip then
+            audio_sample_play(clip, pos, 5)
+            return 0
+        end
     end
 end
 

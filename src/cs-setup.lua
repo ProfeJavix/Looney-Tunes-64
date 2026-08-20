@@ -1,6 +1,8 @@
 local LOONEY_TUNES_64 = get_active_mod().name
 local defaultLifeIcon = get_texture_info("exclamation-icon")
 
+CT_THANKS_FOR_PLAYING_CLIPS = {}
+
 ---@param data LTData
 ---@return integer
 local function addLooneyTunesChar(data)
@@ -36,6 +38,11 @@ local function addLooneyTunesChar(data)
     if data.voices then
         _G.charSelect.character_add_voice(data.model, data.voices)
     end
+
+    if data.thanksForPlayingClip then
+        CT_THANKS_FOR_PLAYING_CLIPS[ct] = audio_sample_load(data.thanksForPlayingClip)
+    end
+
     if data.hasPowerMeter then
         _G.charSelect.character_add_health_meter(
             ct,
@@ -138,7 +145,8 @@ CT_BUGS = addLooneyTunesChar({
         [CHAR_SOUND_DYING] = 'Bugs Dying.ogg',                                                     -- Dying from damage
         [CHAR_SOUND_DROWNING] = 'Bugs Drowning.ogg',                                               -- Running out of air underwater
         [CHAR_SOUND_MAMA_MIA] = 'Bugs Mama Mia.ogg'                                                -- Booted out of level
-    }
+    },
+    thanksForPlayingClip = 'Bugs Thanks For Playing.ogg'
 })
 
 CT_DAFFY = addLooneyTunesChar({
@@ -216,7 +224,8 @@ CT_DAFFY = addLooneyTunesChar({
         [CHAR_SOUND_DYING] = 'Daffy Uhh Ooph.ogg',                                  -- Dying from damage
         [CHAR_SOUND_DROWNING] = 'Daffy Drowning.ogg',                               -- Running out of air underwater
         [CHAR_SOUND_MAMA_MIA] = 'Daffy Mamma Mia.ogg'                               -- Booted out of level
-    }
+    },
+    thanksForPlayingClip = 'Daffy Thanks For Playing.ogg'
 })
 
 CT_PORKY = addLooneyTunesChar({
@@ -294,7 +303,8 @@ CT_PORKY = addLooneyTunesChar({
         [CHAR_SOUND_DROWNING] = 'Porky Drowning.ogg',                                                 -- Running out of air underwater
         [CHAR_SOUND_MAMA_MIA] =
         'Porky Mama Mia.ogg'                                                                          -- Booted out of level
-    }
+    },
+    thanksForPlayingClip = 'Porky Thanks For Playing.ogg'
 })
 
 CT_ELMER = addLooneyTunesChar({
@@ -373,7 +383,8 @@ CT_ELMER = addLooneyTunesChar({
         [CHAR_SOUND_DROWNING] = 'Elmer Drowning.ogg',                                                 -- Running out of air underwater
         [CHAR_SOUND_MAMA_MIA] =
         'Elmer Mama Mia.ogg'                                                                          -- Booted out of level
-    }
+    },
+    thanksForPlayingClip = 'Elmer Thanks For Playing.ogg'
 })
 
 CT_SYLVESTER = addLooneyTunesChar({
@@ -479,7 +490,8 @@ CT_MARVIN = addLooneyTunesChar({
         [CHAR_SOUND_DROWNING] = 'Marvin Drowning.ogg',                                                   -- Running out of air underwater
         [CHAR_SOUND_MAMA_MIA] =
         'Marvin Mama Mia.ogg'                                                                            -- Booted out of level
-    }
+    },
+    thanksForPlayingClip = 'Marvin Thanks For Playing.ogg'
 })
 
 CT_FOGHORN = addLooneyTunesChar({
@@ -558,7 +570,8 @@ CT_FOGHORN = addLooneyTunesChar({
         [CHAR_SOUND_DYING] = 'Foghorn Dying.ogg',                                                           -- Dying from damage
         [CHAR_SOUND_DROWNING] = 'Foghorn Drowning.ogg',                                                     -- Running out of air underwater
         [CHAR_SOUND_MAMA_MIA] = 'Foghorn Mama Mia.ogg'                                                      -- Booted out of level
-    }
+    },
+    thanksForPlayingClip = 'Foghorn Thanks For Playing.ogg'
 })
 
 _G.charSelect.credit_add(LOONEY_TUNES_64, "ThaGurlTilly", "Models")
