@@ -40,6 +40,7 @@ ANIM_PORKY_CS_MENU = 'ANIM_PORKY_CS_MENU'
 ANIM_ELMER_CS_MENU = 'ANIM_ELMER_CS_MENU'
 ANIM_SYLVESTER_CS_MENU = 'ANIM_SYLVESTER_CS_MENU'
 ANIM_MARVIN_CS_MENU = 'ANIM_MARVIN_CS_MENU'
+ANIM_FOGHORN_CS_MENU = 'ANIM_FOGHORN_CS_MENU'
 
 STREAM_CREDITS = audio_stream_load('LT64 Credits.ogg')
 
@@ -87,6 +88,11 @@ function geo_mallet_switch(node)
 end
 
 function geo_railgun_switch(node)
+    local gn = cast_graph_node(node)
+    gn.selectedCase = 1
+end
+
+function geo_shotgun_switch(node)
     local gn = cast_graph_node(node)
     gn.selectedCase = 1
 end

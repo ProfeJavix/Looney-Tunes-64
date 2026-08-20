@@ -1,0 +1,15 @@
+extern const GeoLayout foghorn_metal_6_Cap_Anim_State_Switch_opt1[];
+extern const GeoLayout foghorn_metal_geo[];
+extern Lights1 foghorn_metal_Metal__METAL__lights;
+extern Lights1 foghorn_metal_black_lights;
+extern u8 foghorn_metal_Metal_Shade_rgba16_rgba16[];
+extern u8 foghorn_metal_Metal_Light_rgba16_rgba16[];
+extern Vtx foghorn_metal_Metal_Cap_DL_mesh_layer_1_vtx_0[182];
+extern Gfx foghorn_metal_Metal_Cap_DL_mesh_layer_1_tri_0[];
+extern Vtx foghorn_metal_Metal_Cap_DL_mesh_layer_1_vtx_1[9];
+extern Gfx foghorn_metal_Metal_Cap_DL_mesh_layer_1_tri_1[];
+extern Gfx mat_foghorn_metal_Metal__METAL_[];
+extern Gfx mat_revert_foghorn_metal_Metal__METAL_[];
+extern Gfx mat_foghorn_metal_black[];
+extern Gfx mat_revert_foghorn_metal_black[];
+extern Gfx foghorn_metal_Metal_Cap_DL_mesh_layer_1[];

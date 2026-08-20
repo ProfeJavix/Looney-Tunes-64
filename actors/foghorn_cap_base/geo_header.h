@@ -1,0 +1,18 @@
+extern const GeoLayout foghorn_base_6_Cap_Anim_State_Switch_opt1[];
+extern const GeoLayout foghorn_base_geo[];
+extern Lights1 foghorn_base_Hair__HAIR__lights;
+extern Lights1 foghorn_base_black_lights;
+extern Lights1 foghorn_base_White_lights;
+extern Vtx foghorn_base_Cap_DL_mesh_layer_1_vtx_0[150];
+extern Gfx foghorn_base_Cap_DL_mesh_layer_1_tri_0[];
+extern Vtx foghorn_base_Cap_DL_mesh_layer_1_vtx_1[9];
+extern Gfx foghorn_base_Cap_DL_mesh_layer_1_tri_1[];
+extern Vtx foghorn_base_Cap_DL_mesh_layer_1_vtx_2[40];
+extern Gfx foghorn_base_Cap_DL_mesh_layer_1_tri_2[];
+extern Gfx mat_foghorn_base_Hair__HAIR_[];
+extern Gfx mat_revert_foghorn_base_Hair__HAIR_[];
+extern Gfx mat_foghorn_base_black[];
+extern Gfx mat_revert_foghorn_base_black[];
+extern Gfx mat_foghorn_base_White[];
+extern Gfx mat_revert_foghorn_base_White[];
+extern Gfx foghorn_base_Cap_DL_mesh_layer_1[];

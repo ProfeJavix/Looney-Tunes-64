@@ -371,7 +371,8 @@ CT_ELMER = addLooneyTunesChar({
         --DEATH
         [CHAR_SOUND_DYING] = 'Elmer Dying.ogg',                                                       -- Dying from damage
         [CHAR_SOUND_DROWNING] = 'Elmer Drowning.ogg',                                                 -- Running out of air underwater
-        [CHAR_SOUND_MAMA_MIA] = 'Elmer Mama Mia.ogg'                                                  -- Booted out of level
+        [CHAR_SOUND_MAMA_MIA] =
+        'Elmer Mama Mia.ogg'                                                                          -- Booted out of level
     }
 })
 
@@ -430,6 +431,133 @@ CT_MARVIN = addLooneyTunesChar({
         animTable = {
             [_G.charSelect.CS_ANIM_MENU] = ANIM_MARVIN_CS_MENU
         }
+    },
+    voices = {
+        [CHAR_SOUND_OKEY_DOKEY] = { 'Marvin Okey Dokey.ogg', 'Marvin Hello.ogg', 'Marvin Itsa Me.ogg' }, -- Starting game
+        [CHAR_SOUND_LETS_A_GO] = 'Marvin Letsa Go.ogg',                                                  -- Starting level
+        [CHAR_SOUND_GAME_OVER] = 'Marvin Game Over.ogg',                                                 -- Game Overed
+        [CHAR_SOUND_PUNCH_YAH] = 'Marvin Yah.ogg',                                                       -- Punch 1
+        [CHAR_SOUND_PUNCH_WAH] = 'Marvin Yah.ogg',                                                       -- Punch 2
+        [CHAR_SOUND_PUNCH_HOO] = 'Marvin Uh.ogg',                                                        -- Punch 3
+        [CHAR_SOUND_YAH_WAH_HOO] = { 'Marvin Yah Wah Hoo.ogg', 'Marvin Yah Wah Hoo 2.ogg' },             -- First Jump Sounds
+        [CHAR_SOUND_HOOHOO] = 'Marvin Ooof.ogg',                                                         -- Second jump sound
+        [CHAR_SOUND_YAHOO_WAHA_YIPPEE] = { 'Marvin Yahoo.ogg', 'Marvin Waha.ogg', 'Marvin Yippee.ogg' }, -- Triple jump sounds
+        [CHAR_SOUND_UH] = 'Marvin Uh.ogg',                                                               -- Soft wall bonk
+        [CHAR_SOUND_UH2] = 'Marvin Uh2.ogg',                                                             -- Quick ledge get up
+        [CHAR_SOUND_UH2_2] = 'Marvin Uh2.ogg',                                                           -- Landing after long jump
+        [CHAR_SOUND_DOH] = 'Marvin Doh.ogg',                                                             -- Hard wall bonk
+        [CHAR_SOUND_OOOF] = 'Marvin Ooof.ogg',                                                           -- Attacked in air
+        [CHAR_SOUND_OOOF2] = 'Marvin Uh.ogg',                                                            -- Land from hard bonk
+        [CHAR_SOUND_HAHA] = 'Marvin Haha.ogg',                                                           -- Landing triple jump
+        [CHAR_SOUND_HAHA_2] = 'Marvin Haha.ogg',                                                         -- Landing in water from big fall
+        [CHAR_SOUND_YAHOO] = 'Marvin Yahoo.ogg',                                                         -- Long jump
+        [CHAR_SOUND_DOH] = 'Marvin Doh.ogg',                                                             -- Long jump wall bonk
+        [CHAR_SOUND_WHOA] = 'Marvin Whoa.ogg',                                                           -- Grabbing ledge
+        [CHAR_SOUND_EEUH] = 'Marvin Eeuh.ogg',                                                           -- Climbing over ledge
+        [CHAR_SOUND_WAAAOOOW] = 'Marvin Waaaooow.ogg',                                                   -- Falling a long distance
+        [CHAR_SOUND_TWIRL_BOUNCE] = 'Marvin Twirl Bounce.ogg',                                           -- Bouncing off of a flower spring
+        [CHAR_SOUND_GROUND_POUND_WAH] = 'Marvin Wah.ogg',                                                -- Ground Pound after startup
+        [CHAR_SOUND_WAH2] = 'Marvin Wah.ogg',                                                            -- Throwing something
+        [CHAR_SOUND_HRMM] = 'Marvin Uh2.ogg',                                                            -- Lifting something
+        [CHAR_SOUND_HERE_WE_GO] = 'Marvin Here We Go.ogg',                                               -- Star get
+        [CHAR_SOUND_SO_LONGA_BOWSER] = 'Marvin So Longa Bowser.ogg',                                     -- Throwing Bowser
+        --DAMAGE
+        [CHAR_SOUND_ATTACKED] = 'Marvin Attacked.ogg',                                                   -- Damaged
+        [CHAR_SOUND_PANTING] = 'Marvin Panting.ogg',                                                     -- Low health
+        [CHAR_SOUND_PANTING_COLD] = 'Marvin Panting.ogg',                                                -- Getting cold
+        [CHAR_SOUND_ON_FIRE] = 'Marvin Waaaooow.ogg',                                                    -- Burned
+        --SLEEP SOUNDS
+        [CHAR_SOUND_IMA_TIRED] = 'Marvin Ima Tired.ogg',                                                 -- Mario feeling tired
+        [CHAR_SOUND_YAWNING] = 'Marvin Yawning.ogg',                                                     -- Mario yawning before he sits down to sleep
+        [CHAR_SOUND_SNORING3] = 'Marvin Snoring 3.ogg',                                                  -- Sleep talking / mumbling
+        --COUGHING (USED IN THE GAS MAZE)
+        [CHAR_SOUND_COUGHING1] = 'Marvin Coughing.ogg',                                                  -- Cough take 1
+        [CHAR_SOUND_COUGHING2] = 'Marvin Coughing.ogg',                                                  -- Cough take 2
+        [CHAR_SOUND_COUGHING3] = 'Marvin Coughing.ogg',                                                  -- Cough take 3
+        --DEATH
+        [CHAR_SOUND_DYING] = 'Marvin Dying.ogg',                                                         -- Dying from damage
+        [CHAR_SOUND_DROWNING] = 'Marvin Drowning.ogg',                                                   -- Running out of air underwater
+        [CHAR_SOUND_MAMA_MIA] =
+        'Marvin Mama Mia.ogg'                                                                            -- Booted out of level
+    }
+})
+
+CT_FOGHORN = addLooneyTunesChar({
+    id = 'foghorn',
+    name = 'Foghorn Leghorn',
+    description = "I say I say!",
+    author = 'ThaGurlTilly',
+    menuColor = '8b8b8b',
+    model = smlua_model_util_get_id("foghorn_leghorn_geo"),
+    charType = CT_WALUIGI,
+    camScale = 1.5,
+    palettes = {
+        {
+            palette = {
+                [PANTS]  = "ff4b00",
+                [SHIRT]  = "ffffff",
+                [GLOVES] = "ffffff",
+                [SHOES]  = "ffffff",
+                [HAIR]   = "5b0f00",
+                [SKIN]   = "bf9430",
+                [CAP]    = "472200",
+                [EMBLEM] = "ffffff"
+            }
+        }
+    },
+    animData = {
+        animTable = {
+            [_G.charSelect.CS_ANIM_MENU] = ANIM_FOGHORN_CS_MENU
+        }
+    },
+    voices = {
+        [CHAR_SOUND_OKEY_DOKEY] = { 'Foghorn Okey Dokey.ogg', 'Foghorn Hello.ogg', 'Foghorn Itsa Me.ogg' }, -- Starting game
+        [CHAR_SOUND_LETS_A_GO] = 'Foghorn Letsa Go.ogg',                                                    -- Starting level
+        [CHAR_SOUND_GAME_OVER] = 'Foghorn Game Over.ogg',                                                   -- Game Overed
+        [CHAR_SOUND_PUNCH_YAH] = 'Foghorn Yah.ogg',                                                         -- Punch 1
+        [CHAR_SOUND_PUNCH_WAH] = 'Foghorn Wah.ogg',                                                         -- Punch 2
+        [CHAR_SOUND_PUNCH_HOO] = 'Foghorn Hoo.ogg',                                                         -- Punch 3
+        [CHAR_SOUND_YAH_WAH_HOO] = 'Foghorn Wah.ogg',                                                       -- First Jump Sounds
+        [CHAR_SOUND_HOOHOO] = 'Foghorn Hoohoo.ogg',                                                         -- Second jump sound
+        [CHAR_SOUND_YAHOO_WAHA_YIPPEE] = { 'Foghorn Yahoo.ogg', 'Foghorn Waha.ogg', 'Foghorn Yippee.ogg' }, -- Triple jump sounds
+        [CHAR_SOUND_UH] = 'Foghorn Uh.ogg',                                                                 -- Soft wall bonk
+        [CHAR_SOUND_UH2] = 'Foghorn Uh2.ogg',                                                               -- Quick ledge get up
+        [CHAR_SOUND_UH2_2] = 'Foghorn Uh2.ogg',                                                             -- Landing after long jump
+        [CHAR_SOUND_DOH] = 'Foghorn Doh.ogg',                                                               -- Hard wall bonk
+        [CHAR_SOUND_OOOF] = 'Foghorn Ooof.ogg',                                                             -- Attacked in air
+        [CHAR_SOUND_OOOF2] = 'Foghorn Ooof2.ogg',                                                           -- Land from hard bonk
+        [CHAR_SOUND_HAHA] = 'Foghorn Haha.ogg',                                                             -- Landing triple jump
+        [CHAR_SOUND_HAHA_2] = 'Foghorn Haha.ogg',                                                           -- Landing in water from big fall
+        [CHAR_SOUND_YAHOO] = 'Foghorn Yahoo.ogg',                                                           -- Long jump
+        [CHAR_SOUND_DOH] = 'Foghorn Doh.ogg',                                                               -- Long jump wall bonk
+        [CHAR_SOUND_WHOA] = 'Foghorn Whoa.ogg',                                                             -- Grabbing ledge
+        [CHAR_SOUND_EEUH] = 'Foghorn Eeuh.ogg',                                                             -- Climbing over ledge
+        [CHAR_SOUND_WAAAOOOW] = 'Foghorn Waaaooow.ogg',                                                     -- Falling a long distance
+        [CHAR_SOUND_TWIRL_BOUNCE] = 'Foghorn Twirl Bounce.ogg',                                             -- Bouncing off of a flower spring
+        [CHAR_SOUND_GROUND_POUND_WAH] = 'Foghorn Wah.ogg',                                                  -- Ground Pound after startup
+        [CHAR_SOUND_WAH2] = 'Foghorn Wah2.ogg',                                                             -- Throwing something
+        [CHAR_SOUND_HRMM] = 'Foghorn Hrmm.ogg',                                                             -- Lifting something
+        [CHAR_SOUND_HERE_WE_GO] = 'Foghorn Here We Go.ogg',                                                 -- Star get
+        [CHAR_SOUND_SO_LONGA_BOWSER] = 'Foghorn So Longa Bowser.ogg',                                       -- Throwing Bowser
+        --DAMAGE
+        [CHAR_SOUND_ATTACKED] = 'Foghorn Attacked.ogg',                                                     -- Damaged
+        [CHAR_SOUND_PANTING] = 'Foghorn Panting.ogg',                                                       -- Low health
+        [CHAR_SOUND_PANTING_COLD] = 'Foghorn Panting.ogg',                                                  -- Getting cold
+        [CHAR_SOUND_ON_FIRE] = 'Foghorn On Fire.ogg',                                                       -- Burned
+        --SLEEP SOUNDS
+        [CHAR_SOUND_IMA_TIRED] = 'Foghorn Ima Tired.ogg',                                                   -- Mario feeling tired
+        [CHAR_SOUND_YAWNING] = 'Foghorn Yawning.ogg',                                                       -- Mario yawning before he sits down to sleep
+        [CHAR_SOUND_SNORING1] = 'Foghorn Snoring1.ogg',                                                     -- Snore Inhale
+        [CHAR_SOUND_SNORING2] = 'Foghorn Snoring2.ogg',                                                     -- Exhale
+        [CHAR_SOUND_SNORING3] = 'Foghorn Snoring3.ogg',                                                     -- Sleep talking / mumbling
+        --COUGHING (USED IN THE GAS MAZE)
+        [CHAR_SOUND_COUGHING1] = 'Foghorn Coughing.ogg',                                                    -- Cough take 1
+        [CHAR_SOUND_COUGHING2] = 'Foghorn Coughing.ogg',                                                    -- Cough take 2
+        [CHAR_SOUND_COUGHING3] = 'Foghorn Coughing.ogg',                                                    -- Cough take 3
+        --DEATH
+        [CHAR_SOUND_DYING] = 'Foghorn Dying.ogg',                                                           -- Dying from damage
+        [CHAR_SOUND_DROWNING] = 'Foghorn Drowning.ogg',                                                     -- Running out of air underwater
+        [CHAR_SOUND_MAMA_MIA] = 'Foghorn Mama Mia.ogg'                                                      -- Booted out of level
     }
 })
 
