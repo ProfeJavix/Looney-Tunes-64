@@ -13,12 +13,10 @@
 ---@field menuColor string
 ---@field model ModelExtendedId
 ---@field charType? CharacterType
----@field lifeIcon? TextureInfo
 ---@field camScale? number
 ---@field palettes? PaletteData[]
 ---@field animData? AnimData
 ---@field voices? table
----@field thanksForPlayingClip? string
 ---@field hasPowerMeter? boolean
 
 ---@class PaletteData
