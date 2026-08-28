@@ -1,5 +1,6 @@
 local nps = gNetworkPlayers
 local states = gMarioStates
+local playerTable = gPlayerSyncTable
 
 local loops = {}
 
@@ -26,6 +27,57 @@ function loops.bhv_helicopter_ears_loop(o)
     obj_set_gfx_pos_from_pos(o)
 
     o.oFaceAngleYaw = o.oFaceAngleYaw + 0x2000
+end
+
+---@param o Object
+function loops.bhv_elmer_bullet_init(o)
+    o.oFlags = o.oFlags | OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE
+
+    o.oGraphYOffset = 10
+    o.oWallHitboxRadius = 10
+    o.oDragStrength = 10
+    o.oFriction = 10
+
+    cur_obj_set_hitbox_radius_and_height(10, 20)
+    o.hitboxDownOffset = 10
+
+    obj_set_billboard(o)
+    cur_obj_scale(0.1)
+end
+
+---@param o Object
+function loops.bhv_elmer_bullet_loop(o)
+
+    if o.oTimer > 300 then
+        obj_mark_for_deletion(o)
+        return
+    end
+
+    for _ = 1, 3 do
+        local fVel = 40
+        cur_obj_update_floor_and_walls()
+
+        obj_compute_vel_from_move_pitch(fVel)
+        cur_obj_compute_vel_xz()
+
+        local hit = affectAllObjects(
+            o,
+            function(att, vic)
+                return obj_check_hitbox_overlap(att, vic)
+            end,
+            true
+        )
+
+        if o.oMoveFlags & (OBJ_MOVE_HIT_WALL | OBJ_MOVE_MASK_ON_GROUND) ~= 0 or hit then
+            obj_mark_for_deletion(o)
+            spawn_mist_particles_variable(10, 10, 20)
+            cur_obj_play_sound_2(ternary(hit, SOUND_ACTION_HIT_2, SOUND_GENERAL_SOFT_LANDING))
+        end
+
+        o.oPosX = o.oPosX + o.oVelX
+        o.oPosY = o.oPosY + o.oVelY
+        o.oPosZ = o.oPosZ + o.oVelZ
+    end
 end
 
 ---@param o Object
@@ -87,6 +139,115 @@ function loops.act_bugs_hover(m)
         if m.actionTimer % 3 ~= 0 then
             play_sound(SOUND_ACTION_BRUSH_HAIR, m.marioObj.header.gfx.cameraToObject)
         end
+    end
+end
+
+---@param m MarioState
+function loops.act_elmer_shoot_shotgun(m)
+
+    playerTable[m.playerIndex].elmerSGTimer = 3
+
+    local frame = m.marioObj.header.gfx.animInfo.animFrame
+    local animID = m.marioObj.header.gfx.animInfo.animID
+    local endAct = 0
+    local swapAnim = false
+
+    if animID ~= CHAR_ANIM_FIRST_PUNCH_FAST and animID ~= CHAR_ANIM_AIR_KICK then
+        set_anim_to_frame(m, 0)
+        frame = 0
+    end
+
+    if m.action == ACT_ELMER_SHOOT_SHOTGUN then
+
+        if should_begin_sliding(m) ~= 0 then
+            return set_mario_action(m, ACT_BEGIN_SLIDING, 0)
+        end
+
+        if mario_check_object_grab(m) ~= 0 then
+            set_character_animation(m, CHAR_ANIM_FIRST_PUNCH)
+            set_anim_to_frame(m, 0)
+            return 1
+        end
+
+        animID = CHAR_ANIM_FIRST_PUNCH_FAST
+        if m.marioObj.header.gfx.animInfo.animID == CHAR_ANIM_AIR_KICK then
+            swapAnim = true
+        end
+        endAct = ACT_IDLE
+
+        if m.forwardVel >= 0 then
+            apply_slope_decel(m, 0.5)
+        else
+            m.forwardVel = approach_f32_symmetric(m.forwardVel, 0, 8)
+            apply_slope_accel(m)
+        end
+
+        local step = perform_ground_step(m)
+        if step == GROUND_STEP_LEFT_GROUND then
+            set_mario_action(m, ACT_ELMER_AIR_SHOOT_SHOTGUN, m.actionArg)
+            set_anim_to_frame(m, frame)
+            return 1
+        elseif step == GROUND_STEP_NONE and m.forwardVel ~= 0 then
+            set_mario_particle_flags(m, PARTICLE_DUST, 0)
+        end
+    else
+        animID = CHAR_ANIM_AIR_KICK
+        if m.marioObj.header.gfx.animInfo.animID == CHAR_ANIM_FIRST_PUNCH_FAST then
+            swapAnim = true
+        end
+        endAct = ACT_FREEFALL
+
+        update_air_without_turn(m)
+
+        local step = perform_air_step(m, 0)
+        if step == AIR_STEP_LANDED then
+            if check_fall_damage_or_get_stuck(m, ACT_HARD_BACKWARD_GROUND_KB) == 0 then
+                set_mario_action(m, ACT_ELMER_SHOOT_SHOTGUN, m.actionArg)
+                set_anim_to_frame(m, frame)
+                return 1
+            end
+        end
+    end
+
+    if swapAnim then
+        set_character_animation(m, animID)
+        set_anim_to_frame(m, frame)
+    else
+        set_character_animation(m, animID)
+    end
+
+    if frame == 8 then
+        local bulletPos = {
+            x = get_hand_foot_pos_x(m, 0) + 70 * sins(m.faceAngle.y),
+            y = get_hand_foot_pos_y(m, 0),
+            z = get_hand_foot_pos_z(m, 0) + 70 * coss(m.faceAngle.y)
+        }
+        play_sound(SOUND_OBJ_CANNON4, m.marioObj.header.gfx.cameraToObject)
+        play_character_sound(m, CHAR_SOUND_UH2_2)
+        spawn_non_sync_object(id_bhvSmoke, E_MODEL_SMOKE, bulletPos.x, bulletPos.y, bulletPos.z, function() end)
+
+        if m.playerIndex == 0 and m.actionArg == 0 then
+            local target = getAutoTarget(m, 0x1000, 1500)
+
+            set_camera_shake_from_hit(SHAKE_FOV_UNUSED)
+            spawn_sync_object(id_bhvElmerBullet, E_MODEL_BOWLING_BALL, bulletPos.x, bulletPos.y, bulletPos.z, function(o)
+                o.oOwner = nps[0].globalIndex
+
+                if target then
+                    o.oMoveAnglePitch = obj_pitch_to_object(o, target)
+                    o.oMoveAngleYaw = obj_angle_to_object(o, target)
+                else
+                    o.oMoveAnglePitch = 0
+                    o.oMoveAngleYaw = m.faceAngle.y
+                end
+            end)
+
+            m.actionArg = 1
+        end
+    end
+
+    if is_anim_at_end(m) ~= 0 then
+        return set_mario_action(m, endAct, 0)
     end
 end
 

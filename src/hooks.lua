@@ -1,8 +1,15 @@
+local playerTable = gPlayerSyncTable
+
 local hooks = {}
 
----@param player integer
+function hooks.update()
+    if playerTable[0].elmerSGTimer > 0 then
+        playerTable[0].elmerSGTimer = playerTable[0].elmerSGTimer - 1
+    end
+end
+
 ---@param seqId SeqId
-function hooks.on_seq_load(player, seqId)
+function hooks.on_seq_load(_, seqId)
 
     audio_stream_stop(STREAM_CREDITS)
 
@@ -64,6 +71,35 @@ end
 function hooks.bugs_on_set_mario_action(m)
     if JUMP_ACTIONS[m.action] then
         m.vel.y = m.vel.y * 1.5
+    end
+end
+
+---@param m MarioState
+function hooks.elmer_before_set_mario_action(m, incAct)
+    if incAct == ACT_PUNCHING or incAct == ACT_MOVE_PUNCHING or incAct == ACT_JUMP_KICK then
+        if playerTable[m.playerIndex].elmerSGTimer == 0 then
+            return set_mario_action(m, ternary(m.floorHeight == m.pos.y, ACT_ELMER_SHOOT_SHOTGUN, ACT_ELMER_AIR_SHOOT_SHOTGUN), 0)
+        end
+        return 1
+    end
+end
+
+---@param m MarioState
+---@param o Object
+---@param intType InteractionType
+---@param interacted boolean
+function hooks.elmer_on_interact(m, o, intType, interacted)
+
+    if intType == INTERACT_GRABBABLE and
+    not interacted and
+    o.oInteractionSubtype & INT_SUBTYPE_NOT_GRABBABLE == 0 and
+    m.action == ACT_ELMER_SHOOT_SHOTGUN then
+        m.interactObj = o
+        m.input = m.input | INPUT_INTERACT_OBJ_GRABBABLE
+
+        if o.oSyncID ~= 0 then
+            network_send_object(o, true)
+        end
     end
 end
 
