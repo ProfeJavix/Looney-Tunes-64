@@ -424,55 +424,6 @@ CT_SYLVESTER = addLooneyTunesChar({
         animTable = {
             [_G.charSelect.CS_ANIM_MENU] = ANIM_SYLVESTER_CS_MENU
         }
-    },
-    voices = {
-        [CHAR_SOUND_OKEY_DOKEY] = { 'Sylvester Hello.ogg', 'Sylvester Okey Dokey.ogg', 'Sylvester Itsa Me.ogg' }, -- Starting game
-        [CHAR_SOUND_LETS_A_GO] = 'Sylvester Letsa Go.ogg',                                              -- Starting level
-        [CHAR_SOUND_GAME_OVER] = 'Sylvester Game Over.ogg',                                             -- Game Overed
-        [CHAR_SOUND_PUNCH_YAH] = 'Sylvester Yah.ogg',                                                   -- Punch 1
-        [CHAR_SOUND_PUNCH_WAH] = 'Sylvester Wah.ogg',                                                   -- Punch 2
-        [CHAR_SOUND_PUNCH_HOO] = 'Sylvester Hoo.ogg',                                                   -- Punch 3
-        [CHAR_SOUND_YAH_WAH_HOO] = { 'Sylvester Yah Wah Hoo.ogg', 'Sylvester Yah Wah Hoo 2.ogg' },           -- First Jump Sounds
-        [CHAR_SOUND_HOOHOO] = 'Sylvester Wah.ogg',                                                   -- Second jump sound
-        [CHAR_SOUND_YAHOO_WAHA_YIPPEE] = { 'Sylvester Yahoo.ogg', 'Sylvester Yippee.ogg' }, -- Triple jump sounds
-        [CHAR_SOUND_UH] = 'Sylvester Ooof.ogg',                                                           -- Soft wall bonk
-        [CHAR_SOUND_UH2] = 'Sylvester Uh2.ogg',                                                         -- Quick ledge get up
-        [CHAR_SOUND_UH2_2] = 'Sylvester Uh2.ogg',                                                       -- Landing after long jump
-        [CHAR_SOUND_DOH] = 'Sylvester Hoo.ogg',                                                         -- Hard wall bonk
-        [CHAR_SOUND_OOOF] = 'Sylvester Ooof.ogg',                                                       -- Attacked in air
-        [CHAR_SOUND_OOOF2] = 'Sylvester Ooof.ogg',                                                        -- Land from hard bonk
-        [CHAR_SOUND_HAHA] = 'Sylvester Yahoo.ogg',                                                       -- Landing triple jump
-        [CHAR_SOUND_HAHA_2] = 'Sylvester Yahoo.ogg',                                                     -- Landing in water from big fall
-        [CHAR_SOUND_YAHOO] = 'Sylvester Yahoo.ogg',                                                     -- Long jump
-        [CHAR_SOUND_DOH] = 'Sylvester Hoo.ogg',                                                         -- Long jump wall bonk
-        [CHAR_SOUND_WHOA] = 'Sylvester Ooof.ogg',                                                       -- Grabbing ledge
-        [CHAR_SOUND_EEUH] = 'Sylvester Eeuh.ogg',                                                       -- Climbing over ledge
-        [CHAR_SOUND_WAAAOOOW] = 'Sylvester Waaaooow.ogg',                                               -- Falling a long distance
-        [CHAR_SOUND_TWIRL_BOUNCE] = 'Sylvester Twirl Bounce.ogg',                                       -- Bouncing off of a flower spring
-        [CHAR_SOUND_GROUND_POUND_WAH] = 'Sylvester Wah.ogg',                                            -- Ground Pound after startup
-        [CHAR_SOUND_WAH2] = 'Sylvester Wah2.ogg',                                                       -- Throwing something
-        [CHAR_SOUND_HRMM] = 'Sylvester Hrmm.ogg',                                                       -- Lifting something
-        [CHAR_SOUND_HERE_WE_GO] = 'Sylvester Here We Go.ogg',                                           -- Star get
-        [CHAR_SOUND_SO_LONGA_BOWSER] = 'Sylvester So Longa Bowser.ogg',                                 -- Throwing Bowser
-        --DAMAGE
-        [CHAR_SOUND_ATTACKED] = 'Sylvester Attacked.ogg',                                               -- Damaged
-        [CHAR_SOUND_PANTING] = 'Sylvester Panting.ogg',                                                 -- Low health
-        [CHAR_SOUND_PANTING_COLD] = 'Sylvester Panting.ogg',                                            -- Getting cold
-        [CHAR_SOUND_ON_FIRE] = 'Sylvester On Fire.ogg',                                                 -- Burned
-        --SLEEP SOUNDS
-        [CHAR_SOUND_IMA_TIRED] = 'Sylvester Ima Tired.ogg',                                             -- Mario feeling tired
-        [CHAR_SOUND_YAWNING] = 'Sylvester Yawning.ogg',                                                 -- Mario yawning before he sits down to sleep
-        [CHAR_SOUND_SNORING1] = 'Sylvester Snoring 1.ogg',                                              -- Snore Inhale
-        [CHAR_SOUND_SNORING2] = 'Sylvester Snoring 2.ogg',                                              -- Exhale
-        [CHAR_SOUND_SNORING3] = 'Sylvester Snoring 3.ogg',                                              -- Sleep talking / mumbling
-        --COUGHING (USED IN THE GAS MAZE)
-        [CHAR_SOUND_COUGHING1] = 'Sylvester Ooof.ogg',                                              -- Cough take 1
-        [CHAR_SOUND_COUGHING2] = 'Sylvester Ooof.ogg',                                              -- Cough take 2
-        [CHAR_SOUND_COUGHING3] = 'Sylvester Ooof.ogg',                                              -- Cough take 3
-        --DEATH
-        [CHAR_SOUND_DYING] = 'Sylvester Dying.ogg',                                                     -- Dying from damage
-        [CHAR_SOUND_DROWNING] = 'Sylvester Dying.ogg',                                               -- Running out of air underwater
-        [CHAR_SOUND_MAMA_MIA] = 'Sylvester Mama Mia.ogg'                                                -- Booted out of level
     }
 })
 
