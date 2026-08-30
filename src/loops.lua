@@ -43,12 +43,24 @@ function loops.bhv_elmer_bullet_init(o)
 
     obj_set_billboard(o)
     cur_obj_scale(0.1)
+
+    network_init_object(o, true, { 'oTimer', 'oAction' })
 end
 
 ---@param o Object
 function loops.bhv_elmer_bullet_loop(o)
 
-    if o.oTimer > 300 then
+    if o.oAction == 1 then
+        cur_obj_disable()
+        if o.oTimer < 3 then
+            spawn_non_sync_object(id_bhvSmoke, E_MODEL_SMOKE, o.oPosX, o.oPosY, o.oPosZ, function() end)
+            return
+        else
+            o.oTimer = 300
+        end
+    end
+
+    if o.oTimer >= 300 then
         obj_mark_for_deletion(o)
         return
     end
@@ -69,9 +81,10 @@ function loops.bhv_elmer_bullet_loop(o)
         )
 
         if o.oMoveFlags & (OBJ_MOVE_HIT_WALL | OBJ_MOVE_MASK_ON_GROUND) ~= 0 or hit then
-            obj_mark_for_deletion(o)
-            spawn_mist_particles_variable(10, 10, 20)
-            cur_obj_play_sound_2(ternary(hit, SOUND_ACTION_HIT_2, SOUND_GENERAL_SOFT_LANDING))
+            o.oTimer = 0
+            o.oAction = 1
+            cur_obj_play_sound_2(ternary(hit, SOUND_ACTION_HIT_2, SOUND_GENERAL_VOLCANO_EXPLOSION))
+            return
         end
 
         o.oPosX = o.oPosX + o.oVelX

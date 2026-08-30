@@ -94,7 +94,7 @@ end
 
 function geo_mallet_switch(node)
     local gn = cast_graph_node(node)
-    gn.selectedCase = 1
+    gn.selectedCase = 0
 end
 
 function geo_railgun_switch(node)

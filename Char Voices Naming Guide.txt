@@ -1,0 +1,56 @@
+This is a naming guide for Looney Tunes 64 character voicelines. Read the following points for better understanding:
+-The quoted text on the left is the file name, where "Char" is replaced by the character's name (eg: Bugs Hello.ogg, don't add the quotes to the file name). The text on the right is a description of where the clip will be played.
+-EVERY DESCRIPTION MUST BE USED, but not every clip must be different. You can use a clip for many descriptions (eg: "Char Wah.ogg" for Second Punch and Ground Pound, or "Char Coughing.ogg" for every coughing take). If that's the case, please specify which descriptions are targetted by the clip in its name
+-A description can use many clips. If that's the case, add a number at the end of the text (eg: "Char Sound Uh2_2.ogg", "Char Sound Uh2_2 2.ogg", "Char Sound Uh2_2 3.ogg" and so. Note the white space before the number)
+
+Filename = Description
+"Char Hello.ogg" = Starting Hello
+"Char Okey Dokey.ogg" = Starting Okey Dokey
+"Char Itsa Me.ogg" = Starting It's a me
+"Char Hello.ogg" = Starting Hello
+"Char Letsa Go.ogg" = Starting Level
+"Char Game Over.ogg" = Game Over
+"Char Thanks For Playing.ogg" = After Credits Thanks For Playing
+"Char Yah.ogg" = First Punch
+"Char Wah.ogg" = Second Punch
+"Char Hoo.ogg" = Kick
+"Char Yah Wah Hoo.ogg" = First Jump
+"Char Hoohoo.ogg" = Second Jump
+"Char Yahoo.ogg" = Long Jump
+"Char Waha.ogg" or "Char Yippee.ogg" or "Char Yahoo.ogg" = Triple Jump (yahoo can be the same clip from long jump. If not, specify. Long jump has priority)
+"Char Sound Uh.ogg" = Soft wall bonk
+"Char Sound Uh2.ogg" = Quick ledge get up
+"Char Sound Uh2_2.ogg" = Landing after long jump
+"Char Sound Doh.ogg" = Hard Wall Bonk | Long jump wall bonk
+"Char Sound Ooof.ogg" = Attacked in air
+"Char Ooof2.ogg" = Land from hard bonk
+"Char Haha.ogg" = Land from triple jump
+"Char Haha2.ogg" = Big fall to water
+"Char Whoa.ogg" = Grab ledge
+"Char Eeuh.ogg" = Slow climb over ledge
+"Char Waaaooow.ogg" = Falling a long distance
+"Char Twirl Bounce.ogg" = Bounce off a spindrift (the helicopter-ish enemies)
+"Char Ground Pound Wah.ogg" = Ground Pound
+"Char Wah2.ogg" = Throw Object
+"Char Hrmm.ogg" = Lift Object
+"Char Here We Go.ogg" = Get Star
+"Char So Longa Bowser.ogg" = Throw Bowser
+
+"Char Attacked.ogg" = Damaged
+"Char Panting.ogg" = Low HP
+"Char Cold.ogg" = Getting Cold
+"Char On Fire.ogg" = Burning
+
+"Char Ima Tired.ogg" = Getting tired
+"Char Yawning.ogg" = Yawn before starting to sleep
+"Char Snoring1.ogg" = Snore Inhale
+"Char Snoring2.ogg" = Snore Exhale
+"Char Snoring3.ogg" = Sleep talking
+
+"Char Coughing.ogg" = Cough take 1
+"Char Coughing2.ogg" = Cough take 2
+"Char Coughing3.ogg" = Cough take 3
+
+"Char Dying.ogg" = Normal Death
+"Char Drowning.ogg" = Drowning Death
+"Char Mama Mia.ogg" = Booted out of level

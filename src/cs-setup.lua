@@ -139,9 +139,9 @@ CT_BUGS = addLooneyTunesChar({
         --SLEEP SOUNDS
         [CHAR_SOUND_IMA_TIRED] = 'Bugs Ima Tired.ogg',                                             -- Mario feeling tired
         [CHAR_SOUND_YAWNING] = 'Bugs Yawning.ogg',                                                 -- Mario yawning before he sits down to sleep
-        [CHAR_SOUND_SNORING1] = 'Bugs Snoring 1.ogg',                                              -- Snore Inhale
-        [CHAR_SOUND_SNORING2] = 'Bugs Snoring 2.ogg',                                              -- Exhale
-        [CHAR_SOUND_SNORING3] = 'Bugs Snoring 3.ogg',                                              -- Sleep talking / mumbling
+        [CHAR_SOUND_SNORING1] = 'Bugs Snoring1.ogg',                                                -- Snore Inhale
+        [CHAR_SOUND_SNORING2] = 'Bugs Snoring2.ogg',                                               -- Exhale
+        [CHAR_SOUND_SNORING3] = 'Bugs Snoring3.ogg',                                               -- Sleep talking / mumbling
         --COUGHING (USED IN THE GAS MAZE)
         [CHAR_SOUND_COUGHING1] = 'Bugs Coughing.ogg',                                              -- Cough take 1
         [CHAR_SOUND_COUGHING2] = 'Bugs Coughing.ogg',                                              -- Cough take 2
@@ -181,53 +181,54 @@ CT_DAFFY = addLooneyTunesChar({
         }
     },
     voices = {
-        [CHAR_SOUND_OKEY_DOKEY] = 'Daffy Okey Dokey.ogg',                           -- Starting game
-        [CHAR_SOUND_LETS_A_GO] = 'Daffy Lets A Go.ogg',                             -- Starting level
-        [CHAR_SOUND_GAME_OVER] = 'Daffy Game Over.ogg',                             -- Game Overed
-        [CHAR_SOUND_PUNCH_YAH] = 'Daffy Yah.ogg',                                   -- Punch 1
-        [CHAR_SOUND_PUNCH_WAH] = 'Daffy Wah.ogg',                                   -- Punch 2
-        [CHAR_SOUND_PUNCH_HOO] = 'Daffy Hoo.ogg',                                   -- Punch 3
-        [CHAR_SOUND_YAH_WAH_HOO] = { 'Daffy Wah2.ogg', 'Daffy Oh.ogg' },            -- First Jump Sounds
-        [CHAR_SOUND_HOOHOO] = 'Daffy Hoohoo.ogg',                                   -- Second jump sound
-        [CHAR_SOUND_YAHOO_WAHA_YIPPEE] = { 'Daffy Yahoo.ogg', 'Daffy Yippee.ogg' }, -- Triple jump sounds
-        [CHAR_SOUND_UH] = 'Daffy Unh 02.ogg',                                       -- Soft wall bonk
-        [CHAR_SOUND_UH2] = 'Daffy Unh.ogg',                                         -- Quick ledge get up
-        [CHAR_SOUND_UH2_2] = 'Daffy Unh.ogg',                                       -- Landing after long jump
-        [CHAR_SOUND_DOH] = 'Daffy Doh.ogg',                                         -- Hard wall bonk
-        [CHAR_SOUND_OOOF] = 'Daffy Doh.ogg',                                        -- Attacked in air
-        [CHAR_SOUND_OOOF2] = 'Daffy Ooph.ogg',                                      -- Land from hard bonk
-        [CHAR_SOUND_HAHA] = 'Daffy Haha.ogg',                                       -- Landing triple jump
-        [CHAR_SOUND_HAHA_2] = 'Daffy Haha.ogg',                                     -- Landing in water from big fall
-        [CHAR_SOUND_YAHOO] = 'Daffy Yahoo.ogg',                                     -- Long jump
-        [CHAR_SOUND_DOH] = 'Daffy Ooph.ogg',                                        -- Long jump wall bonk
-        [CHAR_SOUND_WHOA] = 'Daffy Woah.ogg',                                       -- Grabbing ledge
-        [CHAR_SOUND_EEUH] = 'Daffy Ledge Climb.ogg',                                -- Climbing over ledge
-        [CHAR_SOUND_WAAAOOOW] = 'Daffy Waaaooow.ogg',                               -- Falling a long distance
-        [CHAR_SOUND_TWIRL_BOUNCE] = 'Daffy Boing.ogg',                              -- Bouncing off of a flower spring
-        [CHAR_SOUND_GROUND_POUND_WAH] = 'Daffy Wah.ogg',                            -- Ground Pound after startup
-        [CHAR_SOUND_WAH2] = 'Daffy Wah2.ogg',                                       -- Throwing something
-        [CHAR_SOUND_HRMM] = 'Daffy Hrmm.ogg',                                       -- Lifting something
-        [CHAR_SOUND_HERE_WE_GO] = 'Daffy Here We Go.ogg',                           -- Star get
-        [CHAR_SOUND_SO_LONGA_BOWSER] = 'Daffy So Longa Bowser.ogg',                 -- Throwing Bowser
+        [CHAR_SOUND_OKEY_DOKEY] = 'Daffy Okey Dokey.ogg',                                             -- Starting game
+        [CHAR_SOUND_LETS_A_GO] = 'Daffy Lets A Go.ogg',                                               -- Starting level
+        [CHAR_SOUND_GAME_OVER] = 'Daffy Game Over.ogg',                                               -- Game Overed
+        [CHAR_SOUND_PUNCH_YAH] = 'Daffy Yah.ogg',                                                     -- Punch 1
+        [CHAR_SOUND_PUNCH_WAH] = 'Daffy Wah.ogg',                                                     -- Punch 2
+        [CHAR_SOUND_PUNCH_HOO] = 'Daffy Hoo.ogg',                                                     -- Punch 3
+        [CHAR_SOUND_YAH_WAH_HOO] = { 'Daffy Yah Wah Hoo.ogg', 'Daffy Wah2.ogg' },                     -- First Jump Sounds
+        [CHAR_SOUND_HOOHOO] = 'Daffy Hoohoo.ogg',                                                     -- Second jump sound
+        [CHAR_SOUND_YAHOO_WAHA_YIPPEE] = { 'Daffy Yahoo.ogg', 'Daffy Waha.ogg', 'Daffy Yippee.ogg' }, -- Triple jump sounds
+        [CHAR_SOUND_UH] = 'Daffy Uh.ogg',                                                             -- Soft wall bonk
+        [CHAR_SOUND_UH2] = 'Daffy Uh2.ogg',                                                           -- Quick ledge get up
+        [CHAR_SOUND_UH2_2] = 'Daffy Uh2.ogg',                                                         -- Landing after long jump
+        [CHAR_SOUND_DOH] = 'Daffy Doh.ogg',                                                           -- Hard wall bonk
+        [CHAR_SOUND_OOOF] = 'Daffy Ooof.ogg',                                                         -- Attacked in air
+        [CHAR_SOUND_OOOF2] = 'Daffy Ooof.ogg',                                                        -- Land from hard bonk
+        [CHAR_SOUND_HAHA] = 'Daffy Haha.ogg',                                                         -- Landing triple jump
+        [CHAR_SOUND_HAHA_2] = 'Daffy Haha.ogg',                                                       -- Landing in water from big fall
+        [CHAR_SOUND_YAHOO] = 'Daffy Yahoo.ogg',                                                       -- Long jump
+        [CHAR_SOUND_DOH] = 'Daffy Doh.ogg',                                                           -- Long jump wall bonk
+        [CHAR_SOUND_WHOA] = 'Daffy Whoa.ogg',                                                         -- Grabbing ledge
+        [CHAR_SOUND_EEUH] = 'Daffy Eeuh.ogg',                                                         -- Climbing over ledge
+        [CHAR_SOUND_WAAAOOOW] = 'Daffy Waaaooow.ogg',                                                 -- Falling a long distance
+        [CHAR_SOUND_TWIRL_BOUNCE] = 'Daffy Twirl Bounce.ogg',                                         -- Bouncing off of a flower spring
+        [CHAR_SOUND_GROUND_POUND_WAH] = 'Daffy Wah.ogg',                                              -- Ground Pound after startup
+        [CHAR_SOUND_WAH2] = 'Daffy Wah2.ogg',                                                         -- Throwing something
+        [CHAR_SOUND_HRMM] = 'Daffy Hrmm.ogg',                                                         -- Lifting something
+        [CHAR_SOUND_HERE_WE_GO] = 'Daffy Here We Go.ogg',                                             -- Star get
+        [CHAR_SOUND_SO_LONGA_BOWSER] = 'Daffy So Longa Bowser.ogg',                                   -- Throwing Bowser
         --DAMAGE
-        [CHAR_SOUND_ATTACKED] = 'Daffy Lose Health.ogg',                            -- Damaged
-        [CHAR_SOUND_PANTING] = 'Daffy Ooh.ogg',                                     -- Low health
-        [CHAR_SOUND_PANTING_COLD] = 'Daffy Ooh.ogg',                                -- Getting cold
-        [CHAR_SOUND_ON_FIRE] = 'Daffy Hot hot hot.ogg',                             -- Burned
+        [CHAR_SOUND_ATTACKED] = 'Daffy Attacked.ogg',                                                 -- Damaged
+        [CHAR_SOUND_PANTING] = 'Daffy Panting.ogg',                                                   -- Low health
+        [CHAR_SOUND_PANTING_COLD] = 'Daffy Panting.ogg',                                              -- Getting cold
+        [CHAR_SOUND_ON_FIRE] = 'Daffy On Fire.ogg',                                                   -- Burned
         --SLEEP SOUNDS
-        [CHAR_SOUND_IMA_TIRED] = 'Daffy Ima tired.ogg',                             -- Mario feeling tired
-        [CHAR_SOUND_YAWNING] = 'Daffy Yawn.ogg',                                    -- Mario yawning before he sits down to sleep
-        [CHAR_SOUND_SNORING1] = 'Daffy Snore 01 inhale.ogg',                        -- Snore Inhale
-        [CHAR_SOUND_SNORING2] = 'Daffy Snore 02 exhale.ogg',                        -- Exhale
-        [CHAR_SOUND_SNORING3] = 'Daffy Snore & Pasta.ogg',                          -- Sleep talking / mumbling
+        [CHAR_SOUND_IMA_TIRED] = 'Daffy Ima tired.ogg',                                               -- Mario feeling tired
+        [CHAR_SOUND_YAWNING] = 'Daffy Yawning.ogg',                                                   -- Mario yawning before he sits down to sleep
+        [CHAR_SOUND_SNORING1] = 'Daffy Snoring1.ogg',                                                 -- Snore Inhale
+        [CHAR_SOUND_SNORING2] = 'Daffy Snoring2.ogg',                                                 -- Exhale
+        [CHAR_SOUND_SNORING3] = 'Daffy Snoring3.ogg',                                                 -- Sleep talking / mumbling
         --COUGHING (USED IN THE GAS MAZE)
-        [CHAR_SOUND_COUGHING1] = 'Daffy Cough.ogg',                                 -- Cough take 1
-        [CHAR_SOUND_COUGHING2] = 'Daffy Cough 1.ogg',                               -- Cough take 2
-        [CHAR_SOUND_COUGHING3] = 'Daffy Cough 2.ogg',                               -- Cough take 3
+        [CHAR_SOUND_COUGHING1] = 'Daffy Coughing.ogg',                                                -- Cough take 1
+        [CHAR_SOUND_COUGHING2] = 'Daffy Coughing2.ogg',                                               -- Cough take 2
+        [CHAR_SOUND_COUGHING3] = 'Daffy Coughing3.ogg',                                               -- Cough take 3
         --DEATH
-        [CHAR_SOUND_DYING] = 'Daffy Uhh Ooph.ogg',                                  -- Dying from damage
-        [CHAR_SOUND_DROWNING] = 'Daffy Drowning.ogg',                               -- Running out of air underwater
-        [CHAR_SOUND_MAMA_MIA] = 'Daffy Mamma Mia.ogg'                               -- Booted out of level
+        [CHAR_SOUND_DYING] = 'Daffy Dying.ogg',                                                       -- Dying from damage
+        [CHAR_SOUND_DROWNING] = 'Daffy Drowning.ogg',                                                 -- Running out of air underwater
+        [CHAR_SOUND_MAMA_MIA] =
+        'Daffy Mama Mia.ogg'                                                                          -- Booted out of level
     }
 })
 
@@ -277,10 +278,10 @@ CT_PORKY = addLooneyTunesChar({
         [CHAR_SOUND_HAHA] = 'Porky Haha.ogg',                                                         -- Landing triple jump
         [CHAR_SOUND_HAHA_2] = 'Porky Haha.ogg',                                                       -- Landing in water from big fall
         [CHAR_SOUND_YAHOO] = 'Porky Yahoo.ogg',                                                       -- Long jump
-        [CHAR_SOUND_WHOA] = 'Porky Woah.ogg',                                                         -- Grabbing ledge
+        [CHAR_SOUND_WHOA] = 'Porky Whoa.ogg',                                                         -- Grabbing ledge
         [CHAR_SOUND_EEUH] = 'Porky Ooof2.ogg',                                                        -- Climbing over ledge
         [CHAR_SOUND_WAAAOOOW] = 'Porky Waaaooow.ogg',                                                 -- Falling a long distance
-        [CHAR_SOUND_TWIRL_BOUNCE] = 'Porky Boing.ogg',                                                -- Bouncing off of a flower spring
+        [CHAR_SOUND_TWIRL_BOUNCE] = 'Porky Twirl Bounce.ogg',                                         -- Bouncing off of a flower spring
         [CHAR_SOUND_GROUND_POUND_WAH] = 'Porky Wah.ogg',                                              -- Ground Pound after startup
         [CHAR_SOUND_WAH2] = 'Porky Wah2.ogg',                                                         -- Throwing something
         [CHAR_SOUND_HRMM] = 'Porky Hrmm.ogg',                                                         -- Lifting something
@@ -290,19 +291,19 @@ CT_PORKY = addLooneyTunesChar({
         [CHAR_SOUND_ATTACKED] = 'Porky Attacked.ogg',                                                 -- Damaged
         [CHAR_SOUND_PANTING] = 'Porky Panting.ogg',                                                   -- Low health
         [CHAR_SOUND_PANTING_COLD] = 'Porky Panting.ogg',                                              -- Getting cold
-        [CHAR_SOUND_ON_FIRE] = 'Porky Burning.ogg',                                                   -- Burned
+        [CHAR_SOUND_ON_FIRE] = 'Porky On Fire.ogg',                                                   -- Burned
         --SLEEP SOUNDS
         [CHAR_SOUND_IMA_TIRED] = 'Porky Ima Tired.ogg',                                               -- Mario feeling tired
-        [CHAR_SOUND_YAWNING] = 'Porky Yawn.ogg',                                                      -- Mario yawning before he sits down to sleep
-        [CHAR_SOUND_SNORING1] = 'Porky Snore 1 Inhale.ogg',                                           -- Snore Inhale
-        [CHAR_SOUND_SNORING2] = 'Porky Snore 2 Exhale.ogg',                                           -- Exhale
-        [CHAR_SOUND_SNORING3] = 'Porky Snore and Pasta.ogg',                                          -- Sleep talking / mumbling
+        [CHAR_SOUND_YAWNING] = 'Porky Yawning.ogg',                                                   -- Mario yawning before he sits down to sleep
+        [CHAR_SOUND_SNORING1] = 'Porky Snoring1.ogg',                                                 -- Snore Inhale
+        [CHAR_SOUND_SNORING2] = 'Porky Snoring2.ogg',                                                 -- Exhale
+        [CHAR_SOUND_SNORING3] = 'Porky Snoring3.ogg',                                                 -- Sleep talking / mumbling
         --COUGHING (USED IN THE GAS MAZE)
-        [CHAR_SOUND_COUGHING1] = 'Porky Cough.ogg',                                                   -- Cough take 1
-        [CHAR_SOUND_COUGHING2] = 'Porky Cough.ogg',                                                   -- Cough take 2
-        [CHAR_SOUND_COUGHING3] = 'Porky Cough.ogg',                                                   -- Cough take 3
+        [CHAR_SOUND_COUGHING1] = 'Porky Coughing.ogg',                                                -- Cough take 1
+        [CHAR_SOUND_COUGHING2] = 'Porky Coughing.ogg',                                                -- Cough take 2
+        [CHAR_SOUND_COUGHING3] = 'Porky Coughing.ogg',                                                -- Cough take 3
         --DEATH
-        [CHAR_SOUND_DYING] = 'Porky Game Over.ogg',                                                   -- Dying from damage
+        [CHAR_SOUND_DYING] = 'Porky Dying.ogg',                                                       -- Dying from damage
         [CHAR_SOUND_DROWNING] = 'Porky Drowning.ogg',                                                 -- Running out of air underwater
         [CHAR_SOUND_MAMA_MIA] =
         'Porky Mama Mia.ogg'                                                                          -- Booted out of level
@@ -334,12 +335,12 @@ CT_ELMER = addLooneyTunesChar({
     animData = {
         animTable = {
             [_G.charSelect.CS_ANIM_MENU] = ANIM_ELMER_CS_MENU,
-            [CHAR_ANIM_FIRST_PUNCH_FAST] = function (m)
+            [CHAR_ANIM_FIRST_PUNCH_FAST] = function(m)
                 if m.action == ACT_ELMER_SHOOT_SHOTGUN then
                     return ternary(m.forwardVel == 0, ANIM_ELMER_SHOOT_SHOTGUN, ANIM_ELMER_SHOOT_SHOTGUN_SLIDE)
                 end
             end,
-            [CHAR_ANIM_AIR_KICK] = function (m)
+            [CHAR_ANIM_AIR_KICK] = function(m)
                 if m.action == ACT_ELMER_AIR_SHOOT_SHOTGUN then
                     return ANIM_ELMER_SHOOT_SHOTGUN_AIR
                 end
@@ -369,7 +370,7 @@ CT_ELMER = addLooneyTunesChar({
         [CHAR_SOUND_WHOA] = 'Elmer Whoa.ogg',                                                         -- Grabbing ledge
         [CHAR_SOUND_EEUH] = 'Elmer Eeuh.ogg',                                                         -- Climbing over ledge
         [CHAR_SOUND_WAAAOOOW] = 'Elmer Waaaooow.ogg',                                                 -- Falling a long distance
-        [CHAR_SOUND_TWIRL_BOUNCE] = 'Elmer Boing.ogg',                                                -- Bouncing off of a flower spring
+        [CHAR_SOUND_TWIRL_BOUNCE] = 'Elmer Twirl Bounce.ogg',                                         -- Bouncing off of a flower spring
         [CHAR_SOUND_GROUND_POUND_WAH] = 'Elmer Wah.ogg',                                              -- Ground Pound after startup
         [CHAR_SOUND_WAH2] = 'Elmer Wah2.ogg',                                                         -- Throwing something
         [CHAR_SOUND_HRMM] = 'Elmer Hrmm.ogg',                                                         -- Lifting something
@@ -424,6 +425,55 @@ CT_SYLVESTER = addLooneyTunesChar({
         animTable = {
             [_G.charSelect.CS_ANIM_MENU] = ANIM_SYLVESTER_CS_MENU
         }
+    },
+    voices = {
+        [CHAR_SOUND_OKEY_DOKEY] = { 'Sylvester Hello.ogg', 'Sylvester Okey Dokey.ogg', 'Sylvester Itsa Me.ogg' }, -- Starting game
+        [CHAR_SOUND_LETS_A_GO] = 'Sylvester Letsa Go.ogg',                                              -- Starting level
+        [CHAR_SOUND_GAME_OVER] = 'Sylvester Game Over.ogg',                                             -- Game Overed
+        [CHAR_SOUND_PUNCH_YAH] = 'Sylvester Yah.ogg',                                                   -- Punch 1
+        [CHAR_SOUND_PUNCH_WAH] = 'Sylvester Wah.ogg',                                                   -- Punch 2
+        [CHAR_SOUND_PUNCH_HOO] = 'Sylvester Hoo.ogg',                                                   -- Punch 3
+        [CHAR_SOUND_YAH_WAH_HOO] = 'Sylvester Yah Wah Hoo.ogg',           -- First Jump Sounds
+        [CHAR_SOUND_HOOHOO] = 'Sylvester Hoohoo.ogg',                                                   -- Second jump sound
+        [CHAR_SOUND_YAHOO_WAHA_YIPPEE] = { 'Sylvester Yahoo.ogg', 'Sylvester Yippee.ogg' }, -- Triple jump sounds
+        [CHAR_SOUND_UH] = 'Sylvester Uh.ogg',                                                           -- Soft wall bonk
+        [CHAR_SOUND_UH2] = 'Sylvester Uh.ogg',                                                         -- Quick ledge get up
+        [CHAR_SOUND_UH2_2] = 'Sylvester Uh.ogg',                                                       -- Landing after long jump
+        [CHAR_SOUND_DOH] = 'Sylvester Ooof.ogg',                                                         -- Hard wall bonk
+        [CHAR_SOUND_OOOF] = 'Sylvester Ooof.ogg',                                                       -- Attacked in air
+        [CHAR_SOUND_OOOF2] = 'Sylvester Uh.ogg',                                                        -- Land from hard bonk
+        [CHAR_SOUND_HAHA] = 'Sylvester Yippee.ogg',                                                       -- Landing triple jump
+        [CHAR_SOUND_HAHA_2] = 'Sylvester Yippee.ogg',                                                     -- Landing in water from big fall
+        [CHAR_SOUND_YAHOO] = 'Sylvester Yahoo.ogg',                                                     -- Long jump
+        [CHAR_SOUND_DOH] = 'Sylvester Ooof.ogg',                                                         -- Long jump wall bonk
+        [CHAR_SOUND_WHOA] = 'Sylvester Ooof.ogg',                                                       -- Grabbing ledge
+        [CHAR_SOUND_EEUH] = 'Sylvester Eeuh.ogg',                                                       -- Climbing over ledge
+        [CHAR_SOUND_WAAAOOOW] = 'Sylvester Waaaooow.ogg',                                               -- Falling a long distance
+        [CHAR_SOUND_TWIRL_BOUNCE] = 'Sylvester Twirl Bounce.ogg',                                       -- Bouncing off of a flower spring
+        [CHAR_SOUND_GROUND_POUND_WAH] = 'Sylvester Hoo.ogg',                                            -- Ground Pound after startup
+        [CHAR_SOUND_WAH2] = 'Sylvester Wah2.ogg',                                                       -- Throwing something
+        [CHAR_SOUND_HRMM] = 'Sylvester Hrmm.ogg',                                                       -- Lifting something
+        [CHAR_SOUND_HERE_WE_GO] = 'Sylvester Here We Go.ogg',                                           -- Star get
+        [CHAR_SOUND_SO_LONGA_BOWSER] = 'Sylvester So Longa Bowser.ogg',                                 -- Throwing Bowser
+        --DAMAGE
+        [CHAR_SOUND_ATTACKED] = 'Sylvester Attacked.ogg',                                               -- Damaged
+        [CHAR_SOUND_PANTING] = 'Sylvester Panting.ogg',                                                 -- Low health
+        [CHAR_SOUND_PANTING_COLD] = 'Sylvester Panting.ogg',                                            -- Getting cold
+        [CHAR_SOUND_ON_FIRE] = 'Sylvester On Fire.ogg',                                                 -- Burned
+        --SLEEP SOUNDS
+        [CHAR_SOUND_IMA_TIRED] = 'Sylvester Ima Tired.ogg',                                             -- Mario feeling tired
+        [CHAR_SOUND_YAWNING] = 'Sylvester Yawning.ogg',                                                 -- Mario yawning before he sits down to sleep
+        [CHAR_SOUND_SNORING1] = 'Sylvester Snoring1.ogg',                                                -- Snore Inhale
+        [CHAR_SOUND_SNORING2] = 'Sylvester Snoring2.ogg',                                               -- Exhale
+        [CHAR_SOUND_SNORING3] = 'Sylvester Snoring3.ogg',                                               -- Sleep talking / mumbling
+        --COUGHING (USED IN THE GAS MAZE)
+        [CHAR_SOUND_COUGHING1] = 'Sylvester Panting.ogg',                                              -- Cough take 1
+        [CHAR_SOUND_COUGHING2] = 'Sylvester Panting.ogg',                                              -- Cough take 2
+        [CHAR_SOUND_COUGHING3] = 'Sylvester Panting.ogg',                                              -- Cough take 3
+        --DEATH
+        [CHAR_SOUND_DYING] = 'Sylvester Dying.ogg',                                                     -- Dying from damage
+        [CHAR_SOUND_DROWNING] = 'Sylvester Dying.ogg',                                               -- Running out of air underwater
+        [CHAR_SOUND_MAMA_MIA] = 'Sylvester Mama Mia.ogg'                                                -- Booted out of level
     }
 })
 
@@ -491,7 +541,7 @@ CT_MARVIN = addLooneyTunesChar({
         --SLEEP SOUNDS
         [CHAR_SOUND_IMA_TIRED] = 'Marvin Ima Tired.ogg',                                                 -- Mario feeling tired
         [CHAR_SOUND_YAWNING] = 'Marvin Yawning.ogg',                                                     -- Mario yawning before he sits down to sleep
-        [CHAR_SOUND_SNORING3] = 'Marvin Snoring 3.ogg',                                                  -- Sleep talking / mumbling
+        [CHAR_SOUND_SNORING3] = 'Marvin Snoring3.ogg',                                                  -- Sleep talking / mumbling
         --COUGHING (USED IN THE GAS MAZE)
         [CHAR_SOUND_COUGHING1] = 'Marvin Coughing.ogg',                                                  -- Cough take 1
         [CHAR_SOUND_COUGHING2] = 'Marvin Coughing.ogg',                                                  -- Cough take 2
@@ -579,7 +629,8 @@ CT_FOGHORN = addLooneyTunesChar({
         --DEATH
         [CHAR_SOUND_DYING] = 'Foghorn Dying.ogg',                                                           -- Dying from damage
         [CHAR_SOUND_DROWNING] = 'Foghorn Drowning.ogg',                                                     -- Running out of air underwater
-        [CHAR_SOUND_MAMA_MIA] = 'Foghorn Mama Mia.ogg'                                                      -- Booted out of level
+        [CHAR_SOUND_MAMA_MIA] =
+        'Foghorn Mama Mia.ogg'                                                                              -- Booted out of level
     }
 })
 
