@@ -1,0 +1,13 @@
+extern const GeoLayout marvin_tnt_geo[];
+extern Lights1 marvin_tnt_body_lights;
+extern Lights1 marvin_tnt_cord_lights;
+extern Vtx marvin_tnt_tnt_mesh_layer_1_vtx_cull[8];
+extern Vtx marvin_tnt_tnt_mesh_layer_1_vtx_0[138];
+extern Gfx marvin_tnt_tnt_mesh_layer_1_tri_0[];
+extern Vtx marvin_tnt_tnt_mesh_layer_1_vtx_1[845];
+extern Gfx marvin_tnt_tnt_mesh_layer_1_tri_1[];
+extern Gfx mat_marvin_tnt_body[];
+extern Gfx mat_revert_marvin_tnt_body[];
+extern Gfx mat_marvin_tnt_cord[];
+extern Gfx mat_revert_marvin_tnt_cord[];
+extern Gfx marvin_tnt_tnt_mesh_layer_1[];

@@ -501,7 +501,19 @@ CT_MARVIN = addLooneyTunesChar({
     },
     animData = {
         animTable = {
-            [_G.charSelect.CS_ANIM_MENU] = ANIM_MARVIN_CS_MENU
+            [_G.charSelect.CS_ANIM_MENU] = ANIM_MARVIN_CS_MENU,
+            [CHAR_ANIM_FIRST_PUNCH_FAST] = function(m)
+                if m.action == ACT_MARVIN_SHOOT_LASER then
+                    return ANIM_MARVIN_SHOOT_LASER
+                elseif m.action == ACT_MARVIN_AIR_SHOOT_LASER then
+                    return ANIM_MARVIN_SHOOT_LASER_AIR
+                end
+            end,
+            [CHAR_ANIM_PICK_UP_LIGHT_OBJ] = function (m)
+                if m.action == ACT_MARVIN_GRAB_TNT then
+                    return ANIM_MARVIN_GRAB_TNT
+                end
+            end
         }
     },
     voices = {

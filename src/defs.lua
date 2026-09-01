@@ -31,15 +31,34 @@
 local playerTable = gPlayerSyncTable
 
 for i = 0, MAX_PLAYERS - 1 do
-    playerTable[i].elmerSGTimer = 0
+    playerTable[i].shootActTimer = 0
 end
+
+PREVENT_ACT_FLAGS = (
+	ACT_FLAG_INVULNERABLE |
+	ACT_FLAG_THROWING |
+	ACT_FLAG_RIDING_SHELL |
+	ACT_FLAG_SWIMMING_OR_FLYING |
+	ACT_FLAG_BUTT_OR_STOMACH_SLIDE
+)
+
+PREVENT_ACT_GROUPS = {
+    [ACT_GROUP_CUTSCENE] = true,
+    [ACT_GROUP_SUBMERGED] = true,
+	[ACT_GROUP_AUTOMATIC] = true
+}
 
 ACT_BUGS_HOVER = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_MOVING)
 ACT_ELMER_SHOOT_SHOTGUN = allocate_mario_action(ACT_GROUP_MOVING | ACT_FLAG_MOVING)
 ACT_ELMER_AIR_SHOOT_SHOTGUN = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR)
+ACT_MARVIN_SHOOT_LASER = allocate_mario_action(ACT_GROUP_MOVING | ACT_FLAG_MOVING)
+ACT_MARVIN_AIR_SHOOT_LASER = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR)
+ACT_MARVIN_GRAB_TNT = allocate_mario_action(ACT_GROUP_STATIONARY | ACT_FLAG_STATIONARY)
 
 E_MODEL_BUGS_EARS = smlua_model_util_get_id('bugs_ears_geo')
 E_MODEL_MARVIN_LASER = smlua_model_util_get_id('marvin_laser_geo')
+E_MODEL_MARVIN_TNT = smlua_model_util_get_id('marvin_tnt_geo')
+E_MODEL_EXPLOSION_KABOOM = smlua_model_util_get_id('explosion_kaboom_geo')
 
 ANIM_BUGS_CS_MENU = 'bugs_cs_menu'
 ANIM_DAFFY_CS_MENU = 'daffy_cs_menu'
@@ -50,6 +69,9 @@ ANIM_ELMER_SHOOT_SHOTGUN_SLIDE = 'elmer_shoot_shotgun_slide'
 ANIM_ELMER_SHOOT_SHOTGUN_AIR = 'elmer_shoot_shotgun_air'
 ANIM_SYLVESTER_CS_MENU = 'sylvester_cs_menu'
 ANIM_MARVIN_CS_MENU = 'marvin_cs_menu'
+ANIM_MARVIN_SHOOT_LASER = 'marvin_shoot_laser'
+ANIM_MARVIN_SHOOT_LASER_AIR = 'marvin_shoot_laser_air'
+ANIM_MARVIN_GRAB_TNT = 'marvin_grab_tnt'
 ANIM_FOGHORN_CS_MENU = 'foghorn_cs_menu'
 
 STREAM_CREDITS = audio_stream_load('LT64 Credits.ogg')
@@ -99,7 +121,8 @@ end
 
 function geo_railgun_switch(node)
     local gn = cast_graph_node(node)
-    gn.selectedCase = 1
+    local m = geo_get_mario_state()
+    gn.selectedCase = ternary(m.action == ACT_MARVIN_SHOOT_LASER or m.action == ACT_MARVIN_AIR_SHOOT_LASER, 1, 0)
 end
 
 function geo_shotgun_switch(node)

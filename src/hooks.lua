@@ -1,10 +1,59 @@
+local nps = gNetworkPlayers
 local playerTable = gPlayerSyncTable
 
 local hooks = {}
 
 function hooks.update()
-    if playerTable[0].elmerSGTimer > 0 then
-        playerTable[0].elmerSGTimer = playerTable[0].elmerSGTimer - 1
+    if playerTable[0].shootActTimer > 0 then
+        playerTable[0].shootActTimer = playerTable[0].shootActTimer - 1
+    end
+end
+
+local SHOOT_ACTS = {
+    [CT_ELMER] = { ground = ACT_ELMER_SHOOT_SHOTGUN, air = ACT_ELMER_AIR_SHOOT_SHOTGUN },
+    [CT_MARVIN] = { ground = ACT_MARVIN_SHOOT_LASER, air = ACT_MARVIN_AIR_SHOOT_LASER }
+}
+
+---@param m MarioState
+function hooks.before_set_mario_action(m, incAct)
+
+    if not _G.charSelect.gCSPlayers[m.playerIndex].movesetToggle then return end
+
+    if incAct == ACT_PUNCHING or incAct == ACT_MOVE_PUNCHING or incAct == ACT_JUMP_KICK then
+
+        local shootData = SHOOT_ACTS[_G.charSelect.character_get_current_number(m.playerIndex)]
+
+        if not shootData then return end
+
+        if playerTable[m.playerIndex].shootActTimer == 0 then
+            return set_mario_action(m, ternary(m.floorHeight == m.pos.y, shootData.ground, shootData.air), 0)
+        end
+        return 1
+    end
+end
+
+---@param m MarioState
+---@param o Object
+---@param intType InteractionType
+---@param interacted boolean
+function hooks.on_interact(m, o, intType, interacted)
+
+    if not _G.charSelect.gCSPlayers[m.playerIndex].movesetToggle then return end
+
+    local shootData = SHOOT_ACTS[_G.charSelect.character_get_current_number(m.playerIndex)]
+
+    if not shootData then return end
+
+    if intType == INTERACT_GRABBABLE and
+    not interacted and
+    o.oInteractionSubtype & INT_SUBTYPE_NOT_GRABBABLE == 0 and
+    m.action == shootData.ground then
+        m.interactObj = o
+        m.input = m.input | INPUT_INTERACT_OBJ_GRABBABLE
+
+        if o.oSyncID ~= 0 then
+            network_send_object(o, true)
+        end
     end
 end
 
@@ -75,31 +124,14 @@ function hooks.bugs_on_set_mario_action(m)
 end
 
 ---@param m MarioState
-function hooks.elmer_before_set_mario_action(m, incAct)
-    if incAct == ACT_PUNCHING or incAct == ACT_MOVE_PUNCHING or incAct == ACT_JUMP_KICK then
-        if playerTable[m.playerIndex].elmerSGTimer == 0 then
-            return set_mario_action(m, ternary(m.floorHeight == m.pos.y, ACT_ELMER_SHOOT_SHOTGUN, ACT_ELMER_AIR_SHOOT_SHOTGUN), 0)
-        end
-        return 1
-    end
-end
-
----@param m MarioState
----@param o Object
----@param intType InteractionType
----@param interacted boolean
-function hooks.elmer_on_interact(m, o, intType, interacted)
-
-    if intType == INTERACT_GRABBABLE and
-    not interacted and
-    o.oInteractionSubtype & INT_SUBTYPE_NOT_GRABBABLE == 0 and
-    m.action == ACT_ELMER_SHOOT_SHOTGUN then
-        m.interactObj = o
-        m.input = m.input | INPUT_INTERACT_OBJ_GRABBABLE
-
-        if o.oSyncID ~= 0 then
-            network_send_object(o, true)
-        end
+function hooks.marvin_mario_update(m)
+    if m.controller.buttonPressed == X_BUTTON and
+    playerTable[m.playerIndex].shootActTimer == 0 and
+    m.floorHeight == m.pos.y and
+    m.action & (PREVENT_ACT_FLAGS) == 0 and
+    not PREVENT_ACT_GROUPS[m.action & ACT_GROUP_MASK] and
+    m.action ~= ACT_MARVIN_SHOOT_LASER and m.action ~= ACT_MARVIN_GRAB_TNT then
+        set_mario_action(m, ACT_MARVIN_GRAB_TNT, 0)
     end
 end
 

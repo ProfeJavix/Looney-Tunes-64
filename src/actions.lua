@@ -1,110 +1,10 @@
 local nps = gNetworkPlayers
-local states = gMarioStates
 local playerTable = gPlayerSyncTable
 
-local loops = {}
-
----@param o Object
-function loops.bhv_helicopter_ears_init(o)
-    o.oFlags = o.oFlags | OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE
-end
-
----@param o Object
-function loops.bhv_helicopter_ears_loop(o)
-    local m = states[getLocalFromGlobalIdx(o.oOwner)]
-
-    if not m or m.action ~= ACT_BUGS_HOVER then
-        obj_mark_for_deletion(o)
-        return
-    end
-
-    o.oAction = m.marioBodyState.modelState >> 8
-    o.oOpacity = ternary(m.marioBodyState.modelState & MODEL_STATE_NOISE_ALPHA ~= 0, 100, 255)
-
-    o.oPosX = m.pos.x
-    o.oPosY = m.pos.y + 132
-    o.oPosZ = m.pos.z
-    obj_set_gfx_pos_from_pos(o)
-
-    o.oFaceAngleYaw = o.oFaceAngleYaw + 0x2000
-end
-
----@param o Object
-function loops.bhv_elmer_bullet_init(o)
-    o.oFlags = o.oFlags | OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE
-
-    o.oGraphYOffset = 10
-    o.oWallHitboxRadius = 10
-    o.oDragStrength = 10
-    o.oFriction = 10
-
-    cur_obj_set_hitbox_radius_and_height(10, 20)
-    o.hitboxDownOffset = 10
-
-    obj_set_billboard(o)
-    cur_obj_scale(0.1)
-
-    network_init_object(o, true, { 'oTimer', 'oAction' })
-end
-
----@param o Object
-function loops.bhv_elmer_bullet_loop(o)
-
-    if o.oAction == 1 then
-        cur_obj_disable()
-        if o.oTimer < 3 then
-            spawn_non_sync_object(id_bhvSmoke, E_MODEL_SMOKE, o.oPosX, o.oPosY, o.oPosZ, function() end)
-            return
-        else
-            o.oTimer = 300
-        end
-    end
-
-    if o.oTimer >= 300 then
-        obj_mark_for_deletion(o)
-        return
-    end
-
-    for _ = 1, 3 do
-        local fVel = 40
-        cur_obj_update_floor_and_walls()
-
-        obj_compute_vel_from_move_pitch(fVel)
-        cur_obj_compute_vel_xz()
-
-        local hit = affectAllObjects(
-            o,
-            function(att, vic)
-                return obj_check_hitbox_overlap(att, vic)
-            end,
-            true
-        )
-
-        if o.oMoveFlags & (OBJ_MOVE_HIT_WALL | OBJ_MOVE_MASK_ON_GROUND) ~= 0 or hit then
-            o.oTimer = 0
-            o.oAction = 1
-            cur_obj_play_sound_2(ternary(hit, SOUND_ACTION_HIT_2, SOUND_GENERAL_VOLCANO_EXPLOSION))
-            return
-        end
-
-        o.oPosX = o.oPosX + o.oVelX
-        o.oPosY = o.oPosY + o.oVelY
-        o.oPosZ = o.oPosZ + o.oVelZ
-    end
-end
-
----@param o Object
-function loops.bhv_marvin_laser_init(o)
-    o.oFlags = o.oFlags | OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE
-end
-
----@param o Object
-function loops.bhv_marvin_laser_loop(o)
-
-end
+local acts = {}
 
 ---@param m MarioState
-function loops.act_bugs_hover(m)
+function acts.act_bugs_hover(m)
 
     if m.input & INPUT_B_PRESSED ~= 0 then
         return set_mario_action(m, ACT_DIVE, 0)
@@ -156,9 +56,9 @@ function loops.act_bugs_hover(m)
 end
 
 ---@param m MarioState
-function loops.act_elmer_shoot_shotgun(m)
+function acts.act_elmer_shoot_shotgun(m)
 
-    playerTable[m.playerIndex].elmerSGTimer = 3
+    playerTable[m.playerIndex].shootActTimer = 3
 
     local frame = m.marioObj.header.gfx.animInfo.animFrame
     local animID = m.marioObj.header.gfx.animInfo.animID
@@ -229,6 +129,8 @@ function loops.act_elmer_shoot_shotgun(m)
         set_character_animation(m, animID)
     end
 
+    m.marioBodyState.eyeState = ternary(frame > 6 and frame < 15, MARIO_EYES_CLOSED, MARIO_EYES_HALF_CLOSED)
+
     if frame == 8 then
         local bulletPos = {
             x = get_hand_foot_pos_x(m, 0) + 70 * sins(m.faceAngle.y),
@@ -240,15 +142,16 @@ function loops.act_elmer_shoot_shotgun(m)
         spawn_non_sync_object(id_bhvSmoke, E_MODEL_SMOKE, bulletPos.x, bulletPos.y, bulletPos.z, function() end)
 
         if m.playerIndex == 0 and m.actionArg == 0 then
-            local target = getAutoTarget(m, 0x1000, 1500)
+            local target, pitch = getAutoTarget(m, bulletPos, 0x1000, 1500)
 
             set_camera_shake_from_hit(SHAKE_FOV_UNUSED)
             spawn_sync_object(id_bhvElmerBullet, E_MODEL_BOWLING_BALL, bulletPos.x, bulletPos.y, bulletPos.z, function(o)
                 o.oOwner = nps[0].globalIndex
 
                 if target then
-                    o.oMoveAnglePitch = obj_pitch_to_object(o, target)
-                    o.oMoveAngleYaw = obj_angle_to_object(o, target)
+                    o.oSubAction = 1
+                    o.oMoveAnglePitch = pitch
+                    o.oMoveAngleYaw = math.s16(obj_angle_to_point(target, bulletPos.x, bulletPos.z) - 0x8000)
                 else
                     o.oMoveAnglePitch = 0
                     o.oMoveAngleYaw = m.faceAngle.y
@@ -264,4 +167,126 @@ function loops.act_elmer_shoot_shotgun(m)
     end
 end
 
-return loops
+---@param m MarioState
+function acts.act_marvin_shoot_laser(m)
+    playerTable[m.playerIndex].shootActTimer = 3
+    set_character_animation(m, CHAR_ANIM_FIRST_PUNCH_FAST)
+
+    local frame = m.marioObj.header.gfx.animInfo.animFrame
+
+    if frame == 12 and m.actionArg == 0 then
+        local laserPos = {
+            x = get_hand_foot_pos_x(m, 0) + 35 * sins(m.faceAngle.y),
+            y = get_hand_foot_pos_y(m, 0) + 5,
+            z = get_hand_foot_pos_z(m, 0) + 35 * coss(m.faceAngle.y)
+        }
+        spawn_non_sync_object(id_bhvSmoke, E_MODEL_SMOKE, laserPos.x, laserPos.y - 20, laserPos.z, function() end)
+
+        if m.playerIndex == 0 then
+            local target, pitch = getAutoTarget(m, laserPos, 0x1200, 2000)
+
+            spawn_sync_object(id_bhvMarvinLaser, E_MODEL_MARVIN_LASER, laserPos.x, laserPos.y, laserPos.z, function(o)
+                o.oOwner = nps[0].globalIndex
+
+                if target then
+                    o.oSubAction = 1
+                    o.oMoveAnglePitch = pitch
+                    o.oMoveAngleYaw = math.s16(obj_angle_to_point(target, laserPos.x, laserPos.z) - 0x8000)
+                else
+                    o.oMoveAnglePitch = 0
+                    o.oMoveAngleYaw = m.faceAngle.y
+                end
+            end)
+            m.actionArg = 1
+        end
+    end
+
+    if m.action == ACT_MARVIN_SHOOT_LASER then
+
+        if should_begin_sliding(m) ~= 0 then
+            return set_mario_action(m, ACT_BEGIN_SLIDING, 0)
+        end
+
+        if mario_check_object_grab(m) ~= 0 then
+            set_character_animation(m, CHAR_ANIM_FIRST_PUNCH)
+            set_anim_to_frame(m, 0)
+            return 1
+        end
+
+        if m.forwardVel >= 0 then
+            apply_slope_decel(m, 0.7)
+        else
+            m.forwardVel = approach_f32_symmetric(m.forwardVel, 0, 8)
+            apply_slope_accel(m)
+        end
+
+        local step = perform_ground_step(m)
+        if step == GROUND_STEP_LEFT_GROUND then
+            set_mario_action(m, ACT_MARVIN_AIR_SHOOT_LASER, m.actionArg)
+            set_anim_to_frame(m, frame)
+            return 1
+        elseif step == GROUND_STEP_NONE and m.forwardVel ~= 0 then
+            set_mario_particle_flags(m, PARTICLE_DUST, 0)
+        end
+    else
+        update_air_without_turn(m)
+
+        local step = perform_air_step(m, 0)
+        if step == AIR_STEP_LANDED then
+            if check_fall_damage_or_get_stuck(m, ACT_HARD_BACKWARD_GROUND_KB) == 0 then
+                set_mario_action(m, ACT_MARVIN_SHOOT_LASER, m.actionArg)
+                set_anim_to_frame(m, frame)
+                return 1
+            end
+        end
+    end
+
+    if m.controller.buttonPressed & B_BUTTON ~= 0 and frame >= 20 and frame <= 25 then
+        set_anim_to_frame(m, 8)
+        m.actionState = m.actionState + 1
+        m.actionArg = 0
+    elseif frame < 6 and m.action == ACT_MARVIN_AIR_SHOOT_LASER then
+        set_anim_to_frame(m, 6)
+    end
+
+    if is_anim_at_end(m) ~= 0 then
+        return set_mario_action(m, ACT_IDLE, 0)
+    end
+end
+
+---@param m MarioState
+function acts.act_marvin_grab_tnt(m)
+
+    playerTable[m.playerIndex].shootActTimer = 5
+
+    if should_begin_sliding(m) ~= 0 then
+        return set_mario_action(m, ACT_BEGIN_SLIDING, 0)
+    end
+
+    if m.input & INPUT_OFF_FLOOR ~= 0 then
+        return set_mario_action(m, ACT_FREEFALL, 0)
+    end
+
+    play_character_sound_if_no_flag(m, CHAR_SOUND_WAH2, MARIO_MARIO_SOUND_PLAYED)
+    mario_set_forward_vel(m, 0)
+    stationary_ground_step(m)
+
+    local frame = m.marioObj.header.gfx.animInfo.animFrame
+    if frame == 10 and m.playerIndex == 0 then
+        m.usedObj = spawn_sync_object(id_bhvMarvinTNT, E_MODEL_MARVIN_TNT, m.pos.x, m.pos.y, m.pos.z, function (o)
+            o.oOwner = nps[0].globalIndex
+        end)
+        network_send_object(m.usedObj, true)
+    elseif frame == 11 then
+        mario_grab_used_object(m)
+    elseif frame == 20 then
+        mario_throw_held_object(m)
+    end
+
+    set_character_animation(m, CHAR_ANIM_PICK_UP_LIGHT_OBJ)
+    if is_anim_at_end(m) ~= 0 then
+        return set_mario_action(m, ACT_IDLE, 0)
+    end
+end
+
+return acts

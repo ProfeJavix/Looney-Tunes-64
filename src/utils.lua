@@ -1,73 +1,88 @@
 local nps = gNetworkPlayers
 local states = gMarioStates
 
-local targetBhvs = {
-	id_bhvMario,
-	id_bhvBalconyBigBoo,
-	id_bhvBigBully,
-	id_bhvBigChillBully,
-	id_bhvBobomb,
-	id_bhvBoo,
-	id_bhvBooWithCage,
-	id_bhvBowser,
-	id_bhvBulletBill,
-	id_bhvChainChomp,
-	id_bhvChuckya,
-	id_bhvEnemyLakitu,
-	id_bhvFlyGuy,
-	id_bhvFlyingBookend,
-	id_bhvGhostHuntBigBoo,
-	id_bhvGhostHuntBoo,
-	id_bhvGoomba,
-	id_bhvHauntedChair,
-	id_bhvKoopa,
-	id_bhvMerryGoRoundBigBoo,
-	id_bhvMerryGoRoundBoo,
-    id_bhvMips,
-	id_bhvMoneybag,
-	id_bhvMontyMole,
-	id_bhvPiranhaPlant,
-	id_bhvPokey,
-	id_bhvScuttlebug,
-	id_bhvSkeeter,
-	id_bhvSmallBully,
-	id_bhvSmallChillBully,
-	id_bhvSmallPenguin,
-	id_bhvSnufit,
-	id_bhvSpindrift,
-	id_bhvSpiny,
-	id_bhvToadMessage,
-    id_bhvTuxiesMother,
-	id_bhvWigglerBody,
-	id_bhvWigglerHead
-}
-
 ---@param m MarioState
+---@param pPos Vec3f
 ---@param range integer
 ---@param minDist? number
----@return Object|nil
-function getAutoTarget(m, range, minDist)
-	minDist = minDist or 2000
-	local target = nil
+---@return Object|nil, integer
+function getAutoTarget(m, pPos, range, minDist)
+    local targetBhvs = {
+        id_bhvMario,
+        id_bhvBalconyBigBoo,
+        id_bhvBigBully,
+        id_bhvBigChillBully,
+        id_bhvBobomb,
+        id_bhvBoo,
+        id_bhvBooWithCage,
+        id_bhvBowser,
+        id_bhvBulletBill,
+        id_bhvChainChomp,
+        id_bhvChuckya,
+        id_bhvEnemyLakitu,
+        id_bhvFlyGuy,
+        id_bhvFlyingBookend,
+        id_bhvGhostHuntBigBoo,
+        id_bhvGhostHuntBoo,
+        id_bhvGoomba,
+        id_bhvHauntedChair,
+        id_bhvKoopa,
+        id_bhvMerryGoRoundBigBoo,
+        id_bhvMerryGoRoundBoo,
+        id_bhvMips,
+        id_bhvMoneybag,
+        id_bhvMontyMole,
+        id_bhvPiranhaPlant,
+        id_bhvPokey,
+        id_bhvScuttlebug,
+        id_bhvSkeeter,
+        id_bhvSmallBully,
+        id_bhvSmallChillBully,
+        id_bhvSmallPenguin,
+        id_bhvSnufit,
+        id_bhvSpindrift,
+        id_bhvSpiny,
+        id_bhvToadMessage,
+        id_bhvTuxiesMother,
+        id_bhvWigglerBody,
+        id_bhvWigglerHead,
+        id_bhvMarvinTNT
+    }
 
-	for _, id in ipairs(targetBhvs) do
-		local curO = obj_get_first_with_behavior_id(id)
-		while curO do
-			if id ~= id_bhvMario or (curO ~= m.marioObj and is_player_active(states[curO.oBehParams - 1]) ~= 0) then
-				local dist = dist_between_objects(m.marioObj, curO)
-				if dist < minDist and
+    minDist = minDist or 2000
+    local target = nil
+    local pitch = 0
+
+    for _, id in ipairs(targetBhvs) do
+        local curO = obj_get_first_with_behavior_id(id)
+        while curO do
+            if id ~= id_bhvMario or (curO ~= m.marioObj and is_player_active(states[curO.oBehParams - 1]) ~= 0) then
+                local dist = dist_between_objects(m.marioObj, curO)
+                if dist < minDist and
                 math.abs(obj_pitch_to_object(m.marioObj, curO)) < 0x2200 and
                 abs_angle_diff(obj_angle_to_object(m.marioObj, curO), m.faceAngle.y) < range then
-					minDist = dist
-					target = curO
-				end
-			end
+                    minDist = dist
+                    target = curO
+                end
+            end
 
-			curO = obj_get_next_with_same_behavior_id(curO)
-		end
-	end
+            curO = obj_get_next_with_same_behavior_id(curO)
+        end
+    end
 
-	return target
+    if target then
+        local mPos = gVec3fZero()
+        object_pos_to_vec3f(mPos, m.marioObj)
+        target.oPosY = target.oPosY + target.hitboxHeight / 2
+
+        vec3f_to_object_pos(m.marioObj, pPos)
+        pitch = obj_pitch_to_object(m.marioObj, target)
+
+        vec3f_to_object_pos(m.marioObj, mPos)
+        target.oPosY = target.oPosY - target.hitboxHeight / 2
+    end
+
+    return target, pitch
 end
 
 local validAffectLists = {
@@ -106,9 +121,12 @@ function affectAllObjects(attacker, checkFunc, onlyFirst)
             if list == OBJ_LIST_PLAYER then
                 local m = states[curO.oBehParams - 1]
                 if is_player_active(m) ~= 0 and nps[m.playerIndex].globalIndex ~= attacker.oOwner and
-                m.action & ACT_GROUP_MASK ~= ACT_GROUP_CUTSCENE and
-                m.action & (ACT_FLAG_INVULNERABLE | ACT_FLAG_INTANGIBLE) == 0 and m.invincTimer == 0 then
+                    m.action & ACT_GROUP_MASK ~= ACT_GROUP_CUTSCENE and
+                    m.action & (ACT_FLAG_INVULNERABLE | ACT_FLAG_INTANGIBLE) == 0 and m.invincTimer == 0 then
                     hit = checkFunc(attacker, curO)
+                    if hit then
+                        interact_damage(m, 0, attacker)
+                    end
                 end
             elseif list == OBJ_LIST_SURFACE then
                 hit = true
@@ -140,10 +158,36 @@ function affectAllObjects(attacker, checkFunc, onlyFirst)
     return false
 end
 
+---@param o Object
+---@param speed number
+---@param stopFlags integer
+---@param hitFunc? fun(projectile: Object): boolean
+---@return integer
+function moveProjectile(o, speed, stopFlags, hitFunc)
+    for i = 1, math.ceil(speed / 40) do
+        local fVel = ternary(i * 40 <= speed, 40, speed - (40 * (i - 1)))
+        cur_obj_update_floor_and_walls()
+
+        obj_compute_vel_from_move_pitch(fVel)
+        cur_obj_compute_vel_xz()
+
+        if hitFunc and hitFunc(o) then
+            return 1
+        elseif o.oMoveFlags & stopFlags ~= 0 then
+            return 2
+        end
+
+        o.oPosX = o.oPosX + o.oVelX
+        o.oPosY = o.oPosY + o.oVelY
+        o.oPosZ = o.oPosZ + o.oVelZ
+    end
+
+    return 0
+end
+
 ---@param globalIdx integer
 ---@return integer
 function getLocalFromGlobalIdx(globalIdx)
-
     if globalIdx < 0 or globalIdx >= MAX_PLAYERS then return -1 end
 
     for i = 0, MAX_PLAYERS - 1 do
@@ -158,15 +202,14 @@ end
 ---@param ifTrue any
 ---@param ifFalse any
 function ternary(cond, ifTrue, ifFalse)
-	if cond then
-		return ifTrue
-	else
-		return ifFalse
-	end
+    if cond then
+        return ifTrue
+    else
+        return ifFalse
+    end
 end
 
 function debugLog(msg, ...)
-
     local parts = { tostring(msg) }
 
     for i = 1, select("#", ...) do
