@@ -56,6 +56,88 @@ function acts.act_bugs_hover(m)
 end
 
 ---@param m MarioState
+function acts.act_daffy_pound(m)
+    set_character_animation(m, CHAR_ANIM_GROUND_POUND)
+
+    if m.actionState == 0 then
+        m.peakHeight = m.pos.y
+        m.vel.y = -60
+        mario_set_forward_vel(m, 0)
+
+        if is_anim_at_end(m) ~= 0 then
+            m.actionState = 1
+        end
+    else
+        local step = perform_air_step(m, 0)
+        if step == AIR_STEP_LANDED then
+            if check_fall_damage_or_get_stuck(m, ACT_HARD_BACKWARD_GROUND_KB) == 0 then
+                if m.playerIndex == 0 then
+                    set_camera_shake_from_hit(SHAKE_GROUND_POUND)
+                end
+            elseif m.action ~= ACT_HARD_BACKWARD_GROUND_KB then
+                queue_rumble_data_mario(m, 5, 80)
+                set_mario_particle_flags(m, PARTICLE_MIST_CIRCLE, 0)
+                play_character_sound(m, CHAR_SOUND_OOOF2)
+                return set_mario_action(m, ACT_BUTT_STUCK_IN_GROUND, 0)
+            end
+
+            play_mario_heavy_landing_sound(m, SOUND_ACTION_TERRAIN_HEAVY_LANDING)
+            if m.action ~= ACT_HARD_BACKWARD_GROUND_KB then
+                set_mario_particle_flags(m, (PARTICLE_MIST_CIRCLE | PARTICLE_HORIZONTAL_STAR), 0)
+                return set_mario_action(m, ACT_DAFFY_POUND_LAND, m.actionArg)
+            end
+        end
+    end
+end
+
+---@param m MarioState
+function acts.act_daffy_pound_land(m)
+    if m.input & INPUT_UNKNOWN_10 ~= 0 then
+        return drop_and_set_mario_action(m, ACT_SHOCKWAVE_BOUNCE, 0)
+    end
+
+    if m.input & INPUT_OFF_FLOOR ~= 0 then
+        return set_mario_action(m, ACT_FREEFALL, 0)
+    end
+
+    if m.input & INPUT_ABOVE_SLIDE ~= 0 then
+        return set_mario_action(m, ACT_BUTT_SLIDE, 0)
+    end
+
+    if m.actionTimer > 3 and (m.actionArg == 0 or m.controller.buttonDown & Z_TRIG ~= 0) then
+        m.vel.y = 50
+        return set_mario_action(m, ACT_DAFFY_POUND_BOUNCE, m.actionArg)
+    end
+    m.actionTimer = m.actionTimer + 1
+
+    landing_step(m, CHAR_ANIM_GROUND_POUND_LANDING, ACT_BUTT_SLIDE_STOP)
+end
+
+---@param m MarioState
+function acts.act_daffy_pound_bounce(m)
+    play_character_sound_if_no_flag(m, CHAR_SOUND_GROUND_POUND_WAH, MARIO_MARIO_SOUND_PLAYED)
+
+    if m.vel.y < 10 and m.controller.buttonDown & Z_TRIG ~= 0 then
+        return set_mario_action(m, ACT_DAFFY_POUND, 1)
+    end
+
+    update_air_with_turn(m)
+    common_air_action_step(m, ACT_DOUBLE_JUMP_LAND, CHAR_ANIM_DOUBLE_JUMP_RISE, AIR_STEP_CHECK_LEDGE_GRAB | AIR_STEP_CHECK_HANG)
+end
+
+---@param m MarioState
+function acts.act_daffy_mallet_swing(m)
+    --temp, just for anim test
+
+    set_character_animation(m, CHAR_ANIM_A_POSE)
+    smlua_anim_util_set_animation(m.marioObj, 'daffy_swing_anim')
+
+    if is_anim_at_end(m) ~= 0 then
+        return set_mario_action(m, ACT_IDLE, 0)
+    end
+end
+
+---@param m MarioState
 function acts.act_elmer_shoot_shotgun(m)
 
     playerTable[m.playerIndex].shootActTimer = 3
@@ -286,6 +368,63 @@ function acts.act_marvin_grab_tnt(m)
     set_character_animation(m, CHAR_ANIM_PICK_UP_LIGHT_OBJ)
     if is_anim_at_end(m) ~= 0 then
         return set_mario_action(m, ACT_IDLE, 0)
+    end
+end
+
+---@param m MarioState
+function acts.act_foghorn_slap(m)
+    if should_begin_sliding(m) ~= 0 then
+        return set_mario_action(m, ACT_BEGIN_SLIDING, 0)
+    end
+
+    if m.input & INPUT_OFF_FLOOR ~= 0 then
+        return set_mario_action(m, ACT_FREEFALL, 0)
+    end
+
+    if mario_check_object_grab(m) ~= 0 then
+        set_character_animation(m, CHAR_ANIM_FIRST_PUNCH)
+        set_anim_to_frame(m, 0)
+        return 1
+    end
+
+    m.marioBodyState.handState = MARIO_HAND_OPEN
+
+    if m.action == ACT_FOGHORN_SLAP_CHARGE then
+
+        if m.forwardVel >= 0 then
+            apply_slope_decel(m, 0.8)
+        else
+            m.forwardVel = approach_f32_symmetric(m.forwardVel, 0, 8)
+            apply_slope_accel(m)
+        end
+
+        local step = perform_ground_step(m)
+        if step == GROUND_STEP_NONE and m.forwardVel ~= 0 then
+            set_mario_particle_flags(m, PARTICLE_DUST, 0)
+        end
+
+        if m.actionState == 0 then
+            set_character_animation(m, CHAR_ANIM_FIRST_PUNCH_FAST)
+            if is_anim_at_end(m) ~= 0 then
+                m.actionState = 1
+            end
+        else
+            if m.controller.buttonDown & B_BUTTON == 0 then
+                return set_mario_action(m, ACT_FOGHORN_SLAP_RELEASE, m.actionTimer)
+            end
+
+            m.actionTimer = math.min(m.actionTimer + 1, 150)
+            set_character_anim_with_accel(m, CHAR_ANIM_SECOND_PUNCH, 0x10000 * (1 + m.actionTimer / 50))
+        end
+    else
+        set_character_animation(m, CHAR_ANIM_SECOND_PUNCH_FAST)
+        play_character_sound_if_no_flag(m, CHAR_SOUND_PUNCH_HOO, MARIO_MARIO_SOUND_PLAYED)
+        mario_set_forward_vel(m, 0)
+        stationary_ground_step(m)
+
+        if is_anim_at_end(m) ~= 0 then
+            return set_mario_action(m, ACT_IDLE, 0)
+        end
     end
 end
 

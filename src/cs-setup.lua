@@ -204,7 +204,7 @@ CT_DAFFY = addLooneyTunesChar({
         [CHAR_SOUND_EEUH] = 'Daffy Eeuh.ogg',                                                         -- Climbing over ledge
         [CHAR_SOUND_WAAAOOOW] = 'Daffy Waaaooow.ogg',                                                 -- Falling a long distance
         [CHAR_SOUND_TWIRL_BOUNCE] = 'Daffy Twirl Bounce.ogg',                                         -- Bouncing off of a flower spring
-        [CHAR_SOUND_GROUND_POUND_WAH] = 'Daffy Wah.ogg',                                              -- Ground Pound after startup
+        [CHAR_SOUND_GROUND_POUND_WAH] = 'Daffy Hoohoo.ogg',                                              -- Ground Pound after startup
         [CHAR_SOUND_WAH2] = 'Daffy Wah2.ogg',                                                         -- Throwing something
         [CHAR_SOUND_HRMM] = 'Daffy Hrmm.ogg',                                                         -- Lifting something
         [CHAR_SOUND_HERE_WE_GO] = 'Daffy Here We Go.ogg',                                             -- Star get
@@ -591,7 +591,22 @@ CT_FOGHORN = addLooneyTunesChar({
     },
     animData = {
         animTable = {
-            [_G.charSelect.CS_ANIM_MENU] = ANIM_FOGHORN_CS_MENU
+            [_G.charSelect.CS_ANIM_MENU] = ANIM_FOGHORN_CS_MENU,
+            [CHAR_ANIM_FIRST_PUNCH_FAST] = function (m)
+                if m.action == ACT_FOGHORN_SLAP_CHARGE then
+                    return ANIM_FOGHORN_SLAP_START
+                end
+            end,
+            [CHAR_ANIM_SECOND_PUNCH] = function (m)
+                if m.action == ACT_FOGHORN_SLAP_CHARGE then
+                    return ANIM_FOGHORN_SLAP_CHARGE
+                end
+            end,
+            [CHAR_ANIM_SECOND_PUNCH_FAST] = function (m)
+                if m.action == ACT_FOGHORN_SLAP_RELEASE then
+                    return ANIM_FOGHORN_SLAP_RELEASE
+                end
+            end
         }
     },
     voices = {

@@ -15,6 +15,7 @@ local SHOOT_ACTS = {
 }
 
 ---@param m MarioState
+---@param incAct integer
 function hooks.before_set_mario_action(m, incAct)
 
     if not _G.charSelect.gCSPlayers[m.playerIndex].movesetToggle then return end
@@ -124,6 +125,25 @@ function hooks.bugs_on_set_mario_action(m)
 end
 
 ---@param m MarioState
+---@param incAct integer
+function hooks.daffy_before_set_mario_action(m, incAct)
+    if incAct == ACT_GROUND_POUND then
+        return set_mario_action(m, ACT_DAFFY_POUND, 0)
+    elseif incAct == ACT_PUNCHING or incAct == ACT_MOVE_PUNCHING then
+        return set_mario_action(m, ACT_DAFFY_MALLET_SWING, 0)
+    end
+end
+
+---@param m MarioState
+function hooks.daffy_before_phys_step(m)
+    if m.action & ACT_FLAG_SWIMMING ~= 0 and
+    m.action & ACT_FLAG_INVULNERABLE == 0 and
+    m.action ~= ACT_WATER_PLUNGE then
+        vec3f_mul(m.vel, 3)
+    end
+end
+
+---@param m MarioState
 function hooks.marvin_mario_update(m)
     if m.controller.buttonPressed == X_BUTTON and
     playerTable[m.playerIndex].shootActTimer == 0 and
@@ -132,6 +152,14 @@ function hooks.marvin_mario_update(m)
     not PREVENT_ACT_GROUPS[m.action & ACT_GROUP_MASK] and
     m.action ~= ACT_MARVIN_SHOOT_LASER and m.action ~= ACT_MARVIN_GRAB_TNT then
         set_mario_action(m, ACT_MARVIN_GRAB_TNT, 0)
+    end
+end
+
+---@param m MarioState
+---@param incAct integer
+function hooks.foghorn_before_set_mario_action(m, incAct)
+    if incAct == ACT_MOVE_PUNCHING or incAct == ACT_PUNCHING then
+        return set_mario_action(m, ACT_FOGHORN_SLAP_CHARGE, 0)
     end
 end
 

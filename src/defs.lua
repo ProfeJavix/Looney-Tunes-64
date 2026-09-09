@@ -49,11 +49,17 @@ PREVENT_ACT_GROUPS = {
 }
 
 ACT_BUGS_HOVER = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_MOVING)
+ACT_DAFFY_POUND = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_ATTACKING)
+ACT_DAFFY_POUND_LAND = allocate_mario_action(ACT_GROUP_STATIONARY | ACT_FLAG_STATIONARY | ACT_FLAG_ATTACKING)
+ACT_DAFFY_POUND_BOUNCE = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_ATTACKING)
+ACT_DAFFY_MALLET_SWING = allocate_mario_action(ACT_GROUP_MOVING | ACT_FLAG_MOVING | ACT_FLAG_ATTACKING)
 ACT_ELMER_SHOOT_SHOTGUN = allocate_mario_action(ACT_GROUP_MOVING | ACT_FLAG_MOVING)
 ACT_ELMER_AIR_SHOOT_SHOTGUN = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR)
 ACT_MARVIN_SHOOT_LASER = allocate_mario_action(ACT_GROUP_MOVING | ACT_FLAG_MOVING)
 ACT_MARVIN_AIR_SHOOT_LASER = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR)
 ACT_MARVIN_GRAB_TNT = allocate_mario_action(ACT_GROUP_STATIONARY | ACT_FLAG_STATIONARY)
+ACT_FOGHORN_SLAP_CHARGE = allocate_mario_action(ACT_GROUP_MOVING | ACT_FLAG_MOVING)
+ACT_FOGHORN_SLAP_RELEASE = allocate_mario_action(ACT_GROUP_STATIONARY | ACT_FLAG_MOVING | ACT_FLAG_ATTACKING)
 
 E_MODEL_BUGS_EARS = smlua_model_util_get_id('bugs_ears_geo')
 E_MODEL_MARVIN_LASER = smlua_model_util_get_id('marvin_laser_geo')
@@ -73,6 +79,9 @@ ANIM_MARVIN_SHOOT_LASER = 'marvin_shoot_laser'
 ANIM_MARVIN_SHOOT_LASER_AIR = 'marvin_shoot_laser_air'
 ANIM_MARVIN_GRAB_TNT = 'marvin_grab_tnt'
 ANIM_FOGHORN_CS_MENU = 'foghorn_cs_menu'
+ANIM_FOGHORN_SLAP_START = 'foghorn_slap_start'
+ANIM_FOGHORN_SLAP_CHARGE = 'foghorn_slap_charge'
+ANIM_FOGHORN_SLAP_RELEASE = 'foghorn_slap_release'
 
 STREAM_CREDITS = audio_stream_load('LT64 Credits.ogg')
 
@@ -116,7 +125,8 @@ end
 
 function geo_mallet_switch(node)
     local gn = cast_graph_node(node)
-    gn.selectedCase = 0
+    local m = geo_get_mario_state()
+    gn.selectedCase = ternary(m.action == ACT_DAFFY_MALLET_SWING, 1, 0)
 end
 
 function geo_railgun_switch(node)
