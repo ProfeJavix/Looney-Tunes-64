@@ -1,0 +1,10 @@
+extern const GeoLayout taz_metal_geo_opt_1[];
+extern const GeoLayout taz_metal_geo[];
+extern Lights1 taz_metal_Metal__METAL__lights;
+extern u8 taz_metal_Metal_Shadeteehee_rgba16_rgba16[];
+extern Vtx taz_metal_Metal_Cap_DL_mesh_layer_1_vtx_0[73];
+extern Gfx taz_metal_Metal_Cap_DL_mesh_layer_1_tri_0[];
+extern Gfx mat_taz_metal_Metal__METAL_[];
+extern Gfx mat_revert_taz_metal_Metal__METAL_[];
+extern Gfx taz_metal_Metal_Cap_DL_mesh_layer_1_with_layer_1_revert[];
+extern Gfx taz_metal_Metal_Cap_DL_mesh_layer_1_with_layer_5_revert[];

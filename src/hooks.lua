@@ -4,15 +4,10 @@ local playerTable = gPlayerSyncTable
 local hooks = {}
 
 function hooks.update()
-    if playerTable[0].shootActTimer > 0 then
-        playerTable[0].shootActTimer = playerTable[0].shootActTimer - 1
+    if playerTable[0].blockCTActsTimer > 0 then
+        playerTable[0].blockCTActsTimer = playerTable[0].blockCTActsTimer - 1
     end
 end
-
-local SHOOT_ACTS = {
-    [CT_ELMER] = { ground = ACT_ELMER_SHOOT_SHOTGUN, air = ACT_ELMER_AIR_SHOOT_SHOTGUN },
-    [CT_MARVIN] = { ground = ACT_MARVIN_SHOOT_LASER, air = ACT_MARVIN_AIR_SHOOT_LASER }
-}
 
 ---@param m MarioState
 ---@param incAct integer
@@ -20,16 +15,20 @@ function hooks.before_set_mario_action(m, incAct)
 
     if not _G.charSelect.gCSPlayers[m.playerIndex].movesetToggle then return end
 
-    if incAct == ACT_PUNCHING or incAct == ACT_MOVE_PUNCHING or incAct == ACT_JUMP_KICK then
+    local repData = CT_REPLACE_ACTS[_G.charSelect.character_get_current_number(m.playerIndex)]
 
-        local shootData = SHOOT_ACTS[_G.charSelect.character_get_current_number(m.playerIndex)]
-
-        if not shootData then return end
-
-        if playerTable[m.playerIndex].shootActTimer == 0 then
-            return set_mario_action(m, ternary(m.floorHeight == m.pos.y, shootData.ground, shootData.air), 0)
+    if repData then
+        local param = 1
+        if repData.param then
+            param = repData.param(m, incAct)
         end
-        return 1
+
+        if repData.acts[param] then
+            if playerTable[m.playerIndex].blockCTActsTimer == 0 then
+                return set_mario_action(m, repData.acts[param], 0)
+            end
+            return 1
+        end
     end
 end
 
@@ -41,14 +40,14 @@ function hooks.on_interact(m, o, intType, interacted)
 
     if not _G.charSelect.gCSPlayers[m.playerIndex].movesetToggle then return end
 
-    local shootData = SHOOT_ACTS[_G.charSelect.character_get_current_number(m.playerIndex)]
+    local repData = CT_REPLACE_ACTS[_G.charSelect.character_get_current_number(m.playerIndex)]
 
-    if not shootData then return end
+    if not repData or not repData.actsSet[m.action] then return end
 
     if intType == INTERACT_GRABBABLE and
     not interacted and
     o.oInteractionSubtype & INT_SUBTYPE_NOT_GRABBABLE == 0 and
-    m.action == shootData.ground then
+    repData.canGrab(m) then
         m.interactObj = o
         m.input = m.input | INPUT_INTERACT_OBJ_GRABBABLE
 
@@ -104,33 +103,9 @@ local JUMP_ACTIONS = {
 }
 
 ---@param m MarioState
-function hooks.bugs_before_set_mario_action(m, incAct)
-
-    if m.action == ACT_BUGS_HOVER then
-        m.marioBodyState.allowPartRotation = 0
-    end
-
-    if incAct == ACT_TRIPLE_JUMP then
-        set_mario_y_vel_based_on_fspeed(m, 69, 0)
-        m.forwardVel = m.forwardVel * 0.8
-        return set_mario_action(m, ACT_BUGS_HOVER, 0)
-    end
-end
-
----@param m MarioState
 function hooks.bugs_on_set_mario_action(m)
     if JUMP_ACTIONS[m.action] then
         m.vel.y = m.vel.y * 1.5
-    end
-end
-
----@param m MarioState
----@param incAct integer
-function hooks.daffy_before_set_mario_action(m, incAct)
-    if incAct == ACT_GROUND_POUND then
-        return set_mario_action(m, ACT_DAFFY_POUND, 0)
-    elseif incAct == ACT_PUNCHING or incAct == ACT_MOVE_PUNCHING then
-        return set_mario_action(m, ACT_DAFFY_MALLET_SWING, 0)
     end
 end
 
@@ -146,20 +121,12 @@ end
 ---@param m MarioState
 function hooks.marvin_mario_update(m)
     if m.controller.buttonPressed == X_BUTTON and
-    playerTable[m.playerIndex].shootActTimer == 0 and
+    playerTable[m.playerIndex].blockCTActsTimer == 0 and
     m.floorHeight == m.pos.y and
     m.action & (PREVENT_ACT_FLAGS) == 0 and
     not PREVENT_ACT_GROUPS[m.action & ACT_GROUP_MASK] and
     m.action ~= ACT_MARVIN_SHOOT_LASER and m.action ~= ACT_MARVIN_GRAB_TNT then
         set_mario_action(m, ACT_MARVIN_GRAB_TNT, 0)
-    end
-end
-
----@param m MarioState
----@param incAct integer
-function hooks.foghorn_before_set_mario_action(m, incAct)
-    if incAct == ACT_MOVE_PUNCHING or incAct == ACT_PUNCHING then
-        return set_mario_action(m, ACT_FOGHORN_SLAP_CHARGE, 0)
     end
 end
 

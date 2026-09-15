@@ -1,6 +1,7 @@
 local LOONEY_TUNES_64 = get_active_mod().name
 local defaultLifeIcon = get_texture_info("exclamation-icon")
 CT_THANKS_FOR_PLAYING_CLIPS = {}
+CT_REPLACE_ACTS = {} ---@type ReplaceActInfo[]
 
 ---@param data LTData
 ---@return integer
@@ -46,6 +47,15 @@ local function addLooneyTunesChar(data)
     local thanksClip = data.id .. '-thanks-for-playing.ogg'
     if mod_file_exists('sound/' .. thanksClip) then
         CT_THANKS_FOR_PLAYING_CLIPS[ct] = audio_sample_load(thanksClip)
+    end
+
+    if data.replaceActs then
+        data.replaceActs.actsSet = data.replaceActs.actsSet or {}
+        for _, act in ipairs(data.replaceActs.acts) do
+            data.replaceActs.actsSet[act] = true
+        end
+        data.replaceActs.canGrab = data.replaceActs.canGrab or function() return false end
+        CT_REPLACE_ACTS[ct] = data.replaceActs
     end
 
     if data.hasPowerMeter then
@@ -150,6 +160,22 @@ CT_BUGS = addLooneyTunesChar({
         [CHAR_SOUND_DYING] = 'Bugs Dying.ogg',                                                     -- Dying from damage
         [CHAR_SOUND_DROWNING] = 'Bugs Drowning.ogg',                                               -- Running out of air underwater
         [CHAR_SOUND_MAMA_MIA] = 'Bugs Mama Mia.ogg'                                                -- Booted out of level
+    },
+    replaceActs = {
+        acts = { ACT_BUGS_HOVER },
+        param = function(m, incAct)
+            if m.action == ACT_BUGS_HOVER then
+                m.marioBodyState.allowPartRotation = 0
+            end
+
+            if incAct == ACT_TRIPLE_JUMP then
+                set_mario_y_vel_based_on_fspeed(m, 69, 0)
+                m.forwardVel = m.forwardVel * 0.8
+                return 1
+            end
+
+            return -1
+        end
     }
 })
 
@@ -158,7 +184,7 @@ CT_DAFFY = addLooneyTunesChar({
     name = 'Daffy Duck',
     description = "You're Despicable...",
     author = 'ThaGurlTilly',
-    menuColor = '8b8b8b',
+    menuColor = 'ff6f00',
     model = smlua_model_util_get_id("daffy_duck_geo"),
     charType = CT_LUIGI,
     palettes = {
@@ -229,6 +255,18 @@ CT_DAFFY = addLooneyTunesChar({
         [CHAR_SOUND_DROWNING] = 'Daffy Drowning.ogg',                                                 -- Running out of air underwater
         [CHAR_SOUND_MAMA_MIA] =
         'Daffy Mama Mia.ogg'                                                                          -- Booted out of level
+    },
+    replaceActs = {
+        acts = { ACT_DAFFY_MALLET_SWING, ACT_DAFFY_POUND },
+        param = function(m, incAct)
+            if incAct == ACT_PUNCHING or incAct == ACT_MOVE_PUNCHING then
+                return 1
+            elseif incAct == ACT_GROUND_POUND then
+                return 2
+            end
+
+            return -1
+        end
     }
 })
 
@@ -237,7 +275,7 @@ CT_PORKY = addLooneyTunesChar({
     name = 'Porky Pig',
     description = "That's All Folks!",
     author = 'ThaGurlTilly',
-    menuColor = '8b8b8b',
+    menuColor = 'feafa7',
     model = smlua_model_util_get_id("porky_pig_geo"),
     charType = CT_TOAD,
     palettes = {
@@ -314,8 +352,8 @@ CT_ELMER = addLooneyTunesChar({
     id = 'elmer',
     name = 'Elmer Fudd',
     description = "Be vewy, vewy quiet...",
-    author = 'ThaGurlTilly',
-    menuColor = '8b8b8b',
+    author = 'Tanooki',
+    menuColor = 'aa6838',
     model = smlua_model_util_get_id("elmer_fudd_geo"),
     charType = CT_TOAD,
     palettes = {
@@ -396,6 +434,18 @@ CT_ELMER = addLooneyTunesChar({
         [CHAR_SOUND_DROWNING] = 'Elmer Drowning.ogg',                                                 -- Running out of air underwater
         [CHAR_SOUND_MAMA_MIA] =
         'Elmer Mama Mia.ogg'                                                                          -- Booted out of level
+    },
+    replaceActs = {
+        acts = { ACT_ELMER_SHOOT_SHOTGUN, ACT_ELMER_AIR_SHOOT_SHOTGUN },
+        param = function (m, incAct)
+            if incAct== ACT_PUNCHING or incAct == ACT_MOVE_PUNCHING or incAct == ACT_JUMP_KICK then
+                return ternary(m.floorHeight == m.pos.y, 1, 2)
+            end
+            return -1
+        end,
+        canGrab = function (m)
+            return m.floorHeight == m.pos.y
+        end
     }
 })
 
@@ -404,7 +454,7 @@ CT_SYLVESTER = addLooneyTunesChar({
     name = 'Sylvester The Cat',
     description = "I tawt I taw him..",
     author = 'ThaGurlTilly',
-    menuColor = '8b8b8b',
+    menuColor = '0d0d0d',
     model = smlua_model_util_get_id("sylvester_the_cat_geo"),
     charType = CT_LUIGI,
     palettes = {
@@ -482,7 +532,7 @@ CT_MARVIN = addLooneyTunesChar({
     name = 'Marvin The Martian',
     description = "Where's the Boom?",
     author = 'ThaGurlTilly',
-    menuColor = '8b8b8b',
+    menuColor = '0a5e00',
     model = smlua_model_util_get_id("marvin_the_martian_geo"),
     charType = CT_TOAD,
     palettes = {
@@ -563,6 +613,47 @@ CT_MARVIN = addLooneyTunesChar({
         [CHAR_SOUND_DROWNING] = 'Marvin Drowning.ogg',                                                   -- Running out of air underwater
         [CHAR_SOUND_MAMA_MIA] =
         'Marvin Mama Mia.ogg'                                                                            -- Booted out of level
+    },
+    replaceActs = {
+        acts = { ACT_MARVIN_SHOOT_LASER, ACT_MARVIN_AIR_SHOOT_LASER },
+        param = function (m, incAct)
+            if incAct == ACT_PUNCHING or incAct == ACT_MOVE_PUNCHING or incAct == ACT_JUMP_KICK then
+                return ternary(m.floorHeight == m.pos.y, 1, 2)
+            end
+            return -1
+        end,
+        canGrab = function (m)
+            return m.floorHeight == m.pos.y
+        end
+    }
+})
+
+CT_TAZ = addLooneyTunesChar({
+    id = 'taz',
+    name = 'Tasmanian Devil',
+    description = "*Unintelligible*",
+    author = 'Tanooki',
+    menuColor = '9d535a',
+    model = smlua_model_util_get_id("taz_devil_geo"),
+    charType = CT_LUIGI,
+    palettes = {
+        {
+            palette = {
+                [PANTS]  = "9d535a",
+                [SHIRT]  = "9d535a",
+                [GLOVES] = "9d535a",
+                [SHOES]  = "9d535a",
+                [HAIR]   = "9d535a",
+                [SKIN]   = "d9c192",
+                [CAP]    = "ff96c1",
+                [EMBLEM] = "ffffff"
+            }
+        }
+    },
+    animData = {
+        animTable = {
+            [_G.charSelect.CS_ANIM_MENU] = ANIM_TAZ_CS_MENU
+        }
     }
 })
 
@@ -570,8 +661,8 @@ CT_FOGHORN = addLooneyTunesChar({
     id = 'foghorn',
     name = 'Foghorn Leghorn',
     description = "I say I say!",
-    author = 'ThaGurlTilly',
-    menuColor = '8b8b8b',
+    author = 'Tanooki',
+    menuColor = '5b0f00',
     model = smlua_model_util_get_id("foghorn_leghorn_geo"),
     charType = CT_WALUIGI,
     camScale = 1.5,
@@ -658,6 +749,141 @@ CT_FOGHORN = addLooneyTunesChar({
         [CHAR_SOUND_DROWNING] = 'Foghorn Drowning.ogg',                                                     -- Running out of air underwater
         [CHAR_SOUND_MAMA_MIA] =
         'Foghorn Mama Mia.ogg'                                                                              -- Booted out of level
+    },
+    replaceActs = {
+        acts = { ACT_FOGHORN_SLAP_CHARGE },
+        param = function(m, incAct)
+            if incAct == ACT_MOVE_PUNCHING or incAct == ACT_PUNCHING then
+                return 1
+            end
+            return -1
+        end,
+        canGrab = function (m)
+            return true
+        end
+    }
+})
+
+CT_WILE = addLooneyTunesChar({
+    id = 'wile',
+    name = 'Wile E. Coyote',
+    description = "TBC",
+    author = 'Tanooki',
+    menuColor = '0a5e00',
+    model = smlua_model_util_get_id("wile_e_coyote_geo"),
+    charType = CT_LUIGI,
+    camScale = 1.5,
+    palettes = {
+        {
+            palette = {
+                [PANTS]  = "11ff00",
+                [SHIRT]  = "ffffff",
+                [GLOVES] = "ffffff",
+                [SHOES]  = "ffffff",
+                [HAIR]   = "4d2c18",
+                [SKIN]   = "fec179",
+                [CAP]    = "ff6f00",
+                [EMBLEM] = "ffffff"
+            }
+        }
+    },
+    animData = {
+        animTable = {
+            [_G.charSelect.CS_ANIM_MENU] = ANIM_WILE_CS_MENU,
+            [CHAR_ANIM_IDLE_HEAD_CENTER] = function(m)
+                if m.action == ACT_WILE_AIR_WALK then
+                    return ANIM_WILE_IN_AIR_REALIZATION
+                end
+            end,
+            [CHAR_ANIM_STOP_CROUCHING] = function (m)
+                if m.action == ACT_WILE_ROCKET_JUMP then
+                    return ANIM_WILE_ROCKET_JUMP_START
+                end
+            end
+        }
+    },
+    voices = {
+        [CHAR_SOUND_OKEY_DOKEY] = { 'Wile E Okey Dokey.ogg', 'Wile E Hello.ogg', 'Wile E Itsa Me.ogg' }, -- Starting game
+        [CHAR_SOUND_LETS_A_GO] = 'Wile E Letsa Go.ogg',                                                  -- Starting level
+        [CHAR_SOUND_GAME_OVER] = 'Wile E Game Over.ogg',                                                 -- Game Overed
+        [CHAR_SOUND_PUNCH_YAH] = 'Wile E Yah.ogg',                                                       -- Punch 1
+        [CHAR_SOUND_PUNCH_WAH] = 'Wile E Yah.ogg',                                                       -- Punch 2
+        [CHAR_SOUND_PUNCH_HOO] = 'Wile E Hoo.ogg',                                                       -- Punch 3
+        [CHAR_SOUND_YAH_WAH_HOO] = { 'Wile E Yah Wah Hoo.ogg', 'Wile E Yah Wah Hoo 2.ogg' },             -- First Jump Sounds
+        [CHAR_SOUND_HOOHOO] = 'Wile E Hoohoo.ogg',                                                       -- Second jump sound
+        [CHAR_SOUND_YAHOO_WAHA_YIPPEE] = { 'Wile E Yahoo.ogg', 'Wile E Yippee.ogg' },                    -- Triple jump sounds
+        [CHAR_SOUND_UH] = 'Wile E Uh.ogg',                                                               -- Soft wall bonk
+        [CHAR_SOUND_UH2] = 'Wile E Uh.ogg',                                                              -- Quick ledge get up
+        [CHAR_SOUND_UH2_2] = 'Wile E Uh.ogg',                                                            -- Landing after long jump
+        [CHAR_SOUND_DOH] = 'Wile E Uh.ogg',                                                              -- Hard wall bonk
+        [CHAR_SOUND_OOOF] = 'Wile E Uh.ogg',                                                             -- Attacked in air
+        [CHAR_SOUND_OOOF2] = 'Wile E Uh.ogg',                                                            -- Land from hard bonk
+        [CHAR_SOUND_HAHA] = 'Wile E Haha.ogg',                                                           -- Landing triple jump
+        [CHAR_SOUND_HAHA_2] = 'Wile E Haha.ogg',                                                         -- Landing in water from big fall
+        [CHAR_SOUND_YAHOO] = 'Wile E Yahoo.ogg',                                                         -- Long jump
+        [CHAR_SOUND_DOH] = 'Wile E Uh.ogg',                                                              -- Long jump wall bonk
+        [CHAR_SOUND_WHOA] = 'Wile E Whoa.ogg',                                                           -- Grabbing ledge
+        [CHAR_SOUND_EEUH] = 'Wile E Eeuh.ogg',                                                           -- Climbing over ledge
+        [CHAR_SOUND_WAAAOOOW] = 'Wile E Waaaooow.ogg',                                                   -- Falling a long distance
+        [CHAR_SOUND_TWIRL_BOUNCE] = 'Wile E Twirl Bounce.ogg',                                           -- Bouncing off of a flower spring
+        [CHAR_SOUND_GROUND_POUND_WAH] = 'Wile E Yah Wah Hoo 2.ogg',                                      -- Ground Pound after startup
+        [CHAR_SOUND_WAH2] = 'Wile E Yah Wah Hoo 2.ogg',                                                  -- Throwing something
+        [CHAR_SOUND_HRMM] = 'Wile E Hrmm.ogg',                                                           -- Lifting something
+        [CHAR_SOUND_HERE_WE_GO] = 'Wile E Here We Go.ogg',                                               -- Star get
+        [CHAR_SOUND_SO_LONGA_BOWSER] = 'Wile E So Longa Bowser.ogg',                                     -- Throwing Bowser
+        --DAMAGE
+        [CHAR_SOUND_ATTACKED] = 'Wile E Attacked.ogg',                                                   -- Damaged
+        [CHAR_SOUND_PANTING] = 'Wile E Panting.ogg',                                                     -- Low health
+        [CHAR_SOUND_PANTING_COLD] = 'Wile E Panting.ogg',                                                -- Getting cold
+        [CHAR_SOUND_ON_FIRE] = 'Wile E On Fire.ogg',                                                     -- Burned
+        --SLEEP SOUNDS
+        [CHAR_SOUND_IMA_TIRED] = 'Wile E Ima Tired.ogg',                                                 -- Mario feeling tired
+        [CHAR_SOUND_YAWNING] = 'Wile E Yawning.ogg',                                                     -- Mario yawning before he sits down to sleep
+        [CHAR_SOUND_SNORING3] = 'Wile E Snoring3.ogg',                                                   -- Sleep talking / mumbling
+        --COUGHING (USED IN THE GAS MAZE)
+        [CHAR_SOUND_COUGHING1] = 'Wile E Panting.ogg',                                                   -- Cough take 1
+        [CHAR_SOUND_COUGHING2] = 'Wile E Panting.ogg',                                                   -- Cough take 2
+        [CHAR_SOUND_COUGHING3] = 'Wile E Panting.ogg',                                                   -- Cough take 3
+        --DEATH
+        [CHAR_SOUND_DYING] = 'Wile E Dying.ogg',                                                         -- Dying from damage
+        [CHAR_SOUND_DROWNING] = 'Wile E Dying.ogg',                                                      -- Running out of air underwater
+        [CHAR_SOUND_MAMA_MIA] =
+        'Wile E Mama Mia.ogg'                                                                            -- Booted out of level
+    },
+    replaceActs = {
+        acts = { ACT_WILE_AIR_WALK, ACT_WILE_ROCKET_JUMP },
+        param = function(m, incAct)
+
+            if m.action == ACT_WILE_ROCKET_JUMP or m.action == ACT_WILE_ROCKET_EXPLODE then
+                m.faceAngle.x = 0
+            end
+
+            if incAct == ACT_BACKFLIP then
+                return 2
+            end
+
+            if m.forwardVel >= 25 and incAct == ACT_FREEFALL and m.action == ACT_WALKING then
+                local colData = collision_get_temp_wall_collision_data()
+
+                colData.x = m.pos.x
+                colData.y = m.pos.y
+                colData.z = m.pos.z
+                colData.radius = 10
+                colData.offsetY = -10
+
+                if find_wall_collisions(colData) ~= 0 then
+                    local floorHeight, floor = find_floor(colData.x, colData.y, colData.z)
+                    if floor and colData.y - floorHeight > 160 then
+                        local wall = colData.walls[colData.numWalls]
+                        if abs_angle_diff(m.faceAngle.y, atan2s(wall.normal.z, wall.normal.x)) < 0x3555 then
+                            return 1
+                        end
+                    end
+                end
+            end
+
+            return -1
+        end
     }
 })
 

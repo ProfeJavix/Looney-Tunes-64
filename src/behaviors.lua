@@ -151,7 +151,9 @@ end
 function bhvs.bhv_marvin_tnt_loop(o)
 
     if o.oAction == 2 then
-        spawn_non_sync_object(id_bhvLTExplosion, E_MODEL_EXPLOSION_KABOOM, o.oPosX, o.oPosY, o.oPosZ, function()end)
+        spawn_non_sync_object(id_bhvLTExplosion, E_MODEL_EXPLOSION_KABOOM, o.oPosX, o.oPosY, o.oPosZ, function(exp)
+            exp.oOwner = -1
+        end)
         obj_mark_for_deletion(o)
         return
     end
@@ -227,8 +229,6 @@ function bhvs.bhv_lt_explosion_init(o)
     o.oDamageOrCoinValue = 4
     cur_obj_set_hitbox_radius_and_height(200, 150)
     o.hitboxDownOffset = 150
-
-    o.oOwner = -1
 
     bhv_explosion_init()
 end

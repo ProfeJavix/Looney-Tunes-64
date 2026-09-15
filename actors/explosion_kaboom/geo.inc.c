@@ -3,7 +3,6 @@ const GeoLayout explosion_kaboom_geo[] = {
 	GEO_OPEN_NODE(),
 		GEO_BILLBOARD_WITH_PARAMS(LAYER_OPAQUE, 0, 0, 0),
 		GEO_OPEN_NODE(),
-			GEO_ASM(0, geo_update_layer_transparency),
 			GEO_ANIMATED_PART(LAYER_TRANSPARENT, 0, 0, 0, explosion_kaboom_Bone_mesh_layer_5),
 			GEO_OPEN_NODE(),
 				GEO_DISPLAY_LIST(LAYER_OPAQUE, explosion_kaboom_Bone_mesh_layer_1),

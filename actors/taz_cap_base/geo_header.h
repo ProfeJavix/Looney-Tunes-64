@@ -1,0 +1,14 @@
+extern const GeoLayout taz_base_geo_opt_1[];
+extern const GeoLayout taz_base_geo[];
+extern Lights1 taz_base_Cap__CAP__lights;
+extern Lights1 taz_base_Cap_Inside__CAP__lights;
+extern Vtx taz_base_Cap_DL_mesh_layer_1_vtx_0[62];
+extern Gfx taz_base_Cap_DL_mesh_layer_1_tri_0[];
+extern Vtx taz_base_Cap_DL_mesh_layer_1_vtx_1[11];
+extern Gfx taz_base_Cap_DL_mesh_layer_1_tri_1[];
+extern Gfx mat_taz_base_Cap__CAP_[];
+extern Gfx mat_revert_taz_base_Cap__CAP_[];
+extern Gfx mat_taz_base_Cap_Inside__CAP_[];
+extern Gfx mat_revert_taz_base_Cap_Inside__CAP_[];
+extern Gfx taz_base_Cap_DL_mesh_layer_1_with_layer_1_revert[];
+extern Gfx taz_base_Cap_DL_mesh_layer_1_with_layer_5_revert[];
