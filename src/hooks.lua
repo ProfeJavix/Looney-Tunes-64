@@ -105,7 +105,7 @@ local JUMP_ACTIONS = {
 ---@param m MarioState
 function hooks.bugs_on_set_mario_action(m)
     if JUMP_ACTIONS[m.action] then
-        m.vel.y = m.vel.y * 1.5
+        m.vel.y = m.vel.y * 1.2
     end
 end
 
