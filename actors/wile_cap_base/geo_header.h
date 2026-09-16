@@ -1,0 +1,14 @@
+extern const GeoLayout wile_e_base_geo_opt_1[];
+extern const GeoLayout wile_e_base_geo[];
+extern Lights1 wile_e_base_Cap__CAP__lights;
+extern Lights1 wile_e_base_Cap_Inside__CAP__lights;
+extern Vtx wile_e_base_Cap_DL_mesh_layer_1_vtx_0[45];
+extern Gfx wile_e_base_Cap_DL_mesh_layer_1_tri_0[];
+extern Vtx wile_e_base_Cap_DL_mesh_layer_1_vtx_1[36];
+extern Gfx wile_e_base_Cap_DL_mesh_layer_1_tri_1[];
+extern Gfx mat_wile_e_base_Cap__CAP_[];
+extern Gfx mat_revert_wile_e_base_Cap__CAP_[];
+extern Gfx mat_wile_e_base_Cap_Inside__CAP_[];
+extern Gfx mat_revert_wile_e_base_Cap_Inside__CAP_[];
+extern Gfx wile_e_base_Cap_DL_mesh_layer_1_with_layer_1_revert[];
+extern Gfx wile_e_base_Cap_DL_mesh_layer_1_with_layer_5_revert[];

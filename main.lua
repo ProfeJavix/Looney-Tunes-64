@@ -44,6 +44,8 @@ hook_event(HOOK_ON_INTERACT, hooks.on_interact)
 hook_event(HOOK_ON_SEQ_LOAD, hooks.on_seq_load)
 hook_event(HOOK_ON_PLAY_SOUND, hooks.on_play_sound)
 
+_G.charSelect.hook_on_character_change(hooks.on_character_change)
+
 _G.charSelect.character_hook_moveset(CT_BUGS, HOOK_ON_SET_MARIO_ACTION, hooks.bugs_on_set_mario_action)
 _G.charSelect.character_hook_moveset(CT_DAFFY, HOOK_BEFORE_PHYS_STEP, hooks.daffy_before_phys_step)
 _G.charSelect.character_hook_moveset(CT_MARVIN, HOOK_MARIO_UPDATE, hooks.marvin_mario_update)

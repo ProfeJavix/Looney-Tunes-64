@@ -1,11 +1,40 @@
-local nps = gNetworkPlayers
 local playerTable = gPlayerSyncTable
 
 local hooks = {}
 
+local STREAM_AS_SEQS = {
+    [SEQ_EVENT_CUTSCENE_CREDITS] = {
+        audio = audio_stream_load('Music Credits.ogg'),
+        looping = true
+    },
+    [SEQ_LEVEL_SLIDE] = {
+        audio = audio_stream_load('Music Slide.ogg'),
+        looping = true,
+        loopStart = 1488385,
+        loopEnd = 2945664
+    }
+}
+
+local curPlayingSeqs = {}
+local menuWasOpen = false
+
 function hooks.update()
     if playerTable[0].blockCTActsTimer > 0 then
         playerTable[0].blockCTActsTimer = playerTable[0].blockCTActsTimer - 1
+    end
+
+    if _G.charSelect.is_menu_open() then
+        if not menuWasOpen then
+            for _, stream in pairs(curPlayingSeqs) do
+                audio_stream_set_volume(stream, 0)
+            end
+            menuWasOpen = true
+        end
+    elseif menuWasOpen then
+        for player, stream in pairs(curPlayingSeqs) do
+            audio_stream_set_volume(stream, sequence_player_get_volume(player))
+        end
+        menuWasOpen = false
     end
 end
 
@@ -57,14 +86,27 @@ function hooks.on_interact(m, o, intType, interacted)
     end
 end
 
+---@param player integer
 ---@param seqId SeqId
-function hooks.on_seq_load(_, seqId)
+function hooks.on_seq_load(player, seqId)
+    if not isLT64Char() then return end
 
-    audio_stream_stop(STREAM_CREDITS)
+    if curPlayingSeqs[player] then
+        audio_stream_stop(curPlayingSeqs[player])
+        curPlayingSeqs[player] = nil
+    end
 
-    if seqId == SEQ_EVENT_CUTSCENE_CREDITS then
-        audio_stream_set_looping(STREAM_CREDITS, true)
-        audio_stream_play(STREAM_CREDITS, true, 1)
+    local replaceInfo = STREAM_AS_SEQS[seqId]
+    if replaceInfo then
+        if replaceInfo.looping then
+            if replaceInfo.loopStart and replaceInfo.loopEnd then
+                audio_stream_set_loop_points(replaceInfo.audio, replaceInfo.loopStart, replaceInfo.loopEnd)
+            end
+            audio_stream_set_looping(replaceInfo.audio, true)
+        end
+
+        audio_stream_play(replaceInfo.audio, true, sequence_player_get_volume(player))
+        curPlayingSeqs[player] = replaceInfo.audio
         return 0
     end
 end
@@ -79,6 +121,34 @@ function hooks.on_play_sound(soundId, pos)
         if clip then
             audio_sample_play(clip, pos, 5)
             return 0
+        end
+    end
+end
+
+---@param prevChar integer
+---@param curChar integer
+function hooks.on_character_change(prevChar, curChar)
+    if not isLT64Char() then
+        for player, stream in pairs(curPlayingSeqs) do
+            local seqId = nil
+            if stream then
+                for ogSeqId, replaceInfo in pairs(STREAM_AS_SEQS) do
+                    if replaceInfo.audio == stream then
+                        seqId = ogSeqId
+                        break
+                    end
+                end
+                audio_stream_stop(stream)
+            end
+
+            if seqId then
+                play_music(player, seqId, 0)
+            end
+        end
+    elseif not LT_64_CHARS[prevChar] then
+        local curSeqId = get_current_background_music()
+        if STREAM_AS_SEQS[curSeqId] then
+            play_music(SEQ_PLAYER_LEVEL, curSeqId, 0)
         end
     end
 end

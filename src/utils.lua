@@ -185,6 +185,12 @@ function moveProjectile(o, speed, stopFlags, hitFunc)
     return 0
 end
 
+---@param localIdx? integer
+---@return boolean
+function isLT64Char(localIdx)
+    return LT_64_CHARS[_G.charSelect.character_get_current_number(localIdx)]
+end
+
 ---@param globalIdx integer
 ---@return integer
 function getLocalFromGlobalIdx(globalIdx)

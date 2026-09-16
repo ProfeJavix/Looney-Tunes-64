@@ -2,6 +2,7 @@ local LOONEY_TUNES_64 = get_active_mod().name
 local defaultLifeIcon = get_texture_info("exclamation-icon")
 CT_THANKS_FOR_PLAYING_CLIPS = {}
 CT_REPLACE_ACTS = {} ---@type ReplaceActInfo[]
+LT_64_CHARS = {}
 
 ---@param data LTData
 ---@return integer
@@ -81,6 +82,8 @@ local function addLooneyTunesChar(data)
     end
 
     _G.charSelect.character_set_category(ct, LOONEY_TUNES_64)
+
+    LT_64_CHARS[ct] = true
 
     return ct
 end
@@ -654,7 +657,57 @@ CT_TAZ = addLooneyTunesChar({
         animTable = {
             [_G.charSelect.CS_ANIM_MENU] = ANIM_TAZ_CS_MENU
         }
-    }
+    },
+    voices = {
+        [CHAR_SOUND_OKEY_DOKEY] = { 'Taz Okey Dokey.ogg', 'Taz Hello.ogg', 'Taz Itsa Me.ogg' }, -- Starting game
+        [CHAR_SOUND_LETS_A_GO] = 'Taz Letsa Go.ogg',                                            -- Starting level
+        [CHAR_SOUND_GAME_OVER] = 'Taz Game Over.ogg',                                           -- Game Overed
+        [CHAR_SOUND_PUNCH_YAH] = 'Taz Yah.ogg',                                                 -- Punch 1
+        [CHAR_SOUND_PUNCH_WAH] = 'Taz Wah.ogg',                                                 -- Punch 2
+        [CHAR_SOUND_PUNCH_HOO] = 'Taz Hoo.ogg',                                                 -- Punch 3
+        [CHAR_SOUND_YAH_WAH_HOO] = 'Taz Yah Wah Hoo.ogg',                                       -- First Jump Sounds
+        [CHAR_SOUND_HOOHOO] = 'Taz Hoohoo.ogg',                                                 -- Second jump sound
+        [CHAR_SOUND_YAHOO_WAHA_YIPPEE] = { 'Taz Yahoo.ogg', 'Taz Waha.ogg', 'Taz Yippee.ogg' }, -- Triple jump sounds
+        [CHAR_SOUND_UH] = 'Taz Uh.ogg',                                                         -- Soft wall bonk
+        [CHAR_SOUND_UH2] = 'Taz Uh2.ogg',                                                       -- Quick ledge get up
+        [CHAR_SOUND_UH2_2] = 'Taz Uh2.ogg',                                                     -- Landing after long jump
+        [CHAR_SOUND_DOH] = 'Taz Doh.ogg',                                                       -- Hard wall bonk
+        [CHAR_SOUND_OOOF] = 'Taz Ooof.ogg',                                                     -- Attacked in air
+        [CHAR_SOUND_OOOF2] = 'Taz Ooof.ogg',                                                    -- Land from hard bonk
+        [CHAR_SOUND_HAHA] = 'Taz Haha.ogg',                                                     -- Landing triple jump
+        [CHAR_SOUND_HAHA_2] = 'Taz Haha.ogg',                                                   -- Landing in water from big fall
+        [CHAR_SOUND_YAHOO] = 'Taz Yahoo.ogg',                                                   -- Long jump
+        [CHAR_SOUND_DOH] = 'Taz Doh.ogg',                                                       -- Long jump wall bonk
+        [CHAR_SOUND_WHOA] = 'Taz Whoa.ogg',                                                     -- Grabbing ledge
+        [CHAR_SOUND_EEUH] = 'Taz Eeuh.ogg',                                                     -- Climbing over ledge
+        [CHAR_SOUND_WAAAOOOW] = 'Taz Waaaooow.ogg',                                             -- Falling a long distance
+        [CHAR_SOUND_TWIRL_BOUNCE] = 'Taz Twirl Bounce.ogg',                                     -- Bouncing off of a flower spring
+        [CHAR_SOUND_GROUND_POUND_WAH] = 'Taz Ground Pound Wah.ogg',                             -- Ground Pound after startup
+        [CHAR_SOUND_WAH2] = 'Taz Wah2.ogg',                                                     -- Throwing something
+        [CHAR_SOUND_HRMM] = 'Taz Hrmm.ogg',                                                     -- Lifting something
+        [CHAR_SOUND_HERE_WE_GO] = 'Taz Here We Go.ogg',                                         -- Star get
+        [CHAR_SOUND_SO_LONGA_BOWSER] = 'Taz So Longa Bowser.ogg',                               -- Throwing Bowser
+        --DAMAGE
+        [CHAR_SOUND_ATTACKED] = 'Taz Attacked.ogg',                                             -- Damaged
+        [CHAR_SOUND_PANTING] = 'Taz Panting.ogg',                                               -- Low health
+        [CHAR_SOUND_PANTING_COLD] = 'Taz Panting.ogg',                                          -- Getting cold
+        [CHAR_SOUND_ON_FIRE] = 'Taz On Fire.ogg',                                               -- Burned
+        --SLEEP SOUNDS
+        [CHAR_SOUND_IMA_TIRED] = 'Taz Ima Tired.ogg',                                           -- Mario feeling tired
+        [CHAR_SOUND_YAWNING] = 'Taz Yawning.ogg',                                               -- Mario yawning before he sits down to sleep
+        [CHAR_SOUND_SNORING1] = 'Taz Snoring1.ogg',                                             -- Snore Inhale
+        [CHAR_SOUND_SNORING2] = 'Taz Snoring2.ogg',                                             -- Exhale
+        [CHAR_SOUND_SNORING3] = 'Taz Snoring3.ogg',                                             -- Sleep talking / mumbling
+        --COUGHING (USED IN THE GAS MAZE)
+        [CHAR_SOUND_COUGHING1] = 'Taz Coughing.ogg',                                            -- Cough take 1
+        [CHAR_SOUND_COUGHING2] = 'Taz Coughing.ogg',                                            -- Cough take 2
+        [CHAR_SOUND_COUGHING3] = 'Taz Coughing.ogg',                                            -- Cough take 3
+        --DEATH
+        [CHAR_SOUND_DYING] = 'Taz Dying.ogg',                                                   -- Dying from damage
+        [CHAR_SOUND_DROWNING] = 'Taz Drowning.ogg',                                             -- Running out of air underwater
+        [CHAR_SOUND_MAMA_MIA] =
+        'Taz Mama Mia.ogg'                                                                      -- Booted out of level
+    },
 })
 
 CT_FOGHORN = addLooneyTunesChar({
@@ -767,23 +820,23 @@ CT_FOGHORN = addLooneyTunesChar({
 CT_WILE = addLooneyTunesChar({
     id = 'wile',
     name = 'Wile E. Coyote',
-    description = "TBC",
+    description = "ACME S*CKS",
     author = 'Tanooki',
-    menuColor = '0a5e00',
+    menuColor = '4d2c18',
     model = smlua_model_util_get_id("wile_e_coyote_geo"),
-    charType = CT_LUIGI,
+    charType = CT_WALUIGI,
     camScale = 1.5,
     palettes = {
         {
             palette = {
-                [PANTS]  = "11ff00",
-                [SHIRT]  = "ffffff",
-                [GLOVES] = "ffffff",
-                [SHOES]  = "ffffff",
+                [PANTS]  = "4d2c18",
+                [SHIRT]  = "4d2c18",
+                [GLOVES] = "4d2c18",
+                [SHOES]  = "4d2c18",
                 [HAIR]   = "4d2c18",
                 [SKIN]   = "fec179",
                 [CAP]    = "ff6f00",
-                [EMBLEM] = "ffffff"
+                [EMBLEM] = "4d2c18"
             }
         }
     },

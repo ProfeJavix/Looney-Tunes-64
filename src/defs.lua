@@ -98,8 +98,6 @@ ANIM_WILE_CS_MENU = 'wile_cs_menu'
 ANIM_WILE_ROCKET_JUMP_START = 'wile_rocket_jump_start'
 ANIM_WILE_IN_AIR_REALIZATION = 'wile_in_air_realization'
 
-STREAM_CREDITS = audio_stream_load('LT64 Credits.ogg')
-
 define_custom_obj_fields({
     oOwner = "s32"
 })
