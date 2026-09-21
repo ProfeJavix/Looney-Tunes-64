@@ -56,12 +56,15 @@ PREVENT_ACT_GROUPS = {
 }
 
 ACT_BUGS_HOVER = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_MOVING)
+ACT_BUGS_DIVE_POUND = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_ATTACKING)
+ACT_BUGS_MOVE_UNDERGROUND = allocate_mario_action(ACT_GROUP_MOVING | ACT_FLAG_MOVING | ACT_FLAG_INTANGIBLE)
 ACT_DAFFY_POUND = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_ATTACKING)
 ACT_DAFFY_POUND_LAND = allocate_mario_action(ACT_GROUP_STATIONARY | ACT_FLAG_STATIONARY | ACT_FLAG_ATTACKING)
 ACT_DAFFY_POUND_BOUNCE = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_ATTACKING)
 ACT_DAFFY_MALLET_SWING = allocate_mario_action(ACT_GROUP_MOVING | ACT_FLAG_MOVING | ACT_FLAG_ATTACKING)
 ACT_ELMER_SHOOT_SHOTGUN = allocate_mario_action(ACT_GROUP_MOVING | ACT_FLAG_MOVING)
 ACT_ELMER_AIR_SHOOT_SHOTGUN = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR)
+ACT_SYLVESTER_WALL_CRAWL = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_MOVING)
 ACT_MARVIN_SHOOT_LASER = allocate_mario_action(ACT_GROUP_MOVING | ACT_FLAG_MOVING)
 ACT_MARVIN_AIR_SHOOT_LASER = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR)
 ACT_MARVIN_GRAB_TNT = allocate_mario_action(ACT_GROUP_STATIONARY | ACT_FLAG_STATIONARY)
@@ -73,6 +76,7 @@ ACT_WILE_ROCKET_EXPLODE = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AI
 ACT_WILE_ROCKET_JUMP = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_ATTACKING)
 
 E_MODEL_BUGS_EARS = smlua_model_util_get_id('bugs_ears_geo')
+E_MODEL_BUGS_DIRT_HOLE = smlua_model_util_get_id('bugs_dirt_hole_geo')
 E_MODEL_MARVIN_LASER = smlua_model_util_get_id('marvin_laser_geo')
 E_MODEL_MARVIN_TNT = smlua_model_util_get_id('marvin_tnt_geo')
 E_MODEL_EXPLOSION_KABOOM = smlua_model_util_get_id('explosion_kaboom_geo')
@@ -134,6 +138,14 @@ function geo_switch_ears_state(node)
     local o = geo_get_current_object()
 
     gn.selectedCase = o.oAction
+end
+
+---@param node GraphNode
+function geo_switch_bugs_dirt(node)
+    local gn = cast_graph_node(node)
+    local o = geo_get_current_object()
+
+    gn.selectedCase = ternary(o.oForwardVel == 0, 0, 1)
 end
 
 function geo_mallet_switch(node)

@@ -1,14 +1,15 @@
+local nps = gNetworkPlayers
 local states = gMarioStates
 
 local bhvs = {}
 
 ---@param o Object
-function bhvs.bhv_helicopter_ears_init(o)
+function bhvs.bhv_bugs_helicopter_ears_init(o)
     o.oFlags = o.oFlags | OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE
 end
 
 ---@param o Object
-function bhvs.bhv_helicopter_ears_loop(o)
+function bhvs.bhv_bugs_helicopter_ears_loop(o)
     local m = states[getLocalFromGlobalIdx(o.oOwner)]
 
     if not m or m.action ~= ACT_BUGS_HOVER then
@@ -25,6 +26,51 @@ function bhvs.bhv_helicopter_ears_loop(o)
     obj_set_gfx_pos_from_pos(o)
 
     o.oFaceAngleYaw = o.oFaceAngleYaw + 0x2000
+end
+
+---@param o Object
+function bhvs.bhv_bugs_dirt_hole_init(o)
+    o.oFlags = o.oFlags | (OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE | OBJ_FLAG_SET_FACE_ANGLE_TO_MOVE_ANGLE)
+    cur_obj_scale(0)
+    o.oMoveAnglePitch = 0
+end
+
+---@param o Object
+function bhvs.bhv_bugs_dirt_hole_loop(o)
+    if not nps[o.oOwner].connected then
+        obj_mark_for_deletion(o)
+        return
+    end
+
+    if o.oAction == 2 then
+        o.oForwardVel = 0
+        cur_obj_scale(approach_f32_symmetric(o.header.gfx.scale.x, 0, 0.3))
+        cur_obj_play_sound_2(SOUND_MOVING_TERRAIN_SLIDE)
+        if o.header.gfx.scale.x == 0 then
+            obj_mark_for_deletion(o)
+        end
+    else
+        local m = states[o.oOwner]
+
+        if o.oAction == 0 then
+            cur_obj_scale(approach_f32_symmetric(o.header.gfx.scale.x, 1, 0.2))
+            if o.header.gfx.scale.x == 1 then
+                o.oAction = 1
+            end
+        elseif o.oAction == 1 then
+            o.oForwardVel = m.forwardVel
+            if m.action ~= ACT_BUGS_MOVE_UNDERGROUND then
+                o.oAction = 2
+                return
+            end
+        end
+
+        obj_copy_pos(o, m.marioObj)
+        o.oPosY = find_floor_height(o.oPosX, o.oPosY, o.oPosZ)
+        o.oMoveAngleYaw = m.faceAngle.y
+    end
+
+    cur_obj_align_gfx_with_floor()
 end
 
 ---@param o Object

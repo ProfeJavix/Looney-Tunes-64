@@ -1,0 +1,25 @@
+const GeoLayout bugs_dirt_hole_Opt1[] = {
+	GEO_NODE_START(),
+	GEO_OPEN_NODE(),
+		GEO_ANIMATED_PART(LAYER_OPAQUE, 0, 0, 0, bugs_dirt_hole_Opt1_Bone1_mesh_layer_1),
+	GEO_CLOSE_NODE(),
+	GEO_RETURN(),
+};
+const GeoLayout bugs_dirt_hole_geo[] = {
+	GEO_NODE_START(),
+	GEO_OPEN_NODE(),
+		GEO_ANIMATED_PART(LAYER_OPAQUE, 0, 0, 0, NULL),
+		GEO_OPEN_NODE(),
+			GEO_ANIMATED_PART(LAYER_OPAQUE, 0, 0, 0, bugs_dirt_hole_Main_mesh_layer_1),
+			GEO_SWITCH_CASE(0, geo_switch_bugs_dirt),
+			GEO_OPEN_NODE(),
+				GEO_NODE_START(),
+				GEO_OPEN_NODE(),
+					GEO_ANIMATED_PART(LAYER_OPAQUE, 0, 0, 0, NULL),
+				GEO_CLOSE_NODE(),
+				GEO_BRANCH(1, bugs_dirt_hole_Opt1),
+			GEO_CLOSE_NODE(),
+		GEO_CLOSE_NODE(),
+	GEO_CLOSE_NODE(),
+	GEO_END(),
+};

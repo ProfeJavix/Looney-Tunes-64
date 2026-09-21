@@ -165,16 +165,29 @@ CT_BUGS = addLooneyTunesChar({
         [CHAR_SOUND_MAMA_MIA] = 'Bugs Mama Mia.ogg'                                                -- Booted out of level
     },
     replaceActs = {
-        acts = { ACT_BUGS_HOVER },
+        acts = { ACT_BUGS_HOVER, ACT_BUGS_DIVE_POUND },
         param = function(m, incAct)
             if m.action == ACT_BUGS_HOVER then
                 m.marioBodyState.allowPartRotation = 0
+            end
+
+            if m.action == ACT_BUGS_DIVE_POUND then
+                m.faceAngle.x = 0
+            end
+
+            if m.action == ACT_BUGS_MOVE_UNDERGROUND then
+                m.squishTimer = 0
+                m.invincTimer = 0
             end
 
             if incAct == ACT_TRIPLE_JUMP then
                 set_mario_y_vel_based_on_fspeed(m, 69, 0)
                 m.forwardVel = m.forwardVel * 0.8
                 return 1
+            end
+
+            if incAct == ACT_GROUND_POUND then
+                return 2
             end
 
             return -1
@@ -527,6 +540,22 @@ CT_SYLVESTER = addLooneyTunesChar({
         [CHAR_SOUND_DYING] = 'Sylvester Dying.ogg',                                                     -- Dying from damage
         [CHAR_SOUND_DROWNING] = 'Sylvester Dying.ogg',                                               -- Running out of air underwater
         [CHAR_SOUND_MAMA_MIA] = 'Sylvester Mama Mia.ogg'                                                -- Booted out of level
+    },
+    replaceActs = {
+        acts = { ACT_SYLVESTER_WALL_CRAWL },
+        param = function(m, incAct)
+
+            if m.action == ACT_AIR_HIT_WALL then
+                m.faceAngle.x = 0
+                m.faceAngle.z = 0
+            end
+
+            if incAct == ACT_AIR_HIT_WALL then
+                return 1
+            end
+
+            return -1
+        end
     }
 })
 
@@ -835,7 +864,7 @@ CT_WILE = addLooneyTunesChar({
                 [SHOES]  = "4d2c18",
                 [HAIR]   = "4d2c18",
                 [SKIN]   = "fec179",
-                [CAP]    = "ff6f00",
+                [CAP]    = "0000ff",
                 [EMBLEM] = "4d2c18"
             }
         }

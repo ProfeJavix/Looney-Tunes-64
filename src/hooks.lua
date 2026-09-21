@@ -1,3 +1,4 @@
+local states = gMarioStates
 local playerTable = gPlayerSyncTable
 
 local hooks = {}
@@ -83,6 +84,15 @@ function hooks.on_interact(m, o, intType, interacted)
         if o.oSyncID ~= 0 then
             network_send_object(o, true)
         end
+    end
+end
+
+---@param idx integer
+function hooks.on_nametags_render(idx)
+    if idx == 0 or _G.charSelect.character_get_current_number(idx) ~= CT_BUGS then return end
+
+    if states[idx].action == ACT_BUGS_MOVE_UNDERGROUND then
+        return ''
     end
 end
 

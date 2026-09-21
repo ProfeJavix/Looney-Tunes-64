@@ -13940,7 +13940,7 @@ Gfx mat_revert_wile_e_Skin__SKIN_[] = {
 };
 
 Gfx mat_wile_e_Mouth__SKIN_[] = {
-	gsSPSetLights1(wile_e_Mouth__SKIN__lights),
+	gsSPCopyLightsPlayerPart(SKIN),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
@@ -14082,7 +14082,7 @@ Gfx mat_revert_wile_e_Wing_Tip[] = {
 };
 
 Gfx mat_wile_e_Gloves__GLOVES_[] = {
-	gsSPSetLights1(wile_e_Gloves__GLOVES__lights),
+	gsSPCopyLightsPlayerPart(GLOVES),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
@@ -14097,7 +14097,7 @@ Gfx mat_revert_wile_e_Gloves__GLOVES_[] = {
 };
 
 Gfx mat_wile_e_Cap__CAP_[] = {
-	gsSPSetLights1(wile_e_Cap__CAP__lights),
+	gsSPCopyLightsPlayerPart(CAP),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
@@ -14112,7 +14112,7 @@ Gfx mat_revert_wile_e_Cap__CAP_[] = {
 };
 
 Gfx mat_wile_e_Cap_Inside__CAP_[] = {
-	gsSPSetLights1(wile_e_Cap_Inside__CAP__lights),
+	gsSPCopyLightsPlayerPart(CAP),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(SHADE, 0, PRIMITIVE, 0, 0, 0, 0, ENVIRONMENT, SHADE, 0, PRIMITIVE, 0, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),

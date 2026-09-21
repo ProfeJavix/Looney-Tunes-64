@@ -144,7 +144,7 @@ Gfx wile_e_base_Cap_DL_mesh_layer_1_tri_1[] = {
 
 
 Gfx mat_wile_e_base_Cap__CAP_[] = {
-	gsSPSetLights1(wile_e_base_Cap__CAP__lights),
+	gsSPCopyLightsPlayerPart(CAP),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
@@ -159,7 +159,7 @@ Gfx mat_revert_wile_e_base_Cap__CAP_[] = {
 };
 
 Gfx mat_wile_e_base_Cap_Inside__CAP_[] = {
-	gsSPSetLights1(wile_e_base_Cap_Inside__CAP__lights),
+	gsSPCopyLightsPlayerPart(CAP),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(SHADE, 0, PRIMITIVE, 0, 0, 0, 0, ENVIRONMENT, SHADE, 0, PRIMITIVE, 0, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),

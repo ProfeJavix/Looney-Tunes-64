@@ -32,7 +32,7 @@ function acts.act_bugs_hover(m)
         play_flip_sounds(m, 2, 8, 20)
     elseif m.actionState == 1 then
         if m.playerIndex == 0 and m.actionArg == 0 then
-            spawn_sync_object(id_bhvHelicopterEars, E_MODEL_BUGS_EARS, m.pos.x, m.pos.y, m.pos.z, function(o)
+            spawn_sync_object(id_bhvBugsHelicopterEars, E_MODEL_BUGS_EARS, m.pos.x, m.pos.y, m.pos.z, function(o)
                 o.oOwner = nps[0].globalIndex
             end)
             m.actionArg = 1
@@ -57,20 +57,86 @@ function acts.act_bugs_hover(m)
 end
 
 ---@param m MarioState
+function acts.act_bugs_ground_dive_pound(m)
+    m.flags = m.flags | MARIO_UNKNOWN_18
+    set_character_animation(m, CHAR_ANIM_DIVE)
+    play_character_sound_if_no_flag(m, CHAR_SOUND_GROUND_POUND_WAH, MARIO_MARIO_SOUND_PLAYED)
+    play_sound_if_no_flag(m, SOUND_ACTION_THROW, MARIO_ACTION_SOUND_PLAYED)
+
+    if m.actionState == 0 then
+        m.vel.y = -1
+        m.faceAngle.x = approach_s16_symmetric(m.faceAngle.x, 0x3555, 0x800)
+
+        if m.faceAngle.x == 0x3555 then
+            m.vel.y = -55
+            m.actionState = 1
+        end
+    end
+
+    update_air_without_turn(m)
+    if perform_air_step(m, 0) == AIR_STEP_LANDED then
+        play_sound(SOUND_OBJ2_MONTY_MOLE_APPEAR, m.marioObj.header.gfx.cameraToObject)
+        spawn_non_sync_object(id_bhvBugsDirtHole, E_MODEL_BUGS_DIRT_HOLE, m.pos.x, m.pos.y, m.pos.z, function(o)
+            o.oOwner = m.playerIndex
+        end)
+        m.vel.y = 0
+        return set_mario_action(m, ACT_BUGS_MOVE_UNDERGROUND, m.actionArg)
+    end
+
+    m.marioObj.header.gfx.angle.x = m.faceAngle.x
+end
+
+---@param m MarioState
+function acts.act_bugs_move_underground(m)
+    m.squishTimer = 0xFF
+    m.invincTimer = -1
+    cur_obj_scale(0)
+
+    if m.input & INPUT_UNKNOWN_10 ~= 0 then
+        return set_mario_action(m, ACT_SHOCKWAVE_BOUNCE, 0)
+    end
+
+    if m.forwardVel > 5 and get_global_timer() % 5 == 0 then
+        play_sound(SOUND_MOVING_TERRAIN_SLIDE, m.marioObj.header.gfx.cameraToObject)
+        for _ = 1, 3 do
+            local pos = {
+                x = m.pos.x + random_sign() * math.random(0, 60),
+                y = m.pos.y,
+                z = m.pos.z + random_sign() * math.random(0, 60)
+            }
+            spawn_non_sync_object(id_bhvDirtParticleSpawner, E_MODEL_DIRT_ANIMATION, pos.x, pos.y, pos.z, function() end)
+        end
+    end
+
+    m.forwardVel = approach_f32_symmetric(m.forwardVel, 60 * m.intendedMag / 8, 3)
+    m.faceAngle.y = approach_s16_symmetric(m.faceAngle.y, m.intendedYaw, 0x600)
+    mario_set_forward_vel(m, m.forwardVel)
+
+    local step = perform_ground_step(m)
+    if step == GROUND_STEP_LEFT_GROUND then
+        mario_set_forward_vel(m, math.min(m.forwardVel, 20))
+        return set_mario_action(m, ACT_FREEFALL, 0)
+    elseif m.controller.buttonPressed & A_BUTTON ~= 0 then
+        return set_mario_action(m, ACT_JUMP, 0)
+    elseif step == GROUND_STEP_HIT_WALL then
+        mario_set_forward_vel(m, 0)
+    end
+end
+
+---@param m MarioState
 function acts.act_daffy_pound(m)
     set_character_animation(m, CHAR_ANIM_GROUND_POUND)
 
     if m.actionState == 0 then
         m.peakHeight = m.pos.y
         m.vel.y = -60
-        mario_set_forward_vel(m, 0)
 
         if is_anim_at_end(m) ~= 0 then
             m.actionState = 1
         end
     else
-        local step = perform_air_step(m, 0)
-        if step == AIR_STEP_LANDED then
+        update_air_with_turn(m)
+        if perform_air_step(m, 0) == AIR_STEP_LANDED then
             if check_fall_damage_or_get_stuck(m, ACT_HARD_BACKWARD_GROUND_KB) == 0 then
                 if m.playerIndex == 0 then
                     set_camera_shake_from_hit(SHAKE_GROUND_POUND)
@@ -94,7 +160,7 @@ end
 ---@param m MarioState
 function acts.act_daffy_pound_land(m)
     if m.input & INPUT_UNKNOWN_10 ~= 0 then
-        return drop_and_set_mario_action(m, ACT_SHOCKWAVE_BOUNCE, 0)
+        return set_mario_action(m, ACT_SHOCKWAVE_BOUNCE, 0)
     end
 
     if m.input & INPUT_OFF_FLOOR ~= 0 then
@@ -105,21 +171,27 @@ function acts.act_daffy_pound_land(m)
         return set_mario_action(m, ACT_BUTT_SLIDE, 0)
     end
 
-    if m.actionTimer > 3 and (m.actionArg == 0 or m.controller.buttonDown & Z_TRIG ~= 0) then
+    if m.actionTimer > 3 and m.actionArg == 0 then
         m.vel.y = 50
-        return set_mario_action(m, ACT_DAFFY_POUND_BOUNCE, m.actionArg)
+        return set_mario_action(m, ACT_DAFFY_POUND_BOUNCE, 0)
     end
     m.actionTimer = m.actionTimer + 1
 
+    local fVel = m.forwardVel
     landing_step(m, CHAR_ANIM_GROUND_POUND_LANDING, ACT_BUTT_SLIDE_STOP)
+    m.forwardVel = fVel
 end
 
 ---@param m MarioState
 function acts.act_daffy_pound_bounce(m)
     play_character_sound_if_no_flag(m, CHAR_SOUND_GROUND_POUND_WAH, MARIO_MARIO_SOUND_PLAYED)
 
-    if m.vel.y < 10 and m.controller.buttonDown & Z_TRIG ~= 0 then
-        return set_mario_action(m, ACT_DAFFY_POUND, 1)
+    if m.vel.y < 30 and m.controller.buttonDown & Z_TRIG ~= 0 then
+        m.actionArg = 1
+    end
+
+    if m.vel.y < 10 and m.actionArg == 1 then
+        return set_mario_action(m, ACT_DAFFY_POUND, 0)
     end
 
     update_air_with_turn(m)
@@ -247,6 +319,92 @@ function acts.act_elmer_shoot_shotgun(m)
     if is_anim_at_end(m) ~= 0 then
         return set_mario_action(m, endAct, 0)
     end
+end
+
+---@param m MarioState
+function acts.act_sylvester_wall_crawl(m)
+    playerTable[m.playerIndex].blockCTActsTimer = 3
+    m.peakHeight = m.pos.y
+
+    if not m.wall then
+        if m.actionTimer > 3 then
+            m.vel.y = 20
+            mario_set_forward_vel(m, 20)
+            return set_mario_action(m, ACT_FORWARD_ROLLOUT, 0)
+        end
+
+        m.actionTimer = m.actionTimer + 1
+        mario_set_forward_vel(m, 10)
+        perform_air_step(m, 0)
+        m.marioObj.header.gfx.angle.x = -0x4000
+
+        return
+    end
+    m.actionTimer = 0
+
+    local curVel = m.forwardVel
+    mario_set_forward_vel(m, 6)
+
+    m.faceAngle.y = math.s16(atan2s(m.wall.normal.z, m.wall.normal.x) - 0x8000)
+
+    if m.controller.buttonPressed & A_BUTTON ~= 0 then
+        m.faceAngle.y = m.faceAngle.y + 0x8000
+        return set_mario_action(m, ACT_WALL_KICK_AIR, 0)
+    elseif m.controller.buttonPressed & Z_TRIG ~= 0 then
+        m.pos.x = m.pos.x - 30 * sins(m.faceAngle.y)
+        m.pos.z = m.pos.z - 30 * coss(m.faceAngle.y)
+        mario_set_forward_vel(m, -20)
+        return set_mario_action(m, ACT_FREEFALL, 0)
+    end
+
+    vec3f_copy(m.vel, gVec3fZero())
+
+    if m.intendedMag > 0 then
+        curVel = approach_f32_symmetric(curVel, 45 * (m.intendedMag / 64), 2)
+
+        if math.abs(m.controller.stickX) > 0 then
+            local yaw = m.faceAngle.y
+            local hVel = curVel * math.abs(m.controller.stickX / 64)
+
+            if m.controller.stickX > 0 then
+                yaw = yaw - 0x3999
+            elseif m.controller.stickX < 0 then
+                yaw = yaw + 0x3999
+            end
+            yaw = math.s16(yaw)
+
+            m.vel.x = hVel * sins(yaw)
+            m.vel.z = hVel * coss(yaw)
+        end
+
+        if math.abs(m.controller.stickY) > 0 then
+            m.vel.y = curVel * (m.controller.stickY / 64)
+        end
+    else
+        curVel = 0
+    end
+
+    set_character_anim_with_accel(m, CHAR_ANIM_CRAWLING, math.clamp(curVel, 5, 20) * 0x10000)
+    if curVel > 0 and m.vel ~= gVec3fZero() then
+        play_step_sound(m, 26, 79)
+    else
+        m.marioObj.header.gfx.animInfo.animAccel = 1
+        set_anim_to_frame(m, 25)
+    end
+
+    local step = perform_air_step(m, AIR_STEP_CHECK_LEDGE_GRAB)
+    m.forwardVel = curVel
+
+    if step == AIR_STEP_GRABBED_LEDGE then
+        return
+    elseif step == AIR_STEP_LANDED then
+        return set_mario_action(m, ACT_IDLE, 0)
+    end
+
+    m.marioObj.header.gfx.pos.x = m.marioObj.header.gfx.pos.x + 55 * sins(m.faceAngle.y)
+    m.marioObj.header.gfx.pos.z = m.marioObj.header.gfx.pos.z + 55 * coss(m.faceAngle.y)
+
+    m.marioObj.header.gfx.angle.x = -0x4000
 end
 
 ---@param m MarioState
