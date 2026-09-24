@@ -542,7 +542,7 @@ CT_SYLVESTER = addLooneyTunesChar({
         [CHAR_SOUND_MAMA_MIA] = 'Sylvester Mama Mia.ogg'                                                -- Booted out of level
     },
     replaceActs = {
-        acts = { ACT_SYLVESTER_WALL_CRAWL },
+        acts = { ACT_SYLVESTER_WALL_CRAWL, ACT_SYLVESTER_TWEETY_GLIDE },
         param = function(m, incAct)
 
             if m.action == ACT_AIR_HIT_WALL then
@@ -550,8 +550,19 @@ CT_SYLVESTER = addLooneyTunesChar({
                 m.faceAngle.z = 0
             end
 
+            if m.action == ACT_SYLVESTER_TWEETY_FIGHT then
+                m.faceAngle.x = 0
+                m.squishTimer = 0
+                m.usedObj = nil
+            end
+
             if incAct == ACT_AIR_HIT_WALL then
                 return 1
+            end
+
+            if incAct == ACT_BACKFLIP and m.flags & MARIO_CAP_ON_HEAD ~= 0 then
+                m.vel.y = 80
+                return 2
             end
 
             return -1

@@ -199,6 +199,31 @@ function hooks.daffy_before_phys_step(m)
 end
 
 ---@param m MarioState
+function hooks.sylvester_mario_update(m)
+
+    if _G.charSelect.character_get_current_number(m.playerIndex) ~= CT_SYLVESTER or
+    is_player_active(m) == 0 or
+    m.flags & MARIO_CAP_ON_HEAD == 0 then
+        return
+    end
+
+    local tweety = obj_get_first_with_behavior_id(id_bhvTweety)
+    while tweety do
+        if tweety.oOwner == m.playerIndex then
+            break
+        end
+
+        tweety = obj_get_next_with_same_behavior_id(tweety)
+    end
+
+    if tweety then return end
+
+    spawn_non_sync_object(id_bhvTweety, E_MODEL_TWEETY, m.pos.x, m.pos.y + 150, m.pos.z, function (o)
+        o.oOwner = m.playerIndex
+    end)
+end
+
+---@param m MarioState
 function hooks.marvin_mario_update(m)
     if m.controller.buttonPressed == X_BUTTON and
     playerTable[m.playerIndex].blockCTActsTimer == 0 and

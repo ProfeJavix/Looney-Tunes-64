@@ -56,7 +56,8 @@ function getAutoTarget(m, pPos, range, minDist)
     for _, id in ipairs(targetBhvs) do
         local curO = obj_get_first_with_behavior_id(id)
         while curO do
-            if id ~= id_bhvMario or (curO ~= m.marioObj and is_player_active(states[curO.oBehParams - 1]) ~= 0) then
+            if curO.activeFlags ~= ACTIVE_FLAG_DEACTIVATED and (id ~= id_bhvMario or
+            (curO.oBehParams - 1 ~= m.playerIndex and is_player_active(states[curO.oBehParams - 1]) ~= 0)) then
                 local dist = dist_between_objects(m.marioObj, curO)
                 if dist < minDist and
                 math.abs(obj_pitch_to_object(m.marioObj, curO)) < 0x2200 and

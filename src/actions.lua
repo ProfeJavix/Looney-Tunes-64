@@ -322,6 +322,122 @@ function acts.act_elmer_shoot_shotgun(m)
 end
 
 ---@param m MarioState
+function acts.act_sylvester_tweety_glide(m)
+
+    if m.actionState == 0 then
+        play_character_sound_if_no_flag(m, CHAR_SOUND_YAHOO, MARIO_MARIO_SOUND_PLAYED)
+        set_character_animation(m, CHAR_ANIM_DOUBLE_JUMP_RISE)
+
+        if m.vel.y < 20 then
+            if m.controller.buttonDown & A_BUTTON == 0 then
+                return set_mario_action(m, ACT_FREEFALL, 0)
+            else
+                m.actionState = 1
+            end
+        end
+    else
+        set_character_animation(m, CHAR_ANIM_HANG_ON_OWL)
+        if m.controller.buttonDown & A_BUTTON == 0 then
+            play_character_sound(m, CHAR_SOUND_UH)
+            return set_mario_action(m, ACT_FREEFALL, 0)
+        else
+            m.peakHeight = m.pos.y
+        end
+
+        m.vel.y = m.vel.y + ternary(m.actionTimer > 90, 2, 4)
+        m.actionTimer = m.actionTimer + 1
+    end
+
+    update_air_with_turn(m)
+    local step = perform_air_step(m, 0)
+    if m.actionState == 1 then
+        if step == AIR_STEP_LANDED then
+            return set_mario_action(m, ACT_WALKING, 0)
+        elseif step == AIR_STEP_HIT_WALL then
+            return set_mario_action(m, ACT_AIR_HIT_WALL, 0)
+        end
+    end
+end
+
+---@param m MarioState
+function acts.act_sylvester_tweety_fight(m)
+
+    local tweety = obj_get_first_with_behavior_id(id_bhvTweety)
+    while tweety do
+        if tweety.oOwner == m.playerIndex then
+            break
+        end
+
+        tweety = obj_get_next_with_same_behavior_id(tweety)
+    end
+
+    if not tweety then
+        return set_mario_action(m, ACT_FREEFALL, 0)
+    end
+
+    if m.actionState ~= 2 then
+        play_character_sound_if_no_flag(m, CHAR_SOUND_PUNCH_HOO, MARIO_MARIO_SOUND_PLAYED)
+        set_character_animation(m, CHAR_ANIM_DIVE)
+
+        if m.actionState == 0 then
+            local target = getAutoTarget(m, { x = tweety.oPosX, y = tweety.oPosY, z = tweety.oPosZ }, 0x10000, 1000)
+            if target then
+                m.usedObj = target
+            end
+            m.actionState = 1
+        end
+
+        if not m.usedObj or m.usedObj.activeFlags == ACTIVE_FLAG_DEACTIVATED then
+            return set_mario_action(m, ACT_FREEFALL, 0)
+        end
+
+        m.faceAngle.x = obj_pitch_to_object(m.marioObj, m.usedObj)
+        m.faceAngle.y = obj_angle_to_object(m.marioObj, m.usedObj)
+
+        m.pos.y = math.max(m.floorHeight + 10, m.pos.y)
+
+        m.forwardVel = 80
+        m.vel.x = m.forwardVel * sins(m.faceAngle.y) * coss(m.faceAngle.x)
+        m.vel.y = m.forwardVel * -sins(m.faceAngle.x)
+        m.vel.z = m.forwardVel * coss(m.faceAngle.y) * coss(m.faceAngle.x)
+
+        local step = perform_air_step(m, 0)
+        if step == AIR_STEP_HIT_WALL then
+            return set_mario_action(m, ACT_AIR_HIT_WALL, 0)
+        end
+
+        if dist_between_objects(m.marioObj, m.usedObj) < m.usedObj.hitboxRadius + 10 then
+            play_character_sound(m, CHAR_SOUND_PUNCH_YAH)
+            mario_set_forward_vel(m, 0)
+            m.actionState = 2
+        end
+    else
+        
+        m.usedObj = nil
+        if m.actionTimer > 20 then
+            return set_mario_action(m, ACT_BACKWARD_AIR_KB, 0)
+        end
+        m.actionTimer = m.actionTimer + 1
+
+        m.squishTimer = 0xFF
+        cur_obj_scale(0)
+
+        m.marioObj.oOwner = nps[m.playerIndex].globalIndex
+        affectAllObjects(m.marioObj, function (att, vic)
+            return dist_between_objects(att, vic) < 200
+        end)
+
+        if m.actionTimer % 4 == 0 then
+            play_sound(SOUND_ACTION_HIT, m.marioObj.header.gfx.cameraToObject)
+        end
+
+        for _ = 1, 10 do
+            spawn_non_sync_object(id_bhvSylvesterFightDust, E_MODEL_MIST, m.pos.x, m.pos.y, m.pos.z, function() end)
+        end
+    end
+end
+
+---@param m MarioState
 function acts.act_sylvester_wall_crawl(m)
     playerTable[m.playerIndex].blockCTActsTimer = 3
     m.peakHeight = m.pos.y

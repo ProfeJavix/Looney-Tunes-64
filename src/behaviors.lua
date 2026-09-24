@@ -127,6 +127,118 @@ function bhvs.bhv_elmer_bullet_loop(o)
 end
 
 ---@param o Object
+function bhvs.bhv_tweety_init(o)
+    o.oFlags = o.oFlags | (OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE | OBJ_FLAG_SET_FACE_YAW_TO_MOVE_YAW)
+    smlua_anim_util_set_animation(o, ANIM_SYLVESTER_TWEETY_FLYING)
+    o.oFaceAnglePitch = 0
+end
+
+---@param o Object
+function bhvs.bhv_tweety_loop(o)
+    local m = states[o.oOwner]
+    if is_player_active(m) == 0 or m.flags & MARIO_CAP_ON_HEAD == 0 then
+        obj_mark_for_deletion(o)
+        return
+    end
+
+    if m.action == ACT_SYLVESTER_TWEETY_GLIDE and m.actionState == 1 then
+        o.oMoveAngleYaw = m.faceAngle.y
+        o.oPosX = m.pos.x - 10 * sins(m.faceAngle.y) + 10 * sins(math.s16(m.faceAngle.y + 0x4000))
+        o.oPosY = m.pos.y + 125
+        o.oPosZ = m.pos.z - 10 * coss(m.faceAngle.y) + 10 * coss(math.s16(m.faceAngle.y + 0x4000))
+        obj_set_gfx_pos_from_pos(o)
+        return
+    end
+
+    local target = getAutoTarget(m, { x = o.oPosX, y = o.oPosY, z = o.oPosZ }, 0x10000, 1000)
+    local targetFVel = 0
+    local targetYVel = 0
+    local canAttack = true
+    if not target then
+        target = m.marioObj
+        targetFVel = m.forwardVel
+        targetYVel = m.vel.y
+        canAttack = false
+    end
+
+    local targetPos = { x = target.oPosX, y = target.oPosY + target.hitboxHeight + 20 + target.oVelY, z = target.oPosZ }
+
+    local dist = dist_between_object_and_point(o, targetPos.x, targetPos.y, targetPos.z)
+    if dist < 2000 then
+        if targetFVel == 0 and targetYVel == 0 and dist < 150 then
+
+            if dist <= target.hitboxRadius + 30 then
+                o.oAngleVelYaw = math.s16(o.oAngleVelYaw + 0x300)
+                o.oForwardVel = 100
+                targetPos.y = targetPos.y + coss(0x400 * o.oFlyGuyOscTimer) * 10
+
+                if canAttack and m.playerIndex == 0 and m.controller.buttonPressed & X_BUTTON ~= 0 and
+                m.action ~= ACT_SYLVESTER_TWEETY_FIGHT and m.action & PREVENT_ACT_FLAGS == 0 and
+                not PREVENT_ACT_GROUPS[m.action & ACT_GROUP_MASK] then
+                    m.vel.y = 20
+                    set_mario_action(m, ACT_SYLVESTER_TWEETY_FIGHT, 0)
+                end
+            else
+                o.oAngleVelYaw = math.s16(obj_angle_to_object(target, o) + 0x300)
+                o.oForwardVel = approach_f32_symmetric(o.oForwardVel, 20, 1)
+            end
+
+            targetPos.x = targetPos.x + 80 * sins(o.oAngleVelYaw)
+            targetPos.z = targetPos.z + 80 * coss(o.oAngleVelYaw)
+            o.oMoveAngleYaw = obj_angle_to_point(o, targetPos.x, targetPos.z)
+        else
+            if dist < 100 then
+                o.oMoveAngleYaw = approach_s16_symmetric(o.oMoveAngleYaw, target.oFaceAngleYaw, 0x800)
+                o.oForwardVel = 25
+            else
+                o.oMoveAngleYaw = obj_angle_to_object(o, target)
+                o.oForwardVel = 35
+            end
+
+            if targetFVel ~= 0 then
+                o.oForwardVel = math.min(o.oForwardVel, math.abs(targetFVel) - 5)
+            elseif dist < 100 then
+                o.oForwardVel = approach_f32_symmetric(o.oForwardVel, 10, 1)
+            end
+        end
+
+        if m.action == ACT_SYLVESTER_TWEETY_FIGHT and m.actionState == 2 then
+            targetPos.y = m.pos.y + 500
+        end
+
+        cur_obj_compute_vel_xz()
+
+        targetPos.x = approach_f32_symmetric(o.oPosX, targetPos.x, math.abs(o.oVelX))
+        targetPos.y = approach_f32_symmetric(o.oPosY, targetPos.y, math.abs(target.oVelY) + 10)
+        targetPos.z = approach_f32_symmetric(o.oPosZ, targetPos.z, math.abs(o.oVelZ))
+    end
+
+    cur_obj_update_floor()
+    obj_set_pos(o, targetPos.x, math.max(targetPos.y, o.oFloorHeight), targetPos.z)
+
+    o.oFlyGuyOscTimer = o.oFlyGuyOscTimer + 1
+end
+
+---@param o Object
+function bhvs.bhv_sylvester_fight_dust_init(o)
+    o.oFlags = o.oFlags | OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE
+    obj_set_billboard(o)
+    o.oOpacity = 200
+    cur_obj_scale(6)
+
+    obj_translate_xz_random(o, 300)
+    o.oPosY = o.oPosY + math.random(0, 300)
+end
+
+---@param o Object
+function bhvs.bhv_sylvester_fight_dust_loop(o)
+    cur_obj_move_using_fvel_and_gravity()
+    if o.oTimer > 4 then
+        obj_mark_for_deletion(o)
+    end
+end
+
+---@param o Object
 function bhvs.bhv_marvin_laser_init(o)
     o.oFlags = o.oFlags | (OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE | OBJ_FLAG_SET_FACE_ANGLE_TO_MOVE_ANGLE)
     o.header.gfx.scale.z = 0
