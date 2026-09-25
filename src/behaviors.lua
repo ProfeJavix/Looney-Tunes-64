@@ -136,7 +136,9 @@ end
 ---@param o Object
 function bhvs.bhv_tweety_loop(o)
     local m = states[o.oOwner]
-    if is_player_active(m) == 0 or m.flags & MARIO_CAP_ON_HEAD == 0 then
+    if is_player_active(m) == 0 or
+    m.flags & MARIO_CAP_ON_HEAD == 0 or
+    _G.charSelect.character_get_current_number(o.oOwner) ~= CT_SYLVESTER then
         obj_mark_for_deletion(o)
         return
     end
