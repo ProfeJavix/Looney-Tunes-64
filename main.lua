@@ -22,7 +22,6 @@ id_bhvSylvesterFightDust = hook_behavior(nil, OBJ_LIST_DEFAULT, true, bhvs.bhv_s
 id_bhvMarvinLaser = hook_behavior(nil, OBJ_LIST_DESTRUCTIVE, true, bhvs.bhv_marvin_laser_init, bhvs.bhv_marvin_laser_loop)
 id_bhvMarvinTNT = hook_behavior(nil, OBJ_LIST_GENACTOR, true, bhvs.bhv_marvin_tnt_init, bhvs.bhv_marvin_tnt_loop)
 id_bhvMarvinTNTSmoke = hook_behavior(nil, OBJ_LIST_DEFAULT, true, bhvs.bhv_marvin_tnt_smoke_init, bhvs.bhv_marvin_tnt_smoke_loop)
-id_bhvTazTornado = hook_behavior(nil, OBJ_LIST_EXT, true, bhvs.bhv_taz_tornado_init, bhvs.bhv_taz_tornado_loop)
 id_bhvTazCaughtObj = hook_behavior(nil, OBJ_LIST_GENACTOR, true, bhvs.bhv_taz_caught_obj_init, bhvs.bhv_taz_caught_obj_loop)
 id_bhvLTExplosion = hook_behavior(nil, OBJ_LIST_DESTRUCTIVE, true, bhvs.bhv_lt_explosion_init, bhvs.bhv_lt_explosion_loop)
 
