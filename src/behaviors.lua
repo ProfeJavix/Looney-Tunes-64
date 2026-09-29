@@ -152,10 +152,21 @@ function bhvs.bhv_tweety_loop(o)
         return
     end
 
-    local target = getAutoTarget(m, { x = o.oPosX, y = o.oPosY, z = o.oPosZ }, 0x10000, 1000)
+    local target = nil
+    local yOffset = 0
+
+    if m.action & PREVENT_ACT_FLAGS == 0 and
+    not PREVENT_ACT_GROUPS[m.action & ACT_GROUP_MASK] and
+    not _G.charSelect.gCSPlayers[m.playerIndex].inMenu then
+        target = getAutoTarget(m, { x = o.oPosX, y = o.oPosY, z = o.oPosZ }, 0x10000, 1000)
+    else
+        yOffset = 170
+    end
+
     local targetFVel = 0
     local targetYVel = 0
     local canAttack = true
+
     if not target then
         target = m.marioObj
         targetFVel = m.forwardVel
@@ -163,7 +174,11 @@ function bhvs.bhv_tweety_loop(o)
         canAttack = false
     end
 
-    local targetPos = { x = target.oPosX, y = target.oPosY + target.hitboxHeight + 20 + target.oVelY, z = target.oPosZ }
+    if yOffset == 0 then
+        yOffset = target.hitboxHeight + 20 + target.oVelY
+    end
+
+    local targetPos = { x = target.oPosX, y = target.oPosY + yOffset, z = target.oPosZ }
 
     local dist = dist_between_object_and_point(o, targetPos.x, targetPos.y, targetPos.z)
     if dist < 2000 then
@@ -377,6 +392,155 @@ end
 function bhvs.bhv_marvin_tnt_smoke_loop(o)
     o.oAnimState = o.oAnimState + 1
     bhv_dust_smoke_loop()
+end
+
+---@param o Object
+function bhvs.bhv_taz_caught_obj_init(o)
+    o.oFlags = o.oFlags | OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE
+    o.oWallHitboxRadius = 40
+    o.oFaceAnglePitch = 0
+
+    o.oGravity = -2
+
+    local animData = {
+        [id_bhvGoomba] = function (obj)
+            obj.oAnimations = gObjectAnimations.goomba_seg8_anims_0801DA4C
+            cur_obj_init_animation(0)
+        end,
+        [id_bhvKoopa] = function (obj)
+            obj.oAnimations = gObjectAnimations.koopa_seg6_anims_06011364
+            cur_obj_init_animation(1)
+        end,
+        [id_bhvBobomb] = function (obj)
+            obj.oAnimations = gObjectAnimations.bobomb_seg8_anims_0802396C
+            cur_obj_init_animation(0)
+        end,
+        [id_bhvPiranhaPlant] = function (obj)
+            obj.oAnimations = gObjectAnimations.piranha_plant_seg6_anims_0601C31C
+            cur_obj_init_animation(0)
+        end,
+        [id_bhvSpindrift] = function (obj)
+            obj.oAnimations = gObjectAnimations.spindrift_seg5_anims_05002D68
+            cur_obj_init_animation(0)
+        end,
+        [id_bhvScuttlebug] = function (obj)
+            obj.oAnimations = gObjectAnimations.scuttlebug_seg6_anims_06015064
+            cur_obj_init_animation(0)
+        end,
+        [id_bhvHauntedChair] = function (obj)
+            obj.oAnimations = gObjectAnimations.chair_seg5_anims_05005784
+            cur_obj_init_animation(0)
+        end,
+        [id_bhvFlyingBookend] = function (obj)
+            obj.oAnimations = gObjectAnimations.bookend_seg5_anims_05002540
+            cur_obj_init_animation(1)
+        end,
+        [id_bhvFlyGuy] = function (obj)
+            obj.oAnimations = gObjectAnimations.flyguy_seg8_anims_08011A64
+            cur_obj_init_animation(0)
+        end,
+        [id_bhvSwoop] = function (obj)
+            obj.oAnimations = gObjectAnimations.swoop_seg6_anims_060070D0
+            cur_obj_init_animation(0)
+        end,
+        [id_bhvMontyMole] = function (obj)
+            obj.oAnimations = gObjectAnimations.monty_mole_seg5_anims_05007248
+            cur_obj_init_animation(1)
+        end,
+        [id_bhvSmallBully] = function (obj)
+            obj.oAnimations = gObjectAnimations.bully_seg5_anims_0500470C
+            cur_obj_init_animation(0)
+        end,
+        [id_bhvMoneybag] = function (obj)
+            obj.oAnimations = gObjectAnimations.moneybag_seg6_anims_06005E5C
+            cur_obj_init_animation(0)
+            o.oOpacity = 255
+        end,
+        [id_bhvSkeeter] = function (obj)
+            obj.oAnimations = gObjectAnimations.skeeter_seg6_anims_06007DE0
+            cur_obj_init_animation(0)
+        end,
+        [id_bhvSpiny] = function (obj)
+            obj.oAnimations = gObjectAnimations.spiny_seg5_anims_05016EAC
+            cur_obj_init_animation(0)
+        end,
+        [id_bhvFirePiranhaPlant] = function (obj)
+            obj.oAnimations = gObjectAnimations.piranha_plant_seg6_anims_0601C31C
+            cur_obj_init_animation(0)
+        end
+    }
+
+    if animData[o.oSubAction] then
+        animData[o.oSubAction](o)
+    end
+
+    if nearest_mario_state_to_object(o).playerIndex == 0 then
+        o.oMoveAngleYaw = math.random(-0x7FFF, 0x8000)
+        o.oFaceAnglePitch = math.random(-0x7FFF, 0x8000)
+        o.oSnufitYOffset = math.random(170, 220)
+        o.oSnufitZOffset = math.random(50, 150)
+        o.oBirdTargetYaw = math.random(0x300, 0x1000)
+    end
+
+    network_init_object(o, true, {
+        'oAction',
+        'oMoveAngleYaw',
+        'oFaceAngleYaw',
+        'oFaceAnglePitch',
+        'oForwardVel',
+        'oVelY',
+        'oSnufitYOffset',
+        'oSnufitZOffset',
+        'oBirdTargetYaw',
+        'oOwner'
+    })
+end
+
+---@param o Object
+function bhvs.bhv_taz_caught_obj_loop(o)
+
+    o.oFaceAngleYaw = o.oFaceAngleYaw - o.oBirdTargetYaw
+
+    if o.oAction ~= 0 then
+        if o.oAction == 1 then
+            cur_obj_update_floor_and_walls()
+            cur_obj_move_standard(78)
+
+            if o.oMoveFlags & (OBJ_MOVE_MASK_ON_GROUND | OBJ_MOVE_UNDERWATER_ON_GROUND | OBJ_MOVE_HIT_WALL) ~= 0 then
+                o.oAction = 2
+                return
+            end
+        else
+            if o.oNumLootCoins ~= 0 then
+                obj_spawn_loot_yellow_coins(o, o.oNumLootCoins, 20)
+            end
+            spawn_mist_particles_with_sound(ternary(o.oDeathSound == 0, SOUND_ACTION_HIT, o.oDeathSound))
+            obj_mark_for_deletion(o)
+        end
+
+        return
+    end
+
+    local m = states[getLocalFromGlobalIdx(o.oOwner)]
+    if is_player_active(m) == 0 or m.action ~= ACT_TAZ_TORNADO_ATTACK then
+        if nearest_mario_state_to_object(o).playerIndex == 0 then
+            o.oAction = 1
+            o.oForwardVel = math.random(30, 60)
+            o.oVelY = math.random(20, 80)
+            o.oMoveAngleYaw = math.random(-0x7FFF, 0x8000)
+            network_send_object(o, true)
+        end
+        return
+    end
+
+    o.oVelY = math.min(o.oVelY + 10, o.oSnufitYOffset)
+
+    o.oPosX = m.pos.x + o.oSnufitZOffset * sins(o.oMoveAngleYaw)
+    o.oPosY = m.pos.y + o.oVelY
+    o.oPosZ = m.pos.z + o.oSnufitZOffset * coss(o.oMoveAngleYaw)
+    obj_set_gfx_pos_from_pos(o)
+
+    o.oMoveAngleYaw = o.oMoveAngleYaw + 0x500
 end
 
 ---@param o Object

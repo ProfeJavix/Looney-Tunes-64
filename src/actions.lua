@@ -643,13 +643,182 @@ function acts.act_marvin_grab_tnt(m)
     end
 end
 
-local FOGHORN_SLAP_INTERACTS = {
-    INTERACT_PLAYER,
-    INTERACT_BOUNCE_TOP,
-    INTERACT_BOUNCE_TOP2,
-    INTERACT_KOOPA,
-    INTERACT_BULLY
-}
+---@param m MarioState
+function acts.act_taz_tornado(m)
+
+    if m.input & INPUT_OFF_FLOOR ~= 0 then
+        return set_mario_action(m, ACT_FREEFALL, 0)
+    end
+
+    play_character_sound_if_no_flag(m, CHAR_SOUND_WAH2, MARIO_MARIO_SOUND_PLAYED)
+
+    if mario_check_object_grab(m) ~= 0 then
+        set_character_animation(m, CHAR_ANIM_FIRST_PUNCH)
+        set_anim_to_frame(m, 0)
+        return 1
+    end
+
+    if m.action == ACT_TAZ_TORNADO_START then
+        if m.input & INPUT_UNKNOWN_10 ~= 0 then
+            return set_mario_action(m, ACT_SHOCKWAVE_BOUNCE, 0)
+        end
+
+        if m.input & INPUT_ABOVE_SLIDE ~= 0 then
+            return set_mario_action(m, ACT_BUTT_SLIDE, 0)
+        end
+
+        mario_set_forward_vel(m, 0)
+
+        set_character_animation(m, CHAR_ANIM_FIRST_PUNCH_FAST)
+        if is_anim_at_end(m) ~= 0 then
+            mario_set_forward_vel(m, 30)
+            set_mario_action(m, ACT_TAZ_TORNADO_ATTACK, 0)
+            m.flags = m.flags | MARIO_MARIO_SOUND_PLAYED
+            return 1
+        end
+        perform_ground_step(m)
+    else
+        set_character_animation(m, CHAR_ANIM_A_POSE)
+        m.invincTimer = -1
+
+        mario_set_forward_vel(m, approach_f32_symmetric(m.forwardVel, math.max(m.intendedMag / 32 * 40, 10), 0.7))
+        m.faceAngle.y = approach_s16_symmetric(m.faceAngle.y, m.intendedYaw, 0x400)
+
+        m.actionTimer = m.actionTimer + 1
+
+        if m.actionTimer % 3 == 0 then
+            play_sound(SOUND_ACTION_SPIN, m.pos)
+        end
+        set_mario_particle_flags(m, PARTICLE_DIRT | PARTICLE_DUST, 0)
+
+        m.marioObj.oOwner = nps[m.playerIndex].globalIndex
+        affectAllObjects(m.marioObj, function (att, vic)
+            if dist_between_objects(att, vic) < 250 then
+                local bhvId = get_id_from_behavior(vic.behavior)
+                if bhvId == id_bhvMario then
+                    local nm = states[vic.oBehParams - 1]
+                    if is_player_active(nm) ~= 0 and
+                    nm.action & PREVENT_ACT_FLAGS == 0 and
+                    not PREVENT_ACT_GROUPS[nm.action & ACT_GROUP_MASK] then
+                        hurt_and_set_mario_action(nm, ACT_CAUGHT_IN_TAZ_TORNADO, nps[m.playerIndex].globalIndex, 0)
+                    end
+                elseif get_object_list_from_behavior(vic.behavior) ~= OBJ_LIST_SURFACE and
+                bhvId ~= id_bhvChainChomp and bhvId ~= id_bhvBigBully and bhvId ~= id_bhvBigChillBully and bhvId ~= id_bhvKlepto then
+
+                    if vic.oInteractType == INTERACT_GRABBABLE and m.actionTimer <= 10 then
+                        return false
+                    end
+
+                    spawn_sync_object(id_bhvTazCaughtObj, obj_get_model_id_extended(vic), m.pos.x, m.pos.y, m.pos.z, function(o)
+                        o.oOwner = nps[m.playerIndex].globalIndex
+                        o.oSubAction = bhvId
+
+                        o.oBehParams = vic.oBehParams
+                        o.oBehParams2ndByte = vic.oBehParams2ndByte
+
+                        o.oHealth = vic.oHealth
+                        o.oNumLootCoins = vic.oNumLootCoins
+                        o.oOpacity = vic.oOpacity
+                        o.oAnimState = vic.oAnimState
+                        o.oDeathSound = vic.oDeathSound
+
+                        o.oGraphYOffset = vic.oGraphYOffset
+                        o.hitboxDownOffset = vic.hitboxDownOffset
+                        o.hitboxRadius = vic.hitboxRadius
+                        o.hitboxHeight = vic.hitboxHeight
+                        o.hurtboxRadius = vic.hurtboxRadius
+                        o.hurtboxHeight = vic.hurtboxHeight
+                        vec3f_copy(o.header.gfx.scale, vic.header.gfx.scale)
+
+                        o.oKoopaMovementType = vic.oKoopaMovementType
+                        o.oScuttlebugUnkF4 = vic.oScuttlebugUnkF4
+                        o.oBullySubtype = vic.oBullySubtype
+                    end)
+                    vic.oSyncDeath = 1
+                    network_send_object(vic, true)
+                    obj_mark_for_deletion(vic)
+                elseif obj_check_hitbox_overlap(att, vic) then
+                    return true
+                end
+            end
+            return false
+        end)
+
+        local step = perform_ground_step(m)
+        if m.actionTimer > 90 then
+            return set_mario_action(m, ACT_WALKING, 0)
+        elseif step == GROUND_STEP_HIT_WALL and m.wall then
+            local doors = {
+                [id_bhvDoor] = true,
+                [id_bhvStarDoor] = true
+            }
+            if m.wall.object and doors[get_id_from_behavior(m.wall.object.behavior)] and isDoorUnlocked(m.wall.object) then
+                spawn_triangle_break_particles(20, 138, 0.7, 3)
+                cur_obj_play_sound_1(SOUND_GENERAL_BREAK_BOX)
+                obj_mark_for_deletion(m.wall.object)
+            else
+                m.marioObj.oWallAngle = atan2s(m.wall.normal.z, m.wall.normal.x)
+                m.faceAngle.y = cur_obj_reflect_move_angle_off_wall()
+                play_sound(SOUND_ACTION_HIT_2, m.marioObj.header.gfx.cameraToObject)
+            end
+        end
+
+        m.marioObj.header.gfx.angle.y = m.twirlYaw
+        m.twirlYaw = math.s16(m.twirlYaw + 0x2100)
+    end
+end
+
+---@param m MarioState
+function acts.act_caught_in_taz_tornado(m)
+    if m.actionState ~= 2 then
+        local tornadoM = states[getLocalFromGlobalIdx(m.actionArg)]
+        if is_player_active(tornadoM) == 0 or tornadoM.action ~= ACT_TAZ_TORNADO_ATTACK then
+            if m.playerIndex == 0 then
+                m.faceAngle.y = math.random(-0x7FFF, 0x8000)
+                mario_set_forward_vel(m, math.random(30, 60))
+                m.vel.y = math.random(20, 80)
+                m.flags = m.flags & ~MARIO_MARIO_SOUND_PLAYED
+                m.actionState = 2
+            end
+            return
+        end
+
+        if m.playerIndex == 0 and m.actionState == 0 then
+            m.vel.y = 0
+            m.twirlYaw = math.random(-0x7FFF, 0x8000)
+            m.angleVel.x = math.random(0x300, 0x1000)
+            m.angleVel.y = math.random(170, 220)
+            m.angleVel.z = math.random(50, 150)
+            m.actionState = 1
+        end
+
+        m.faceAngle.y = m.faceAngle.y - math.s16(m.angleVel.x)
+
+        set_character_animation(m, CHAR_ANIM_BEING_GRABBED)
+        play_character_sound_if_no_flag(m, CHAR_SOUND_WHOA, MARIO_MARIO_SOUND_PLAYED)
+
+        m.vel.y = math.min(m.vel.y + 10, m.angleVel.y)
+
+        m.pos.x = tornadoM.pos.x + m.angleVel.z * sins(m.twirlYaw)
+        m.pos.y = tornadoM.pos.y + m.vel.y
+        m.pos.z = tornadoM.pos.z + m.angleVel.z * coss(m.twirlYaw)
+
+        vec3f_copy(m.marioObj.header.gfx.pos, m.pos)
+        vec3s_copy(m.marioObj.header.gfx.angle, m.faceAngle)
+
+        m.twirlYaw = m.twirlYaw + 0x500
+    else
+        set_character_animation(m, CHAR_ANIM_AIR_FORWARD_KB)
+        play_character_sound_if_no_flag(m, CHAR_SOUND_WAAAOOOW, MARIO_MARIO_SOUND_PLAYED)
+
+        local step = perform_air_step(m, 0)
+        if step == AIR_STEP_LANDED then
+            return set_mario_action(m, ACT_FORWARD_GROUND_KB, 0)
+        elseif step == AIR_STEP_HIT_WALL then
+            return set_mario_action(m, ACT_BACKWARD_AIR_KB, 0)
+        end
+    end
+end
 
 ---@param m MarioState
 function acts.act_foghorn_slap(m)
@@ -667,35 +836,52 @@ function acts.act_foghorn_slap(m)
         return 1
     end
 
-    m.marioBodyState.handState = MARIO_HAND_RIGHT_OPEN
-
     if m.action == ACT_FOGHORN_SLAP_CHARGE then
-        if m.forwardVel >= 0 then
-            apply_slope_decel(m, 0.8)
-        else
-            m.forwardVel = approach_f32_symmetric(m.forwardVel, 0, 8)
-            apply_slope_accel(m)
-        end
-
-        local step = perform_ground_step(m)
-        if step == GROUND_STEP_NONE and m.forwardVel ~= 0 then
-            set_mario_particle_flags(m, PARTICLE_DUST, 0)
-        end
-
         if m.actionState == 0 then
+            m.marioBodyState.handState = MARIO_HAND_RIGHT_OPEN
             set_character_animation(m, CHAR_ANIM_FIRST_PUNCH_FAST)
+            play_character_sound_if_no_flag(m, CHAR_SOUND_HOOHOO, MARIO_MARIO_SOUND_PLAYED)
             if is_anim_at_end(m) ~= 0 then
                 m.actionState = 1
             end
         else
+            if m.intendedMag ~= 0 then
+
+                if m.actionState ~= 2 then
+                    play_character_sound(m, CHAR_SOUND_HELLO)
+                    m.actionState = 2
+                end
+
+                m.faceAngle.y = approach_s16_symmetric(m.faceAngle.y, m.intendedYaw, 0x800)
+                play_step_sound(m, 28, 84)
+                if m.marioObj.header.gfx.animInfo.animFrame == 0 then
+                    m.forwardVel = 10 * m.intendedMag / 32
+                end
+            else
+                m.forwardVel = approach_f32_symmetric(m.forwardVel, 0, 1)
+                if m.forwardVel == 0 then
+                    m.marioBodyState.handState = MARIO_HAND_RIGHT_OPEN
+
+                    if m.actionState == 2 then
+                        m.flags = m.flags & ~MARIO_MARIO_SOUND_PLAYED
+                        m.actionState = 0
+                    end
+                end
+            end
+            mario_set_forward_vel(m, m.forwardVel)
+
             if m.controller.buttonDown & B_BUTTON == 0 then
                 return set_mario_action(m, ACT_FOGHORN_SLAP_RELEASE, m.actionTimer)
             end
 
             m.actionTimer = math.min(m.actionTimer + 5, 150)
-            set_character_anim_with_accel(m, CHAR_ANIM_SECOND_PUNCH, 0x10000 * (1 + m.actionTimer / 50))
+
+            local accel = ternary(m.forwardVel == 0, (1 + m.actionTimer / 50), 3 * (m.forwardVel / 15))
+            set_character_anim_with_accel(m, CHAR_ANIM_SECOND_PUNCH, math.max(0x1000, 0x10000 * accel))
         end
+        perform_ground_step(m)
     else
+        m.marioBodyState.handState = MARIO_HAND_RIGHT_OPEN
         set_character_animation(m, CHAR_ANIM_SECOND_PUNCH_FAST)
         play_character_sound_if_no_flag(m, CHAR_SOUND_PUNCH_HOO, MARIO_MARIO_SOUND_PLAYED)
         mario_set_forward_vel(m, 0)
@@ -704,46 +890,56 @@ function acts.act_foghorn_slap(m)
         if m.marioObj.header.gfx.animInfo.animFrame < 8 then
             local power = m.actionArg / 150
 
-            for _, intType in ipairs(FOGHORN_SLAP_INTERACTS) do
-                local o = mario_get_collided_object(m, intType)
-                if o then
-                    local angleToO = mario_obj_angle_to_object(m, o)
-                    if abs_angle_diff(angleToO, m.faceAngle.y) <= 0x2AAA then
-                        if intType == INTERACT_PLAYER then
-                            local nm = states[o.oBehParams - 1]
-                            if nm.playerIndex == 0 and
-                            is_player_active(nm) ~= 0 and
-                            nm.action & ACT_GROUP_MASK ~= ACT_GROUP_CUTSCENE and
-                            nm.action & (ACT_FLAG_INVULNERABLE | ACT_FLAG_INTANGIBLE) == 0 and
-                            nm.invincTimer == 0 then
-                                nm.faceAngle.y = obj_angle_to_object(nm.marioObj, m.marioObj)
-                                hurt_and_set_mario_action(nm, ACT_SLAPPED_BY_FOGHORN, m.actionArg, 4 * (2 + 2 * power))
-                            end
-                        else
-                            o.oAction = OBJ_ACT_HORIZONTAL_KNOCKBACK
-                            o.oForwardVel = 40 + 80 * power
-                            o.oVelY = 25 + 45 * power
-                            o.oFlags = o.oFlags & ~OBJ_FLAG_SET_FACE_YAW_TO_MOVE_YAW
-                            o.oMoveFlags = 0
-                            o.oMoveAngleYaw = angleToO
+            m.marioObj.oOwner = nps[m.playerIndex].globalIndex
 
-                            if o.oSyncID ~= 0 then
-                                network_send_object(o, true)
-                            end
+            affectAllObjects(m.marioObj, function (att, vic)
+                local angleToO = mario_obj_angle_to_object(m, vic)
+                if dist_between_objects(att, vic) < vic.hitboxRadius + 100 and
+                abs_angle_diff(angleToO, m.faceAngle.y) <= 0x2AAA then
+
+                    if obj_has_behavior_id(vic, id_bhvMario) ~= 0 then
+
+                        if m.actionState == 0 then
+                            m.actionState = 1
                         end
 
-                        if m.playerIndex == 0 then
-                            local shake = 0
-                            if power >= 0.2 then
-                                if power <= 0.6 then
-                                    shake = SHAKE_POS_SMALL
-                                else
-                                    shake = SHAKE_POS_MEDIUM
-                                end
-                            end
-                            set_camera_shake_from_point(shake, m.pos.x, m.pos.y, m.pos.z)
+                        local nm = states[vic.oBehParams - 1]
+                        nm.faceAngle.y = obj_angle_to_object(nm.marioObj, m.marioObj)
+                        hurt_and_set_mario_action(nm, ACT_SLAPPED_BY_FOGHORN, m.actionArg, 4 * (2 + 2 * power))
+                    elseif vic.oInteractType == INTERACT_BOUNCE_TOP or
+                    vic.oInteractType == INTERACT_BOUNCE_TOP2 or
+                    vic.oInteractType == INTERACT_KOOPA or
+                    vic.oInteractType == INTERACT_BULLY then
+
+                        if m.actionState == 0 then
+                            m.actionState = 1
+                        end
+
+                        vic.oAction = OBJ_ACT_HORIZONTAL_KNOCKBACK
+                        vic.oIntangibleTimer = 5
+                        vic.oForwardVel = 40 + 80 * power
+                        vic.oVelY = 25 + 45 * power
+                        vic.oFlags = vic.oFlags & ~OBJ_FLAG_SET_FACE_YAW_TO_MOVE_YAW
+                        vic.oMoveFlags = 0
+                        vic.oMoveAngleYaw = angleToO
+
+                        if vic.oSyncID ~= 0 then
+                            network_send_object(vic, true)
                         end
                     end
+                end
+
+                return false
+            end)
+
+            if m.actionState == 1 then
+                if m.actionState == 1 and is_anim_past_frame(m, 3) ~= 0 then
+                    m.actionState = 2
+                    spawn_non_sync_object(id_bhvTriangleParticleSpawner, E_MODEL_NONE, m.pos.x, m.pos.y + 50, m.pos.z, function() end)
+                end
+                if m.playerIndex == 0 and power >= 0.2 then
+                    play_sound(SOUND_ACTION_HIT_3, m.marioObj.header.gfx.cameraToObject)
+                    set_camera_shake_from_point(ternary(power <= 0.6, SHAKE_POS_SMALL, SHAKE_POS_MEDIUM), m.pos.x, m.pos.y, m.pos.z)
                 end
             end
         end
@@ -770,7 +966,7 @@ end
 ---@param m MarioState
 function acts.act_wile_air_walk(m)
     m.marioBodyState.handState = MARIO_HAND_FISTS
-    
+
     if m.actionState == 0 then
         m.vel.y = 0
 

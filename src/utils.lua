@@ -192,6 +192,29 @@ function isLT64Char(localIdx)
     return LT_64_CHARS[_G.charSelect.character_get_current_number(localIdx)]
 end
 
+---@param o Object
+---@return boolean
+function isDoorUnlocked(o)
+
+    local behParamsValue = o.oBehParams >> 24
+
+    if o.oInteractType == INTERACT_WARP_DOOR then
+
+        if behParamsValue ~= 1 and behParamsValue ~= 2 then
+            return true
+        end
+
+        local saveFlags = save_file_get_flags()
+        local cond1 = saveFlags & (SAVE_FLAG_UNLOCKED_UPSTAIRS_DOOR | SAVE_FLAG_HAVE_KEY_2) ~= 0
+        local cond2 = saveFlags & (SAVE_FLAG_UNLOCKED_BASEMENT_DOOR | SAVE_FLAG_HAVE_KEY_1) ~= 0
+
+        return (behParamsValue == 1 and cond1) or (behParamsValue == 2 and cond2)
+    end
+
+    return save_file_get_total_star_count(get_current_save_file_num() - 1, COURSE_MIN - 1, COURSE_MAX - 1) >= behParamsValue or
+    behParamsValue == 70
+end
+
 ---@param globalIdx integer
 ---@return integer
 function getLocalFromGlobalIdx(globalIdx)

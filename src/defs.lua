@@ -70,6 +70,9 @@ ACT_SYLVESTER_WALL_CRAWL = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_A
 ACT_MARVIN_SHOOT_LASER = allocate_mario_action(ACT_GROUP_MOVING | ACT_FLAG_MOVING)
 ACT_MARVIN_AIR_SHOOT_LASER = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR)
 ACT_MARVIN_GRAB_TNT = allocate_mario_action(ACT_GROUP_STATIONARY | ACT_FLAG_STATIONARY)
+ACT_TAZ_TORNADO_START = allocate_mario_action(ACT_GROUP_STATIONARY | ACT_FLAG_STATIONARY)
+ACT_TAZ_TORNADO_ATTACK = allocate_mario_action(ACT_GROUP_MOVING | ACT_FLAG_MOVING | ACT_FLAG_ATTACKING)
+ACT_CAUGHT_IN_TAZ_TORNADO = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_INVULNERABLE)
 ACT_FOGHORN_SLAP_CHARGE = allocate_mario_action(ACT_GROUP_MOVING | ACT_FLAG_MOVING)
 ACT_FOGHORN_SLAP_RELEASE = allocate_mario_action(ACT_GROUP_STATIONARY | ACT_FLAG_STATIONARY)
 ACT_SLAPPED_BY_FOGHORN = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_INVULNERABLE | ACT_FLAG_ALLOW_VERTICAL_WIND_ACTION)
@@ -98,8 +101,10 @@ ANIM_MARVIN_GRAB_TNT = 'marvin_grab_tnt'
 ANIM_MARVIN_SHOOT_LASER = 'marvin_shoot_laser'
 ANIM_MARVIN_SHOOT_LASER_AIR = 'marvin_shoot_laser_air'
 ANIM_TAZ_CS_MENU = 'taz_cs_menu'
+ANIM_TAZ_TORNADO_START = 'taz_tornado_start'
 ANIM_FOGHORN_CS_MENU = 'foghorn_cs_menu'
 ANIM_FOGHORN_SLAP_CHARGE = 'foghorn_slap_charge'
+ANIM_FOGHORN_SLAP_CHARGE_TIPTOE = 'foghorn_slap_charge_tiptoe'
 ANIM_FOGHORN_SLAP_RELEASE = 'foghorn_slap_release'
 ANIM_FOGHORN_SLAP_START = 'foghorn_slap_start'
 ANIM_WILE_CS_MENU = 'wile_cs_menu'
@@ -168,6 +173,16 @@ function geo_shotgun_switch(node)
     local gn = cast_graph_node(node)
     local m = geo_get_mario_state()
     gn.selectedCase = ternary(m.action == ACT_ELMER_SHOOT_SHOTGUN or m.action == ACT_ELMER_AIR_SHOOT_SHOTGUN, 1, 0)
+end
+
+function geo_tornado_switch(node)
+    local gn = cast_graph_node(node)
+    local m = geo_get_mario_state()
+    if m.action == ACT_TAZ_TORNADO_ATTACK then
+        gn.selectedCase = 4
+    else
+        gn.selectedCase = m.marioBodyState.modelState >> 8
+    end
 end
 
 function geo_rocket_switch(node)

@@ -1,3 +1,5 @@
+local nps = gNetworkPlayers
+
 local LOONEY_TUNES_64 = get_active_mod().name
 local defaultLifeIcon = get_texture_info("exclamation-icon")
 CT_THANKS_FOR_PLAYING_CLIPS = {}
@@ -473,6 +475,7 @@ CT_SYLVESTER = addLooneyTunesChar({
     menuColor = '0d0d0d',
     model = smlua_model_util_get_id("sylvester_the_cat_geo"),
     charType = CT_LUIGI,
+    camScale = 1.5,
     palettes = {
         {
             palette = {
@@ -695,7 +698,12 @@ CT_TAZ = addLooneyTunesChar({
     },
     animData = {
         animTable = {
-            [_G.charSelect.CS_ANIM_MENU] = ANIM_TAZ_CS_MENU
+            [_G.charSelect.CS_ANIM_MENU] = ANIM_TAZ_CS_MENU,
+            [CHAR_ANIM_FIRST_PUNCH_FAST] = function (m)
+                if m.action == ACT_TAZ_TORNADO_START then
+                    return ANIM_TAZ_TORNADO_START
+                end
+            end
         }
     },
     voices = {
@@ -748,6 +756,33 @@ CT_TAZ = addLooneyTunesChar({
         [CHAR_SOUND_MAMA_MIA] =
         'Taz Mama Mia.ogg'                                                                      -- Booted out of level
     },
+    replaceActs = {
+        acts = { ACT_TAZ_TORNADO_START, ACT_TAZ_TORNADO_ATTACK },
+        param = function(m, incAct)
+
+            if m.action == ACT_TAZ_TORNADO_ATTACK then
+                m.twirlYaw = 0
+                m.invincTimer = 0
+            end
+            
+            if incAct == ACT_TAZ_TORNADO_ATTACK then
+                m.twirlYaw = m.faceAngle.y
+            end
+
+            if m.floorHeight == m.pos.y then
+                if incAct == ACT_PUNCHING or incAct == ACT_MOVE_PUNCHING then
+                    return ternary(m.forwardVel < 10, 1, 2)
+                elseif incAct == ACT_DIVE then
+                    return 2
+                end
+            end
+
+            return -1
+        end,
+        canGrab = function (m)
+            return m.action == ACT_TAZ_TORNADO_START or (m.action == ACT_TAZ_TORNADO_ATTACK and m.actionTimer <= 10)
+        end
+    }
 })
 
 CT_FOGHORN = addLooneyTunesChar({
@@ -783,7 +818,7 @@ CT_FOGHORN = addLooneyTunesChar({
             end,
             [CHAR_ANIM_SECOND_PUNCH] = function (m)
                 if m.action == ACT_FOGHORN_SLAP_CHARGE then
-                    return ANIM_FOGHORN_SLAP_CHARGE
+                    return ternary(m.forwardVel == 0, ANIM_FOGHORN_SLAP_CHARGE, ANIM_FOGHORN_SLAP_CHARGE_TIPTOE)
                 end
             end,
             [CHAR_ANIM_SECOND_PUNCH_FAST] = function (m)
@@ -794,6 +829,7 @@ CT_FOGHORN = addLooneyTunesChar({
         }
     },
     voices = {
+        [CHAR_SOUND_HELLO] = 'Foghorn Itsa Me.ogg', --extra
         [CHAR_SOUND_OKEY_DOKEY] = { 'Foghorn Okey Dokey.ogg', 'Foghorn Hello.ogg', 'Foghorn Itsa Me.ogg' }, -- Starting game
         [CHAR_SOUND_LETS_A_GO] = 'Foghorn Letsa Go.ogg',                                                    -- Starting level
         [CHAR_SOUND_GAME_OVER] = 'Foghorn Game Over.ogg',                                                   -- Game Overed
@@ -847,6 +883,7 @@ CT_FOGHORN = addLooneyTunesChar({
         acts = { ACT_FOGHORN_SLAP_CHARGE },
         param = function(m, incAct)
             if incAct == ACT_MOVE_PUNCHING or incAct == ACT_PUNCHING then
+                mario_set_forward_vel(m, 0)
                 return 1
             end
             return -1

@@ -43,6 +43,12 @@ end
 ---@param incAct integer
 function hooks.before_set_mario_action(m, incAct)
 
+    if m.action == ACT_CAUGHT_IN_TAZ_TORNADO then
+        vec3s_copy(m.angleVel, gVec3sZero())
+        m.faceAngle.x = 0
+        m.twirlYaw = 0
+    end
+
     if not _G.charSelect.gCSPlayers[m.playerIndex].movesetToggle then return end
 
     local repData = CT_REPLACE_ACTS[_G.charSelect.character_get_current_number(m.playerIndex)]
@@ -133,6 +139,37 @@ function hooks.on_play_sound(soundId, pos)
             return 0
         end
     end
+end
+
+function hooks.allow_menu_open()
+    local noMenuActs = {
+        [ACT_BUGS_HOVER] = true,
+        [ACT_BUGS_DIVE_POUND] = true,
+        [ACT_BUGS_MOVE_UNDERGROUND] = true,
+        [ACT_DAFFY_POUND] = true,
+        [ACT_DAFFY_POUND_LAND] = true,
+        [ACT_DAFFY_POUND_BOUNCE] = true,
+        [ACT_DAFFY_MALLET_SWING] = true,
+        [ACT_ELMER_SHOOT_SHOTGUN] = true,
+        [ACT_ELMER_AIR_SHOOT_SHOTGUN] = true,
+        [ACT_SYLVESTER_TWEETY_GLIDE] = true,
+        [ACT_SYLVESTER_TWEETY_FIGHT] = true,
+        [ACT_SYLVESTER_WALL_CRAWL] = true,
+        [ACT_MARVIN_SHOOT_LASER] = true,
+        [ACT_MARVIN_AIR_SHOOT_LASER] = true,
+        [ACT_MARVIN_GRAB_TNT] = true,
+        [ACT_TAZ_TORNADO_START] = true,
+        [ACT_TAZ_TORNADO_ATTACK] = true,
+        [ACT_CAUGHT_IN_TAZ_TORNADO] = true,
+        [ACT_FOGHORN_SLAP_CHARGE] = true,
+        [ACT_FOGHORN_SLAP_RELEASE] = true,
+        [ACT_SLAPPED_BY_FOGHORN] = true,
+        [ACT_WILE_AIR_WALK] = true,
+        [ACT_WILE_ROCKET_EXPLODE] = true,
+        [ACT_WILE_ROCKET_JUMP] = true
+    }
+
+    return not noMenuActs[states[0].action]
 end
 
 ---@param prevChar integer
