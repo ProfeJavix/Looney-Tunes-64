@@ -125,12 +125,26 @@ function acts.act_daffy_pound_bounce(m)
     common_air_action_step(m, ACT_DOUBLE_JUMP_LAND, CHAR_ANIM_DOUBLE_JUMP_RISE, AIR_STEP_CHECK_LEDGE_GRAB | AIR_STEP_CHECK_HANG)
 end
 
+local function reset_animation_values(m)
+    m.marioObj.header.gfx.animInfo.animFrame = 0
+    m.marioObj.header.gfx.animInfo.prevAnimFrame = 0
+    m.marioObj.header.gfx.animInfo.prevAnimFrameTimestamp = 0
+    m.marioObj.header.gfx.animInfo.animFrameAccelAssist = 0
+    m.marioObj.header.gfx.animInfo.animAccel = 0x10000
+    m.marioObj.header.gfx.animInfo.animTimer = 0
+    m.marioObj.header.gfx.animInfo.animYTrans = 0
+end
+
 ---@param m MarioState
 function acts.act_daffy_mallet_swing(m)
     --temp, just for anim test
 
-    set_character_animation(m, CHAR_ANIM_A_POSE)
-    smlua_anim_util_set_animation(m.marioObj, 'daffy_swing_anim')
+    --set_character_animation(m, CHAR_ANIM_A_POSE)
+    m.actionTimer = m.actionTimer + 1
+    if(m.actionTimer == 1) then
+        reset_animation_values(m)
+    end
+    smlua_anim_util_set_animation(m.marioObj, 'Daffy_mallet_swing_2')
 
     if is_anim_at_end(m) ~= 0 then
         return set_mario_action(m, ACT_IDLE, 0)
