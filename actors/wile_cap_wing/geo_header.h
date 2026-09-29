@@ -1,0 +1,18 @@
+extern const GeoLayout wile_e_wing_geo_opt_1[];
+extern const GeoLayout wile_e_wing_geo[];
+extern Lights1 wile_e_wing_BoxFront_lights;
+extern Lights1 wile_e_wing_BoxRest_lights;
+extern u8 wile_e_wing_frontbox_ci8[];
+extern u8 wile_e_wing_frontbox_pal_rgba16[];
+extern u8 wile_e_wing_restbox_ci8[];
+extern u8 wile_e_wing_restbox_pal_rgba16[];
+extern Vtx wile_e_wing_Wing_Cap_DL_mesh_layer_1_vtx_0[4];
+extern Gfx wile_e_wing_Wing_Cap_DL_mesh_layer_1_tri_0[];
+extern Vtx wile_e_wing_Wing_Cap_DL_mesh_layer_1_vtx_1[20];
+extern Gfx wile_e_wing_Wing_Cap_DL_mesh_layer_1_tri_1[];
+extern Gfx mat_wile_e_wing_BoxFront[];
+extern Gfx mat_revert_wile_e_wing_BoxFront[];
+extern Gfx mat_wile_e_wing_BoxRest[];
+extern Gfx mat_revert_wile_e_wing_BoxRest[];
+extern Gfx wile_e_wing_Wing_Cap_DL_mesh_layer_1_with_layer_1_revert[];
+extern Gfx wile_e_wing_Wing_Cap_DL_mesh_layer_1_with_layer_5_revert[];

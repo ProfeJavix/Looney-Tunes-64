@@ -56,7 +56,8 @@ function getAutoTarget(m, pPos, range, minDist)
     for _, id in ipairs(targetBhvs) do
         local curO = obj_get_first_with_behavior_id(id)
         while curO do
-            if id ~= id_bhvMario or (curO ~= m.marioObj and is_player_active(states[curO.oBehParams - 1]) ~= 0) then
+            if curO.activeFlags ~= ACTIVE_FLAG_DEACTIVATED and (id ~= id_bhvMario or
+            (curO.oBehParams - 1 ~= m.playerIndex and is_player_active(states[curO.oBehParams - 1]) ~= 0)) then
                 local dist = dist_between_objects(m.marioObj, curO)
                 if dist < minDist and
                 math.abs(obj_pitch_to_object(m.marioObj, curO)) < 0x2200 and
@@ -183,6 +184,35 @@ function moveProjectile(o, speed, stopFlags, hitFunc)
     end
 
     return 0
+end
+
+---@param localIdx? integer
+---@return boolean
+function isLT64Char(localIdx)
+    return LT_64_CHARS[_G.charSelect.character_get_current_number(localIdx)]
+end
+
+---@param o Object
+---@return boolean
+function isDoorUnlocked(o)
+
+    local behParamsValue = o.oBehParams >> 24
+
+    if o.oInteractType == INTERACT_WARP_DOOR then
+
+        if behParamsValue ~= 1 and behParamsValue ~= 2 then
+            return true
+        end
+
+        local saveFlags = save_file_get_flags()
+        local cond1 = saveFlags & (SAVE_FLAG_UNLOCKED_UPSTAIRS_DOOR | SAVE_FLAG_HAVE_KEY_2) ~= 0
+        local cond2 = saveFlags & (SAVE_FLAG_UNLOCKED_BASEMENT_DOOR | SAVE_FLAG_HAVE_KEY_1) ~= 0
+
+        return (behParamsValue == 1 and cond1) or (behParamsValue == 2 and cond2)
+    end
+
+    return save_file_get_total_star_count(get_current_save_file_num() - 1, COURSE_MIN - 1, COURSE_MAX - 1) >= behParamsValue or
+    behParamsValue == 70
 end
 
 ---@param globalIdx integer

@@ -1,6 +1,10 @@
+local nps = gNetworkPlayers
+
 local LOONEY_TUNES_64 = get_active_mod().name
 local defaultLifeIcon = get_texture_info("exclamation-icon")
 CT_THANKS_FOR_PLAYING_CLIPS = {}
+CT_REPLACE_ACTS = {} ---@type ReplaceActInfo[]
+LT_64_CHARS = {}
 
 ---@param data LTData
 ---@return integer
@@ -48,6 +52,15 @@ local function addLooneyTunesChar(data)
         CT_THANKS_FOR_PLAYING_CLIPS[ct] = audio_sample_load(thanksClip)
     end
 
+    if data.replaceActs then
+        data.replaceActs.actsSet = data.replaceActs.actsSet or {}
+        for _, act in ipairs(data.replaceActs.acts) do
+            data.replaceActs.actsSet[act] = true
+        end
+        data.replaceActs.canGrab = data.replaceActs.canGrab or function() return false end
+        CT_REPLACE_ACTS[ct] = data.replaceActs
+    end
+
     if data.hasPowerMeter then
         _G.charSelect.character_add_health_meter(
             ct,
@@ -71,6 +84,8 @@ local function addLooneyTunesChar(data)
     end
 
     _G.charSelect.character_set_category(ct, LOONEY_TUNES_64)
+
+    LT_64_CHARS[ct] = true
 
     return ct
 end
@@ -150,6 +165,35 @@ CT_BUGS = addLooneyTunesChar({
         [CHAR_SOUND_DYING] = 'Bugs Dying.ogg',                                                     -- Dying from damage
         [CHAR_SOUND_DROWNING] = 'Bugs Drowning.ogg',                                               -- Running out of air underwater
         [CHAR_SOUND_MAMA_MIA] = 'Bugs Mama Mia.ogg'                                                -- Booted out of level
+    },
+    replaceActs = {
+        acts = { ACT_BUGS_HOVER, ACT_BUGS_DIVE_POUND },
+        param = function(m, incAct)
+            if m.action == ACT_BUGS_HOVER then
+                m.marioBodyState.allowPartRotation = 0
+            end
+
+            if m.action == ACT_BUGS_DIVE_POUND then
+                m.faceAngle.x = 0
+            end
+
+            if m.action == ACT_BUGS_MOVE_UNDERGROUND then
+                m.squishTimer = 0
+                m.invincTimer = 0
+            end
+
+            if incAct == ACT_TRIPLE_JUMP then
+                set_mario_y_vel_based_on_fspeed(m, 69, 0)
+                m.forwardVel = m.forwardVel * 0.8
+                return 1
+            end
+
+            if incAct == ACT_GROUND_POUND then
+                return 2
+            end
+
+            return -1
+        end
     }
 })
 
@@ -158,7 +202,7 @@ CT_DAFFY = addLooneyTunesChar({
     name = 'Daffy Duck',
     description = "You're Despicable...",
     author = 'ThaGurlTilly',
-    menuColor = '8b8b8b',
+    menuColor = 'ff6f00',
     model = smlua_model_util_get_id("daffy_duck_geo"),
     charType = CT_LUIGI,
     palettes = {
@@ -229,6 +273,18 @@ CT_DAFFY = addLooneyTunesChar({
         [CHAR_SOUND_DROWNING] = 'Daffy Drowning.ogg',                                                 -- Running out of air underwater
         [CHAR_SOUND_MAMA_MIA] =
         'Daffy Mama Mia.ogg'                                                                          -- Booted out of level
+    },
+    replaceActs = {
+        acts = { ACT_DAFFY_MALLET_SWING, ACT_DAFFY_POUND },
+        param = function(m, incAct)
+            if incAct == ACT_PUNCHING or incAct == ACT_MOVE_PUNCHING then
+                return 1
+            elseif incAct == ACT_GROUND_POUND then
+                return 2
+            end
+
+            return -1
+        end
     }
 })
 
@@ -237,7 +293,7 @@ CT_PORKY = addLooneyTunesChar({
     name = 'Porky Pig',
     description = "That's All Folks!",
     author = 'ThaGurlTilly',
-    menuColor = '8b8b8b',
+    menuColor = 'feafa7',
     model = smlua_model_util_get_id("porky_pig_geo"),
     charType = CT_TOAD,
     palettes = {
@@ -314,8 +370,8 @@ CT_ELMER = addLooneyTunesChar({
     id = 'elmer',
     name = 'Elmer Fudd',
     description = "Be vewy, vewy quiet...",
-    author = 'ThaGurlTilly',
-    menuColor = '8b8b8b',
+    author = 'Tanooki',
+    menuColor = 'aa6838',
     model = smlua_model_util_get_id("elmer_fudd_geo"),
     charType = CT_TOAD,
     palettes = {
@@ -396,6 +452,18 @@ CT_ELMER = addLooneyTunesChar({
         [CHAR_SOUND_DROWNING] = 'Elmer Drowning.ogg',                                                 -- Running out of air underwater
         [CHAR_SOUND_MAMA_MIA] =
         'Elmer Mama Mia.ogg'                                                                          -- Booted out of level
+    },
+    replaceActs = {
+        acts = { ACT_ELMER_SHOOT_SHOTGUN, ACT_ELMER_AIR_SHOOT_SHOTGUN },
+        param = function (m, incAct)
+            if incAct== ACT_PUNCHING or incAct == ACT_MOVE_PUNCHING or incAct == ACT_JUMP_KICK then
+                return ternary(m.floorHeight == m.pos.y, 1, 2)
+            end
+            return -1
+        end,
+        canGrab = function (m)
+            return m.floorHeight == m.pos.y
+        end
     }
 })
 
@@ -404,9 +472,10 @@ CT_SYLVESTER = addLooneyTunesChar({
     name = 'Sylvester The Cat',
     description = "I tawt I taw him..",
     author = 'ThaGurlTilly',
-    menuColor = '8b8b8b',
+    menuColor = '0d0d0d',
     model = smlua_model_util_get_id("sylvester_the_cat_geo"),
     charType = CT_LUIGI,
+    camScale = 1.5,
     palettes = {
         {
             palette = {
@@ -474,6 +543,33 @@ CT_SYLVESTER = addLooneyTunesChar({
         [CHAR_SOUND_DYING] = 'Sylvester Dying.ogg',                                                     -- Dying from damage
         [CHAR_SOUND_DROWNING] = 'Sylvester Dying.ogg',                                               -- Running out of air underwater
         [CHAR_SOUND_MAMA_MIA] = 'Sylvester Mama Mia.ogg'                                                -- Booted out of level
+    },
+    replaceActs = {
+        acts = { ACT_SYLVESTER_WALL_CRAWL, ACT_SYLVESTER_TWEETY_GLIDE },
+        param = function(m, incAct)
+
+            if m.action == ACT_AIR_HIT_WALL then
+                m.faceAngle.x = 0
+                m.faceAngle.z = 0
+            end
+
+            if m.action == ACT_SYLVESTER_TWEETY_FIGHT then
+                m.faceAngle.x = 0
+                m.squishTimer = 0
+                m.usedObj = nil
+            end
+
+            if incAct == ACT_AIR_HIT_WALL then
+                return 1
+            end
+
+            if incAct == ACT_BACKFLIP and m.flags & MARIO_CAP_ON_HEAD ~= 0 then
+                m.vel.y = 80
+                return 2
+            end
+
+            return -1
+        end
     }
 })
 
@@ -482,7 +578,7 @@ CT_MARVIN = addLooneyTunesChar({
     name = 'Marvin The Martian',
     description = "Where's the Boom?",
     author = 'ThaGurlTilly',
-    menuColor = '8b8b8b',
+    menuColor = '0a5e00',
     model = smlua_model_util_get_id("marvin_the_martian_geo"),
     charType = CT_TOAD,
     palettes = {
@@ -563,6 +659,129 @@ CT_MARVIN = addLooneyTunesChar({
         [CHAR_SOUND_DROWNING] = 'Marvin Drowning.ogg',                                                   -- Running out of air underwater
         [CHAR_SOUND_MAMA_MIA] =
         'Marvin Mama Mia.ogg'                                                                            -- Booted out of level
+    },
+    replaceActs = {
+        acts = { ACT_MARVIN_SHOOT_LASER, ACT_MARVIN_AIR_SHOOT_LASER },
+        param = function (m, incAct)
+            if incAct == ACT_PUNCHING or incAct == ACT_MOVE_PUNCHING or incAct == ACT_JUMP_KICK then
+                return ternary(m.floorHeight == m.pos.y, 1, 2)
+            end
+            return -1
+        end,
+        canGrab = function (m)
+            return m.floorHeight == m.pos.y
+        end
+    }
+})
+
+CT_TAZ = addLooneyTunesChar({
+    id = 'taz',
+    name = 'Tasmanian Devil',
+    description = "*Unintelligible*",
+    author = 'Tanooki',
+    menuColor = '9d535a',
+    model = smlua_model_util_get_id("taz_devil_geo"),
+    charType = CT_LUIGI,
+    palettes = {
+        {
+            palette = {
+                [PANTS]  = "9d535a",
+                [SHIRT]  = "9d535a",
+                [GLOVES] = "9d535a",
+                [SHOES]  = "9d535a",
+                [HAIR]   = "9d535a",
+                [SKIN]   = "d9c192",
+                [CAP]    = "ff96c1",
+                [EMBLEM] = "ffffff"
+            }
+        }
+    },
+    animData = {
+        animTable = {
+            [_G.charSelect.CS_ANIM_MENU] = ANIM_TAZ_CS_MENU,
+            [CHAR_ANIM_FIRST_PUNCH_FAST] = function (m)
+                if m.action == ACT_TAZ_TORNADO_START then
+                    return ANIM_TAZ_TORNADO_START
+                end
+            end
+        }
+    },
+    voices = {
+        [CHAR_SOUND_OKEY_DOKEY] = { 'Taz Okey Dokey.ogg', 'Taz Hello.ogg', 'Taz Itsa Me.ogg' }, -- Starting game
+        [CHAR_SOUND_LETS_A_GO] = 'Taz Letsa Go.ogg',                                            -- Starting level
+        [CHAR_SOUND_GAME_OVER] = 'Taz Game Over.ogg',                                           -- Game Overed
+        [CHAR_SOUND_PUNCH_YAH] = 'Taz Yah.ogg',                                                 -- Punch 1
+        [CHAR_SOUND_PUNCH_WAH] = 'Taz Wah.ogg',                                                 -- Punch 2
+        [CHAR_SOUND_PUNCH_HOO] = 'Taz Hoo.ogg',                                                 -- Punch 3
+        [CHAR_SOUND_YAH_WAH_HOO] = 'Taz Yah Wah Hoo.ogg',                                       -- First Jump Sounds
+        [CHAR_SOUND_HOOHOO] = 'Taz Hoohoo.ogg',                                                 -- Second jump sound
+        [CHAR_SOUND_YAHOO_WAHA_YIPPEE] = { 'Taz Yahoo.ogg', 'Taz Waha.ogg', 'Taz Yippee.ogg' }, -- Triple jump sounds
+        [CHAR_SOUND_UH] = 'Taz Uh.ogg',                                                         -- Soft wall bonk
+        [CHAR_SOUND_UH2] = 'Taz Uh2.ogg',                                                       -- Quick ledge get up
+        [CHAR_SOUND_UH2_2] = 'Taz Uh2.ogg',                                                     -- Landing after long jump
+        [CHAR_SOUND_DOH] = 'Taz Doh.ogg',                                                       -- Hard wall bonk
+        [CHAR_SOUND_OOOF] = 'Taz Ooof.ogg',                                                     -- Attacked in air
+        [CHAR_SOUND_OOOF2] = 'Taz Ooof.ogg',                                                    -- Land from hard bonk
+        [CHAR_SOUND_HAHA] = 'Taz Haha.ogg',                                                     -- Landing triple jump
+        [CHAR_SOUND_HAHA_2] = 'Taz Haha.ogg',                                                   -- Landing in water from big fall
+        [CHAR_SOUND_YAHOO] = 'Taz Yahoo.ogg',                                                   -- Long jump
+        [CHAR_SOUND_DOH] = 'Taz Doh.ogg',                                                       -- Long jump wall bonk
+        [CHAR_SOUND_WHOA] = 'Taz Whoa.ogg',                                                     -- Grabbing ledge
+        [CHAR_SOUND_EEUH] = 'Taz Eeuh.ogg',                                                     -- Climbing over ledge
+        [CHAR_SOUND_WAAAOOOW] = 'Taz Waaaooow.ogg',                                             -- Falling a long distance
+        [CHAR_SOUND_TWIRL_BOUNCE] = 'Taz Twirl Bounce.ogg',                                     -- Bouncing off of a flower spring
+        [CHAR_SOUND_GROUND_POUND_WAH] = 'Taz Ground Pound Wah.ogg',                             -- Ground Pound after startup
+        [CHAR_SOUND_WAH2] = 'Taz Wah2.ogg',                                                     -- Throwing something
+        [CHAR_SOUND_HRMM] = 'Taz Hrmm.ogg',                                                     -- Lifting something
+        [CHAR_SOUND_HERE_WE_GO] = 'Taz Here We Go.ogg',                                         -- Star get
+        [CHAR_SOUND_SO_LONGA_BOWSER] = 'Taz So Longa Bowser.ogg',                               -- Throwing Bowser
+        --DAMAGE
+        [CHAR_SOUND_ATTACKED] = 'Taz Attacked.ogg',                                             -- Damaged
+        [CHAR_SOUND_PANTING] = 'Taz Panting.ogg',                                               -- Low health
+        [CHAR_SOUND_PANTING_COLD] = 'Taz Panting.ogg',                                          -- Getting cold
+        [CHAR_SOUND_ON_FIRE] = 'Taz On Fire.ogg',                                               -- Burned
+        --SLEEP SOUNDS
+        [CHAR_SOUND_IMA_TIRED] = 'Taz Ima Tired.ogg',                                           -- Mario feeling tired
+        [CHAR_SOUND_YAWNING] = 'Taz Yawning.ogg',                                               -- Mario yawning before he sits down to sleep
+        [CHAR_SOUND_SNORING1] = 'Taz Snoring1.ogg',                                             -- Snore Inhale
+        [CHAR_SOUND_SNORING2] = 'Taz Snoring2.ogg',                                             -- Exhale
+        [CHAR_SOUND_SNORING3] = 'Taz Snoring3.ogg',                                             -- Sleep talking / mumbling
+        --COUGHING (USED IN THE GAS MAZE)
+        [CHAR_SOUND_COUGHING1] = 'Taz Coughing.ogg',                                            -- Cough take 1
+        [CHAR_SOUND_COUGHING2] = 'Taz Coughing.ogg',                                            -- Cough take 2
+        [CHAR_SOUND_COUGHING3] = 'Taz Coughing.ogg',                                            -- Cough take 3
+        --DEATH
+        [CHAR_SOUND_DYING] = 'Taz Dying.ogg',                                                   -- Dying from damage
+        [CHAR_SOUND_DROWNING] = 'Taz Drowning.ogg',                                             -- Running out of air underwater
+        [CHAR_SOUND_MAMA_MIA] =
+        'Taz Mama Mia.ogg'                                                                      -- Booted out of level
+    },
+    replaceActs = {
+        acts = { ACT_TAZ_TORNADO_START, ACT_TAZ_TORNADO_ATTACK },
+        param = function(m, incAct)
+
+            if m.action == ACT_TAZ_TORNADO_ATTACK then
+                m.twirlYaw = 0
+                m.invincTimer = 0
+            end
+            
+            if incAct == ACT_TAZ_TORNADO_ATTACK then
+                m.twirlYaw = m.faceAngle.y
+            end
+
+            if m.floorHeight == m.pos.y then
+                if incAct == ACT_PUNCHING or incAct == ACT_MOVE_PUNCHING then
+                    return ternary(m.forwardVel < 10, 1, 2)
+                elseif incAct == ACT_DIVE then
+                    return 2
+                end
+            end
+
+            return -1
+        end,
+        canGrab = function (m)
+            return m.action == ACT_TAZ_TORNADO_START or (m.action == ACT_TAZ_TORNADO_ATTACK and m.actionTimer <= 10)
+        end
     }
 })
 
@@ -570,8 +789,8 @@ CT_FOGHORN = addLooneyTunesChar({
     id = 'foghorn',
     name = 'Foghorn Leghorn',
     description = "I say I say!",
-    author = 'ThaGurlTilly',
-    menuColor = '8b8b8b',
+    author = 'Tanooki',
+    menuColor = '5b0f00',
     model = smlua_model_util_get_id("foghorn_leghorn_geo"),
     charType = CT_WALUIGI,
     camScale = 1.5,
@@ -599,7 +818,7 @@ CT_FOGHORN = addLooneyTunesChar({
             end,
             [CHAR_ANIM_SECOND_PUNCH] = function (m)
                 if m.action == ACT_FOGHORN_SLAP_CHARGE then
-                    return ANIM_FOGHORN_SLAP_CHARGE
+                    return ternary(m.forwardVel == 0, ANIM_FOGHORN_SLAP_CHARGE, ANIM_FOGHORN_SLAP_CHARGE_TIPTOE)
                 end
             end,
             [CHAR_ANIM_SECOND_PUNCH_FAST] = function (m)
@@ -610,6 +829,7 @@ CT_FOGHORN = addLooneyTunesChar({
         }
     },
     voices = {
+        [CHAR_SOUND_HELLO] = 'Foghorn Itsa Me.ogg', --extra
         [CHAR_SOUND_OKEY_DOKEY] = { 'Foghorn Okey Dokey.ogg', 'Foghorn Hello.ogg', 'Foghorn Itsa Me.ogg' }, -- Starting game
         [CHAR_SOUND_LETS_A_GO] = 'Foghorn Letsa Go.ogg',                                                    -- Starting level
         [CHAR_SOUND_GAME_OVER] = 'Foghorn Game Over.ogg',                                                   -- Game Overed
@@ -658,6 +878,142 @@ CT_FOGHORN = addLooneyTunesChar({
         [CHAR_SOUND_DROWNING] = 'Foghorn Drowning.ogg',                                                     -- Running out of air underwater
         [CHAR_SOUND_MAMA_MIA] =
         'Foghorn Mama Mia.ogg'                                                                              -- Booted out of level
+    },
+    replaceActs = {
+        acts = { ACT_FOGHORN_SLAP_CHARGE },
+        param = function(m, incAct)
+            if incAct == ACT_MOVE_PUNCHING or incAct == ACT_PUNCHING then
+                mario_set_forward_vel(m, 0)
+                return 1
+            end
+            return -1
+        end,
+        canGrab = function (m)
+            return true
+        end
+    }
+})
+
+CT_WILE = addLooneyTunesChar({
+    id = 'wile',
+    name = 'Wile E. Coyote',
+    description = "ACME S*CKS",
+    author = 'Tanooki',
+    menuColor = '4d2c18',
+    model = smlua_model_util_get_id("wile_e_coyote_geo"),
+    charType = CT_WALUIGI,
+    camScale = 1.5,
+    palettes = {
+        {
+            palette = {
+                [PANTS]  = "4d2c18",
+                [SHIRT]  = "4d2c18",
+                [GLOVES] = "4d2c18",
+                [SHOES]  = "4d2c18",
+                [HAIR]   = "4d2c18",
+                [SKIN]   = "fec179",
+                [CAP]    = "0000ff",
+                [EMBLEM] = "4d2c18"
+            }
+        }
+    },
+    animData = {
+        animTable = {
+            [_G.charSelect.CS_ANIM_MENU] = ANIM_WILE_CS_MENU,
+            [CHAR_ANIM_IDLE_HEAD_CENTER] = function(m)
+                if m.action == ACT_WILE_AIR_WALK then
+                    return ANIM_WILE_IN_AIR_REALIZATION
+                end
+            end,
+            [CHAR_ANIM_STOP_CROUCHING] = function (m)
+                if m.action == ACT_WILE_ROCKET_JUMP then
+                    return ANIM_WILE_ROCKET_JUMP_START
+                end
+            end
+        }
+    },
+    voices = {
+        [CHAR_SOUND_OKEY_DOKEY] = { 'Wile E Okey Dokey.ogg', 'Wile E Hello.ogg', 'Wile E Itsa Me.ogg' }, -- Starting game
+        [CHAR_SOUND_LETS_A_GO] = 'Wile E Letsa Go.ogg',                                                  -- Starting level
+        [CHAR_SOUND_GAME_OVER] = 'Wile E Game Over.ogg',                                                 -- Game Overed
+        [CHAR_SOUND_PUNCH_YAH] = 'Wile E Yah.ogg',                                                       -- Punch 1
+        [CHAR_SOUND_PUNCH_WAH] = 'Wile E Yah.ogg',                                                       -- Punch 2
+        [CHAR_SOUND_PUNCH_HOO] = 'Wile E Hoo.ogg',                                                       -- Punch 3
+        [CHAR_SOUND_YAH_WAH_HOO] = { 'Wile E Yah Wah Hoo.ogg', 'Wile E Yah Wah Hoo 2.ogg' },             -- First Jump Sounds
+        [CHAR_SOUND_HOOHOO] = 'Wile E Hoohoo.ogg',                                                       -- Second jump sound
+        [CHAR_SOUND_YAHOO_WAHA_YIPPEE] = { 'Wile E Yahoo.ogg', 'Wile E Yippee.ogg' },                    -- Triple jump sounds
+        [CHAR_SOUND_UH] = 'Wile E Uh.ogg',                                                               -- Soft wall bonk
+        [CHAR_SOUND_UH2] = 'Wile E Uh.ogg',                                                              -- Quick ledge get up
+        [CHAR_SOUND_UH2_2] = 'Wile E Uh.ogg',                                                            -- Landing after long jump
+        [CHAR_SOUND_DOH] = 'Wile E Uh.ogg',                                                              -- Hard wall bonk
+        [CHAR_SOUND_OOOF] = 'Wile E Uh.ogg',                                                             -- Attacked in air
+        [CHAR_SOUND_OOOF2] = 'Wile E Uh.ogg',                                                            -- Land from hard bonk
+        [CHAR_SOUND_HAHA] = 'Wile E Haha.ogg',                                                           -- Landing triple jump
+        [CHAR_SOUND_HAHA_2] = 'Wile E Haha.ogg',                                                         -- Landing in water from big fall
+        [CHAR_SOUND_YAHOO] = 'Wile E Yahoo.ogg',                                                         -- Long jump
+        [CHAR_SOUND_DOH] = 'Wile E Uh.ogg',                                                              -- Long jump wall bonk
+        [CHAR_SOUND_WHOA] = 'Wile E Whoa.ogg',                                                           -- Grabbing ledge
+        [CHAR_SOUND_EEUH] = 'Wile E Eeuh.ogg',                                                           -- Climbing over ledge
+        [CHAR_SOUND_WAAAOOOW] = 'Wile E Waaaooow.ogg',                                                   -- Falling a long distance
+        [CHAR_SOUND_TWIRL_BOUNCE] = 'Wile E Twirl Bounce.ogg',                                           -- Bouncing off of a flower spring
+        [CHAR_SOUND_GROUND_POUND_WAH] = 'Wile E Yah Wah Hoo 2.ogg',                                      -- Ground Pound after startup
+        [CHAR_SOUND_WAH2] = 'Wile E Yah Wah Hoo 2.ogg',                                                  -- Throwing something
+        [CHAR_SOUND_HRMM] = 'Wile E Hrmm.ogg',                                                           -- Lifting something
+        [CHAR_SOUND_HERE_WE_GO] = 'Wile E Here We Go.ogg',                                               -- Star get
+        [CHAR_SOUND_SO_LONGA_BOWSER] = 'Wile E So Longa Bowser.ogg',                                     -- Throwing Bowser
+        --DAMAGE
+        [CHAR_SOUND_ATTACKED] = 'Wile E Attacked.ogg',                                                   -- Damaged
+        [CHAR_SOUND_PANTING] = 'Wile E Panting.ogg',                                                     -- Low health
+        [CHAR_SOUND_PANTING_COLD] = 'Wile E Panting.ogg',                                                -- Getting cold
+        [CHAR_SOUND_ON_FIRE] = 'Wile E On Fire.ogg',                                                     -- Burned
+        --SLEEP SOUNDS
+        [CHAR_SOUND_IMA_TIRED] = 'Wile E Ima Tired.ogg',                                                 -- Mario feeling tired
+        [CHAR_SOUND_YAWNING] = 'Wile E Yawning.ogg',                                                     -- Mario yawning before he sits down to sleep
+        [CHAR_SOUND_SNORING3] = 'Wile E Snoring3.ogg',                                                   -- Sleep talking / mumbling
+        --COUGHING (USED IN THE GAS MAZE)
+        [CHAR_SOUND_COUGHING1] = 'Wile E Panting.ogg',                                                   -- Cough take 1
+        [CHAR_SOUND_COUGHING2] = 'Wile E Panting.ogg',                                                   -- Cough take 2
+        [CHAR_SOUND_COUGHING3] = 'Wile E Panting.ogg',                                                   -- Cough take 3
+        --DEATH
+        [CHAR_SOUND_DYING] = 'Wile E Dying.ogg',                                                         -- Dying from damage
+        [CHAR_SOUND_DROWNING] = 'Wile E Dying.ogg',                                                      -- Running out of air underwater
+        [CHAR_SOUND_MAMA_MIA] =
+        'Wile E Mama Mia.ogg'                                                                            -- Booted out of level
+    },
+    replaceActs = {
+        acts = { ACT_WILE_AIR_WALK, ACT_WILE_ROCKET_JUMP },
+        param = function(m, incAct)
+
+            if m.action == ACT_WILE_ROCKET_JUMP or m.action == ACT_WILE_ROCKET_EXPLODE then
+                m.faceAngle.x = 0
+            end
+
+            if incAct == ACT_BACKFLIP then
+                return 2
+            end
+
+            if m.forwardVel >= 25 and incAct == ACT_FREEFALL and m.action == ACT_WALKING then
+                local colData = collision_get_temp_wall_collision_data()
+
+                colData.x = m.pos.x
+                colData.y = m.pos.y
+                colData.z = m.pos.z
+                colData.radius = 10
+                colData.offsetY = -10
+
+                if find_wall_collisions(colData) ~= 0 then
+                    local floorHeight, floor = find_floor(colData.x, colData.y, colData.z)
+                    if floor and colData.y - floorHeight > 160 then
+                        local wall = colData.walls[colData.numWalls]
+                        if abs_angle_diff(m.faceAngle.y, atan2s(wall.normal.z, wall.normal.x)) < 0x3555 then
+                            return 1
+                        end
+                    end
+                end
+            end
+
+            return -1
+        end
     }
 })
 

@@ -1,0 +1,13 @@
+extern const GeoLayout bugs_dirt_hole_Opt1[];
+extern const GeoLayout bugs_dirt_hole_geo[];
+extern Lights1 bugs_dirt_hole_Material_f3d_lights;
+extern u8 bugs_dirt_hole_Sprite_0001_ci4[];
+extern u8 bugs_dirt_hole_Sprite_0001_pal_rgba16[];
+extern Vtx bugs_dirt_hole_Main_mesh_layer_1_vtx_0[50];
+extern Gfx bugs_dirt_hole_Main_mesh_layer_1_tri_0[];
+extern Vtx bugs_dirt_hole_Opt1_Bone1_mesh_layer_1_vtx_0[83];
+extern Gfx bugs_dirt_hole_Opt1_Bone1_mesh_layer_1_tri_0[];
+extern Gfx mat_bugs_dirt_hole_Material_f3d[];
+extern Gfx mat_revert_bugs_dirt_hole_Material_f3d[];
+extern Gfx bugs_dirt_hole_Main_mesh_layer_1[];
+extern Gfx bugs_dirt_hole_Opt1_Bone1_mesh_layer_1[];

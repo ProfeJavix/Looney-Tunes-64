@@ -1,35 +1,70 @@
-local nps = gNetworkPlayers
+local states = gMarioStates
 local playerTable = gPlayerSyncTable
 
 local hooks = {}
 
+local STREAM_AS_SEQS = {
+    [SEQ_EVENT_CUTSCENE_CREDITS] = {
+        audio = audio_stream_load('Music Credits.ogg'),
+        looping = true
+    },
+    [SEQ_LEVEL_SLIDE] = {
+        audio = audio_stream_load('Music Slide.ogg'),
+        looping = true,
+        loopStart = 1488385,
+        loopEnd = 2945664
+    }
+}
+
+local curPlayingSeqs = {}
+local menuWasOpen = false
+
 function hooks.update()
-    if playerTable[0].shootActTimer > 0 then
-        playerTable[0].shootActTimer = playerTable[0].shootActTimer - 1
+    if playerTable[0].blockCTActsTimer > 0 then
+        playerTable[0].blockCTActsTimer = playerTable[0].blockCTActsTimer - 1
+    end
+
+    if _G.charSelect.is_menu_open() then
+        if not menuWasOpen then
+            for _, stream in pairs(curPlayingSeqs) do
+                audio_stream_set_volume(stream, 0)
+            end
+            menuWasOpen = true
+        end
+    elseif menuWasOpen then
+        for player, stream in pairs(curPlayingSeqs) do
+            audio_stream_set_volume(stream, sequence_player_get_volume(player))
+        end
+        menuWasOpen = false
     end
 end
-
-local SHOOT_ACTS = {
-    [CT_ELMER] = { ground = ACT_ELMER_SHOOT_SHOTGUN, air = ACT_ELMER_AIR_SHOOT_SHOTGUN },
-    [CT_MARVIN] = { ground = ACT_MARVIN_SHOOT_LASER, air = ACT_MARVIN_AIR_SHOOT_LASER }
-}
 
 ---@param m MarioState
 ---@param incAct integer
 function hooks.before_set_mario_action(m, incAct)
 
+    if m.action == ACT_CAUGHT_IN_TAZ_TORNADO then
+        vec3s_copy(m.angleVel, gVec3sZero())
+        m.faceAngle.x = 0
+        m.twirlYaw = 0
+    end
+
     if not _G.charSelect.gCSPlayers[m.playerIndex].movesetToggle then return end
 
-    if incAct == ACT_PUNCHING or incAct == ACT_MOVE_PUNCHING or incAct == ACT_JUMP_KICK then
+    local repData = CT_REPLACE_ACTS[_G.charSelect.character_get_current_number(m.playerIndex)]
 
-        local shootData = SHOOT_ACTS[_G.charSelect.character_get_current_number(m.playerIndex)]
-
-        if not shootData then return end
-
-        if playerTable[m.playerIndex].shootActTimer == 0 then
-            return set_mario_action(m, ternary(m.floorHeight == m.pos.y, shootData.ground, shootData.air), 0)
+    if repData then
+        local param = 1
+        if repData.param then
+            param = repData.param(m, incAct)
         end
-        return 1
+
+        if repData.acts[param] then
+            if playerTable[m.playerIndex].blockCTActsTimer == 0 then
+                return set_mario_action(m, repData.acts[param], 0)
+            end
+            return 1
+        end
     end
 end
 
@@ -41,14 +76,14 @@ function hooks.on_interact(m, o, intType, interacted)
 
     if not _G.charSelect.gCSPlayers[m.playerIndex].movesetToggle then return end
 
-    local shootData = SHOOT_ACTS[_G.charSelect.character_get_current_number(m.playerIndex)]
+    local repData = CT_REPLACE_ACTS[_G.charSelect.character_get_current_number(m.playerIndex)]
 
-    if not shootData then return end
+    if not repData or not repData.actsSet[m.action] then return end
 
     if intType == INTERACT_GRABBABLE and
     not interacted and
     o.oInteractionSubtype & INT_SUBTYPE_NOT_GRABBABLE == 0 and
-    m.action == shootData.ground then
+    repData.canGrab(m) then
         m.interactObj = o
         m.input = m.input | INPUT_INTERACT_OBJ_GRABBABLE
 
@@ -58,14 +93,36 @@ function hooks.on_interact(m, o, intType, interacted)
     end
 end
 
+---@param idx integer
+function hooks.on_nametags_render(idx)
+    if idx == 0 or _G.charSelect.character_get_current_number(idx) ~= CT_BUGS then return end
+
+    if states[idx].action == ACT_BUGS_MOVE_UNDERGROUND then
+        return ''
+    end
+end
+
+---@param player integer
 ---@param seqId SeqId
-function hooks.on_seq_load(_, seqId)
+function hooks.on_seq_load(player, seqId)
+    if not isLT64Char() then return end
 
-    audio_stream_stop(STREAM_CREDITS)
+    if curPlayingSeqs[player] then
+        audio_stream_stop(curPlayingSeqs[player])
+        curPlayingSeqs[player] = nil
+    end
 
-    if seqId == SEQ_EVENT_CUTSCENE_CREDITS then
-        audio_stream_set_looping(STREAM_CREDITS, true)
-        audio_stream_play(STREAM_CREDITS, true, 1)
+    local replaceInfo = STREAM_AS_SEQS[seqId]
+    if replaceInfo then
+        if replaceInfo.looping then
+            if replaceInfo.loopStart and replaceInfo.loopEnd then
+                audio_stream_set_loop_points(replaceInfo.audio, replaceInfo.loopStart, replaceInfo.loopEnd)
+            end
+            audio_stream_set_looping(replaceInfo.audio, true)
+        end
+
+        audio_stream_play(replaceInfo.audio, true, sequence_player_get_volume(player))
+        curPlayingSeqs[player] = replaceInfo.audio
         return 0
     end
 end
@@ -80,6 +137,65 @@ function hooks.on_play_sound(soundId, pos)
         if clip then
             audio_sample_play(clip, pos, 5)
             return 0
+        end
+    end
+end
+
+function hooks.allow_menu_open()
+    local noMenuActs = {
+        [ACT_BUGS_HOVER] = true,
+        [ACT_BUGS_DIVE_POUND] = true,
+        [ACT_BUGS_MOVE_UNDERGROUND] = true,
+        [ACT_DAFFY_POUND] = true,
+        [ACT_DAFFY_POUND_LAND] = true,
+        [ACT_DAFFY_POUND_BOUNCE] = true,
+        [ACT_DAFFY_MALLET_SWING] = true,
+        [ACT_ELMER_SHOOT_SHOTGUN] = true,
+        [ACT_ELMER_AIR_SHOOT_SHOTGUN] = true,
+        [ACT_SYLVESTER_TWEETY_GLIDE] = true,
+        [ACT_SYLVESTER_TWEETY_FIGHT] = true,
+        [ACT_SYLVESTER_WALL_CRAWL] = true,
+        [ACT_MARVIN_SHOOT_LASER] = true,
+        [ACT_MARVIN_AIR_SHOOT_LASER] = true,
+        [ACT_MARVIN_GRAB_TNT] = true,
+        [ACT_TAZ_TORNADO_START] = true,
+        [ACT_TAZ_TORNADO_ATTACK] = true,
+        [ACT_CAUGHT_IN_TAZ_TORNADO] = true,
+        [ACT_FOGHORN_SLAP_CHARGE] = true,
+        [ACT_FOGHORN_SLAP_RELEASE] = true,
+        [ACT_SLAPPED_BY_FOGHORN] = true,
+        [ACT_WILE_AIR_WALK] = true,
+        [ACT_WILE_ROCKET_EXPLODE] = true,
+        [ACT_WILE_ROCKET_JUMP] = true
+    }
+
+    return not noMenuActs[states[0].action]
+end
+
+---@param prevChar integer
+---@param curChar integer
+function hooks.on_character_change(prevChar, curChar)
+    if not isLT64Char() then
+        for player, stream in pairs(curPlayingSeqs) do
+            local seqId = nil
+            if stream then
+                for ogSeqId, replaceInfo in pairs(STREAM_AS_SEQS) do
+                    if replaceInfo.audio == stream then
+                        seqId = ogSeqId
+                        break
+                    end
+                end
+                audio_stream_stop(stream)
+            end
+
+            if seqId then
+                play_music(player, seqId, 0)
+            end
+        end
+    elseif not LT_64_CHARS[prevChar] then
+        local curSeqId = get_current_background_music()
+        if STREAM_AS_SEQS[curSeqId] then
+            play_music(SEQ_PLAYER_LEVEL, curSeqId, 0)
         end
     end
 end
@@ -104,33 +220,9 @@ local JUMP_ACTIONS = {
 }
 
 ---@param m MarioState
-function hooks.bugs_before_set_mario_action(m, incAct)
-
-    if m.action == ACT_BUGS_HOVER then
-        m.marioBodyState.allowPartRotation = 0
-    end
-
-    if incAct == ACT_TRIPLE_JUMP then
-        set_mario_y_vel_based_on_fspeed(m, 69, 0)
-        m.forwardVel = m.forwardVel * 0.8
-        return set_mario_action(m, ACT_BUGS_HOVER, 0)
-    end
-end
-
----@param m MarioState
 function hooks.bugs_on_set_mario_action(m)
     if JUMP_ACTIONS[m.action] then
-        m.vel.y = m.vel.y * 1.5
-    end
-end
-
----@param m MarioState
----@param incAct integer
-function hooks.daffy_before_set_mario_action(m, incAct)
-    if incAct == ACT_GROUND_POUND then
-        return set_mario_action(m, ACT_DAFFY_POUND, 0)
-    elseif incAct == ACT_PUNCHING or incAct == ACT_MOVE_PUNCHING then
-        return set_mario_action(m, ACT_DAFFY_MALLET_SWING, 0)
+        m.vel.y = m.vel.y * 1.2
     end
 end
 
@@ -144,22 +236,39 @@ function hooks.daffy_before_phys_step(m)
 end
 
 ---@param m MarioState
+function hooks.sylvester_mario_update(m)
+
+    if _G.charSelect.character_get_current_number(m.playerIndex) ~= CT_SYLVESTER or
+    is_player_active(m) == 0 or
+    m.flags & MARIO_CAP_ON_HEAD == 0 then
+        return
+    end
+
+    local tweety = obj_get_first_with_behavior_id(id_bhvTweety)
+    while tweety do
+        if tweety.oOwner == m.playerIndex then
+            break
+        end
+
+        tweety = obj_get_next_with_same_behavior_id(tweety)
+    end
+
+    if tweety then return end
+
+    spawn_non_sync_object(id_bhvTweety, E_MODEL_TWEETY, m.pos.x, m.pos.y + 150, m.pos.z, function (o)
+        o.oOwner = m.playerIndex
+    end)
+end
+
+---@param m MarioState
 function hooks.marvin_mario_update(m)
     if m.controller.buttonPressed == X_BUTTON and
-    playerTable[m.playerIndex].shootActTimer == 0 and
+    playerTable[m.playerIndex].blockCTActsTimer == 0 and
     m.floorHeight == m.pos.y and
     m.action & (PREVENT_ACT_FLAGS) == 0 and
     not PREVENT_ACT_GROUPS[m.action & ACT_GROUP_MASK] and
     m.action ~= ACT_MARVIN_SHOOT_LASER and m.action ~= ACT_MARVIN_GRAB_TNT then
         set_mario_action(m, ACT_MARVIN_GRAB_TNT, 0)
-    end
-end
-
----@param m MarioState
----@param incAct integer
-function hooks.foghorn_before_set_mario_action(m, incAct)
-    if incAct == ACT_MOVE_PUNCHING or incAct == ACT_PUNCHING then
-        return set_mario_action(m, ACT_FOGHORN_SLAP_CHARGE, 0)
     end
 end
 
