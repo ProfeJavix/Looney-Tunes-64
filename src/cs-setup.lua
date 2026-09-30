@@ -221,7 +221,17 @@ CT_DAFFY = addLooneyTunesChar({
     },
     animData = {
         animTable = {
-            [_G.charSelect.CS_ANIM_MENU] = ANIM_DAFFY_CS_MENU
+            [_G.charSelect.CS_ANIM_MENU] = ANIM_DAFFY_CS_MENU,
+            [CHAR_ANIM_FIRST_PUNCH_FAST] = function (m)
+                if m.action == ACT_DAFFY_MALLET_SWING then
+                    return ANIM_DAFFY_MALLET_SWING
+                end
+            end,
+            [CHAR_ANIM_SECOND_PUNCH] = function (m)
+                if m.action == ACT_DAFFY_MALLET_POUND or m.action == ACT_DAFFY_MALLET_POUND_LAND then
+                    return ANIM_DAFFY_MALLET_POUND
+                end
+            end
         }
     },
     voices = {
@@ -275,15 +285,21 @@ CT_DAFFY = addLooneyTunesChar({
         'Daffy Mama Mia.ogg'                                                                          -- Booted out of level
     },
     replaceActs = {
-        acts = { ACT_DAFFY_MALLET_SWING, ACT_DAFFY_POUND },
+        acts = { ACT_DAFFY_MALLET_SWING, ACT_DAFFY_MALLET_POUND, ACT_DAFFY_POUND },
         param = function(m, incAct)
+
             if incAct == ACT_PUNCHING or incAct == ACT_MOVE_PUNCHING then
                 return 1
-            elseif incAct == ACT_GROUND_POUND then
+            elseif incAct == ACT_JUMP_KICK then
                 return 2
+            elseif incAct == ACT_GROUND_POUND then
+                return 3
             end
 
             return -1
+        end,
+        canGrab = function (m)
+            return m.action == ACT_DAFFY_MALLET_SWING and m.actionArg == 0
         end
     }
 })

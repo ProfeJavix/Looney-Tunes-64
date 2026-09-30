@@ -195,34 +195,165 @@ function acts.act_daffy_pound_bounce(m)
     end
 
     update_air_with_turn(m)
-    common_air_action_step(m, ACT_DOUBLE_JUMP_LAND, CHAR_ANIM_DOUBLE_JUMP_RISE,
-        AIR_STEP_CHECK_LEDGE_GRAB | AIR_STEP_CHECK_HANG)
-end
-
-local function reset_animation_values(m)
-    m.marioObj.header.gfx.animInfo.animFrame = 0
-    m.marioObj.header.gfx.animInfo.prevAnimFrame = 0
-    m.marioObj.header.gfx.animInfo.prevAnimFrameTimestamp = 0
-    m.marioObj.header.gfx.animInfo.animFrameAccelAssist = 0
-    m.marioObj.header.gfx.animInfo.animAccel = 0x10000
-    m.marioObj.header.gfx.animInfo.animTimer = 0
-    m.marioObj.header.gfx.animInfo.animYTrans = 0
+    common_air_action_step(m, ACT_DOUBLE_JUMP_LAND, CHAR_ANIM_DOUBLE_JUMP_RISE, AIR_STEP_CHECK_LEDGE_GRAB | AIR_STEP_CHECK_HANG)
 end
 
 ---@param m MarioState
 function acts.act_daffy_mallet_swing(m)
-    --temp, just for anim test
 
-    --set_character_animation(m, CHAR_ANIM_A_POSE)
-    m.actionTimer = m.actionTimer + 1
-    if(m.actionTimer == 1) then
-        reset_animation_values(m)
+    if should_begin_sliding(m) ~= 0 then
+        return set_mario_action(m, ACT_BEGIN_SLIDING, 0)
     end
-    smlua_anim_util_set_animation(m.marioObj, 'Daffy_mallet_swing_2')
+
+    if m.input & INPUT_OFF_FLOOR ~= 0 then
+        return set_mario_action(m, ACT_FREEFALL, 0)
+    end
+
+    if mario_check_object_grab(m) ~= 0 then
+        set_character_animation(m, CHAR_ANIM_FIRST_PUNCH)
+        set_anim_to_frame(m, 0)
+        return 1
+    end
+
+    play_character_sound_if_no_flag(m, CHAR_SOUND_PUNCH_WAH, MARIO_MARIO_SOUND_PLAYED)
+    set_character_anim_with_accel(m, CHAR_ANIM_FIRST_PUNCH_FAST, 0x10000 * 2.9)
+
+    local frame = m.marioObj.header.gfx.animInfo.animFrame
+
+    if frame > 3 then
+        affectAllObjects(m.marioObj, function(att, vic)
+            if dist_between_objects(att, vic) < 220 and vic.oInteractType ~= INTERACT_GRABBABLE then
+                local angleToVic = obj_angle_to_object(att, vic)
+                local startAngle = m.faceAngle.y
+
+                if frame < 12 then
+                    startAngle = math.s16(startAngle + 0x71C)
+                elseif frame < 22 then
+                    startAngle = math.s16(startAngle - 0x1C71)
+                else
+                    startAngle = math.s16(startAngle - 0x4000)
+                end
+
+                local angleDiff = abs_angle_diff(angleToVic, startAngle)
+
+                if angleDiff <= 0x38E3 and math.s16(startAngle + angleDiff) == angleToVic then
+                    play_sound(SOUND_ACTION_HIT, vic.header.gfx.cameraToObject)
+
+                    if obj_has_behavior_id(vic, id_bhvMario) ~= 0 then
+                        local nm = states[vic.oBehParams - 1]
+                        local act = 0
+                        if abs_angle_diff(angleToVic, nm.faceAngle.y) > 0x4000 then
+                            act = ternary(nm.floorHeight == nm.pos.y, ACT_HARD_BACKWARD_GROUND_KB,
+                                ACT_HARD_BACKWARD_AIR_KB)
+                            nm.faceAngle.y = math.s16(angleToVic - 0x8000)
+                        else
+                            act = ternary(nm.floorHeight == nm.pos.y, ACT_HARD_FORWARD_GROUND_KB, ACT_HARD_FORWARD_AIR_KB)
+                            nm.faceAngle.y = angleToVic
+                        end
+
+                        hurt_and_set_mario_action(nm, act, 0, 8)
+                        nm.invincTimer = 20
+                    else
+                        return true
+                    end
+                end
+            end
+            return false
+        end)
+
+        if frame > 15 and m.controller.buttonPressed & B_BUTTON ~= 0 then
+            m.actionArg = 1
+        end
+    end
+
+    mario_set_forward_vel(m, approach_f32_symmetric(m.forwardVel, 0, 1))
+    perform_ground_step(m)
 
     if is_anim_at_end(m) ~= 0 then
-        return set_mario_action(m, ACT_IDLE, 0)
+        return set_mario_action(m, ternary(m.actionArg == 0, ACT_IDLE, ACT_DAFFY_MALLET_POUND), 0)
     end
+end
+
+---@param m MarioState
+function acts.act_daffy_mallet_pound(m)
+    play_character_sound_if_no_flag(m, CHAR_SOUND_HERE_WE_GO, MARIO_MARIO_SOUND_PLAYED)
+    set_character_anim_with_accel(m, CHAR_ANIM_SECOND_PUNCH, 0x10000 * ternary(m.marioObj.header.gfx.animInfo.animFrame < 12, 1, 1.6))
+
+    if m.actionState == 0 then
+        m.vel.y = 30
+        m.actionState = 1
+    end
+
+    update_air_with_turn(m)
+
+    local frame = m.marioObj.header.gfx.animInfo.animFrame
+
+    local poundPos = {
+        x = m.pos.x + 130 * sins(m.faceAngle.y),
+        y = m.pos.y,
+        z = m.pos.z + 130 * coss(m.faceAngle.y)
+    }
+
+    if frame >= 15 then
+        affectAllObjects(m.marioObj, function(att, vic)
+            if dist_between_object_and_point(vic, poundPos.x, vic.oPosY, poundPos.z) < 300 and
+            math.abs(poundPos.y - vic.oPosY) < 80 then
+                play_sound(SOUND_ACTION_HIT_3, vic.header.gfx.cameraToObject)
+                if obj_has_behavior_id(vic, id_bhvMario) ~= 0 then
+                    local nm = states[vic.oBehParams - 1]
+                    local act = ternary(nm.pos.y == nm.floorHeight, ACT_HARD_BACKWARD_GROUND_KB, ACT_HARD_BACKWARD_AIR_KB)
+                    hurt_and_set_mario_action(nm, act, 0, 12)
+                elseif vic.oInteractType == INTERACT_BOUNCE_TOP or
+                    vic.oInteractType == INTERACT_BOUNCE_TOP2 or
+                    vic.oInteractType == INTERACT_KOOPA or
+                    vic.oInteractType == INTERACT_BULLY then
+                    vic.oInteractStatus = (ATTACK_GROUND_POUND_OR_TWIRL | INT_STATUS_WAS_ATTACKED | INT_STATUS_INTERACTED)
+                else
+                    return true
+                end
+            end
+            return false
+        end)
+        if frame > 20 then
+            m.vel.y = -55
+        end
+    end
+
+    if perform_air_step(m, 0) == AIR_STEP_LANDED then
+        play_sound(SOUND_OBJ_POUNDING_LOUD, m.marioObj.header.gfx.cameraToObject)
+
+        spawn_non_sync_object(id_bhvHorStarParticleSpawner, E_MODEL_NONE, poundPos.x, poundPos.y, poundPos.z, function() end)
+        spawn_non_sync_object(id_bhvMistCircParticleSpawner, E_MODEL_NONE, poundPos.x, poundPos.y, poundPos.z, function() end)
+
+        if m.playerIndex == 0 then
+            set_camera_shake_from_hit(SHAKE_GROUND_POUND)
+        end
+
+        return set_mario_action(m, ACT_DAFFY_MALLET_POUND_LAND, 0)
+    end
+end
+
+---@param m MarioState
+function acts.act_daffy_mallet_pound_land(m)
+    if m.input & INPUT_UNKNOWN_10 ~= 0 then
+        return set_mario_action(m, ACT_SHOCKWAVE_BOUNCE, 0)
+    end
+
+    if m.input & INPUT_OFF_FLOOR ~= 0 then
+        return set_mario_action(m, ACT_FREEFALL, 0)
+    end
+
+    if m.input & INPUT_ABOVE_SLIDE ~= 0 then
+        return set_mario_action(m, ACT_BUTT_SLIDE, 0)
+    end
+
+    set_character_animation(m, CHAR_ANIM_SECOND_PUNCH)
+    stationary_ground_step(m)
+
+    if m.actionTimer > 5 then
+        return set_mario_action(m, ACT_STOP_CROUCHING, 0)
+    end
+    m.actionTimer = m.actionTimer + 1
 end
 
 ---@param m MarioState
@@ -436,7 +567,6 @@ function acts.act_sylvester_tweety_fight(m)
         m.squishTimer = 0xFF
         cur_obj_scale(0)
 
-        m.marioObj.oOwner = nps[m.playerIndex].globalIndex
         affectAllObjects(m.marioObj, function (att, vic)
             return dist_between_objects(att, vic) < 200
         end)
@@ -705,7 +835,6 @@ function acts.act_taz_tornado(m)
         end
         set_mario_particle_flags(m, PARTICLE_DIRT | PARTICLE_DUST, 0)
 
-        m.marioObj.oOwner = nps[m.playerIndex].globalIndex
         affectAllObjects(m.marioObj, function (att, vic)
             if dist_between_objects(att, vic) < 250 then
                 local bhvId = get_id_from_behavior(vic.behavior)
@@ -903,8 +1032,6 @@ function acts.act_foghorn_slap(m)
 
         if m.marioObj.header.gfx.animInfo.animFrame < 8 then
             local power = m.actionArg / 150
-
-            m.marioObj.oOwner = nps[m.playerIndex].globalIndex
 
             affectAllObjects(m.marioObj, function (att, vic)
                 local angleToO = mario_obj_angle_to_object(m, vic)

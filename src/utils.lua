@@ -119,29 +119,32 @@ function affectAllObjects(attacker, checkFunc, onlyFirst)
 
         while curO do
             local hit = false
-            if list == OBJ_LIST_PLAYER then
-                local m = states[curO.oBehParams - 1]
-                if is_player_active(m) ~= 0 and nps[m.playerIndex].globalIndex ~= attacker.oOwner and
-                    m.action & ACT_GROUP_MASK ~= ACT_GROUP_CUTSCENE and
-                    m.action & (ACT_FLAG_INVULNERABLE | ACT_FLAG_INTANGIBLE) == 0 and m.invincTimer == 0 then
-                    hit = checkFunc(attacker, curO)
-                    if hit then
-                        interact_damage(m, 0, attacker)
+
+            if curO ~= attacker then
+                if list == OBJ_LIST_PLAYER then
+                    local m = states[curO.oBehParams - 1]
+                    if is_player_active(m) ~= 0 and m.invincTimer == 0 and
+                    (obj_has_behavior_id(attacker, id_bhvMario) ~= 0 or nps[m.playerIndex].globalIndex ~= attacker.oOwner) and
+                    m.action & ACT_GROUP_MASK ~= ACT_GROUP_CUTSCENE and m.action & (ACT_FLAG_INVULNERABLE | ACT_FLAG_INTANGIBLE) == 0 then
+                        hit = checkFunc(attacker, curO)
+                        if hit then
+                            interact_damage(m, 0, attacker)
+                        end
                     end
-                end
-            elseif list == OBJ_LIST_SURFACE then
-                hit = true
-                curO.oInteractStatus = curO.oInteractStatus | (INT_STATUS_INTERACTED | INT_STATUS_WAS_ATTACKED)
-            else
-                if obj_is_attackable(curO) or (obj_has_behavior_id(curO, id_bhvChainChomp) ~= 0 and obj_is_valid_for_interaction(curO)) then
-                    hit = checkFunc(attacker, curO)
-                    if hit then
-                        curO.oInteractStatus = (ATTACK_PUNCH | INT_STATUS_WAS_ATTACKED | INT_STATUS_INTERACTED | INT_STATUS_TOUCHED_BOB_OMB)
-                    end
-                elseif (obj_is_bully(curO) or obj_has_behavior_id(curO, id_bhvBobomb) ~= 0) and obj_is_valid_for_interaction(curO) then
-                    hit = checkFunc(attacker, curO)
-                    if hit then
-                        curO.oInteractStatus = (ATTACK_KICK_OR_TRIP | INT_STATUS_MARIO_UNK1 | INT_STATUS_INTERACTED)
+                elseif list == OBJ_LIST_SURFACE then
+                    hit = true
+                    curO.oInteractStatus = curO.oInteractStatus | (INT_STATUS_INTERACTED | INT_STATUS_WAS_ATTACKED)
+                else
+                    if obj_is_attackable(curO) or (obj_has_behavior_id(curO, id_bhvChainChomp) ~= 0 and obj_is_valid_for_interaction(curO)) then
+                        hit = checkFunc(attacker, curO)
+                        if hit then
+                            curO.oInteractStatus = (ATTACK_PUNCH | INT_STATUS_WAS_ATTACKED | INT_STATUS_INTERACTED | INT_STATUS_TOUCHED_BOB_OMB)
+                        end
+                    elseif (obj_is_bully(curO) or obj_has_behavior_id(curO, id_bhvBobomb) ~= 0) and obj_is_valid_for_interaction(curO) then
+                        hit = checkFunc(attacker, curO)
+                        if hit then
+                            curO.oInteractStatus = (ATTACK_KICK_OR_TRIP | INT_STATUS_MARIO_UNK1 | INT_STATUS_INTERACTED)
+                        end
                     end
                 end
             end

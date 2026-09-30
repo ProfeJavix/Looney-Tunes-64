@@ -62,6 +62,8 @@ ACT_DAFFY_POUND = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_
 ACT_DAFFY_POUND_LAND = allocate_mario_action(ACT_GROUP_STATIONARY | ACT_FLAG_STATIONARY | ACT_FLAG_ATTACKING)
 ACT_DAFFY_POUND_BOUNCE = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_ATTACKING)
 ACT_DAFFY_MALLET_SWING = allocate_mario_action(ACT_GROUP_MOVING | ACT_FLAG_MOVING | ACT_FLAG_ATTACKING)
+ACT_DAFFY_MALLET_POUND = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_ATTACKING)
+ACT_DAFFY_MALLET_POUND_LAND = allocate_mario_action(ACT_GROUP_STATIONARY | ACT_FLAG_STATIONARY | ACT_FLAG_ATTACKING)
 ACT_ELMER_SHOOT_SHOTGUN = allocate_mario_action(ACT_GROUP_MOVING | ACT_FLAG_MOVING)
 ACT_ELMER_AIR_SHOOT_SHOTGUN = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR)
 ACT_SYLVESTER_TWEETY_GLIDE = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_MOVING)
@@ -89,6 +91,8 @@ E_MODEL_EXPLOSION_KABOOM = smlua_model_util_get_id('explosion_kaboom_geo')
 
 ANIM_BUGS_CS_MENU = 'bugs_cs_menu'
 ANIM_DAFFY_CS_MENU = 'daffy_cs_menu'
+ANIM_DAFFY_MALLET_SWING = 'daffy_mallet_swing'
+ANIM_DAFFY_MALLET_POUND = 'daffy_mallet_pound'
 ANIM_PORKY_CS_MENU = 'porky_cs_menu'
 ANIM_ELMER_CS_MENU = 'elmer_cs_menu'
 ANIM_ELMER_SHOOT_SHOTGUN = 'elmer_shoot_shotgun'
@@ -160,7 +164,11 @@ end
 function geo_mallet_switch(node)
     local gn = cast_graph_node(node)
     local m = geo_get_mario_state()
-    gn.selectedCase = ternary(m.action == ACT_DAFFY_MALLET_SWING, 1, 0)
+    if m.action == ACT_DAFFY_MALLET_SWING or m.action == ACT_DAFFY_MALLET_POUND or m.action == ACT_DAFFY_MALLET_POUND_LAND then
+        gn.selectedCase = 1
+    else
+        gn.selectedCase = 0
+    end
 end
 
 function geo_railgun_switch(node)
@@ -179,7 +187,7 @@ function geo_tornado_switch(node)
     local gn = cast_graph_node(node)
     local m = geo_get_mario_state()
     if m.action == ACT_TAZ_TORNADO_ATTACK then
-        gn.selectedCase = 4
+        gn.selectedCase = ternary(m.marioBodyState.modelState & MODEL_STATE_METAL ~= 0, 5, 4)
     else
         gn.selectedCase = m.marioBodyState.modelState >> 8
     end
