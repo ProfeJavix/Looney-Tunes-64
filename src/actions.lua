@@ -1134,11 +1134,17 @@ function acts.act_sam_shoot_pistol(m)
         return set_mario_action(m, ACT_BUTT_SLIDE, 0)
     end
 
-    play_character_sound_if_no_flag(m, CHAR_SOUND_SO_LONGA_BOWSER, MARIO_MARIO_SOUND_PLAYED)
-
     if m.actionArg == 0 then
+
+        if mario_check_object_grab(m) ~= 0 then
+            set_character_animation(m, CHAR_ANIM_FIRST_PUNCH)
+            set_anim_to_frame(m, 0)
+            return 1
+        end
+
         set_character_anim_with_accel(m, CHAR_ANIM_CROUCHING, 0x10000 * 3.4)
         if is_anim_at_end(m) ~= 0 then
+            play_character_sound(m, CHAR_SOUND_SO_LONGA_BOWSER)
             m.actionArg = 1
         end
     elseif m.actionArg == 3 then

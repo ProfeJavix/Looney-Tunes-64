@@ -1030,6 +1030,9 @@ CT_SAM = addLooneyTunesChar({
                 return 2
             end
             return -1
+        end,
+        canGrab = function (m)
+            return m.action == ACT_SAM_SHOOT_PISTOL and m.actionState == 0
         end
     }
 })
