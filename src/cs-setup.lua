@@ -910,6 +910,130 @@ CT_FOGHORN = addLooneyTunesChar({
     }
 })
 
+CT_SAM = addLooneyTunesChar({
+    id = 'sam',
+    name = 'Yosemite Sam',
+    description = "Great horny toads!",
+    author = 'Tanooki',
+    menuColor = 'ef2e00',
+    model = smlua_model_util_get_id("sam_yosemite_geo"),
+    charType = CT_TOAD,
+    palettes = {
+        {
+            palette = {
+                [PANTS]  = "0073d6",
+                [SHIRT]  = "cb2016",
+                [GLOVES] = "f0cbbf",
+                [SHOES]  = "000000",
+                [HAIR]   = "ef2e00",
+                [SKIN]   = "f0cbbf",
+                [CAP]    = "ffda8e",
+                [EMBLEM] = "cbba00"
+            }
+        }
+    },
+    animData = {
+        animTable = {
+            [_G.charSelect.CS_ANIM_MENU] = ANIM_SAM_CS_MENU,
+            [CHAR_ANIM_CROUCHING] = function(m)
+                if m.action == ACT_SAM_SHOOT_PISTOL then
+                    return ANIM_SAM_UNHOLSTER
+                end
+            end,
+            [CHAR_ANIM_STOP_CROUCHING] = function(m)
+                if m.action == ACT_SAM_SHOOT_PISTOL then
+                    return ANIM_SAM_HOLSTER
+                end
+            end,
+            [CHAR_ANIM_FIRST_PUNCH_FAST] = function(m)
+                if m.action == ACT_SAM_SHOOT_PISTOL then
+                    return ANIM_SAM_SHOOT_LEFT
+                end
+            end,
+            [CHAR_ANIM_SECOND_PUNCH_FAST] = function(m)
+                if m.action == ACT_SAM_SHOOT_PISTOL then
+                    return ANIM_SAM_SHOOT_RIGHT
+                end
+            end,
+            [CHAR_ANIM_AIR_KICK] = function (m)
+                if m.action == ACT_SAM_AIR_SHOOT_PISTOL then
+                    return ANIM_SAM_SHOOT_DOWN
+                end
+            end,
+            [CHAR_ANIM_CROUCH_FROM_SLIDE_KICK] = function (m)
+                if m.action == ACT_SAM_SHOULDER_BASH then
+                    return ANIM_SAM_BASH_START
+                end
+            end,
+            [CHAR_ANIM_SLIDE_KICK] = function (m)
+                if m.action == ACT_SAM_SHOULDER_BASH then
+                    return ANIM_SAM_BASH_RUN
+                end
+            end
+        }
+    },
+    voices = {
+        [CHAR_SOUND_OKEY_DOKEY] = { 'Sam Hello.ogg', 'Sam Okey Dokey.ogg', 'Sam Itsa Me.ogg' }, -- Starting game
+        [CHAR_SOUND_LETS_A_GO] = 'Sam Letsa Go.ogg',                                            -- Starting level
+        [CHAR_SOUND_GAME_OVER] = 'Sam Game Over.ogg',                                           -- Game Overed
+        [CHAR_SOUND_PUNCH_YAH] = 'Sam Yah.ogg',                                                 -- Punch 1
+        [CHAR_SOUND_PUNCH_WAH] = 'Sam Wah.ogg',                                                 -- Punch 2
+        [CHAR_SOUND_PUNCH_HOO] = 'Sam Hoo.ogg',                                                 -- Punch 3
+        [CHAR_SOUND_YAH_WAH_HOO] = 'Sam Yah Wah Hoo.ogg',                                       -- First Jump Sounds
+        [CHAR_SOUND_HOOHOO] = 'Sam Hoo.ogg',                                                    -- Second jump sound
+        [CHAR_SOUND_YAHOO_WAHA_YIPPEE] = { 'Sam Yahoo.ogg', 'Sam Waha.ogg', 'Sam Yippee.ogg' }, -- Triple jump sounds
+        [CHAR_SOUND_UH] = 'Sam Uh.ogg',                                                         -- Soft wall bonk
+        [CHAR_SOUND_UH2] = 'Sam Uh2.ogg',                                                       -- Quick ledge get up
+        [CHAR_SOUND_UH2_2] = 'Sam Uh2_2.ogg',                                                   -- Landing after long jump
+        [CHAR_SOUND_DOH] = 'Sam Doh.ogg',                                                       -- Hard wall bonk
+        [CHAR_SOUND_OOOF] = 'Sam Ooof.ogg',                                                     -- Attacked in air
+        [CHAR_SOUND_OOOF2] = 'Sam Ooof2.ogg',                                                   -- Land from hard bonk
+        [CHAR_SOUND_HAHA] = 'Sam Haha.ogg',                                                     -- Landing triple jump
+        [CHAR_SOUND_HAHA_2] = 'Sam Haha.ogg',                                                   -- Landing in water from big fall
+        [CHAR_SOUND_YAHOO] = 'Sam Yahoo.ogg',                                                   -- Long jump
+        [CHAR_SOUND_DOH] = 'Sam Doh.ogg',                                                       -- Long jump wall bonk
+        [CHAR_SOUND_WHOA] = 'Sam Whoa.ogg',                                                     -- Grabbing ledge
+        [CHAR_SOUND_EEUH] = 'Sam Eeuh.ogg',                                                     -- Climbing over ledge
+        [CHAR_SOUND_WAAAOOOW] = 'Sam Waaaooow.ogg',                                             -- Falling a long distance
+        [CHAR_SOUND_TWIRL_BOUNCE] = 'Sam Twirl Bounce.ogg',                                     -- Bouncing off of a flower spring
+        [CHAR_SOUND_GROUND_POUND_WAH] = 'Sam Wah.ogg',                                          -- Ground Pound after startup
+        [CHAR_SOUND_WAH2] = 'Sam Wah2.ogg',                                                     -- Throwing something
+        [CHAR_SOUND_HRMM] = 'Sam Hrmm.ogg',                                                     -- Lifting something
+        [CHAR_SOUND_HERE_WE_GO] = 'Sam Here We Go.ogg',                                         -- Star get
+        [CHAR_SOUND_SO_LONGA_BOWSER] = 'Sam So Longa Bowser.ogg',                               -- Throwing Bowser
+        --DAMAGE
+        [CHAR_SOUND_ATTACKED] = 'Sam Attacked.ogg',                                             -- Damaged
+        [CHAR_SOUND_PANTING] = 'Sam Panting.ogg',                                               -- Low health
+        [CHAR_SOUND_PANTING_COLD] = 'Sam Panting.ogg',                                          -- Getting cold
+        [CHAR_SOUND_ON_FIRE] = 'Sam On Fire.ogg',                                               -- Burned
+        --SLEEP SOUNDS
+        [CHAR_SOUND_IMA_TIRED] = 'Sam Ima Tired.ogg',                                           -- Mario feeling tired
+        [CHAR_SOUND_YAWNING] = 'Sam Yawning.ogg',                                               -- Mario yawning before he sits down to sleep
+        [CHAR_SOUND_SNORING1] = 'Sam Snoring1.ogg',                                             -- Snore Inhale
+        [CHAR_SOUND_SNORING2] = 'Sam Snoring2.ogg',                                             -- Exhale
+        [CHAR_SOUND_SNORING3] = 'Sam Snoring3.ogg',                                             -- Sleep talking / mumbling
+        --COUGHING (USED IN THE GAS MAZE)
+        [CHAR_SOUND_COUGHING1] = 'Sam Coughing.ogg',                                            -- Cough take 1
+        [CHAR_SOUND_COUGHING2] = 'Sam Coughing.ogg',                                            -- Cough take 2
+        [CHAR_SOUND_COUGHING3] = 'Sam Coughing.ogg',                                            -- Cough take 3
+        --DEATH
+        [CHAR_SOUND_DYING] = 'Sam Dying.ogg',                                                   -- Dying from damage
+        [CHAR_SOUND_DROWNING] = 'Sam Drowning.ogg',                                             -- Running out of air underwater
+        [CHAR_SOUND_MAMA_MIA] = 'Sam Mama Mia.ogg'                                              -- Booted out of level
+    },
+    replaceActs = {
+        acts = { ACT_SAM_SHOOT_PISTOL, ACT_SAM_SHOULDER_BASH },
+        param = function(m, incAct)
+            if incAct == ACT_PUNCHING or incAct == ACT_MOVE_PUNCHING then
+                return 1
+            elseif incAct == ACT_SLIDE_KICK or incAct == ACT_SLIDE_KICK_SLIDE then
+                return 2
+            end
+            return -1
+        end
+    }
+})
+
 CT_WILE = addLooneyTunesChar({
     id = 'wile',
     name = 'Wile E. Coyote',

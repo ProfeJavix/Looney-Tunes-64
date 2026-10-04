@@ -246,7 +246,7 @@ function hooks.sylvester_mario_update(m)
 
     local tweety = obj_get_first_with_behavior_id(id_bhvTweety)
     while tweety do
-        if tweety.oOwner == m.playerIndex then
+        if tweety.oOwner == m.marioObj.globalPlayerIndex then
             break
         end
 
@@ -256,7 +256,7 @@ function hooks.sylvester_mario_update(m)
     if tweety then return end
 
     spawn_non_sync_object(id_bhvTweety, E_MODEL_TWEETY, m.pos.x, m.pos.y + 150, m.pos.z, function (o)
-        o.oOwner = m.playerIndex
+        o.oOwner = m.marioObj.globalPlayerIndex
     end)
 end
 
@@ -269,6 +269,13 @@ function hooks.marvin_mario_update(m)
     not PREVENT_ACT_GROUPS[m.action & ACT_GROUP_MASK] and
     m.action ~= ACT_MARVIN_SHOOT_LASER and m.action ~= ACT_MARVIN_GRAB_TNT then
         set_mario_action(m, ACT_MARVIN_GRAB_TNT, 0)
+    end
+end
+
+---@param m MarioState
+function hooks.sam_mario_update(m)
+    if m.action == ACT_GROUND_POUND and m.controller.buttonPressed & B_BUTTON ~= 0 then
+        return set_mario_action(m, ACT_SAM_AIR_SHOOT_PISTOL, 0)
     end
 end
 

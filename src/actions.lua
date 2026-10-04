@@ -444,8 +444,9 @@ function acts.act_elmer_shoot_shotgun(m)
             local target, pitch = getAutoTarget(m, bulletPos, 0x1000, 1500)
 
             set_camera_shake_from_hit(SHAKE_FOV_UNUSED)
-            spawn_sync_object(id_bhvElmerBullet, E_MODEL_BOWLING_BALL, bulletPos.x, bulletPos.y, bulletPos.z, function(o)
+            spawn_sync_object(id_bhvCommonBullet, E_MODEL_BOWLING_BALL, bulletPos.x, bulletPos.y, bulletPos.z, function(o)
                 o.oOwner = nps[0].globalIndex
+                o.oBehParams2ndByte = 10
 
                 if target then
                     o.oSubAction = 1
@@ -557,7 +558,6 @@ function acts.act_sylvester_tweety_fight(m)
             m.actionState = 2
         end
     else
-        
         m.usedObj = nil
         if m.actionTimer > 20 then
             return set_mario_action(m, ACT_BACKWARD_AIR_KB, 0)
@@ -568,7 +568,18 @@ function acts.act_sylvester_tweety_fight(m)
         cur_obj_scale(0)
 
         affectAllObjects(m.marioObj, function (att, vic)
-            return dist_between_objects(att, vic) < 200
+            if dist_between_objects(att, vic) < 300 then
+                if obj_has_behavior_id(vic, id_bhvMario) ~= 0 then
+                    local nm = states[vic.oBehParams - 1]
+                    att.oDamageOrCoinValue = 3
+                    nm.interactObj = att
+                    take_damage_and_knock_back(nm, att)
+                else
+                    return true
+                end
+            end
+
+            return false
         end)
 
         if m.actionTimer % 4 == 0 then
@@ -1102,6 +1113,246 @@ function acts.act_slapped_by_foghorn(m)
 
     play_character_sound_if_no_flag(m, CHAR_SOUND_UH, MARIO_MARIO_SOUND_PLAYED)
     common_air_knockback_step(m, ACT_BACKWARD_GROUND_KB, ACT_BACKWARD_GROUND_KB, 0x0002, m.forwardVel)
+end
+
+---@param m MarioState
+function acts.act_sam_shoot_pistol(m)
+
+    if m.input & INPUT_UNKNOWN_10 ~= 0 then
+        return set_mario_action(m, ACT_SHOCKWAVE_BOUNCE, 0)
+    end
+
+    if m.input & INPUT_OFF_FLOOR ~= 0 then
+        return set_mario_action(m, ACT_FREEFALL, 0)
+    end
+
+    if should_begin_sliding(m) ~= 0 then
+        return set_mario_action(m, ACT_BEGIN_SLIDING, 0)
+    end
+
+    if m.input & INPUT_ABOVE_SLIDE ~= 0 then
+        return set_mario_action(m, ACT_BUTT_SLIDE, 0)
+    end
+
+    play_character_sound_if_no_flag(m, CHAR_SOUND_SO_LONGA_BOWSER, MARIO_MARIO_SOUND_PLAYED)
+
+    if m.actionArg == 0 then
+        set_character_anim_with_accel(m, CHAR_ANIM_CROUCHING, 0x10000 * 3.4)
+        if is_anim_at_end(m) ~= 0 then
+            m.actionArg = 1
+        end
+    elseif m.actionArg == 3 then
+        set_character_anim_with_accel(m, CHAR_ANIM_STOP_CROUCHING, 0x10000 * 3)
+        if is_anim_at_end(m) ~= 0 then
+            return set_mario_action(m, ACT_IDLE, 0)
+        end
+    else
+        set_character_anim_with_accel(m, ternary(m.actionArg == 1, CHAR_ANIM_FIRST_PUNCH_FAST, CHAR_ANIM_SECOND_PUNCH_FAST), 0x10000 * 1.9)
+
+        if m.marioObj.header.gfx.animInfo.animFrame > 3 and m.controller.buttonPressed & B_BUTTON ~= 0 then
+            m.actionTimer = 1
+        end
+
+        if is_anim_at_end(m) ~= 0 then
+            if m.actionTimer == 1 then
+                m.actionArg = 3 - m.actionArg
+            else
+                m.actionArg = 3
+            end
+            m.actionTimer = 0
+        end
+
+        if is_anim_past_frame(m, 12) ~= 0 then
+            local bulletPos = {
+                x = get_hand_foot_pos_x(m, 2 - m.actionArg) + 50 * sins(m.faceAngle.y),
+                y = get_hand_foot_pos_y(m, 2 - m.actionArg),
+                z = get_hand_foot_pos_z(m, 2 - m.actionArg) + 50 * coss(m.faceAngle.y)
+            }
+            play_sound(SOUND_OBJ_CANNON4, m.marioObj.header.gfx.cameraToObject)
+            spawn_non_sync_object(id_bhvSmoke, E_MODEL_SMOKE, bulletPos.x, bulletPos.y - 20, bulletPos.z, function() end)
+
+            if m.playerIndex == 0 then
+                local target, pitch = getAutoTarget(m, bulletPos, 0x1000, 1500)
+                set_environmental_camera_shake(SHAKE_ENV_EXPLOSION)
+
+                spawn_sync_object(id_bhvCommonBullet, E_MODEL_BOWLING_BALL, bulletPos.x, bulletPos.y, bulletPos.z, function(o)
+                    o.oOwner = nps[0].globalIndex
+                    o.oBehParams2ndByte = 5
+
+                    if target then
+                        o.oSubAction = 1
+                        o.oMoveAnglePitch = pitch
+                        o.oMoveAngleYaw = math.s16(obj_angle_to_point(target, bulletPos.x, bulletPos.z) - 0x8000)
+                    else
+                        o.oMoveAnglePitch = 0
+                        o.oMoveAngleYaw = m.faceAngle.y
+                    end
+                end)
+            end
+        end
+    end
+
+    if m.forwardVel >= 0 then
+        apply_slope_decel(m, 0.5)
+        if m.forwardVel ~= 0 then
+            set_mario_particle_flags(m, PARTICLE_DUST, 0)
+            play_sound(SOUND_MOVING_TERRAIN_SLIDE, m.marioObj.header.gfx.cameraToObject)
+        end
+    else
+        m.forwardVel = approach_f32_symmetric(m.forwardVel, 0, 8)
+        apply_slope_accel(m)
+    end
+    perform_ground_step(m)
+end
+
+---@param m MarioState
+function acts.act_sam_air_shoot_pistol(m)
+
+    m.peakHeight = m.pos.y
+    play_character_sound_if_no_flag(m, CHAR_SOUND_SO_LONGA_BOWSER, MARIO_MARIO_SOUND_PLAYED)
+
+    if m.actionState == 0 then
+        set_character_anim_with_accel(m, CHAR_ANIM_AIR_KICK, 0x10000 * 2)
+
+        mario_set_forward_vel(m, 0)
+        m.vel.y = -7
+
+        if is_anim_past_frame(m, 12) ~= 0 then
+            for i = 0, 1 do
+                local bulletPos = {
+                    x = get_hand_foot_pos_x(m, i),
+                    y = get_hand_foot_pos_y(m, i) - 80,
+                    z = get_hand_foot_pos_z(m, i)
+                }
+
+                play_sound(SOUND_OBJ_CANNON4, m.marioObj.header.gfx.cameraToObject)
+                spawn_non_sync_object(id_bhvSmoke, E_MODEL_SMOKE, bulletPos.x, bulletPos.y, bulletPos.z, function() end)
+
+                if m.playerIndex == 0 then
+                    local target, pitch = getAutoTarget(m, bulletPos, 0x10000, 5000)
+                    set_environmental_camera_shake(SHAKE_ENV_EXPLOSION)
+
+                    spawn_sync_object(id_bhvCommonBullet, E_MODEL_BOWLING_BALL, bulletPos.x, bulletPos.y, bulletPos.z, function(o)
+                        o.oOwner = nps[0].globalIndex
+                        o.oBehParams2ndByte = 5
+                        if target and pitch <= 0x4000 and pitch > 0x1000 then
+                            o.oSubAction = 1
+                            o.oMoveAnglePitch = pitch
+                            o.oMoveAngleYaw = math.s16(obj_angle_to_point(target, bulletPos.x, bulletPos.z) - 0x8000)
+                        else
+                            o.oMoveAnglePitch = 0x4000
+                            o.oMoveAngleYaw = m.faceAngle.y
+                        end
+                    end)
+                end
+            end
+        end
+
+        if is_anim_at_end(m) ~= 0 then
+            mario_set_forward_vel(m, 30)
+            m.vel.y = 80
+            m.actionState = 1
+        end
+    else
+        if set_character_animation(m, CHAR_ANIM_FORWARD_SPINNING) == 0 then
+            play_sound(SOUND_ACTION_SPIN, m.marioObj.header.gfx.cameraToObject)
+        end
+
+        update_air_without_turn(m)
+    end
+
+    local step = perform_air_step(m, AIR_STEP_CHECK_LEDGE_GRAB)
+    if step == AIR_STEP_LANDED then
+        return set_mario_action(m, ACT_JUMP_LAND, 0)
+    elseif step == AIR_STEP_GRABBED_LEDGE then
+        mario_set_forward_vel(m, 0)
+        set_character_animation(m, CHAR_ANIM_IDLE_ON_LEDGE)
+        return drop_and_set_mario_action(m, ACT_LEDGE_GRAB, 0)
+    elseif step == AIR_STEP_HIT_WALL then
+        mario_set_forward_vel(m, 0)
+    end
+end
+
+---@param m MarioState
+function acts.act_sam_shoulder_bash(m)
+
+    if m.input & INPUT_UNKNOWN_10 ~= 0 then
+        return set_mario_action(m, ACT_SHOCKWAVE_BOUNCE, 0)
+    end
+
+    if m.input & INPUT_OFF_FLOOR ~= 0 then
+        return set_mario_action(m, ACT_FREEFALL, 0)
+    end
+
+    local shake = false
+
+    if m.actionState == 0 then
+        play_character_sound_if_no_flag(m, CHAR_SOUND_LETS_A_GO, MARIO_MARIO_SOUND_PLAYED)
+        set_character_anim_with_accel(m, CHAR_ANIM_CROUCH_FROM_SLIDE_KICK, 0x10000 * 2.6)
+        set_mario_particle_flags(m, PARTICLE_MIST_CIRCLE, 0)
+
+        mario_set_forward_vel(m, 0)
+
+        if is_anim_at_end(m) ~= 0 then
+            shake = true
+            if m.actionTimer > 10 then
+                mario_set_forward_vel(m, 40)
+                m.actionTimer = 0
+                m.actionState = 1
+            else
+                m.actionTimer = m.actionTimer + 1
+            end
+        end
+    else
+        if m.forwardVel < 0 then
+            m.forwardVel = 40
+        end
+
+        set_character_anim_with_accel(m, CHAR_ANIM_SLIDE_KICK, 0x10000 * 4.2)
+        mario_set_forward_vel(m, approach_f32_symmetric(m.forwardVel, 40 + 20 * m.intendedMag / 32, 2))
+        m.faceAngle.y = approach_s16_symmetric(m.faceAngle.y, m.intendedYaw, 0x200)
+
+        local pFlags = PARTICLE_DIRT
+        if m.actionTimer % 2 == 0 then
+            pFlags = pFlags | PARTICLE_MIST_CIRCLE
+        end
+        set_mario_particle_flags(m, pFlags, 0)
+        play_step_sound(m, 1, 21)
+
+        if m.actionTimer > 60 then
+            return set_mario_action(m, ACT_BRAKING, 0)
+        end
+        m.actionTimer = m.actionTimer + 1
+    end
+
+    if perform_ground_step(m) == GROUND_STEP_HIT_WALL then
+        local bonk = true
+        if m.wall and m.wall.object then
+            local intType = m.wall.object.oInteractType
+            if intType ~= 0 and intType ~= INTERACT_WARP_DOOR then
+                if intType ~= INTERACT_DOOR or isDoorUnlocked(m.wall.object) then
+                    bonk = false
+
+                    if intType == INTERACT_DOOR then
+                        spawn_triangle_break_particles(20, 138, 0.7, 3)
+                        cur_obj_play_sound_1(SOUND_GENERAL_BREAK_BOX)
+                        obj_mark_for_deletion(m.wall.object)
+                    end
+                end
+            end
+        end
+
+        if bonk then
+            play_sound(SOUND_ACTION_BONK, m.marioObj.header.gfx.cameraToObject)
+            set_mario_particle_flags(m, PARTICLE_VERTICAL_STAR, 0)
+            mario_set_forward_vel(m, -20)
+            return set_mario_action(m, ACT_GROUND_BONK, 0)
+        end
+    end
+    if shake then
+        m.marioObj.header.gfx.pos.x = m.pos.x + random_sign() * math.random(3)
+        m.marioObj.header.gfx.pos.z = m.pos.z + random_sign() * math.random(3)
+    end
 end
 
 ---@param m MarioState

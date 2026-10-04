@@ -74,25 +74,27 @@ function bhvs.bhv_bugs_dirt_hole_loop(o)
 end
 
 ---@param o Object
-function bhvs.bhv_elmer_bullet_init(o)
+function bhvs.bhv_common_bullet_init(o)
     o.oFlags = o.oFlags | OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE
 
-    o.oGraphYOffset = 10
-    o.oWallHitboxRadius = 10
     o.oDragStrength = 10
     o.oFriction = 10
 
-    cur_obj_set_hitbox_radius_and_height(10, 20)
-    o.hitboxDownOffset = 10
+    local param = o.oBehParams2ndByte
+
+    cur_obj_set_hitbox_radius_and_height(param, param * 2)
+    o.hitboxDownOffset = param
+    o.oGraphYOffset = param
+    o.oWallHitboxRadius = math.max(30, param)
 
     obj_set_billboard(o)
-    cur_obj_scale(0.1)
+    cur_obj_scale(param / 100)
 
     network_init_object(o, true, { 'oTimer', 'oAction' })
 end
 
 ---@param o Object
-function bhvs.bhv_elmer_bullet_loop(o)
+function bhvs.bhv_common_bullet_loop(o)
 
     if o.oAction == 1 then
         cur_obj_disable()
@@ -135,10 +137,10 @@ end
 
 ---@param o Object
 function bhvs.bhv_tweety_loop(o)
-    local m = states[o.oOwner]
+    local m = states[getLocalFromGlobalIdx(o.oOwner)]
     if is_player_active(m) == 0 or
     m.flags & MARIO_CAP_ON_HEAD == 0 or
-    _G.charSelect.character_get_current_number(o.oOwner) ~= CT_SYLVESTER then
+    _G.charSelect.character_get_current_number(m.playerIndex) ~= CT_SYLVESTER then
         obj_mark_for_deletion(o)
         return
     end
@@ -184,7 +186,7 @@ function bhvs.bhv_tweety_loop(o)
     if dist < 2000 then
         if targetFVel == 0 and targetYVel == 0 and dist < 150 then
 
-            if dist <= target.hitboxRadius + 30 then
+            if dist <= target.hitboxRadius + 50 then
                 o.oAngleVelYaw = math.s16(o.oAngleVelYaw + 0x300)
                 o.oForwardVel = 100
                 targetPos.y = targetPos.y + coss(0x400 * o.oFlyGuyOscTimer) * 10
@@ -200,8 +202,8 @@ function bhvs.bhv_tweety_loop(o)
                 o.oForwardVel = approach_f32_symmetric(o.oForwardVel, 20, 1)
             end
 
-            targetPos.x = targetPos.x + 80 * sins(o.oAngleVelYaw)
-            targetPos.z = targetPos.z + 80 * coss(o.oAngleVelYaw)
+            targetPos.x = targetPos.x + (target.hitboxRadius + 30) * sins(o.oAngleVelYaw)
+            targetPos.z = targetPos.z + (target.hitboxRadius + 30) * coss(o.oAngleVelYaw)
             o.oMoveAngleYaw = obj_angle_to_point(o, targetPos.x, targetPos.z)
         else
             if dist < 100 then

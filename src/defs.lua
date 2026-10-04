@@ -78,6 +78,9 @@ ACT_CAUGHT_IN_TAZ_TORNADO = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_
 ACT_FOGHORN_SLAP_CHARGE = allocate_mario_action(ACT_GROUP_MOVING | ACT_FLAG_MOVING)
 ACT_FOGHORN_SLAP_RELEASE = allocate_mario_action(ACT_GROUP_STATIONARY | ACT_FLAG_STATIONARY)
 ACT_SLAPPED_BY_FOGHORN = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_INVULNERABLE | ACT_FLAG_ALLOW_VERTICAL_WIND_ACTION)
+ACT_SAM_SHOOT_PISTOL = allocate_mario_action(ACT_GROUP_MOVING | ACT_FLAG_MOVING)
+ACT_SAM_AIR_SHOOT_PISTOL = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR)
+ACT_SAM_SHOULDER_BASH = allocate_mario_action(ACT_GROUP_MOVING | ACT_FLAG_MOVING | ACT_FLAG_ATTACKING)
 ACT_WILE_AIR_WALK = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_ALLOW_VERTICAL_WIND_ACTION)
 ACT_WILE_ROCKET_EXPLODE = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_INVULNERABLE | ACT_FLAG_ALLOW_VERTICAL_WIND_ACTION)
 ACT_WILE_ROCKET_JUMP = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_ATTACKING)
@@ -111,6 +114,14 @@ ANIM_FOGHORN_SLAP_CHARGE = 'foghorn_slap_charge'
 ANIM_FOGHORN_SLAP_CHARGE_TIPTOE = 'foghorn_slap_charge_tiptoe'
 ANIM_FOGHORN_SLAP_RELEASE = 'foghorn_slap_release'
 ANIM_FOGHORN_SLAP_START = 'foghorn_slap_start'
+ANIM_SAM_CS_MENU = 'sam_cs_menu'
+ANIM_SAM_UNHOLSTER = 'sam_unholster'
+ANIM_SAM_HOLSTER = 'sam_holster'
+ANIM_SAM_SHOOT_LEFT = 'sam_shoot_left'
+ANIM_SAM_SHOOT_RIGHT = 'sam_shoot_right'
+ANIM_SAM_SHOOT_DOWN = 'sam_shoot_down'
+ANIM_SAM_BASH_START = 'sam_bash_start'
+ANIM_SAM_BASH_RUN = 'sam_bash_run'
 ANIM_WILE_CS_MENU = 'wile_cs_menu'
 ANIM_WILE_ROCKET_JUMP_START = 'wile_rocket_jump_start'
 ANIM_WILE_IN_AIR_REALIZATION = 'wile_in_air_realization'
@@ -118,6 +129,48 @@ ANIM_WILE_IN_AIR_REALIZATION = 'wile_in_air_realization'
 define_custom_obj_fields({
     oOwner = "s32"
 })
+
+function geo_switch_lt_common(node)
+    local gn = cast_graph_node(node)
+    local curM = geo_get_mario_state()
+
+    local caseFuncs = {
+        [CT_DAFFY] = function (m, _, _)
+            if m.action == ACT_DAFFY_MALLET_SWING or
+            m.action == ACT_DAFFY_MALLET_POUND or
+            m.action == ACT_DAFFY_MALLET_POUND_LAND then
+                return 1
+            end
+        end,
+        [CT_ELMER] = function (m, _, _)
+            if m.action == ACT_ELMER_SHOOT_SHOTGUN or m.action == ACT_ELMER_AIR_SHOOT_SHOTGUN then
+                return 1
+            end
+        end,
+        [CT_MARVIN] = function (m, _, _)
+            if m.action == ACT_MARVIN_SHOOT_LASER or m.action == ACT_MARVIN_AIR_SHOOT_LASER then
+                return 1
+            end
+        end,
+        [CT_SAM] = function (m, param, frame)
+            if (m.action == ACT_SAM_SHOOT_PISTOL and (m.actionArg ~= 0 or frame > 15)) or m.action == ACT_SAM_AIR_SHOOT_PISTOL then
+                return 1
+            end
+        end,
+        [CT_WILE] = function (m, _, _)
+            if m.action == ACT_WILE_ROCKET_JUMP then
+                return 1
+            end
+        end
+    }
+
+    local ctFunc = caseFuncs[_G.charSelect.character_get_current_number(curM.playerIndex)]
+    if ctFunc then
+        gn.selectedCase = ctFunc(curM, gn.parameter, curM.marioObj.header.gfx.animInfo.animFrame) or 0
+    else
+        gn.selectedCase = 0
+    end
+end
 
 ---@param node GraphNode
 function geo_switch_bugs_ears(node)
@@ -161,28 +214,6 @@ function geo_switch_bugs_dirt(node)
     gn.selectedCase = ternary(o.oForwardVel == 0, 0, 1)
 end
 
-function geo_mallet_switch(node)
-    local gn = cast_graph_node(node)
-    local m = geo_get_mario_state()
-    if m.action == ACT_DAFFY_MALLET_SWING or m.action == ACT_DAFFY_MALLET_POUND or m.action == ACT_DAFFY_MALLET_POUND_LAND then
-        gn.selectedCase = 1
-    else
-        gn.selectedCase = 0
-    end
-end
-
-function geo_railgun_switch(node)
-    local gn = cast_graph_node(node)
-    local m = geo_get_mario_state()
-    gn.selectedCase = ternary(m.action == ACT_MARVIN_SHOOT_LASER or m.action == ACT_MARVIN_AIR_SHOOT_LASER, 1, 0)
-end
-
-function geo_shotgun_switch(node)
-    local gn = cast_graph_node(node)
-    local m = geo_get_mario_state()
-    gn.selectedCase = ternary(m.action == ACT_ELMER_SHOOT_SHOTGUN or m.action == ACT_ELMER_AIR_SHOOT_SHOTGUN, 1, 0)
-end
-
 function geo_tornado_switch(node)
     local gn = cast_graph_node(node)
     local m = geo_get_mario_state()
@@ -191,10 +222,4 @@ function geo_tornado_switch(node)
     else
         gn.selectedCase = m.marioBodyState.modelState >> 8
     end
-end
-
-function geo_rocket_switch(node)
-    local gn = cast_graph_node(node)
-    local m = geo_get_mario_state()
-    gn.selectedCase = ternary(m.action == ACT_WILE_ROCKET_JUMP, 1, 0)
 end
