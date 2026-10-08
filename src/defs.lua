@@ -90,6 +90,7 @@ E_MODEL_TWEETY = smlua_model_util_get_id('sylvester_tweety_geo')
 E_MODEL_MARVIN_LASER = smlua_model_util_get_id('marvin_laser_geo')
 E_MODEL_MARVIN_TNT = smlua_model_util_get_id('marvin_tnt_geo')
 E_MODEL_EXPLOSION_KABOOM = smlua_model_util_get_id('explosion_kaboom_geo')
+E_MODEL_BASKET_BALL = smlua_model_util_get_id('basket_ball_geo')
 
 ANIM_BUGS_CS_MENU = 'bugs_cs_menu'
 ANIM_DAFFY_CS_MENU = 'daffy_cs_menu'
