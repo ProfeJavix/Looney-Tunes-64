@@ -1,7 +1,7 @@
-const GeoLayout beakbase_6_Cap_Anim_State_Switch_opt1[] = {
+const GeoLayout daffy_base_6_Cap_Anim_State_Switch_opt1[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, beakbase_Cap_DL_mesh_layer_1),
+		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, daffy_base_Cap_DL_mesh_layer_1),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
@@ -22,14 +22,14 @@ const GeoLayout daffy_cap_base_geo[] = {
 				GEO_OPEN_NODE(),
 					GEO_NODE_START(),
 					GEO_OPEN_NODE(),
-						GEO_DISPLAY_LIST(LAYER_OPAQUE, beakbase_Cap_DL_mesh_layer_1),
+						GEO_DISPLAY_LIST(LAYER_OPAQUE, daffy_base_Cap_DL_mesh_layer_1),
 					GEO_CLOSE_NODE(),
-					GEO_BRANCH(1, beakbase_6_Cap_Anim_State_Switch_opt1),
+					GEO_BRANCH(1, daffy_base_6_Cap_Anim_State_Switch_opt1),
 				GEO_CLOSE_NODE(),
 			GEO_CLOSE_NODE(),
 		GEO_CLOSE_NODE(),
-		GEO_DISPLAY_LIST(LAYER_OPAQUE, beakbase_material_revert_render_settings),
-		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, beakbase_material_revert_render_settings),
+		GEO_DISPLAY_LIST(LAYER_OPAQUE, daffy_base_material_revert_render_settings),
+		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, daffy_base_material_revert_render_settings),
 	GEO_CLOSE_NODE(),
 	GEO_END(),
 };

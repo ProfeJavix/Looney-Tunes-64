@@ -3,7 +3,6 @@ extern const GeoLayout elmer_metal_geo[];
 extern Lights1 elmer_metal_Metal__METAL__lights;
 extern Lights1 elmer_metal_black_lights;
 extern u8 elmer_metal_Metal_Shade_rgba16_rgba16[];
-extern u8 elmer_metal_Metal_Light_rgba16_rgba16[];
 extern Vtx elmer_metal_Metal_Cap_DL_mesh_layer_1_vtx_0[71];
 extern Gfx elmer_metal_Metal_Cap_DL_mesh_layer_1_tri_0[];
 extern Vtx elmer_metal_Metal_Cap_DL_mesh_layer_1_vtx_1[16];

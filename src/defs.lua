@@ -55,7 +55,7 @@ PREVENT_ACT_GROUPS = {
 	[ACT_GROUP_AUTOMATIC] = true
 }
 
-ACT_BUGS_HOVER = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_MOVING)
+ACT_BUGS_LOLA_HOVER = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_MOVING)
 ACT_BUGS_DIVE_POUND = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_ATTACKING)
 ACT_BUGS_MOVE_UNDERGROUND = allocate_mario_action(ACT_GROUP_MOVING | ACT_FLAG_MOVING | ACT_FLAG_INTANGIBLE)
 ACT_DAFFY_POUND = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_ATTACKING)
@@ -85,7 +85,6 @@ ACT_WILE_AIR_WALK = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | AC
 ACT_WILE_ROCKET_EXPLODE = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_INVULNERABLE | ACT_FLAG_ALLOW_VERTICAL_WIND_ACTION)
 ACT_WILE_ROCKET_JUMP = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_ATTACKING)
 
-E_MODEL_BUGS_EARS = smlua_model_util_get_id('bugs_ears_geo')
 E_MODEL_BUGS_DIRT_HOLE = smlua_model_util_get_id('bugs_dirt_hole_geo')
 E_MODEL_TWEETY = smlua_model_util_get_id('sylvester_tweety_geo')
 E_MODEL_MARVIN_LASER = smlua_model_util_get_id('marvin_laser_geo')
@@ -114,6 +113,7 @@ ANIM_FOGHORN_SLAP_CHARGE = 'foghorn_slap_charge'
 ANIM_FOGHORN_SLAP_CHARGE_TIPTOE = 'foghorn_slap_charge_tiptoe'
 ANIM_FOGHORN_SLAP_RELEASE = 'foghorn_slap_release'
 ANIM_FOGHORN_SLAP_START = 'foghorn_slap_start'
+ANIM_LOLA_CS_MENU = 'lola_cs_menu'
 ANIM_SAM_CS_MENU = 'sam_cs_menu'
 ANIM_SAM_UNHOLSTER = 'sam_unholster'
 ANIM_SAM_HOLSTER = 'sam_holster'
@@ -172,38 +172,20 @@ function geo_switch_lt_common(node)
     end
 end
 
----@param node GraphNode
-function geo_switch_bugs_ears(node)
+function geo_rotate_ears(node)
     local gn = cast_graph_node(node)
+    local rot = cast_graph_node(node.next)
     local m = geo_get_mario_state()
 
-    if m.action == ACT_BUGS_HOVER and m.actionState == 1 then
-        gn.selectedCase = 2
-    else
-        local capState = geo_get_body_state().capState
-        local next = node.next
-
-        gn.selectedCase = capState & 1
-
-        while next and next ~= node do
-            if next.type == GRAPH_NODE_TYPE_TRANSLATION_ROTATION then
-                if capState & 2 ~= 0 then
-                    next.flags = next.flags | GRAPH_RENDER_ACTIVE
-                else
-                    next.flags = next.flags & ~GRAPH_RENDER_ACTIVE
-                end
-            end
-            next = next.next
+    if m.action == ACT_BUGS_LOLA_HOVER and m.actionState == 1 then
+        if gn.parameter == 1 then
+            rot.rotation.x = 0x2500
         end
+        rot.rotation.y = rot.rotation.y + 0x4000
+    else
+        rot.rotation.x = 0
+        rot.rotation.y = ternary(gn.parameter == 0, 0x8000, 0)
     end
-end
-
----@param node GraphNode
-function geo_switch_ears_state(node)
-    local gn = cast_graph_node(node)
-    local o = geo_get_current_object()
-
-    gn.selectedCase = o.oAction
 end
 
 ---@param node GraphNode

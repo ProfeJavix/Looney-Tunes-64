@@ -1,96 +1,82 @@
-Lights1 beakbase_Orange_lights = gdSPDefLights1(
+Lights1 daffy_base_Orange_lights = gdSPDefLights1(
 	0x7F, 0x34, 0x0,
 	0xFF, 0x6F, 0x0, 0x28, 0x28, 0x28);
 
-Lights1 beakbase_Mouf_lights = gdSPDefLights1(
-	0x0, 0x0, 0x0,
-	0x0, 0x0, 0x0, 0x28, 0x28, 0x28);
-
-Vtx beakbase_Cap_DL_mesh_layer_1_vtx_0[42] = {
-	{{{-79, -1, 19}, 0, {-16, 1008}, {0x2A, 0x8F, 0x29, 0xFF}}},
-	{{{-54, 1, -26}, 0, {-16, 1008}, {0x33, 0x8E, 0x19, 0xFF}}},
-	{{{-1, 43, 58}, 0, {-16, 1008}, {0x00, 0x99, 0x4B, 0xFF}}},
-	{{{-87, 31, 76}, 0, {-16, 1008}, {0x1E, 0xA1, 0x4F, 0xFF}}},
-	{{{-72, 78, 111}, 0, {-16, 1008}, {0x19, 0xAA, 0x5A, 0xFF}}},
-	{{{-1, 103, 122}, 0, {-16, 1008}, {0x00, 0xA3, 0x56, 0xFF}}},
-	{{{69, 78, 111}, 0, {-16, 1008}, {0xE7, 0xAA, 0x5A, 0xFF}}},
-	{{{84, 31, 76}, 0, {-16, 1008}, {0xE2, 0xA1, 0x4F, 0xFF}}},
-	{{{77, -1, 19}, 0, {-16, 1008}, {0xD6, 0x8F, 0x29, 0xFF}}},
-	{{{51, 1, -26}, 0, {-16, 1008}, {0xCD, 0x8E, 0x19, 0xFF}}},
-	{{{-48, 49, -18}, 0, {-16, 1008}, {0xA3, 0x54, 0xEA, 0xFF}}},
-	{{{-54, 1, -26}, 0, {-16, 1008}, {0x93, 0x17, 0xC4, 0xFF}}},
-	{{{-79, -1, 19}, 0, {-16, 1008}, {0x8F, 0x25, 0xD2, 0xFF}}},
-	{{{-87, 31, 76}, 0, {-16, 1008}, {0xAE, 0x55, 0xD0, 0xFF}}},
-	{{{-1, 68, 34}, 0, {-16, 1008}, {0x00, 0x7E, 0xEF, 0xFF}}},
-	{{{-72, 78, 111}, 0, {-16, 1008}, {0xCA, 0x61, 0xC2, 0xFF}}},
-	{{{-1, 103, 122}, 0, {-16, 1008}, {0x00, 0x76, 0xD1, 0xFF}}},
-	{{{69, 78, 111}, 0, {-16, 1008}, {0x36, 0x61, 0xC2, 0xFF}}},
-	{{{84, 31, 76}, 0, {-16, 1008}, {0x52, 0x55, 0xD0, 0xFF}}},
-	{{{45, 49, -18}, 0, {-16, 1008}, {0x5D, 0x54, 0xEA, 0xFF}}},
-	{{{77, -1, 19}, 0, {-16, 1008}, {0x71, 0x25, 0xD2, 0xFF}}},
-	{{{51, 1, -26}, 0, {-16, 1008}, {0x6D, 0x17, 0xC4, 0xFF}}},
-	{{{-1, 76, 4}, 0, {-16, 1008}, {0x00, 0x7A, 0x22, 0xFF}}},
-	{{{-55, 77, -90}, 0, {-16, 1008}, {0x64, 0x4C, 0x13, 0xFF}}},
-	{{{-48, 49, -18}, 0, {-16, 1008}, {0x39, 0x63, 0xC9, 0xFF}}},
-	{{{-1, -1, -61}, 0, {-16, 1008}, {0x00, 0x77, 0xD4, 0xFF}}},
-	{{{-1, 76, 4}, 0, {-16, 1008}, {0x00, 0x52, 0x9F, 0xFF}}},
-	{{{45, 49, -18}, 0, {-16, 1008}, {0xC7, 0x63, 0xC9, 0xFF}}},
-	{{{52, 77, -90}, 0, {-16, 1008}, {0x9C, 0x4C, 0x13, 0xFF}}},
-	{{{-1, 37, 52}, 0, {-16, 1008}, {0x00, 0xA6, 0x59, 0xFF}}},
-	{{{-54, 1, -26}, 0, {-16, 1008}, {0xBC, 0x98, 0x17, 0xFF}}},
-	{{{-1, -1, 13}, 0, {-16, 1008}, {0x00, 0x91, 0x3E, 0xFF}}},
-	{{{-1, -1, -61}, 0, {-16, 1008}, {0x00, 0x88, 0xD6, 0xFF}}},
-	{{{-55, 22, -108}, 0, {-16, 1008}, {0x0C, 0xD1, 0x8B, 0xFF}}},
-	{{{-88, 24, -94}, 0, {-16, 1008}, {0x8F, 0xE0, 0xD1, 0xFF}}},
-	{{{-48, 49, -18}, 0, {-16, 1008}, {0x8F, 0x1E, 0x32, 0xFF}}},
-	{{{-55, 77, -90}, 0, {-16, 1008}, {0xC0, 0x59, 0xC0, 0xFF}}},
-	{{{51, 1, -26}, 0, {-16, 1008}, {0x44, 0x98, 0x17, 0xFF}}},
-	{{{53, 22, -108}, 0, {-16, 1008}, {0xF4, 0xD1, 0x8B, 0xFF}}},
-	{{{52, 77, -90}, 0, {-16, 1008}, {0x40, 0x59, 0xC0, 0xFF}}},
-	{{{86, 24, -94}, 0, {-16, 1008}, {0x71, 0xE0, 0xD1, 0xFF}}},
-	{{{45, 49, -18}, 0, {-16, 1008}, {0x71, 0x1E, 0x32, 0xFF}}},
+Vtx daffy_base_Cap_DL_mesh_layer_1_vtx_0[42] = {
+	{{{-71, 18, 59}, 0, {-16, 1008}, {0x1E, 0x98, 0x42, 0xFF}}},
+	{{{-47, 7, 18}, 0, {-16, 1008}, {0x27, 0x93, 0x33, 0xFF}}},
+	{{{-5, 54, 85}, 0, {-16, 1008}, {0xFE, 0xAD, 0x60, 0xFF}}},
+	{{{-79, 56, 102}, 0, {-16, 1008}, {0x15, 0xB4, 0x64, 0xFF}}},
+	{{{-65, 100, 122}, 0, {-16, 1008}, {0x19, 0xC8, 0x6F, 0xFF}}},
+	{{{-6, 131, 123}, 0, {-16, 1008}, {0xF7, 0xC8, 0x72, 0xFF}}},
+	{{{44, 100, 128}, 0, {-16, 1008}, {0xDF, 0xC1, 0x69, 0xFF}}},
+	{{{76, 57, 105}, 0, {-16, 1008}, {0xEC, 0xAF, 0x5F, 0xFF}}},
+	{{{69, 20, 66}, 0, {-16, 1008}, {0xE2, 0x98, 0x42, 0xFF}}},
+	{{{52, 9, 23}, 0, {-16, 1008}, {0xD9, 0x90, 0x2E, 0xFF}}},
+	{{{45, 57, -55}, 0, {-16, 1008}, {0x95, 0x43, 0xF1, 0xFF}}},
+	{{{1, -3, -9}, 0, {-16, 1008}, {0xFB, 0x62, 0xB0, 0xFF}}},
+	{{{32, 51, 11}, 0, {-16, 1008}, {0xC2, 0x44, 0xA9, 0xFF}}},
+	{{{1, 78, 25}, 0, {-16, 1008}, {0xFF, 0x31, 0x8B, 0xFF}}},
+	{{{-43, 51, 12}, 0, {-16, 1008}, {0x3D, 0x4F, 0xB1, 0xFF}}},
+	{{{-50, 55, -60}, 0, {-16, 1008}, {0x62, 0x51, 0xFB, 0xFF}}},
+	{{{-6, 131, 123}, 0, {-16, 1008}, {0x09, 0x60, 0xAD, 0xFF}}},
+	{{{-7, 73, 56}, 0, {-16, 1008}, {0xFE, 0x78, 0xD7, 0xFF}}},
+	{{{-65, 100, 122}, 0, {-16, 1008}, {0xC5, 0x4C, 0xAD, 0xFF}}},
+	{{{44, 100, 128}, 0, {-16, 1008}, {0x3C, 0x55, 0xB7, 0xFF}}},
+	{{{76, 57, 105}, 0, {-16, 1008}, {0x49, 0x55, 0xC4, 0xFF}}},
+	{{{32, 51, 11}, 0, {-16, 1008}, {0x5F, 0x54, 0xFE, 0xFF}}},
+	{{{69, 20, 66}, 0, {-16, 1008}, {0x6E, 0x23, 0xCA, 0xFF}}},
+	{{{52, 9, 23}, 0, {-16, 1008}, {0x78, 0xD6, 0x07, 0xFF}}},
+	{{{85, 8, -44}, 0, {-16, 1008}, {0x77, 0xDC, 0xE8, 0xFF}}},
+	{{{51, 0, -64}, 0, {-16, 1008}, {0xFB, 0xB5, 0x99, 0xFF}}},
+	{{{1, -3, -9}, 0, {-16, 1008}, {0xFE, 0x82, 0xF0, 0xFF}}},
+	{{{-6, 0, 64}, 0, {-16, 1008}, {0xF7, 0x9E, 0x51, 0xFF}}},
+	{{{40, 33, 55}, 0, {-16, 1008}, {0x67, 0x44, 0x1D, 0xFF}}},
+	{{{-6, 29, 53}, 0, {-16, 1008}, {0x01, 0x65, 0xB3, 0xFF}}},
+	{{{-5, 54, 85}, 0, {-16, 1008}, {0x00, 0x65, 0xB3, 0xFF}}},
+	{{{-40, 30, 51}, 0, {-16, 1008}, {0x93, 0x3F, 0x0F, 0xFF}}},
+	{{{-47, 7, 18}, 0, {-16, 1008}, {0x97, 0xB9, 0x03, 0xFF}}},
+	{{{-49, 2, -60}, 0, {-16, 1008}, {0x0F, 0xB0, 0x9F, 0xFF}}},
+	{{{-79, 7, -48}, 0, {-16, 1008}, {0x8F, 0xD0, 0xDE, 0xFF}}},
+	{{{-43, 51, 12}, 0, {-16, 1008}, {0x95, 0x43, 0xF7, 0xFF}}},
+	{{{-71, 18, 59}, 0, {-16, 1008}, {0x8E, 0x16, 0xCC, 0xFF}}},
+	{{{-79, 56, 102}, 0, {-16, 1008}, {0xAF, 0x48, 0xBE, 0xFF}}},
+	{{{1, 78, 25}, 0, {-16, 1008}, {0x1B, 0x79, 0x1B, 0xFF}}},
+	{{{-5, 54, 85}, 0, {-16, 1008}, {0xFC, 0xD1, 0x76, 0xFF}}},
+	{{{45, 57, -55}, 0, {-16, 1008}, {0x33, 0x58, 0xB4, 0xFF}}},
+	{{{-50, 55, -60}, 0, {-16, 1008}, {0xC0, 0x41, 0xA8, 0xFF}}},
 };
 
-Gfx beakbase_Cap_DL_mesh_layer_1_tri_0[] = {
-	gsSPVertex(beakbase_Cap_DL_mesh_layer_1_vtx_0 + 0, 42, 0),
+Gfx daffy_base_Cap_DL_mesh_layer_1_tri_0[] = {
+	gsSPVertex(daffy_base_Cap_DL_mesh_layer_1_vtx_0 + 0, 42, 0),
 	gsSP2Triangles(0, 1, 2, 0, 2, 3, 0, 0),
 	gsSP2Triangles(2, 4, 3, 0, 2, 5, 4, 0),
-	gsSP2Triangles(2, 6, 5, 0, 2, 7, 6, 0),
-	gsSP2Triangles(2, 8, 7, 0, 8, 2, 9, 0),
-	gsSP2Triangles(10, 11, 12, 0, 13, 10, 12, 0),
-	gsSP2Triangles(13, 14, 10, 0, 15, 14, 13, 0),
-	gsSP2Triangles(16, 14, 15, 0, 16, 17, 14, 0),
-	gsSP2Triangles(17, 18, 14, 0, 18, 19, 14, 0),
-	gsSP2Triangles(18, 20, 19, 0, 19, 20, 21, 0),
-	gsSP2Triangles(22, 14, 19, 0, 22, 10, 14, 0),
-	gsSP2Triangles(23, 24, 25, 0, 26, 25, 24, 0),
-	gsSP2Triangles(26, 27, 25, 0, 28, 25, 27, 0),
-	gsSP2Triangles(29, 30, 31, 0, 30, 32, 31, 0),
-	gsSP2Triangles(32, 30, 33, 0, 30, 34, 33, 0),
-	gsSP2Triangles(35, 34, 30, 0, 34, 35, 36, 0),
-	gsSP2Triangles(33, 34, 36, 0, 32, 33, 36, 0),
-	gsSP2Triangles(37, 31, 32, 0, 29, 31, 37, 0),
-	gsSP2Triangles(32, 38, 37, 0, 32, 39, 38, 0),
-	gsSP2Triangles(38, 39, 40, 0, 40, 39, 41, 0),
-	gsSP2Triangles(41, 37, 40, 0, 37, 38, 40, 0),
-	gsSPEndDisplayList(),
-};
-
-Vtx beakbase_Cap_DL_mesh_layer_1_vtx_1[4] = {
-	{{{-1, 43, 58}, 0, {-16, 1008}, {0x00, 0xA6, 0x59, 0xFF}}},
-	{{{-1, 37, 52}, 0, {-16, 1008}, {0x00, 0xA6, 0x59, 0xFF}}},
-	{{{51, 1, -26}, 0, {-16, 1008}, {0x3D, 0xB1, 0x4E, 0xFF}}},
-	{{{-54, 1, -26}, 0, {-16, 1008}, {0xC3, 0xB1, 0x4E, 0xFF}}},
-};
-
-Gfx beakbase_Cap_DL_mesh_layer_1_tri_1[] = {
-	gsSPVertex(beakbase_Cap_DL_mesh_layer_1_vtx_1 + 0, 4, 0),
-	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
+	gsSP2Triangles(6, 5, 2, 0, 7, 6, 2, 0),
+	gsSP2Triangles(7, 2, 8, 0, 9, 8, 2, 0),
+	gsSP2Triangles(10, 11, 12, 0, 12, 11, 13, 0),
+	gsSP2Triangles(13, 11, 14, 0, 15, 14, 11, 0),
+	gsSP2Triangles(16, 17, 18, 0, 17, 16, 19, 0),
+	gsSP2Triangles(17, 19, 20, 0, 20, 21, 17, 0),
+	gsSP2Triangles(21, 20, 22, 0, 21, 22, 23, 0),
+	gsSP2Triangles(23, 24, 21, 0, 24, 23, 25, 0),
+	gsSP2Triangles(23, 26, 25, 0, 23, 27, 26, 0),
+	gsSP2Triangles(27, 23, 28, 0, 29, 28, 23, 0),
+	gsSP2Triangles(28, 29, 30, 0, 31, 30, 29, 0),
+	gsSP2Triangles(29, 32, 31, 0, 27, 31, 32, 0),
+	gsSP2Triangles(32, 26, 27, 0, 26, 32, 33, 0),
+	gsSP2Triangles(32, 34, 33, 0, 35, 34, 32, 0),
+	gsSP2Triangles(35, 32, 36, 0, 37, 35, 36, 0),
+	gsSP2Triangles(37, 17, 35, 0, 18, 17, 37, 0),
+	gsSP2Triangles(38, 35, 17, 0, 17, 21, 38, 0),
+	gsSP2Triangles(28, 39, 27, 0, 31, 27, 39, 0),
+	gsSP2Triangles(21, 24, 40, 0, 40, 24, 25, 0),
+	gsSP2Triangles(40, 25, 26, 0, 34, 35, 41, 0),
+	gsSP2Triangles(33, 34, 41, 0, 26, 33, 41, 0),
 	gsSPEndDisplayList(),
 };
 
 
-Gfx mat_beakbase_Orange[] = {
+Gfx mat_daffy_base_Orange[] = {
 	gsSPCopyLightsPlayerPart(CAP),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
@@ -99,38 +85,20 @@ Gfx mat_beakbase_Orange[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_beakbase_Orange[] = {
+Gfx mat_revert_daffy_base_Orange[] = {
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_beakbase_Mouf[] = {
-	gsSPSetLights1(beakbase_Mouf_lights),
-	gsDPPipeSync(),
-	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
-	gsDPSetAlphaDither(G_AD_NOISE),
-	gsSPTexture(65535, 65535, 0, 0, 1),
+Gfx daffy_base_Cap_DL_mesh_layer_1[] = {
+	gsSPDisplayList(mat_daffy_base_Orange),
+	gsSPDisplayList(daffy_base_Cap_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_daffy_base_Orange),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_beakbase_Mouf[] = {
-	gsDPPipeSync(),
-	gsDPSetAlphaDither(G_AD_DISABLE),
-	gsSPEndDisplayList(),
-};
-
-Gfx beakbase_Cap_DL_mesh_layer_1[] = {
-	gsSPDisplayList(mat_beakbase_Orange),
-	gsSPDisplayList(beakbase_Cap_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_beakbase_Orange),
-	gsSPDisplayList(mat_beakbase_Mouf),
-	gsSPDisplayList(beakbase_Cap_DL_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_beakbase_Mouf),
-	gsSPEndDisplayList(),
-};
-
-Gfx beakbase_material_revert_render_settings[] = {
+Gfx daffy_base_material_revert_render_settings[] = {
 	gsDPPipeSync(),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPClearGeometryMode(G_TEXTURE_GEN),

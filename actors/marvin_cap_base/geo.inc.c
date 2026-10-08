@@ -1,7 +1,7 @@
-const GeoLayout helmetbase_6_Cap_Anim_State_Switch_opt1[] = {
+const GeoLayout marvin_base_6_Cap_Anim_State_Switch_opt1[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, helmetbase_Cap_DL_mesh_layer_1),
+		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, marvin_base_Cap_DL_mesh_layer_1),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
@@ -22,9 +22,9 @@ const GeoLayout marvin_cap_base_geo[] = {
 				GEO_OPEN_NODE(),
 					GEO_NODE_START(),
 					GEO_OPEN_NODE(),
-						GEO_DISPLAY_LIST(LAYER_OPAQUE, helmetbase_Cap_DL_mesh_layer_1),
+						GEO_DISPLAY_LIST(LAYER_OPAQUE, marvin_base_Cap_DL_mesh_layer_1),
 					GEO_CLOSE_NODE(),
-					GEO_BRANCH(1, helmetbase_6_Cap_Anim_State_Switch_opt1),
+					GEO_BRANCH(1, marvin_base_6_Cap_Anim_State_Switch_opt1),
 				GEO_CLOSE_NODE(),
 			GEO_CLOSE_NODE(),
 		GEO_CLOSE_NODE(),

@@ -1,0 +1,15 @@
+extern const GeoLayout Lola_base_6_Cap_Anim_State_Switch_opt1[];
+extern const GeoLayout Lola_base_geo[];
+extern Lights1 Lola_base_Gloves__GLOVES__lights;
+extern Lights1 Lola_base_Carrots_lights;
+extern u8 Lola_base_carrot_rgba16[];
+extern Vtx Lola_base_Cap_DL_mesh_layer_1_vtx_0[33];
+extern Gfx Lola_base_Cap_DL_mesh_layer_1_tri_0[];
+extern Vtx Lola_base_Cap_DL_mesh_layer_1_vtx_1[9];
+extern Gfx Lola_base_Cap_DL_mesh_layer_1_tri_1[];
+extern Gfx mat_Lola_base_Gloves__GLOVES_[];
+extern Gfx mat_revert_Lola_base_Gloves__GLOVES_[];
+extern Gfx mat_Lola_base_Carrots[];
+extern Gfx mat_revert_Lola_base_Carrots[];
+extern Gfx Lola_base_Cap_DL_mesh_layer_1[];
+extern Gfx Lola_base_material_revert_render_settings[];

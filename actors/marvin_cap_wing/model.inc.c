@@ -1,16 +1,16 @@
-Lights1 helmetwing_Vest__SHIRT__lights = gdSPDefLights1(
+Lights1 marvin_wing_Cap_lights = gdSPDefLights1(
 	0x2, 0x2B, 0x0,
 	0xA, 0x5E, 0x0, 0x28, 0x28, 0x28);
 
-Lights1 helmetwing_Skin_Dark__SKIN__lights = gdSPDefLights1(
+Lights1 marvin_wing_Skin_Dark__SKIN__lights = gdSPDefLights1(
 	0x7F, 0x50, 0x16,
 	0xFE, 0xA5, 0x36, 0x28, 0x28, 0x28);
 
-Lights1 helmetwing_black_lights = gdSPDefLights1(
+Lights1 marvin_wing_black_lights = gdSPDefLights1(
 	0x0, 0x0, 0x0,
 	0x0, 0x0, 0x0, 0x28, 0x28, 0x28);
 
-Texture helmetwing_mario_wing_rgba16[] = {
+Texture marvin_wing_mario_wing_rgba16[] = {
 	0x31, 0x8c, 0x31, 0x8c, 0x31, 0x8c, 0x31, 0x8c, 
 	0x31, 0x8c, 0x31, 0x8c, 0x31, 0x8c, 0x31, 0x8c, 
 	0x31, 0x8c, 0x31, 0x8c, 0x31, 0x8c, 0x31, 0x8c, 
@@ -526,7 +526,7 @@ Texture helmetwing_mario_wing_rgba16[] = {
 	
 };
 
-Texture helmetwing_mario_wing_tip_rgba16[] = {
+Texture marvin_wing_mario_wing_tip_rgba16[] = {
 	0x31, 0x8c, 0x31, 0x8c, 0x31, 0x8c, 0x31, 0x8c, 
 	0x31, 0x8c, 0x31, 0x8c, 0x31, 0x8c, 0x31, 0x8c, 
 	0x31, 0x8c, 0x31, 0x8c, 0x31, 0x8c, 0x31, 0x8c, 
@@ -1042,7 +1042,7 @@ Texture helmetwing_mario_wing_tip_rgba16[] = {
 	
 };
 
-Texture helmetwing_earsdark_ia8[] = {
+Texture marvin_wing_earsdark_ia8[] = {
 	0x04, 0x04, 0x04, 0x04, 0x04, 0x04, 0x04, 0x04, 
 	0x04, 0x04, 0x04, 0x04, 0x04, 0x04, 0x04, 0x04, 
 	0x04, 0x04, 0x04, 0x04, 0x04, 0x04, 0x04, 0x04, 
@@ -1174,7 +1174,7 @@ Texture helmetwing_earsdark_ia8[] = {
 	
 };
 
-Vtx helmetwing_Wing_Cap_DL_mesh_layer_4_vtx_0[8] = {
+Vtx marvin_wing_Wing_Cap_DL_mesh_layer_4_vtx_0[8] = {
 	{{{-123, 150, -133}, 0, {974, 1996}, {0xA7, 0xED, 0x58, 0xFF}}},
 	{{{-34, 184, -38}, 0, {-16, 1996}, {0xA7, 0xED, 0x59, 0xFF}}},
 	{{{-199, 407, -156}, 0, {974, -16}, {0xA6, 0xED, 0x58, 0xFF}}},
@@ -1185,14 +1185,14 @@ Vtx helmetwing_Wing_Cap_DL_mesh_layer_4_vtx_0[8] = {
 	{{{117, 441, -60}, 0, {-16, -16}, {0x5A, 0xEC, 0x57, 0xFF}}},
 };
 
-Gfx helmetwing_Wing_Cap_DL_mesh_layer_4_tri_0[] = {
-	gsSPVertex(helmetwing_Wing_Cap_DL_mesh_layer_4_vtx_0 + 0, 8, 0),
+Gfx marvin_wing_Wing_Cap_DL_mesh_layer_4_tri_0[] = {
+	gsSPVertex(marvin_wing_Wing_Cap_DL_mesh_layer_4_vtx_0 + 0, 8, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
 	gsSP2Triangles(4, 5, 6, 0, 4, 7, 5, 0),
 	gsSPEndDisplayList(),
 };
 
-Vtx helmetwing_Wing_Cap_DL_mesh_layer_4_vtx_1[8] = {
+Vtx marvin_wing_Wing_Cap_DL_mesh_layer_4_vtx_1[8] = {
 	{{{-123, 150, -133}, 0, {-16, 1996}, {0xA7, 0xED, 0x58, 0xFF}}},
 	{{{-199, 407, -156}, 0, {-16, -16}, {0xA6, 0xED, 0x58, 0xFF}}},
 	{{{-286, 372, -253}, 0, {974, -16}, {0xA6, 0xED, 0x58, 0xFF}}},
@@ -1203,14 +1203,14 @@ Vtx helmetwing_Wing_Cap_DL_mesh_layer_4_vtx_1[8] = {
 	{{{213, 114, -230}, 0, {974, 1996}, {0x5A, 0xED, 0x58, 0xFF}}},
 };
 
-Gfx helmetwing_Wing_Cap_DL_mesh_layer_4_tri_1[] = {
-	gsSPVertex(helmetwing_Wing_Cap_DL_mesh_layer_4_vtx_1 + 0, 8, 0),
+Gfx marvin_wing_Wing_Cap_DL_mesh_layer_4_tri_1[] = {
+	gsSPVertex(marvin_wing_Wing_Cap_DL_mesh_layer_4_vtx_1 + 0, 8, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 0, 2, 0),
 	gsSP2Triangles(4, 5, 6, 0, 4, 6, 7, 0),
 	gsSPEndDisplayList(),
 };
 
-Vtx helmetwing_Wing_Cap_DL_mesh_layer_1_vtx_0[165] = {
+Vtx marvin_wing_Wing_Cap_DL_mesh_layer_1_vtx_0[165] = {
 	{{{164, 122, -3}, 0, {-16, 1008}, {0xFE, 0xB9, 0x97, 0xFF}}},
 	{{{121, 97, 14}, 0, {-16, 1008}, {0xFE, 0xB9, 0x97, 0xFF}}},
 	{{{139, 133, -11}, 0, {-16, 1008}, {0xFE, 0xB9, 0x97, 0xFF}}},
@@ -1378,8 +1378,8 @@ Vtx helmetwing_Wing_Cap_DL_mesh_layer_1_vtx_0[165] = {
 	{{{-94, 137, 77}, 0, {-16, 1008}, {0x70, 0xC6, 0x0D, 0xFF}}},
 };
 
-Gfx helmetwing_Wing_Cap_DL_mesh_layer_1_tri_0[] = {
-	gsSPVertex(helmetwing_Wing_Cap_DL_mesh_layer_1_vtx_0 + 0, 64, 0),
+Gfx marvin_wing_Wing_Cap_DL_mesh_layer_1_tri_0[] = {
+	gsSPVertex(marvin_wing_Wing_Cap_DL_mesh_layer_1_vtx_0 + 0, 64, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 4, 5, 0),
 	gsSP2Triangles(6, 7, 8, 0, 6, 8, 9, 0),
 	gsSP2Triangles(10, 9, 8, 0, 10, 11, 9, 0),
@@ -1405,7 +1405,7 @@ Gfx helmetwing_Wing_Cap_DL_mesh_layer_1_tri_0[] = {
 	gsSP2Triangles(54, 55, 56, 0, 54, 56, 57, 0),
 	gsSP2Triangles(58, 59, 60, 0, 58, 60, 61, 0),
 	gsSP2Triangles(62, 61, 60, 0, 62, 60, 63, 0),
-	gsSPVertex(helmetwing_Wing_Cap_DL_mesh_layer_1_vtx_0 + 64, 64, 0),
+	gsSPVertex(marvin_wing_Wing_Cap_DL_mesh_layer_1_vtx_0 + 64, 64, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(3, 2, 4, 0, 3, 4, 5, 0),
 	gsSP2Triangles(5, 4, 6, 0, 5, 6, 7, 0),
@@ -1436,7 +1436,7 @@ Gfx helmetwing_Wing_Cap_DL_mesh_layer_1_tri_0[] = {
 	gsSP2Triangles(57, 58, 59, 0, 60, 57, 59, 0),
 	gsSP2Triangles(60, 61, 57, 0, 62, 61, 60, 0),
 	gsSP1Triangle(62, 63, 61, 0),
-	gsSPVertex(helmetwing_Wing_Cap_DL_mesh_layer_1_vtx_0 + 128, 37, 0),
+	gsSPVertex(marvin_wing_Wing_Cap_DL_mesh_layer_1_vtx_0 + 128, 37, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(4, 1, 3, 0, 5, 4, 3, 0),
 	gsSP2Triangles(6, 4, 5, 0, 5, 7, 6, 0),
@@ -1460,7 +1460,7 @@ Gfx helmetwing_Wing_Cap_DL_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx helmetwing_Wing_Cap_DL_mesh_layer_1_vtx_1[34] = {
+Vtx marvin_wing_Wing_Cap_DL_mesh_layer_1_vtx_1[34] = {
 	{{{27, 129, -141}, 0, {112, 1008}, {0x4C, 0x9B, 0xF5, 0xFF}}},
 	{{{-16, 128, -143}, 0, {847, 1008}, {0xBB, 0x97, 0xF0, 0xFF}}},
 	{{{-19, 132, -153}, 0, {888, 752}, {0xB3, 0x9C, 0xF5, 0xFF}}},
@@ -1497,8 +1497,8 @@ Vtx helmetwing_Wing_Cap_DL_mesh_layer_1_vtx_1[34] = {
 	{{{-19, 132, -153}, 0, {888, 752}, {0x21, 0x5E, 0xB1, 0xFF}}},
 };
 
-Gfx helmetwing_Wing_Cap_DL_mesh_layer_1_tri_1[] = {
-	gsSPVertex(helmetwing_Wing_Cap_DL_mesh_layer_1_vtx_1 + 0, 34, 0),
+Gfx marvin_wing_Wing_Cap_DL_mesh_layer_1_tri_1[] = {
+	gsSPVertex(marvin_wing_Wing_Cap_DL_mesh_layer_1_vtx_1 + 0, 34, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(4, 5, 6, 0, 4, 7, 5, 0),
 	gsSP2Triangles(8, 7, 4, 0, 8, 9, 7, 0),
@@ -1516,7 +1516,7 @@ Gfx helmetwing_Wing_Cap_DL_mesh_layer_1_tri_1[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx helmetwing_Wing_Cap_DL_mesh_layer_1_vtx_2[6] = {
+Vtx marvin_wing_Wing_Cap_DL_mesh_layer_1_vtx_2[6] = {
 	{{{28, 192, -108}, 0, {521, 768}, {0x02, 0x3F, 0x92, 0xFF}}},
 	{{{20, 139, -140}, 0, {883, 777}, {0x03, 0x43, 0x94, 0xFF}}},
 	{{{-9, 139, -142}, 0, {830, 760}, {0x03, 0x43, 0x94, 0xFF}}},
@@ -1525,21 +1525,21 @@ Vtx helmetwing_Wing_Cap_DL_mesh_layer_1_vtx_2[6] = {
 	{{{-39, 273, -65}, 0, {817, 754}, {0x01, 0x3C, 0x90, 0xFF}}},
 };
 
-Gfx helmetwing_Wing_Cap_DL_mesh_layer_1_tri_2[] = {
-	gsSPVertex(helmetwing_Wing_Cap_DL_mesh_layer_1_vtx_2 + 0, 6, 0),
+Gfx marvin_wing_Wing_Cap_DL_mesh_layer_1_tri_2[] = {
+	gsSPVertex(marvin_wing_Wing_Cap_DL_mesh_layer_1_vtx_2 + 0, 6, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(3, 4, 0, 0, 3, 5, 4, 0),
 	gsSPEndDisplayList(),
 };
 
 
-Gfx mat_helmetwing_Wing_Base[] = {
+Gfx mat_marvin_wing_Wing_Base[] = {
 	gsSPClearGeometryMode(G_CULL_BACK),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, TEXEL0, TEXEL0, 0, ENVIRONMENT, 0, 0, 0, 0, TEXEL0, TEXEL0, 0, ENVIRONMENT, 0),
 	gsDPSetAlphaDither(G_AD_NOISE),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, helmetwing_mario_wing_rgba16),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, marvin_wing_mario_wing_rgba16),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 2047, 256),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 6, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
@@ -1547,20 +1547,20 @@ Gfx mat_helmetwing_Wing_Base[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_helmetwing_Wing_Base[] = {
+Gfx mat_revert_marvin_wing_Wing_Base[] = {
 	gsSPSetGeometryMode(G_CULL_BACK),
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_helmetwing_Wing_Tip[] = {
+Gfx mat_marvin_wing_Wing_Tip[] = {
 	gsSPClearGeometryMode(G_CULL_BACK),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, TEXEL0, TEXEL0, 0, ENVIRONMENT, 0, 0, 0, 0, TEXEL0, TEXEL0, 0, ENVIRONMENT, 0),
 	gsDPSetAlphaDither(G_AD_NOISE),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, helmetwing_mario_wing_tip_rgba16),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, marvin_wing_mario_wing_tip_rgba16),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 2047, 256),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 6, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
@@ -1568,16 +1568,16 @@ Gfx mat_helmetwing_Wing_Tip[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_helmetwing_Wing_Tip[] = {
+Gfx mat_revert_marvin_wing_Wing_Tip[] = {
 	gsSPSetGeometryMode(G_CULL_BACK),
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_helmetwing_Vest__SHIRT_[] = {
+Gfx mat_marvin_wing_Cap[] = {
 	gsSPClearGeometryMode(G_CULL_BACK),
-	gsSPCopyLightsPlayerPart(SHIRT),
+	gsSPCopyLightsPlayerPart(CAP),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
@@ -1585,20 +1585,20 @@ Gfx mat_helmetwing_Vest__SHIRT_[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_helmetwing_Vest__SHIRT_[] = {
+Gfx mat_revert_marvin_wing_Cap[] = {
 	gsSPSetGeometryMode(G_CULL_BACK),
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_helmetwing_Skin_Dark__SKIN_[] = {
+Gfx mat_marvin_wing_Skin_Dark__SKIN_[] = {
 	gsSPCopyLightsPlayerPart(HAIR),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 1, helmetwing_earsdark_ia8),
+	gsDPSetTextureImage(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 1, marvin_wing_earsdark_ia8),
 	gsDPSetTile(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 511, 512),
 	gsDPSetTile(G_IM_FMT_IA, G_IM_SIZ_8b, 4, 0, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0),
@@ -1606,14 +1606,14 @@ Gfx mat_helmetwing_Skin_Dark__SKIN_[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_helmetwing_Skin_Dark__SKIN_[] = {
+Gfx mat_revert_marvin_wing_Skin_Dark__SKIN_[] = {
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_helmetwing_black[] = {
-	gsSPSetLights1(helmetwing_black_lights),
+Gfx mat_marvin_wing_black[] = {
+	gsSPSetLights1(marvin_wing_black_lights),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
@@ -1621,19 +1621,19 @@ Gfx mat_helmetwing_black[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_helmetwing_black[] = {
+Gfx mat_revert_marvin_wing_black[] = {
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx helmetwing_Wing_Cap_DL_mesh_layer_4[] = {
-	gsSPDisplayList(mat_helmetwing_Wing_Base),
-	gsSPDisplayList(helmetwing_Wing_Cap_DL_mesh_layer_4_tri_0),
-	gsSPDisplayList(mat_revert_helmetwing_Wing_Base),
-	gsSPDisplayList(mat_helmetwing_Wing_Tip),
-	gsSPDisplayList(helmetwing_Wing_Cap_DL_mesh_layer_4_tri_1),
-	gsSPDisplayList(mat_revert_helmetwing_Wing_Tip),
+Gfx marvin_wing_Wing_Cap_DL_mesh_layer_4[] = {
+	gsSPDisplayList(mat_marvin_wing_Wing_Base),
+	gsSPDisplayList(marvin_wing_Wing_Cap_DL_mesh_layer_4_tri_0),
+	gsSPDisplayList(mat_revert_marvin_wing_Wing_Base),
+	gsSPDisplayList(mat_marvin_wing_Wing_Tip),
+	gsSPDisplayList(marvin_wing_Wing_Cap_DL_mesh_layer_4_tri_1),
+	gsSPDisplayList(mat_revert_marvin_wing_Wing_Tip),
 	gsDPPipeSync(),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPClearGeometryMode(G_TEXTURE_GEN),
@@ -1644,16 +1644,16 @@ Gfx helmetwing_Wing_Cap_DL_mesh_layer_4[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx helmetwing_Wing_Cap_DL_mesh_layer_1[] = {
-	gsSPDisplayList(mat_helmetwing_Vest__SHIRT_),
-	gsSPDisplayList(helmetwing_Wing_Cap_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_helmetwing_Vest__SHIRT_),
-	gsSPDisplayList(mat_helmetwing_Skin_Dark__SKIN_),
-	gsSPDisplayList(helmetwing_Wing_Cap_DL_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_helmetwing_Skin_Dark__SKIN_),
-	gsSPDisplayList(mat_helmetwing_black),
-	gsSPDisplayList(helmetwing_Wing_Cap_DL_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_helmetwing_black),
+Gfx marvin_wing_Wing_Cap_DL_mesh_layer_1[] = {
+	gsSPDisplayList(mat_marvin_wing_Cap),
+	gsSPDisplayList(marvin_wing_Wing_Cap_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_marvin_wing_Cap),
+	gsSPDisplayList(mat_marvin_wing_Skin_Dark__SKIN_),
+	gsSPDisplayList(marvin_wing_Wing_Cap_DL_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_marvin_wing_Skin_Dark__SKIN_),
+	gsSPDisplayList(mat_marvin_wing_black),
+	gsSPDisplayList(marvin_wing_Wing_Cap_DL_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_marvin_wing_black),
 	gsDPPipeSync(),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPClearGeometryMode(G_TEXTURE_GEN),

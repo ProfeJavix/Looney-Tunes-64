@@ -167,9 +167,9 @@ CT_BUGS = addLooneyTunesChar({
         [CHAR_SOUND_MAMA_MIA] = 'Bugs Mama Mia.ogg'                                                -- Booted out of level
     },
     replaceActs = {
-        acts = { ACT_BUGS_HOVER, ACT_BUGS_DIVE_POUND },
+        acts = { ACT_BUGS_LOLA_HOVER, ACT_BUGS_DIVE_POUND },
         param = function(m, incAct)
-            if m.action == ACT_BUGS_HOVER then
+            if m.action == ACT_BUGS_LOLA_HOVER then
                 m.marioBodyState.allowPartRotation = 0
             end
 
@@ -208,14 +208,14 @@ CT_DAFFY = addLooneyTunesChar({
     palettes = {
         {
             palette = {
-                [PANTS]  = "11ff00",
-                [SHIRT]  = "ffffff",
-                [GLOVES] = "ffffff",
-                [SHOES]  = "ffffff",
+                [PANTS]  = "0d0d0d",
+                [SHIRT]  = "0d0d0d",
+                [GLOVES] = "0d0d0d",
+                [SHOES]  = "ff6f00",
                 [HAIR]   = "0d0d0d",
-                [SKIN]   = "fe98a3",
+                [SKIN]   = "ff6f00",
                 [CAP]    = "ff6f00",
-                [EMBLEM] = "ffffff"
+                [EMBLEM] = "ff6f00"
             }
         }
     },
@@ -338,23 +338,23 @@ CT_PORKY = addLooneyTunesChar({
         [CHAR_SOUND_PUNCH_YAH] = 'Porky Yah.ogg',                                                     -- Punch 1
         [CHAR_SOUND_PUNCH_WAH] = 'Porky Wah.ogg',                                                     -- Punch 2
         [CHAR_SOUND_PUNCH_HOO] = 'Porky Hoo.ogg',                                                     -- Punch 3
-        [CHAR_SOUND_YAH_WAH_HOO] = { 'Porky Yah.ogg', 'Porky Yah2.ogg' },                             -- First Jump Sounds
+        [CHAR_SOUND_YAH_WAH_HOO] = 'Porky Yah Wah Hoo.ogg',                             -- First Jump Sounds
         [CHAR_SOUND_HOOHOO] = 'Porky Hoohoo.ogg',                                                     -- Second jump sound
         [CHAR_SOUND_YAHOO_WAHA_YIPPEE] = { 'Porky Yahoo.ogg', 'Porky Waha.ogg', 'Porky Yippee.ogg' }, -- Triple jump sounds
         [CHAR_SOUND_UH] = 'Porky Uh.ogg',                                                             -- Soft wall bonk
         [CHAR_SOUND_UH2] = 'Porky Uh2.ogg',                                                           -- Quick ledge get up
-        [CHAR_SOUND_UH2_2] = 'Porky Uh2.ogg',                                                         -- Landing after long jump
+        [CHAR_SOUND_UH2_2] = 'Porky Uh2_2.ogg',                                                         -- Landing after long jump
         [CHAR_SOUND_DOH] = 'Porky Doh.ogg',                                                           -- Hard wall bonk
-        [CHAR_SOUND_OOOF] = 'Porky Doh.ogg',                                                          -- Attacked in air
+        [CHAR_SOUND_OOOF] = 'Porky Ooof.ogg',                                                          -- Attacked in air
         [CHAR_SOUND_OOOF2] = 'Porky Ooof2.ogg',                                                       -- Land from hard bonk
         [CHAR_SOUND_HAHA] = 'Porky Haha.ogg',                                                         -- Landing triple jump
         [CHAR_SOUND_HAHA_2] = 'Porky Haha.ogg',                                                       -- Landing in water from big fall
         [CHAR_SOUND_YAHOO] = 'Porky Yahoo.ogg',                                                       -- Long jump
         [CHAR_SOUND_WHOA] = 'Porky Whoa.ogg',                                                         -- Grabbing ledge
-        [CHAR_SOUND_EEUH] = 'Porky Ooof2.ogg',                                                        -- Climbing over ledge
+        [CHAR_SOUND_EEUH] = 'Porky Eeuh.ogg',                                                        -- Climbing over ledge
         [CHAR_SOUND_WAAAOOOW] = 'Porky Waaaooow.ogg',                                                 -- Falling a long distance
         [CHAR_SOUND_TWIRL_BOUNCE] = 'Porky Twirl Bounce.ogg',                                         -- Bouncing off of a flower spring
-        [CHAR_SOUND_GROUND_POUND_WAH] = 'Porky Wah.ogg',                                              -- Ground Pound after startup
+        [CHAR_SOUND_GROUND_POUND_WAH] = 'Porky Ground Pound Wah.ogg',                                              -- Ground Pound after startup
         [CHAR_SOUND_WAH2] = 'Porky Wah2.ogg',                                                         -- Throwing something
         [CHAR_SOUND_HRMM] = 'Porky Hrmm.ogg',                                                         -- Lifting something
         [CHAR_SOUND_HERE_WE_GO] = 'Porky Here We Go.ogg',                                             -- Star get
@@ -394,7 +394,7 @@ CT_ELMER = addLooneyTunesChar({
         {
             palette = {
                 [PANTS]  = "aa6838",
-                [SHIRT]  = "163fb5",
+                [SHIRT]  = "aa6838",
                 [GLOVES] = "202020",
                 [SHOES]  = "3a160f",
                 [HAIR]   = "0d0d0d",
@@ -495,14 +495,14 @@ CT_SYLVESTER = addLooneyTunesChar({
     palettes = {
         {
             palette = {
-                [PANTS]  = "11ff00",
-                [SHIRT]  = "ffffff",
+                [PANTS]  = "0d0d0d",
+                [SHIRT]  = "0d0d0d",
                 [GLOVES] = "ffffff",
                 [SHOES]  = "ffffff",
                 [HAIR]   = "0d0d0d",
-                [SKIN]   = "fe412d",
+                [SKIN]   = "ffffff",
                 [CAP]    = "ff6f00",
-                [EMBLEM] = "ffffff"
+                [EMBLEM] = "730600"
             }
         }
     },
@@ -606,8 +606,8 @@ CT_MARVIN = addLooneyTunesChar({
                 [SHOES]  = "ffffff",
                 [HAIR]   = "fea536",
                 [SKIN]   = "161616",
-                [CAP]    = "ff6f00",
-                [EMBLEM] = "ffffff"
+                [CAP]    = "0a5e00",
+                [EMBLEM] = "fea536"
             }
         }
     },
@@ -708,7 +708,7 @@ CT_TAZ = addLooneyTunesChar({
                 [HAIR]   = "9d535a",
                 [SKIN]   = "d9c192",
                 [CAP]    = "ff96c1",
-                [EMBLEM] = "ffffff"
+                [EMBLEM] = "9d535a"
             }
         }
     },
@@ -780,7 +780,7 @@ CT_TAZ = addLooneyTunesChar({
                 m.twirlYaw = 0
                 m.invincTimer = 0
             end
-            
+
             if incAct == ACT_TAZ_TORNADO_ATTACK then
                 m.twirlYaw = m.faceAngle.y
             end
@@ -813,14 +813,14 @@ CT_FOGHORN = addLooneyTunesChar({
     palettes = {
         {
             palette = {
-                [PANTS]  = "ff4b00",
+                [PANTS]  = "ffffff",
                 [SHIRT]  = "ffffff",
                 [GLOVES] = "ffffff",
-                [SHOES]  = "ffffff",
-                [HAIR]   = "5b0f00",
-                [SKIN]   = "bf9430",
+                [SHOES]  = "fe7600",
+                [HAIR]   = "ff4b00",
+                [SKIN]   = "5b0f00",
                 [CAP]    = "472200",
-                [EMBLEM] = "ffffff"
+                [EMBLEM] = "bf9430"
             }
         }
     },
@@ -906,6 +906,97 @@ CT_FOGHORN = addLooneyTunesChar({
         end,
         canGrab = function (m)
             return true
+        end
+    }
+})
+
+CT_LOLA = addLooneyTunesChar({
+    id = 'lola',
+    name = 'Lola Bunny',
+    description = "Don't call her 'doll",
+    author = 'LotsaSpaget',
+    menuColor = 'e4bc5a',
+    model = smlua_model_util_get_id("lola_bunny_geo"),
+    charType = CT_LUIGI,
+    palettes = {
+        {
+            palette = {
+                [PANTS]  = "7a53c3",
+                [SHIRT]  = "eaa500",
+                [GLOVES] = "ffffff",
+                [SHOES]  = "fee2b0",
+                [HAIR]   = "e4bc5a",
+                [SKIN]   = "cb7350",
+                [CAP]    = "fee2b0",
+                [EMBLEM] = "fe98a3"
+            }
+        }
+    },
+    animData = {
+        animTable = {
+            [_G.charSelect.CS_ANIM_MENU] = ANIM_LOLA_CS_MENU
+        }
+    },
+    voices = {
+        [CHAR_SOUND_OKEY_DOKEY] = { 'Lola Hello.ogg', 'Lola Okey Dokey.ogg', 'Lola Itsa Me.ogg' }, -- Starting game
+        [CHAR_SOUND_LETS_A_GO] = 'Lola Letsa Go.ogg',                                              -- Starting level
+        [CHAR_SOUND_GAME_OVER] = 'Lola Game Over.ogg',                                             -- Game Overed
+        [CHAR_SOUND_PUNCH_YAH] = 'Lola Yah.ogg',                                                   -- Punch 1
+        [CHAR_SOUND_PUNCH_WAH] = 'Lola Wah.ogg',                                                   -- Punch 2
+        [CHAR_SOUND_PUNCH_HOO] = 'Lola Hoo.ogg',                                                   -- Punch 3
+        [CHAR_SOUND_YAH_WAH_HOO] = 'Lola Wah.ogg',                                                 -- First Jump Sounds
+        [CHAR_SOUND_HOOHOO] = 'Lola Hoohoo.ogg',                                                   -- Second jump sound
+        [CHAR_SOUND_YAHOO_WAHA_YIPPEE] = 'Lola Yahoo.ogg',                                         -- Triple jump sounds
+        [CHAR_SOUND_UH] = 'Lola Uh.ogg',                                                           -- Soft wall bonk
+        [CHAR_SOUND_UH2] = 'Lola Uh2.ogg',                                                         -- Quick ledge get up
+        [CHAR_SOUND_UH2_2] = 'Lola Uh2_2.ogg',                                                     -- Landing after long jump
+        [CHAR_SOUND_DOH] = 'Lola Ooof2.ogg',                                                       -- Hard wall bonk
+        [CHAR_SOUND_OOOF] = 'Lola Ooof.ogg',                                                       -- Attacked in air
+        [CHAR_SOUND_OOOF2] = 'Lola Ooof2.ogg',                                                     -- Land from hard bonk
+        [CHAR_SOUND_HAHA] = 'Lola Waha.ogg',                                                       -- Landing triple jump
+        [CHAR_SOUND_HAHA_2] = 'Lola Waha.ogg',                                                     -- Landing in water from big fall
+        [CHAR_SOUND_YAHOO] = 'Lola Yahoo.ogg',                                                     -- Long jump
+        [CHAR_SOUND_DOH] = 'Lola Ooof.ogg',                                                        -- Long jump wall bonk
+        [CHAR_SOUND_WHOA] = 'Lola Ooof2.ogg',                                                      -- Grabbing ledge
+        [CHAR_SOUND_EEUH] = 'Lola Eeuh.ogg',                                                       -- Climbing over ledge
+        [CHAR_SOUND_WAAAOOOW] = 'Lola Waaaooow.ogg',                                               -- Falling a long distance
+        [CHAR_SOUND_TWIRL_BOUNCE] = 'Lola Twirl Bounce.ogg',                                       -- Bouncing off of a flower spring
+        [CHAR_SOUND_GROUND_POUND_WAH] = 'Lola Wah.ogg',                                            -- Ground Pound after startup
+        [CHAR_SOUND_WAH2] = 'Lola Uh2_2.ogg',                                                      -- Throwing something
+        [CHAR_SOUND_HRMM] = 'Lola Hrmm.ogg',                                                       -- Lifting something
+        [CHAR_SOUND_HERE_WE_GO] = 'Lola Here We Go.ogg',                                           -- Star get
+        [CHAR_SOUND_SO_LONGA_BOWSER] = 'Lola So Longa Bowser.ogg',                                 -- Throwing Bowser
+        --DAMAGE
+        [CHAR_SOUND_ATTACKED] = 'Lola Attacked.ogg',                                               -- Damaged
+        [CHAR_SOUND_PANTING] = 'Lola Snoring2.ogg',                                                -- Low health
+        [CHAR_SOUND_PANTING_COLD] = 'Lola Snoring2.ogg',                                           -- Getting cold
+        [CHAR_SOUND_ON_FIRE] = 'Lola On Fire.ogg',                                                 -- Burned
+        --SLEEP SOUNDS
+        [CHAR_SOUND_IMA_TIRED] = 'Lola Ima Tired.ogg',                                             -- Mario feeling tired
+        [CHAR_SOUND_YAWNING] = 'Lola Yawning.ogg',                                                 -- Mario yawning before he sits down to sleep
+        [CHAR_SOUND_SNORING1] = 'Lola Snoring1.ogg',                                               -- Snore Inhale
+        [CHAR_SOUND_SNORING2] = 'Lola Snoring2.ogg',                                               -- Exhale
+        [CHAR_SOUND_SNORING3] = 'Lola Snoring3.ogg',                                               -- Sleep talking / mumbling
+        --COUGHING (USED IN THE GAS MAZE)
+        [CHAR_SOUND_COUGHING1] = 'Lola Snoring2.ogg',                                              -- Cough take 1
+        [CHAR_SOUND_COUGHING2] = 'Lola Snoring2.ogg',                                              -- Cough take 2
+        [CHAR_SOUND_COUGHING3] = 'Lola Snoring2.ogg',                                              -- Cough take 3
+        --DEATH
+        [CHAR_SOUND_DYING] = 'Lola Dying.ogg',                                                     -- Dying from damage
+        [CHAR_SOUND_DROWNING] = 'Lola Drowning.ogg',                                               -- Running out of air underwater
+        [CHAR_SOUND_MAMA_MIA] = 'Lola Mama Mia.ogg'                                                -- Booted out of level
+    },
+    replaceActs = {
+        acts = { ACT_BUGS_LOLA_HOVER },
+        param = function(m, incAct)
+
+            if incAct == ACT_TRIPLE_JUMP then
+                set_mario_y_vel_based_on_fspeed(m, 69, 0)
+                m.forwardVel = m.forwardVel * 0.8
+                return 1
+            end
+
+            return -1
         end
     }
 })

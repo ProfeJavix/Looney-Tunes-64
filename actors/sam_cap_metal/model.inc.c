@@ -1,6 +1,6 @@
 Lights1 sam_metal_Metal__METAL__lights = gdSPDefLights1(
 	0xBB, 0xBC, 0xBC,
-	0xFF, 0xFF, 0xFF, 0x28, 0x28, 0x28);
+	0x0, 0x0, 0x0, 0x28, 0x28, 0x28);
 
 Texture sam_metal_Metal_Shade_rgba16_rgba16[] = {
 	0x00, 0x01, 0x00, 0x01, 0x00, 0x01, 0x00, 0x01, 
@@ -615,7 +615,9 @@ Gfx sam_metal_Metal_Cap_DL_mesh_layer_1_tri_0[] = {
 
 Gfx mat_sam_metal_Metal__METAL_[] = {
 	gsSPGeometryMode(G_CULL_BACK, G_TEXTURE_GEN),
-	gsSPCopyLightsPlayerPart(SHIRT),
+	gsSPLight(&sam_metal_Metal__METAL__lights.l, 1),
+    gsSPLight(&sam_metal_Metal__METAL__lights.a, 2),
+    gsSPCopyLightEXT(2, 5),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT, TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),

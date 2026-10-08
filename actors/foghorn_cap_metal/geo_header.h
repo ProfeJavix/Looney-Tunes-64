@@ -3,7 +3,6 @@ extern const GeoLayout foghorn_metal_geo[];
 extern Lights1 foghorn_metal_Metal__METAL__lights;
 extern Lights1 foghorn_metal_black_lights;
 extern u8 foghorn_metal_Metal_Shade_rgba16_rgba16[];
-extern u8 foghorn_metal_Metal_Light_rgba16_rgba16[];
 extern Vtx foghorn_metal_Metal_Cap_DL_mesh_layer_1_vtx_0[182];
 extern Gfx foghorn_metal_Metal_Cap_DL_mesh_layer_1_tri_0[];
 extern Vtx foghorn_metal_Metal_Cap_DL_mesh_layer_1_vtx_1[9];

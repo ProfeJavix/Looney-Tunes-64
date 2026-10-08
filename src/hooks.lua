@@ -20,6 +20,7 @@ local curPlayingSeqs = {}
 local menuWasOpen = false
 
 function hooks.update()
+
     if playerTable[0].blockCTActsTimer > 0 then
         playerTable[0].blockCTActsTimer = playerTable[0].blockCTActsTimer - 1
     end
@@ -143,7 +144,7 @@ end
 
 function hooks.allow_menu_open()
     local noMenuActs = {
-        [ACT_BUGS_HOVER] = true,
+        [ACT_BUGS_LOLA_HOVER] = true,
         [ACT_BUGS_DIVE_POUND] = true,
         [ACT_BUGS_MOVE_UNDERGROUND] = true,
         [ACT_DAFFY_POUND] = true,
@@ -220,9 +221,9 @@ local JUMP_ACTIONS = {
 }
 
 ---@param m MarioState
-function hooks.bugs_on_set_mario_action(m)
+function hooks.bugs_lola_on_set_mario_action(m)
     if JUMP_ACTIONS[m.action] then
-        m.vel.y = m.vel.y * 1.2
+        m.vel.y = m.vel.y * ternary(_G.charSelect.character_get_current_number(m.playerIndex) == CT_BUGS, 1.3, 1.2)
     end
 end
 
@@ -246,7 +247,7 @@ function hooks.sylvester_mario_update(m)
 
     local tweety = obj_get_first_with_behavior_id(id_bhvTweety)
     while tweety do
-        if tweety.oOwner == m.marioObj.globalPlayerIndex then
+        if tweety.globalPlayerIndex == m.marioObj.globalPlayerIndex then
             break
         end
 
@@ -256,7 +257,7 @@ function hooks.sylvester_mario_update(m)
     if tweety then return end
 
     spawn_non_sync_object(id_bhvTweety, E_MODEL_TWEETY, m.pos.x, m.pos.y + 150, m.pos.z, function (o)
-        o.oOwner = m.marioObj.globalPlayerIndex
+        o.globalPlayerIndex = m.marioObj.globalPlayerIndex
     end)
 end
 
@@ -269,6 +270,41 @@ function hooks.marvin_mario_update(m)
     not PREVENT_ACT_GROUPS[m.action & ACT_GROUP_MASK] and
     m.action ~= ACT_MARVIN_SHOOT_LASER and m.action ~= ACT_MARVIN_GRAB_TNT then
         set_mario_action(m, ACT_MARVIN_GRAB_TNT, 0)
+    end
+end
+
+local LAND_ACTIONS = {
+    [ACT_JUMP_LAND] = true,
+    [ACT_HOLD_JUMP_LAND] = true,
+    [ACT_LONG_JUMP_LAND] = true,
+    [ACT_DOUBLE_JUMP_LAND] = true,
+    [ACT_TRIPLE_JUMP_LAND] = true,
+    [ACT_LAVA_BOOST_LAND] = true,
+    [ACT_DEATH_EXIT_LAND] = true,
+    [ACT_AIR_THROW_LAND] = true,
+    [ACT_BACKFLIP_LAND] = true,
+    [ACT_FREEFALL_LAND] = true,
+    [ACT_HOLD_FREEFALL_LAND] = true,
+    [ACT_METAL_WATER_FALL_LAND] = true,
+    [ACT_METAL_WATER_JUMP_LAND] = true,
+    [ACT_WATER_JUMP] = true,
+    [ACT_HOLD_WATER_JUMP] = true,
+    [ACT_TOP_OF_POLE_JUMP] = true,
+    [ACT_SIDE_FLIP_LAND] = true,
+    [ACT_QUICKSAND_JUMP_LAND] = true,
+    [ACT_SOFT_BONK] = true,
+    [ACT_GROUND_BONK] = true,
+    [ACT_BACKWARD_GROUND_KB] = true,
+    [ACT_HARD_BACKWARD_GROUND_KB] = true,
+    [ACT_SOFT_FORWARD_GROUND_KB] = true
+}
+
+---@param m MarioState
+function hooks.lola_before_phys_step(m)
+    if m.action & (ACT_FLAG_INVULNERABLE | ACT_FLAG_THROWING | ACT_FLAG_BUTT_OR_STOMACH_SLIDE) == 0 and
+    m.action & ACT_GROUP_MASK ~= ACT_GROUP_CUTSCENE and not LAND_ACTIONS[m.action] then
+        m.vel.x = m.vel.x * 1.5
+        m.vel.z = m.vel.z * 1.5
     end
 end
 

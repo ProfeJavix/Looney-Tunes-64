@@ -1,0 +1,15 @@
+extern const GeoLayout Lola_metal_6_Cap_Anim_State_Switch_opt1[];
+extern const GeoLayout Lola_metal_geo[];
+extern Lights1 Lola_metal_Gloves__GLOVES__lights;
+extern Lights1 Lola_metal_Metal__METAL__lights;
+extern u8 Lola_metal_Metal_Shade_rgba16_rgba16[];
+extern Vtx Lola_metal_Metal_Cap_DL_mesh_layer_1_vtx_0[33];
+extern Gfx Lola_metal_Metal_Cap_DL_mesh_layer_1_tri_0[];
+extern Vtx Lola_metal_Metal_Cap_DL_mesh_layer_1_vtx_1[9];
+extern Gfx Lola_metal_Metal_Cap_DL_mesh_layer_1_tri_1[];
+extern Gfx mat_Lola_metal_Gloves__GLOVES_[];
+extern Gfx mat_revert_Lola_metal_Gloves__GLOVES_[];
+extern Gfx mat_Lola_metal_Metal__METAL_[];
+extern Gfx mat_revert_Lola_metal_Metal__METAL_[];
+extern Gfx Lola_metal_Metal_Cap_DL_mesh_layer_1[];
+extern Gfx Lola_metal_material_revert_render_settings[];

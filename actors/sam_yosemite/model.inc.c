@@ -1,92 +1,92 @@
-Lights1 sam_yosemite_Pants__PANTS__lights = gdSPDefLights1(
+Lights1 sam_Pants__PANTS__lights = gdSPDefLights1(
 	0x0, 0x36, 0x6A,
 	0x0, 0x73, 0xD6, 0x28, 0x28, 0x28);
 
-Lights1 sam_yosemite_Belt_lights = gdSPDefLights1(
+Lights1 sam_Belt_lights = gdSPDefLights1(
 	0x2F, 0x2C, 0x9,
 	0x66, 0x61, 0x1D, 0x28, 0x28, 0x28);
 
-Lights1 sam_yosemite_Logo__EMBLEM__lights = gdSPDefLights1(
+Lights1 sam_Logo__EMBLEM__lights = gdSPDefLights1(
 	0x64, 0x5B, 0x0,
 	0xCB, 0xBA, 0x0, 0x28, 0x28, 0x28);
 
-Lights1 sam_yosemite_Shirt__SHIRT__lights = gdSPDefLights1(
+Lights1 sam_Shirt__SHIRT__lights = gdSPDefLights1(
 	0x64, 0xA, 0x6,
 	0xCB, 0x20, 0x16, 0x28, 0x28, 0x28);
 
-Lights1 sam_yosemite_Skin__SKIN__lights = gdSPDefLights1(
+Lights1 sam_Skin__SKIN__lights = gdSPDefLights1(
 	0x78, 0x64, 0x5E,
 	0xF0, 0xCB, 0xBF, 0x28, 0x28, 0x28);
 
-Lights1 sam_yosemite_black_lights = gdSPDefLights1(
+Lights1 sam_black_lights = gdSPDefLights1(
 	0x0, 0x0, 0x0,
 	0x0, 0x0, 0x0, 0x28, 0x28, 0x28);
 
-Lights1 sam_yosemite_Open_Eyes__SKIN__lights = gdSPDefLights1(
+Lights1 sam_Open_Eyes__SKIN__lights = gdSPDefLights1(
 	0x77, 0x12, 0x0,
 	0xEF, 0x2E, 0x0, 0x28, 0x28, 0x28);
 
-Lights1 sam_yosemite_Cap__CAP__lights = gdSPDefLights1(
-	0x80, 0x6C, 0x44,
+Lights1 sam_Cap__CAP__lights = gdSPDefLights1(
+	0x7F, 0x6C, 0x44,
 	0xFF, 0xDA, 0x8E, 0x28, 0x28, 0x28);
 
-Lights1 sam_yosemite_Half_Closed_Eyes__SKIN__lights = gdSPDefLights1(
+Lights1 sam_Half_Closed_Eyes__SKIN__lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0xFF, 0xFF, 0xFF, 0x28, 0x28, 0x28);
 
-Lights1 sam_yosemite_Closed_Eyes__SKIN__lights = gdSPDefLights1(
+Lights1 sam_Closed_Eyes__SKIN__lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0xFF, 0xFF, 0xFF, 0x28, 0x28, 0x28);
 
-Lights1 sam_yosemite_Left_Eyes__SKIN__lights = gdSPDefLights1(
+Lights1 sam_Left_Eyes__SKIN__lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0xFF, 0xFF, 0xFF, 0x28, 0x28, 0x28);
 
-Lights1 sam_yosemite_Right_Eyes__SKIN__lights = gdSPDefLights1(
+Lights1 sam_Right_Eyes__SKIN__lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0xFF, 0xFF, 0xFF, 0x28, 0x28, 0x28);
 
-Lights1 sam_yosemite_Up_Eyes__SKIN__lights = gdSPDefLights1(
+Lights1 sam_Up_Eyes__SKIN__lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0xFF, 0xFF, 0xFF, 0x28, 0x28, 0x28);
 
-Lights1 sam_yosemite_Down_Eyes__SKIN__lights = gdSPDefLights1(
+Lights1 sam_Down_Eyes__SKIN__lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0xFF, 0xFF, 0xFF, 0x28, 0x28, 0x28);
 
-Lights1 sam_yosemite_Dead_Eyes__SKIN__lights = gdSPDefLights1(
+Lights1 sam_Dead_Eyes__SKIN__lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0xFF, 0xFF, 0xFF, 0x28, 0x28, 0x28);
 
-Lights1 sam_yosemite_Gloves__GLOVES__lights = gdSPDefLights1(
+Lights1 sam_Gloves__GLOVES__lights = gdSPDefLights1(
 	0x78, 0x64, 0x5E,
 	0xF0, 0xCB, 0xBF, 0x28, 0x28, 0x28);
 
-Lights1 sam_yosemite_Metal__METAL__001_lights = gdSPDefLights1(
+Lights1 sam_Metal__METAL__001_lights = gdSPDefLights1(
 	0x40, 0x45, 0x4E,
 	0x85, 0x90, 0xA1, 0x28, 0x28, 0x28);
 
-Lights1 sam_yosemite_Brown_lights = gdSPDefLights1(
+Lights1 sam_Brown_lights = gdSPDefLights1(
 	0x2F, 0x16, 0xE,
 	0x66, 0x36, 0x28, 0x28, 0x28, 0x28);
 
-Lights1 sam_yosemite_Shoes__SHOES__lights = gdSPDefLights1(
+Lights1 sam_Shoes__SHOES__lights = gdSPDefLights1(
 	0x0, 0x0, 0x0,
 	0x0, 0x0, 0x0, 0x28, 0x28, 0x28);
 
-Lights1 sam_yosemite_Metal__METAL__lights = gdSPDefLights1(
-	0xBC, 0xBC, 0xBC,
-	0xFF, 0xFF, 0xFF, 0x28, 0x28, 0x28);
+Lights1 sam_Metal__METAL__lights = gdSPDefLights1(
+	0xBB, 0xBC, 0xBC,
+	0x0, 0x0, 0x0, 0x28, 0x28, 0x28);
 
-Lights1 sam_yosemite_Metal_Wing_Tip__METAL__lights = gdSPDefLights1(
-	0x80, 0x7F, 0x7F,
-	0xFF, 0xFF, 0xFF, 0x28, 0x28, 0x28);
-
-Lights1 sam_yosemite_Metal_Wing_Base__METAL__lights = gdSPDefLights1(
+Lights1 sam_Metal_Wing_Tip__METAL__lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
-	0xFF, 0xFF, 0xFF, 0x28, 0x28, 0x28);
+	0x0, 0x0, 0x0, 0x28, 0x28, 0x28);
 
-Texture sam_yosemite_sameyes_ci4[] = {
+Lights1 sam_Metal_Wing_Base__METAL__lights = gdSPDefLights1(
+	0x7F, 0x7F, 0x7F,
+	0x0, 0x0, 0x0, 0x28, 0x28, 0x28);
+
+Texture sam_sameyes_ci4[] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
@@ -218,13 +218,13 @@ Texture sam_yosemite_sameyes_ci4[] = {
 	
 };
 
-Texture sam_yosemite_sameyes_pal_rgba16[] = {
+Texture sam_sameyes_pal_rgba16[] = {
 	0x00, 0x00, 0x00, 0x01, 0x84, 0x21, 0x8c, 0x21, 
 	0xbd, 0xef, 0xff, 0xff, 0xf7, 0xbd, 0x94, 0xa5, 
 	0x8c, 0x63, 0xde, 0xf7, 
 };
 
-Texture sam_yosemite_sameyeshalfclosed_ia8[] = {
+Texture sam_sameyeshalfclosed_ia8[] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
@@ -484,7 +484,7 @@ Texture sam_yosemite_sameyeshalfclosed_ia8[] = {
 	
 };
 
-Texture sam_yosemite_sameyesclosed_ia8[] = {
+Texture sam_sameyesclosed_ia8[] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
@@ -744,7 +744,7 @@ Texture sam_yosemite_sameyesclosed_ia8[] = {
 	
 };
 
-Texture sam_yosemite_sameyesLeft_ci4[] = {
+Texture sam_sameyesLeft_ci4[] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
@@ -876,13 +876,13 @@ Texture sam_yosemite_sameyesLeft_ci4[] = {
 	
 };
 
-Texture sam_yosemite_sameyesLeft_pal_rgba16[] = {
+Texture sam_sameyesLeft_pal_rgba16[] = {
 	0x00, 0x00, 0x00, 0x01, 0x84, 0x21, 0x8c, 0x21, 
 	0xbd, 0xef, 0xff, 0xff, 0xf7, 0xbd, 0x94, 0xa5, 
 	0x8c, 0x63, 0xde, 0xf7, 
 };
 
-Texture sam_yosemite_sameyesRight_ci4[] = {
+Texture sam_sameyesRight_ci4[] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
@@ -1014,13 +1014,13 @@ Texture sam_yosemite_sameyesRight_ci4[] = {
 	
 };
 
-Texture sam_yosemite_sameyesRight_pal_rgba16[] = {
+Texture sam_sameyesRight_pal_rgba16[] = {
 	0x00, 0x00, 0x00, 0x01, 0x84, 0x21, 0x8c, 0x21, 
 	0xbd, 0xef, 0xff, 0xff, 0xf7, 0xbd, 0x94, 0xa5, 
 	0x8c, 0x63, 0xde, 0xf7, 
 };
 
-Texture sam_yosemite_sameyesup_ci4[] = {
+Texture sam_sameyesup_ci4[] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
@@ -1152,13 +1152,13 @@ Texture sam_yosemite_sameyesup_ci4[] = {
 	
 };
 
-Texture sam_yosemite_sameyesup_pal_rgba16[] = {
+Texture sam_sameyesup_pal_rgba16[] = {
 	0x00, 0x00, 0x00, 0x01, 0x84, 0x21, 0x8c, 0x21, 
 	0xbd, 0xef, 0xff, 0xff, 0xf7, 0xbd, 0x94, 0xa5, 
 	0x8c, 0x63, 0xde, 0xf7, 
 };
 
-Texture sam_yosemite_custom_wario_eyes_down_unused_rgba16[] = {
+Texture sam_custom_wario_eyes_down_unused_rgba16[] = {
 	0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 
 	0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 
 	0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 0xff, 0xfe, 
@@ -1674,7 +1674,7 @@ Texture sam_yosemite_custom_wario_eyes_down_unused_rgba16[] = {
 	
 };
 
-Texture sam_yosemite_sameyesded_ci8[] = {
+Texture sam_sameyesded_ci8[] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
@@ -1934,7 +1934,7 @@ Texture sam_yosemite_sameyesded_ci8[] = {
 	
 };
 
-Texture sam_yosemite_sameyesded_pal_rgba16[] = {
+Texture sam_sameyesded_pal_rgba16[] = {
 	0x00, 0x00, 0x00, 0x01, 0x84, 0x21, 0x8c, 0x21, 
 	0xbd, 0xef, 0xff, 0xff, 0xf7, 0xbd, 0x94, 0xa5, 
 	0x8c, 0x63, 0xde, 0xf7, 0xce, 0x73, 0x7b, 0xdf, 
@@ -1943,7 +1943,7 @@ Texture sam_yosemite_sameyesded_pal_rgba16[] = {
 	0x6b, 0x5b, 
 };
 
-Texture sam_yosemite_wing_2_rgba16[] = {
+Texture sam_wing_2_rgba16[] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
@@ -2459,7 +2459,7 @@ Texture sam_yosemite_wing_2_rgba16[] = {
 	
 };
 
-Texture sam_yosemite_wing1_rgba16[] = {
+Texture sam_wing1_rgba16[] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
@@ -2975,7 +2975,7 @@ Texture sam_yosemite_wing1_rgba16[] = {
 	
 };
 
-Texture sam_yosemite_Metal_Shade_rgba16_rgba16[] = {
+Texture sam_Metal_Shade_rgba16_rgba16[] = {
 	0x00, 0x01, 0x00, 0x01, 0x00, 0x01, 0x00, 0x01, 
 	0x00, 0x01, 0x00, 0x01, 0x00, 0x01, 0x00, 0x01, 
 	0x00, 0x01, 0x00, 0x01, 0x00, 0x01, 0x00, 0x01, 
@@ -3491,7 +3491,7 @@ Texture sam_yosemite_Metal_Shade_rgba16_rgba16[] = {
 	
 };
 
-Texture sam_yosemite_custom_mario_metal_wing_tip_shade_rgba16[] = {
+Texture sam_custom_mario_metal_wing_tip_shade_rgba16[] = {
 	0x31, 0x8c, 0x31, 0x8c, 0x31, 0x8c, 0x31, 0x8c, 
 	0x31, 0x8c, 0x31, 0x8c, 0x31, 0x8c, 0x31, 0x8c, 
 	0x31, 0x8c, 0x31, 0x8c, 0x42, 0x10, 0x31, 0x8c, 
@@ -4007,7 +4007,7 @@ Texture sam_yosemite_custom_mario_metal_wing_tip_shade_rgba16[] = {
 	
 };
 
-Texture sam_yosemite_custom_mario_metal_wing_shade_rgba16[] = {
+Texture sam_custom_mario_metal_wing_shade_rgba16[] = {
 	0x31, 0x8c, 0x31, 0x8c, 0x31, 0x8c, 0x31, 0x8c, 
 	0x31, 0x8c, 0x31, 0x8c, 0x31, 0x8c, 0x31, 0x8c, 
 	0x31, 0x8c, 0x31, 0x8c, 0x31, 0x8c, 0x31, 0x8c, 
@@ -4523,7 +4523,7 @@ Texture sam_yosemite_custom_mario_metal_wing_shade_rgba16[] = {
 	
 };
 
-Vtx sam_yosemite_Butt_mesh_layer_1_vtx_0[23] = {
+Vtx sam_Butt_mesh_layer_1_vtx_0[23] = {
 	{{{35, 44, 35}, 0, {368, 240}, {0x3E, 0x56, 0x45, 0xFF}}},
 	{{{34, 15, 46}, 0, {368, 368}, {0x4C, 0x01, 0x65, 0xFF}}},
 	{{{46, 16, 0}, 0, {368, 240}, {0x7F, 0xFF, 0x00, 0xFF}}},
@@ -4549,8 +4549,8 @@ Vtx sam_yosemite_Butt_mesh_layer_1_vtx_0[23] = {
 	{{{-22, -18, 0}, 0, {368, 605}, {0xB0, 0x9E, 0x00, 0xFF}}},
 };
 
-Gfx sam_yosemite_Butt_mesh_layer_1_tri_0[] = {
-	gsSPVertex(sam_yosemite_Butt_mesh_layer_1_vtx_0 + 0, 23, 0),
+Gfx sam_Butt_mesh_layer_1_tri_0[] = {
+	gsSPVertex(sam_Butt_mesh_layer_1_vtx_0 + 0, 23, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 0, 3, 0),
 	gsSP2Triangles(0, 4, 3, 0, 0, 5, 4, 0),
 	gsSP2Triangles(5, 0, 6, 0, 5, 6, 7, 0),
@@ -4570,7 +4570,7 @@ Gfx sam_yosemite_Butt_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_Butt_mesh_layer_1_vtx_1[18] = {
+Vtx sam_Butt_mesh_layer_1_vtx_1[18] = {
 	{{{17, 59, 14}, 0, {368, 163}, {0x20, 0x73, 0x2B, 0xFF}}},
 	{{{17, 51, 36}, 0, {368, 240}, {0x1D, 0x59, 0x56, 0xFF}}},
 	{{{41, 45, 33}, 0, {404, 240}, {0x1D, 0x56, 0x59, 0xFF}}},
@@ -4591,8 +4591,8 @@ Vtx sam_yosemite_Butt_mesh_layer_1_vtx_1[18] = {
 	{{{41, 53, 13}, 0, {402, 163}, {0x20, 0x73, 0x2B, 0xFF}}},
 };
 
-Gfx sam_yosemite_Butt_mesh_layer_1_tri_1[] = {
-	gsSPVertex(sam_yosemite_Butt_mesh_layer_1_vtx_1 + 0, 18, 0),
+Gfx sam_Butt_mesh_layer_1_tri_1[] = {
+	gsSPVertex(sam_Butt_mesh_layer_1_vtx_1 + 0, 18, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
 	gsSP2Triangles(1, 4, 3, 0, 4, 5, 3, 0),
 	gsSP2Triangles(4, 6, 5, 0, 6, 7, 5, 0),
@@ -4604,7 +4604,7 @@ Gfx sam_yosemite_Butt_mesh_layer_1_tri_1[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_Butt_mesh_layer_1_vtx_2[6] = {
+Vtx sam_Butt_mesh_layer_1_vtx_2[6] = {
 	{{{18, 64, 0}, 0, {368, 112}, {0x22, 0x7A, 0x00, 0xFF}}},
 	{{{17, 59, 14}, 0, {368, 163}, {0x20, 0x73, 0x2B, 0xFF}}},
 	{{{41, 53, 13}, 0, {402, 163}, {0x20, 0x73, 0x2B, 0xFF}}},
@@ -4613,14 +4613,14 @@ Vtx sam_yosemite_Butt_mesh_layer_1_vtx_2[6] = {
 	{{{17, 59, -14}, 0, {368, 163}, {0x20, 0x73, 0xD5, 0xFF}}},
 };
 
-Gfx sam_yosemite_Butt_mesh_layer_1_tri_2[] = {
-	gsSPVertex(sam_yosemite_Butt_mesh_layer_1_vtx_2 + 0, 6, 0),
+Gfx sam_Butt_mesh_layer_1_tri_2[] = {
+	gsSPVertex(sam_Butt_mesh_layer_1_vtx_2 + 0, 6, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(0, 3, 4, 0, 0, 4, 5, 0),
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_Torso_mesh_layer_1_vtx_0[32] = {
+Vtx sam_Torso_mesh_layer_1_vtx_0[32] = {
 	{{{-16, 15, 49}, 0, {426, 368}, {0xA3, 0x0A, 0x56, 0xFF}}},
 	{{{-15, 50, 36}, 0, {415, 240}, {0xAC, 0x4A, 0x3D, 0xFF}}},
 	{{{-26, 15, 0}, 0, {412, 368}, {0x81, 0x05, 0x00, 0xFF}}},
@@ -4655,8 +4655,8 @@ Vtx sam_yosemite_Torso_mesh_layer_1_vtx_0[32] = {
 	{{{86, -71, 0}, 0, {624, 624}, {0x1D, 0x84, 0x00, 0xFF}}},
 };
 
-Gfx sam_yosemite_Torso_mesh_layer_1_tri_0[] = {
-	gsSPVertex(sam_yosemite_Torso_mesh_layer_1_vtx_0 + 0, 32, 0),
+Gfx sam_Torso_mesh_layer_1_tri_0[] = {
+	gsSPVertex(sam_Torso_mesh_layer_1_vtx_0 + 0, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(0, 4, 3, 0, 5, 4, 0, 0),
 	gsSP2Triangles(5, 0, 6, 0, 5, 7, 4, 0),
@@ -4685,7 +4685,7 @@ Gfx sam_yosemite_Torso_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_Torso_mesh_layer_1_vtx_1[28] = {
+Vtx sam_Torso_mesh_layer_1_vtx_1[28] = {
 	{{{54, 69, 6}, 0, {-16, 1008}, {0x20, 0x7A, 0x0F, 0xFF}}},
 	{{{50, 70, 0}, 0, {-16, 1008}, {0x20, 0x7A, 0x0F, 0xFF}}},
 	{{{41, 72, 2}, 0, {-16, 1008}, {0x43, 0x68, 0xE3, 0xFF}}},
@@ -4716,8 +4716,8 @@ Vtx sam_yosemite_Torso_mesh_layer_1_vtx_1[28] = {
 	{{{58, 71, -7}, 0, {-16, 1008}, {0x4A, 0x46, 0xB4, 0xFF}}},
 };
 
-Gfx sam_yosemite_Torso_mesh_layer_1_tri_1[] = {
-	gsSPVertex(sam_yosemite_Torso_mesh_layer_1_vtx_1 + 0, 28, 0),
+Gfx sam_Torso_mesh_layer_1_tri_1[] = {
+	gsSPVertex(sam_Torso_mesh_layer_1_vtx_1 + 0, 28, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(3, 2, 4, 0, 3, 4, 5, 0),
 	gsSP2Triangles(5, 4, 6, 0, 5, 6, 7, 0),
@@ -4737,7 +4737,7 @@ Gfx sam_yosemite_Torso_mesh_layer_1_tri_1[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_Head_DL_mesh_layer_1_vtx_0[156] = {
+Vtx sam_Head_DL_mesh_layer_1_vtx_0[156] = {
 	{{{-14, -29, 58}, 0, {482, 496}, {0xB5, 0xB7, 0x48, 0xFF}}},
 	{{{-16, 19, 78}, 0, {491, 368}, {0xBA, 0xFF, 0x6A, 0xFF}}},
 	{{{-46, 22, 0}, 0, {482, 496}, {0x81, 0xFD, 0x00, 0xFF}}},
@@ -4896,8 +4896,8 @@ Vtx sam_yosemite_Head_DL_mesh_layer_1_vtx_0[156] = {
 	{{{96, -42, 0}, 0, {742, 527}, {0x65, 0xB3, 0x00, 0xFF}}},
 };
 
-Gfx sam_yosemite_Head_DL_mesh_layer_1_tri_0[] = {
-	gsSPVertex(sam_yosemite_Head_DL_mesh_layer_1_vtx_0 + 0, 64, 0),
+Gfx sam_Head_DL_mesh_layer_1_tri_0[] = {
+	gsSPVertex(sam_Head_DL_mesh_layer_1_vtx_0 + 0, 64, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(0, 4, 3, 0, 0, 5, 4, 0),
 	gsSP2Triangles(5, 0, 6, 0, 5, 6, 7, 0),
@@ -4932,7 +4932,7 @@ Gfx sam_yosemite_Head_DL_mesh_layer_1_tri_0[] = {
 	gsSP2Triangles(57, 54, 58, 0, 57, 58, 59, 0),
 	gsSP2Triangles(59, 58, 60, 0, 59, 60, 61, 0),
 	gsSP2Triangles(62, 59, 61, 0, 62, 61, 63, 0),
-	gsSPVertex(sam_yosemite_Head_DL_mesh_layer_1_vtx_0 + 64, 64, 0),
+	gsSPVertex(sam_Head_DL_mesh_layer_1_vtx_0 + 64, 64, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(0, 4, 3, 0, 0, 5, 4, 0),
 	gsSP2Triangles(6, 5, 0, 0, 6, 0, 7, 0),
@@ -4978,7 +4978,7 @@ Gfx sam_yosemite_Head_DL_mesh_layer_1_tri_0[] = {
 	gsSP2Triangles(49, 50, 62, 0, 51, 62, 50, 0),
 	gsSP2Triangles(60, 62, 51, 0, 60, 51, 52, 0),
 	gsSP2Triangles(60, 52, 63, 0, 63, 52, 53, 0),
-	gsSPVertex(sam_yosemite_Head_DL_mesh_layer_1_vtx_0 + 128, 28, 0),
+	gsSPVertex(sam_Head_DL_mesh_layer_1_vtx_0 + 128, 28, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 2, 1, 0),
 	gsSP2Triangles(3, 1, 4, 0, 5, 3, 4, 0),
 	gsSP2Triangles(6, 3, 5, 0, 6, 7, 3, 0),
@@ -4996,7 +4996,7 @@ Gfx sam_yosemite_Head_DL_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_Head_DL_mesh_layer_1_vtx_1[16] = {
+Vtx sam_Head_DL_mesh_layer_1_vtx_1[16] = {
 	{{{39, 75, 60}, 0, {506, 240}, {0x23, 0x51, 0x5B, 0xFF}}},
 	{{{125, 58, 45}, 0, {598, 240}, {0x23, 0x53, 0x5A, 0xFF}}},
 	{{{87, 85, 0}, 0, {555, 112}, {0x23, 0x7A, 0x00, 0xFF}}},
@@ -5015,8 +5015,8 @@ Vtx sam_yosemite_Head_DL_mesh_layer_1_vtx_1[16] = {
 	{{{49, 97, 0}, 0, {500, 112}, {0x23, 0x7A, 0x00, 0xFF}}},
 };
 
-Gfx sam_yosemite_Head_DL_mesh_layer_1_tri_1[] = {
-	gsSPVertex(sam_yosemite_Head_DL_mesh_layer_1_vtx_1 + 0, 16, 0),
+Gfx sam_Head_DL_mesh_layer_1_tri_1[] = {
+	gsSPVertex(sam_Head_DL_mesh_layer_1_vtx_1 + 0, 16, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(3, 4, 1, 0, 5, 4, 3, 0),
 	gsSP2Triangles(5, 6, 4, 0, 7, 6, 5, 0),
@@ -5028,7 +5028,7 @@ Gfx sam_yosemite_Head_DL_mesh_layer_1_tri_1[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_Head_DL_mesh_layer_1_vtx_2[161] = {
+Vtx sam_Head_DL_mesh_layer_1_vtx_2[161] = {
 	{{{58, 90, 57}, 0, {2030, 755}, {0xFD, 0x58, 0x5C, 0xFF}}},
 	{{{30, 105, 0}, 0, {1001, 1087}, {0xB2, 0x64, 0x00, 0xFF}}},
 	{{{19, 100, 44}, 0, {1798, 1207}, {0xA8, 0x50, 0x2D, 0xFF}}},
@@ -5192,8 +5192,8 @@ Vtx sam_yosemite_Head_DL_mesh_layer_1_vtx_2[161] = {
 	{{{164, 69, 41}, 0, {1120, 346}, {0x53, 0xAD, 0xCF, 0xFF}}},
 };
 
-Gfx sam_yosemite_Head_DL_mesh_layer_1_tri_2[] = {
-	gsSPVertex(sam_yosemite_Head_DL_mesh_layer_1_vtx_2 + 0, 64, 0),
+Gfx sam_Head_DL_mesh_layer_1_tri_2[] = {
+	gsSPVertex(sam_Head_DL_mesh_layer_1_vtx_2 + 0, 64, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(3, 0, 4, 0, 3, 4, 5, 0),
 	gsSP2Triangles(5, 4, 6, 0, 6, 4, 7, 0),
@@ -5228,7 +5228,7 @@ Gfx sam_yosemite_Head_DL_mesh_layer_1_tri_2[] = {
 	gsSP2Triangles(59, 35, 60, 0, 60, 35, 37, 0),
 	gsSP2Triangles(60, 37, 61, 0, 37, 62, 61, 0),
 	gsSP2Triangles(37, 38, 62, 0, 38, 63, 62, 0),
-	gsSPVertex(sam_yosemite_Head_DL_mesh_layer_1_vtx_2 + 64, 64, 0),
+	gsSPVertex(sam_Head_DL_mesh_layer_1_vtx_2 + 64, 64, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(3, 4, 1, 0, 5, 4, 3, 0),
 	gsSP2Triangles(5, 6, 4, 0, 7, 6, 5, 0),
@@ -5266,7 +5266,7 @@ Gfx sam_yosemite_Head_DL_mesh_layer_1_tri_2[] = {
 	gsSP2Triangles(57, 58, 56, 0, 57, 59, 58, 0),
 	gsSP2Triangles(60, 59, 57, 0, 60, 61, 59, 0),
 	gsSP2Triangles(62, 61, 60, 0, 63, 62, 60, 0),
-	gsSPVertex(sam_yosemite_Head_DL_mesh_layer_1_vtx_2 + 128, 33, 0),
+	gsSPVertex(sam_Head_DL_mesh_layer_1_vtx_2 + 128, 33, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 0, 2, 0),
 	gsSP2Triangles(3, 2, 4, 0, 3, 4, 5, 0),
 	gsSP2Triangles(3, 5, 6, 0, 6, 5, 7, 0),
@@ -5291,7 +5291,7 @@ Gfx sam_yosemite_Head_DL_mesh_layer_1_tri_2[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_Head_DL_mesh_layer_1_vtx_3[54] = {
+Vtx sam_Head_DL_mesh_layer_1_vtx_3[54] = {
 	{{{389, 83, 0}, 0, {-16, 1008}, {0xEC, 0x7D, 0x00, 0xFF}}},
 	{{{136, 44, 0}, 0, {-16, 667}, {0xC4, 0x70, 0x00, 0xFF}}},
 	{{{302, 120, 135}, 0, {1008, 880}, {0xE4, 0x77, 0xDF, 0xFF}}},
@@ -5348,8 +5348,8 @@ Vtx sam_yosemite_Head_DL_mesh_layer_1_vtx_3[54] = {
 	{{{100, -101, 0}, 0, {-16, 211}, {0x33, 0x8C, 0x00, 0xFF}}},
 };
 
-Gfx sam_yosemite_Head_DL_mesh_layer_1_tri_3[] = {
-	gsSPVertex(sam_yosemite_Head_DL_mesh_layer_1_vtx_3 + 0, 54, 0),
+Gfx sam_Head_DL_mesh_layer_1_tri_3[] = {
+	gsSPVertex(sam_Head_DL_mesh_layer_1_vtx_3 + 0, 54, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(3, 4, 1, 0, 5, 1, 4, 0),
 	gsSP2Triangles(5, 6, 1, 0, 7, 6, 5, 0),
@@ -5385,7 +5385,7 @@ Gfx sam_yosemite_Head_DL_mesh_layer_1_tri_3[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_vtx_0[156] = {
+Vtx sam_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_vtx_0[156] = {
 	{{{-14, -29, 58}, 0, {482, 496}, {0xB5, 0xB7, 0x48, 0xFF}}},
 	{{{-16, 19, 78}, 0, {491, 368}, {0xBA, 0xFF, 0x6A, 0xFF}}},
 	{{{-46, 22, 0}, 0, {482, 496}, {0x81, 0xFD, 0x00, 0xFF}}},
@@ -5544,8 +5544,8 @@ Vtx sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_vtx_0[156] = {
 	{{{96, -42, 0}, 0, {742, 527}, {0x65, 0xB3, 0x00, 0xFF}}},
 };
 
-Gfx sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_0[] = {
-	gsSPVertex(sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_vtx_0 + 0, 64, 0),
+Gfx sam_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_0[] = {
+	gsSPVertex(sam_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_vtx_0 + 0, 64, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(0, 4, 3, 0, 0, 5, 4, 0),
 	gsSP2Triangles(5, 0, 6, 0, 5, 6, 7, 0),
@@ -5580,7 +5580,7 @@ Gfx sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_0[] = {
 	gsSP2Triangles(57, 54, 58, 0, 57, 58, 59, 0),
 	gsSP2Triangles(59, 58, 60, 0, 59, 60, 61, 0),
 	gsSP2Triangles(62, 59, 61, 0, 62, 61, 63, 0),
-	gsSPVertex(sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_vtx_0 + 64, 64, 0),
+	gsSPVertex(sam_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_vtx_0 + 64, 64, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(0, 4, 3, 0, 0, 5, 4, 0),
 	gsSP2Triangles(6, 5, 0, 0, 6, 0, 7, 0),
@@ -5626,7 +5626,7 @@ Gfx sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_0[] = {
 	gsSP2Triangles(49, 50, 62, 0, 51, 62, 50, 0),
 	gsSP2Triangles(60, 62, 51, 0, 60, 51, 52, 0),
 	gsSP2Triangles(60, 52, 63, 0, 63, 52, 53, 0),
-	gsSPVertex(sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_vtx_0 + 128, 28, 0),
+	gsSPVertex(sam_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_vtx_0 + 128, 28, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 2, 1, 0),
 	gsSP2Triangles(3, 1, 4, 0, 5, 3, 4, 0),
 	gsSP2Triangles(6, 3, 5, 0, 6, 7, 3, 0),
@@ -5644,7 +5644,7 @@ Gfx sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_vtx_1[16] = {
+Vtx sam_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_vtx_1[16] = {
 	{{{39, 75, 60}, 0, {506, 240}, {0x23, 0x51, 0x5B, 0xFF}}},
 	{{{125, 58, 45}, 0, {598, 240}, {0x23, 0x53, 0x5A, 0xFF}}},
 	{{{87, 85, 0}, 0, {555, 112}, {0x23, 0x7A, 0x00, 0xFF}}},
@@ -5663,8 +5663,8 @@ Vtx sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_vtx_1[16] = {
 	{{{49, 97, 0}, 0, {500, 112}, {0x23, 0x7A, 0x00, 0xFF}}},
 };
 
-Gfx sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_1[] = {
-	gsSPVertex(sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_vtx_1 + 0, 16, 0),
+Gfx sam_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_1[] = {
+	gsSPVertex(sam_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_vtx_1 + 0, 16, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(3, 4, 1, 0, 5, 4, 3, 0),
 	gsSP2Triangles(5, 6, 4, 0, 7, 6, 5, 0),
@@ -5676,7 +5676,7 @@ Gfx sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_1[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_vtx_2[156] = {
+Vtx sam_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_vtx_2[156] = {
 	{{{-107, 41, 71}, 0, {915, 278}, {0xD2, 0x6A, 0x34, 0xFF}}},
 	{{{-108, 36, 59}, 0, {915, 296}, {0xDC, 0x47, 0x9D, 0xFF}}},
 	{{{-236, 15, 58}, 0, {915, 278}, {0xB7, 0xBD, 0x50, 0xFF}}},
@@ -5835,8 +5835,8 @@ Vtx sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_vtx_2[156] = {
 	{{{162, 63, 71}, 0, {1262, 352}, {0x56, 0x22, 0x57, 0xFF}}},
 };
 
-Gfx sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_2[] = {
-	gsSPVertex(sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_vtx_2 + 0, 64, 0),
+Gfx sam_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_2[] = {
+	gsSPVertex(sam_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_vtx_2 + 0, 64, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(4, 3, 0, 0, 4, 0, 5, 0),
 	gsSP2Triangles(5, 0, 6, 0, 7, 4, 5, 0),
@@ -5877,7 +5877,7 @@ Gfx sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_2[] = {
 	gsSP2Triangles(28, 29, 56, 0, 29, 59, 56, 0),
 	gsSP2Triangles(30, 60, 29, 0, 38, 61, 30, 0),
 	gsSP2Triangles(56, 62, 48, 0, 48, 63, 47, 0),
-	gsSPVertex(sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_vtx_2 + 64, 64, 0),
+	gsSPVertex(sam_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_vtx_2 + 64, 64, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 0, 2, 0),
 	gsSP2Triangles(4, 5, 6, 0, 4, 7, 5, 0),
 	gsSP2Triangles(7, 4, 8, 0, 7, 8, 9, 0),
@@ -5905,7 +5905,7 @@ Gfx sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_2[] = {
 	gsSP2Triangles(57, 58, 59, 0, 59, 58, 60, 0),
 	gsSP2Triangles(58, 61, 60, 0, 58, 62, 61, 0),
 	gsSP1Triangle(62, 63, 61, 0),
-	gsSPVertex(sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_vtx_2 + 128, 28, 0),
+	gsSPVertex(sam_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_vtx_2 + 128, 28, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 0, 3, 0),
 	gsSP2Triangles(3, 4, 1, 0, 3, 5, 4, 0),
 	gsSP2Triangles(6, 5, 3, 0, 5, 7, 4, 0),
@@ -5925,7 +5925,7 @@ Gfx sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_2[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_vtx_3[54] = {
+Vtx sam_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_vtx_3[54] = {
 	{{{389, 83, 0}, 0, {-16, 1008}, {0xEC, 0x7D, 0x00, 0xFF}}},
 	{{{136, 44, 0}, 0, {-16, 667}, {0xC4, 0x70, 0x00, 0xFF}}},
 	{{{302, 120, 135}, 0, {1008, 880}, {0xE4, 0x77, 0xDF, 0xFF}}},
@@ -5982,8 +5982,8 @@ Vtx sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_vtx_3[54] = {
 	{{{100, -101, 0}, 0, {-16, 211}, {0x33, 0x8C, 0x00, 0xFF}}},
 };
 
-Gfx sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_3[] = {
-	gsSPVertex(sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_vtx_3 + 0, 54, 0),
+Gfx sam_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_3[] = {
+	gsSPVertex(sam_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_vtx_3 + 0, 54, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(3, 4, 1, 0, 5, 1, 4, 0),
 	gsSP2Triangles(5, 6, 1, 0, 7, 6, 5, 0),
@@ -6019,7 +6019,7 @@ Gfx sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_3[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_0[156] = {
+Vtx sam_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_0[156] = {
 	{{{-14, -29, 58}, 0, {482, 496}, {0xB5, 0xB7, 0x48, 0xFF}}},
 	{{{-16, 19, 78}, 0, {491, 368}, {0xBA, 0xFF, 0x6A, 0xFF}}},
 	{{{-46, 22, 0}, 0, {482, 496}, {0x81, 0xFD, 0x00, 0xFF}}},
@@ -6178,8 +6178,8 @@ Vtx sam_yosemite_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_0[156]
 	{{{96, -42, 0}, 0, {742, 527}, {0x65, 0xB3, 0x00, 0xFF}}},
 };
 
-Gfx sam_yosemite_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0[] = {
-	gsSPVertex(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_0 + 0, 64, 0),
+Gfx sam_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0[] = {
+	gsSPVertex(sam_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_0 + 0, 64, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(0, 4, 3, 0, 0, 5, 4, 0),
 	gsSP2Triangles(5, 0, 6, 0, 5, 6, 7, 0),
@@ -6214,7 +6214,7 @@ Gfx sam_yosemite_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0[] = 
 	gsSP2Triangles(57, 54, 58, 0, 57, 58, 59, 0),
 	gsSP2Triangles(59, 58, 60, 0, 59, 60, 61, 0),
 	gsSP2Triangles(62, 59, 61, 0, 62, 61, 63, 0),
-	gsSPVertex(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_0 + 64, 64, 0),
+	gsSPVertex(sam_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_0 + 64, 64, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(0, 4, 3, 0, 0, 5, 4, 0),
 	gsSP2Triangles(6, 5, 0, 0, 6, 0, 7, 0),
@@ -6260,7 +6260,7 @@ Gfx sam_yosemite_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0[] = 
 	gsSP2Triangles(49, 50, 62, 0, 51, 62, 50, 0),
 	gsSP2Triangles(60, 62, 51, 0, 60, 51, 52, 0),
 	gsSP2Triangles(60, 52, 63, 0, 63, 52, 53, 0),
-	gsSPVertex(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_0 + 128, 28, 0),
+	gsSPVertex(sam_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_0 + 128, 28, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 2, 1, 0),
 	gsSP2Triangles(3, 1, 4, 0, 5, 3, 4, 0),
 	gsSP2Triangles(6, 3, 5, 0, 6, 7, 3, 0),
@@ -6278,7 +6278,7 @@ Gfx sam_yosemite_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0[] = 
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_1[16] = {
+Vtx sam_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_1[16] = {
 	{{{39, 75, 60}, 0, {506, 240}, {0x23, 0x51, 0x5B, 0xFF}}},
 	{{{125, 58, 45}, 0, {598, 240}, {0x23, 0x53, 0x5A, 0xFF}}},
 	{{{87, 85, 0}, 0, {555, 112}, {0x23, 0x7A, 0x00, 0xFF}}},
@@ -6297,8 +6297,8 @@ Vtx sam_yosemite_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_1[16] 
 	{{{49, 97, 0}, 0, {500, 112}, {0x23, 0x7A, 0x00, 0xFF}}},
 };
 
-Gfx sam_yosemite_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1[] = {
-	gsSPVertex(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_1 + 0, 16, 0),
+Gfx sam_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1[] = {
+	gsSPVertex(sam_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_1 + 0, 16, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(3, 4, 1, 0, 5, 4, 3, 0),
 	gsSP2Triangles(5, 6, 4, 0, 7, 6, 5, 0),
@@ -6310,7 +6310,7 @@ Gfx sam_yosemite_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1[] = 
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_2[161] = {
+Vtx sam_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_2[161] = {
 	{{{58, 90, 57}, 0, {2030, 755}, {0xFD, 0x58, 0x5C, 0xFF}}},
 	{{{30, 105, 0}, 0, {1001, 1087}, {0xB2, 0x64, 0x00, 0xFF}}},
 	{{{19, 100, 44}, 0, {1798, 1207}, {0xA8, 0x50, 0x2D, 0xFF}}},
@@ -6474,8 +6474,8 @@ Vtx sam_yosemite_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_2[161]
 	{{{164, 69, 41}, 0, {1120, 346}, {0x53, 0xAD, 0xCF, 0xFF}}},
 };
 
-Gfx sam_yosemite_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2[] = {
-	gsSPVertex(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_2 + 0, 64, 0),
+Gfx sam_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2[] = {
+	gsSPVertex(sam_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_2 + 0, 64, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(3, 0, 4, 0, 3, 4, 5, 0),
 	gsSP2Triangles(5, 4, 6, 0, 6, 4, 7, 0),
@@ -6510,7 +6510,7 @@ Gfx sam_yosemite_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2[] = 
 	gsSP2Triangles(59, 35, 60, 0, 60, 35, 37, 0),
 	gsSP2Triangles(60, 37, 61, 0, 37, 62, 61, 0),
 	gsSP2Triangles(37, 38, 62, 0, 38, 63, 62, 0),
-	gsSPVertex(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_2 + 64, 64, 0),
+	gsSPVertex(sam_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_2 + 64, 64, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(3, 4, 1, 0, 5, 4, 3, 0),
 	gsSP2Triangles(5, 6, 4, 0, 7, 6, 5, 0),
@@ -6548,7 +6548,7 @@ Gfx sam_yosemite_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2[] = 
 	gsSP2Triangles(57, 58, 56, 0, 57, 59, 58, 0),
 	gsSP2Triangles(60, 59, 57, 0, 60, 61, 59, 0),
 	gsSP2Triangles(62, 61, 60, 0, 63, 62, 60, 0),
-	gsSPVertex(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_2 + 128, 33, 0),
+	gsSPVertex(sam_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_2 + 128, 33, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 0, 2, 0),
 	gsSP2Triangles(3, 2, 4, 0, 3, 4, 5, 0),
 	gsSP2Triangles(3, 5, 6, 0, 6, 5, 7, 0),
@@ -6573,7 +6573,7 @@ Gfx sam_yosemite_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2[] = 
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_vtx_0[156] = {
+Vtx sam_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_vtx_0[156] = {
 	{{{-14, -29, 58}, 0, {482, 496}, {0xB5, 0xB7, 0x48, 0xFF}}},
 	{{{-16, 19, 78}, 0, {491, 368}, {0xBA, 0xFF, 0x6A, 0xFF}}},
 	{{{-46, 22, 0}, 0, {482, 496}, {0x81, 0xFD, 0x00, 0xFF}}},
@@ -6732,8 +6732,8 @@ Vtx sam_yosemite_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capl
 	{{{96, -42, 0}, 0, {742, 527}, {0x65, 0xB3, 0x00, 0xFF}}},
 };
 
-Gfx sam_yosemite_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_0[] = {
-	gsSPVertex(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_vtx_0 + 0, 64, 0),
+Gfx sam_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_0[] = {
+	gsSPVertex(sam_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_vtx_0 + 0, 64, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(0, 4, 3, 0, 0, 5, 4, 0),
 	gsSP2Triangles(5, 0, 6, 0, 5, 6, 7, 0),
@@ -6768,7 +6768,7 @@ Gfx sam_yosemite_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capl
 	gsSP2Triangles(57, 54, 58, 0, 57, 58, 59, 0),
 	gsSP2Triangles(59, 58, 60, 0, 59, 60, 61, 0),
 	gsSP2Triangles(62, 59, 61, 0, 62, 61, 63, 0),
-	gsSPVertex(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_vtx_0 + 64, 64, 0),
+	gsSPVertex(sam_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_vtx_0 + 64, 64, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(0, 4, 3, 0, 0, 5, 4, 0),
 	gsSP2Triangles(6, 5, 0, 0, 6, 0, 7, 0),
@@ -6814,7 +6814,7 @@ Gfx sam_yosemite_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capl
 	gsSP2Triangles(49, 50, 62, 0, 51, 62, 50, 0),
 	gsSP2Triangles(60, 62, 51, 0, 60, 51, 52, 0),
 	gsSP2Triangles(60, 52, 63, 0, 63, 52, 53, 0),
-	gsSPVertex(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_vtx_0 + 128, 28, 0),
+	gsSPVertex(sam_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_vtx_0 + 128, 28, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 2, 1, 0),
 	gsSP2Triangles(3, 1, 4, 0, 5, 3, 4, 0),
 	gsSP2Triangles(6, 3, 5, 0, 6, 7, 3, 0),
@@ -6832,7 +6832,7 @@ Gfx sam_yosemite_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capl
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_vtx_1[16] = {
+Vtx sam_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_vtx_1[16] = {
 	{{{39, 75, 60}, 0, {506, 240}, {0x23, 0x51, 0x5B, 0xFF}}},
 	{{{125, 58, 45}, 0, {598, 240}, {0x23, 0x53, 0x5A, 0xFF}}},
 	{{{87, 85, 0}, 0, {555, 112}, {0x23, 0x7A, 0x00, 0xFF}}},
@@ -6851,8 +6851,8 @@ Vtx sam_yosemite_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capl
 	{{{49, 97, 0}, 0, {500, 112}, {0x23, 0x7A, 0x00, 0xFF}}},
 };
 
-Gfx sam_yosemite_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_1[] = {
-	gsSPVertex(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_vtx_1 + 0, 16, 0),
+Gfx sam_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_1[] = {
+	gsSPVertex(sam_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_vtx_1 + 0, 16, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(3, 4, 1, 0, 5, 4, 3, 0),
 	gsSP2Triangles(5, 6, 4, 0, 7, 6, 5, 0),
@@ -6864,7 +6864,7 @@ Gfx sam_yosemite_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capl
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_vtx_2[156] = {
+Vtx sam_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_vtx_2[156] = {
 	{{{-107, 41, 71}, 0, {915, 278}, {0xD2, 0x6A, 0x34, 0xFF}}},
 	{{{-108, 36, 59}, 0, {915, 296}, {0xDC, 0x47, 0x9D, 0xFF}}},
 	{{{-236, 15, 58}, 0, {915, 278}, {0xB7, 0xBD, 0x50, 0xFF}}},
@@ -7023,8 +7023,8 @@ Vtx sam_yosemite_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capl
 	{{{162, 63, 71}, 0, {1262, 352}, {0x56, 0x22, 0x57, 0xFF}}},
 };
 
-Gfx sam_yosemite_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_2[] = {
-	gsSPVertex(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_vtx_2 + 0, 64, 0),
+Gfx sam_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_2[] = {
+	gsSPVertex(sam_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_vtx_2 + 0, 64, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(4, 3, 0, 0, 4, 0, 5, 0),
 	gsSP2Triangles(5, 0, 6, 0, 7, 4, 5, 0),
@@ -7065,7 +7065,7 @@ Gfx sam_yosemite_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capl
 	gsSP2Triangles(28, 29, 56, 0, 29, 59, 56, 0),
 	gsSP2Triangles(30, 60, 29, 0, 38, 61, 30, 0),
 	gsSP2Triangles(56, 62, 48, 0, 48, 63, 47, 0),
-	gsSPVertex(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_vtx_2 + 64, 64, 0),
+	gsSPVertex(sam_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_vtx_2 + 64, 64, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 0, 2, 0),
 	gsSP2Triangles(4, 5, 6, 0, 4, 7, 5, 0),
 	gsSP2Triangles(7, 4, 8, 0, 7, 8, 9, 0),
@@ -7093,7 +7093,7 @@ Gfx sam_yosemite_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capl
 	gsSP2Triangles(57, 58, 59, 0, 59, 58, 60, 0),
 	gsSP2Triangles(58, 61, 60, 0, 58, 62, 61, 0),
 	gsSP1Triangle(62, 63, 61, 0),
-	gsSPVertex(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_vtx_2 + 128, 28, 0),
+	gsSPVertex(sam_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_vtx_2 + 128, 28, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 0, 3, 0),
 	gsSP2Triangles(3, 4, 1, 0, 3, 5, 4, 0),
 	gsSP2Triangles(6, 5, 3, 0, 5, 7, 4, 0),
@@ -7113,59 +7113,59 @@ Gfx sam_yosemite_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capl
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_Left_Wing_DL_mesh_layer_4_vtx_0[4] = {
+Vtx sam_Left_Wing_DL_mesh_layer_4_vtx_0[4] = {
 	{{{130, 186, 52}, 0, {1008, -16}, {0xFB, 0x26, 0x87, 0xFF}}},
 	{{{159, 26, 0}, 0, {1008, 2032}, {0xFB, 0x26, 0x87, 0xFF}}},
 	{{{75, 11, -1}, 0, {-16, 2032}, {0xFB, 0x26, 0x87, 0xFF}}},
 	{{{46, 171, 51}, 0, {-16, -16}, {0xFB, 0x26, 0x87, 0xFF}}},
 };
 
-Gfx sam_yosemite_Left_Wing_DL_mesh_layer_4_tri_0[] = {
-	gsSPVertex(sam_yosemite_Left_Wing_DL_mesh_layer_4_vtx_0 + 0, 4, 0),
+Gfx sam_Left_Wing_DL_mesh_layer_4_tri_0[] = {
+	gsSPVertex(sam_Left_Wing_DL_mesh_layer_4_vtx_0 + 0, 4, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_Left_Wing_DL_mesh_layer_4_vtx_1[4] = {
+Vtx sam_Left_Wing_DL_mesh_layer_4_vtx_1[4] = {
 	{{{46, 171, 51}, 0, {1008, -16}, {0xFB, 0x26, 0x87, 0xFF}}},
 	{{{-8, -4, -2}, 0, {-16, 2032}, {0xFB, 0x26, 0x87, 0xFF}}},
 	{{{-37, 156, 50}, 0, {-16, -16}, {0xFB, 0x26, 0x87, 0xFF}}},
 	{{{75, 11, -1}, 0, {1008, 2032}, {0xFB, 0x26, 0x87, 0xFF}}},
 };
 
-Gfx sam_yosemite_Left_Wing_DL_mesh_layer_4_tri_1[] = {
-	gsSPVertex(sam_yosemite_Left_Wing_DL_mesh_layer_4_vtx_1 + 0, 4, 0),
+Gfx sam_Left_Wing_DL_mesh_layer_4_tri_1[] = {
+	gsSPVertex(sam_Left_Wing_DL_mesh_layer_4_vtx_1 + 0, 4, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_Right_Wing_DL_mesh_layer_4_vtx_0[4] = {
+Vtx sam_Right_Wing_DL_mesh_layer_4_vtx_0[4] = {
 	{{{130, 186, -52}, 0, {1008, -16}, {0xFB, 0x26, 0x79, 0xFF}}},
 	{{{46, 171, -51}, 0, {-16, -16}, {0xFB, 0x26, 0x79, 0xFF}}},
 	{{{75, 11, 1}, 0, {-16, 2032}, {0xFB, 0x26, 0x79, 0xFF}}},
 	{{{159, 26, 0}, 0, {1008, 2032}, {0xFB, 0x26, 0x79, 0xFF}}},
 };
 
-Gfx sam_yosemite_Right_Wing_DL_mesh_layer_4_tri_0[] = {
-	gsSPVertex(sam_yosemite_Right_Wing_DL_mesh_layer_4_vtx_0 + 0, 4, 0),
+Gfx sam_Right_Wing_DL_mesh_layer_4_tri_0[] = {
+	gsSPVertex(sam_Right_Wing_DL_mesh_layer_4_vtx_0 + 0, 4, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_Right_Wing_DL_mesh_layer_4_vtx_1[4] = {
+Vtx sam_Right_Wing_DL_mesh_layer_4_vtx_1[4] = {
 	{{{46, 171, -51}, 0, {1008, -16}, {0xFB, 0x26, 0x79, 0xFF}}},
 	{{{-37, 156, -50}, 0, {-16, -16}, {0xFB, 0x26, 0x79, 0xFF}}},
 	{{{-8, -4, 2}, 0, {-16, 2032}, {0xFB, 0x26, 0x79, 0xFF}}},
 	{{{75, 11, 1}, 0, {1008, 2032}, {0xFB, 0x26, 0x79, 0xFF}}},
 };
 
-Gfx sam_yosemite_Right_Wing_DL_mesh_layer_4_tri_1[] = {
-	gsSPVertex(sam_yosemite_Right_Wing_DL_mesh_layer_4_vtx_1 + 0, 4, 0),
+Gfx sam_Right_Wing_DL_mesh_layer_4_tri_1[] = {
+	gsSPVertex(sam_Right_Wing_DL_mesh_layer_4_vtx_1 + 0, 4, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_Left_Arm_Color_mesh_layer_1_vtx_0[30] = {
+Vtx sam_Left_Arm_Color_mesh_layer_1_vtx_0[30] = {
 	{{{107, -18, 20}, 0, {524, 496}, {0x48, 0xB6, 0x4A, 0xFF}}},
 	{{{109, -23, -1}, 0, {643, 512}, {0x50, 0x9F, 0xEB, 0xFF}}},
 	{{{122, -2, 6}, 0, {524, 496}, {0x7E, 0xFC, 0x0B, 0xFF}}},
@@ -7198,8 +7198,8 @@ Vtx sam_yosemite_Left_Arm_Color_mesh_layer_1_vtx_0[30] = {
 	{{{-5, -21, -15}, 0, {643, 512}, {0x9D, 0xB8, 0xDE, 0xFF}}},
 };
 
-Gfx sam_yosemite_Left_Arm_Color_mesh_layer_1_tri_0[] = {
-	gsSPVertex(sam_yosemite_Left_Arm_Color_mesh_layer_1_vtx_0 + 0, 30, 0),
+Gfx sam_Left_Arm_Color_mesh_layer_1_tri_0[] = {
+	gsSPVertex(sam_Left_Arm_Color_mesh_layer_1_vtx_0 + 0, 30, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 0, 3, 0),
 	gsSP2Triangles(0, 4, 3, 0, 0, 5, 4, 0),
 	gsSP2Triangles(5, 0, 6, 0, 5, 7, 4, 0),
@@ -7226,7 +7226,7 @@ Gfx sam_yosemite_Left_Arm_Color_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_Left_Forearm_mesh_layer_1_vtx_0[30] = {
+Vtx sam_Left_Forearm_mesh_layer_1_vtx_0[30] = {
 	{{{92, 9, -3}, 0, {643, 224}, {0x5B, 0x44, 0xC7, 0xFF}}},
 	{{{91, 14, 16}, 0, {524, 240}, {0x51, 0x5A, 0x26, 0xFF}}},
 	{{{90, -5, 10}, 0, {643, 224}, {0x7E, 0xFB, 0x0D, 0xFF}}},
@@ -7259,8 +7259,8 @@ Vtx sam_yosemite_Left_Forearm_mesh_layer_1_vtx_0[30] = {
 	{{{-20, -2, -3}, 0, {524, 240}, {0x81, 0x03, 0xF8, 0xFF}}},
 };
 
-Gfx sam_yosemite_Left_Forearm_mesh_layer_1_tri_0[] = {
-	gsSPVertex(sam_yosemite_Left_Forearm_mesh_layer_1_vtx_0 + 0, 30, 0),
+Gfx sam_Left_Forearm_mesh_layer_1_tri_0[] = {
+	gsSPVertex(sam_Left_Forearm_mesh_layer_1_vtx_0 + 0, 30, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(4, 3, 0, 0, 4, 0, 5, 0),
 	gsSP2Triangles(5, 0, 6, 0, 7, 4, 5, 0),
@@ -7282,7 +7282,7 @@ Gfx sam_yosemite_Left_Forearm_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_Left_Hand_DL_mesh_layer_1_vtx_0[32] = {
+Vtx sam_Left_Hand_DL_mesh_layer_1_vtx_0[32] = {
 	{{{7, -9, 0}, 0, {112, 368}, {0xD5, 0x8A, 0xEF, 0xFF}}},
 	{{{6, -8, 8}, 0, {112, 240}, {0xBE, 0xAE, 0x47, 0xFF}}},
 	{{{-8, -4, -1}, 0, {112, 368}, {0xA4, 0x42, 0x39, 0xFF}}},
@@ -7317,8 +7317,8 @@ Vtx sam_yosemite_Left_Hand_DL_mesh_layer_1_vtx_0[32] = {
 	{{{-8, -4, -1}, 0, {368, -16}, {0xA4, 0x42, 0x39, 0xFF}}},
 };
 
-Gfx sam_yosemite_Left_Hand_DL_mesh_layer_1_tri_0[] = {
-	gsSPVertex(sam_yosemite_Left_Hand_DL_mesh_layer_1_vtx_0 + 0, 32, 0),
+Gfx sam_Left_Hand_DL_mesh_layer_1_tri_0[] = {
+	gsSPVertex(sam_Left_Hand_DL_mesh_layer_1_vtx_0 + 0, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(0, 4, 3, 0, 5, 4, 0, 0),
 	gsSP2Triangles(5, 0, 6, 0, 5, 7, 4, 0),
@@ -7339,7 +7339,7 @@ Gfx sam_yosemite_Left_Hand_DL_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_LeftGunOption_LeftGunDL_mesh_layer_1_vtx_0[226] = {
+Vtx sam_LeftGunOption_LeftGunDL_mesh_layer_1_vtx_0[226] = {
 	{{{68, 19, -25}, 0, {63, -237}, {0xF7, 0x78, 0x29, 0xFF}}},
 	{{{66, 23, -25}, 0, {63, -237}, {0x27, 0x28, 0x72, 0xFF}}},
 	{{{61, 22, -24}, 0, {-4, -273}, {0x2A, 0x35, 0x6C, 0xFF}}},
@@ -7568,8 +7568,8 @@ Vtx sam_yosemite_LeftGunOption_LeftGunDL_mesh_layer_1_vtx_0[226] = {
 	{{{117, 1, -42}, 0, {1020, -273}, {0x2F, 0xA2, 0xB8, 0xFF}}},
 };
 
-Gfx sam_yosemite_LeftGunOption_LeftGunDL_mesh_layer_1_tri_0[] = {
-	gsSPVertex(sam_yosemite_LeftGunOption_LeftGunDL_mesh_layer_1_vtx_0 + 0, 64, 0),
+Gfx sam_LeftGunOption_LeftGunDL_mesh_layer_1_tri_0[] = {
+	gsSPVertex(sam_LeftGunOption_LeftGunDL_mesh_layer_1_vtx_0 + 0, 64, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(0, 3, 4, 0, 0, 4, 5, 0),
 	gsSP2Triangles(4, 6, 5, 0, 4, 7, 6, 0),
@@ -7603,7 +7603,7 @@ Gfx sam_yosemite_LeftGunOption_LeftGunDL_mesh_layer_1_tri_0[] = {
 	gsSP2Triangles(22, 59, 60, 0, 60, 59, 61, 0),
 	gsSP2Triangles(60, 61, 62, 0, 63, 60, 62, 0),
 	gsSP1Triangle(63, 62, 4, 0),
-	gsSPVertex(sam_yosemite_LeftGunOption_LeftGunDL_mesh_layer_1_vtx_0 + 64, 64, 0),
+	gsSPVertex(sam_LeftGunOption_LeftGunDL_mesh_layer_1_vtx_0 + 64, 64, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(3, 4, 1, 0, 3, 5, 4, 0),
 	gsSP2Triangles(1, 4, 6, 0, 1, 6, 7, 0),
@@ -7630,7 +7630,7 @@ Gfx sam_yosemite_LeftGunOption_LeftGunDL_mesh_layer_1_tri_0[] = {
 	gsSP2Triangles(56, 58, 59, 0, 60, 56, 59, 0),
 	gsSP2Triangles(60, 59, 61, 0, 62, 60, 61, 0),
 	gsSP1Triangle(62, 61, 63, 0),
-	gsSPVertex(sam_yosemite_LeftGunOption_LeftGunDL_mesh_layer_1_vtx_0 + 128, 64, 0),
+	gsSPVertex(sam_LeftGunOption_LeftGunDL_mesh_layer_1_vtx_0 + 128, 64, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(4, 5, 6, 0, 4, 6, 7, 0),
 	gsSP2Triangles(8, 9, 10, 0, 8, 10, 11, 0),
@@ -7658,7 +7658,7 @@ Gfx sam_yosemite_LeftGunOption_LeftGunDL_mesh_layer_1_tri_0[] = {
 	gsSP2Triangles(58, 59, 60, 0, 61, 59, 58, 0),
 	gsSP2Triangles(61, 58, 62, 0, 62, 58, 63, 0),
 	gsSP1Triangle(58, 60, 63, 0),
-	gsSPVertex(sam_yosemite_LeftGunOption_LeftGunDL_mesh_layer_1_vtx_0 + 192, 34, 0),
+	gsSPVertex(sam_LeftGunOption_LeftGunDL_mesh_layer_1_vtx_0 + 192, 34, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(0, 3, 4, 0, 0, 4, 5, 0),
 	gsSP2Triangles(4, 6, 5, 0, 4, 7, 6, 0),
@@ -7685,7 +7685,7 @@ Gfx sam_yosemite_LeftGunOption_LeftGunDL_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_LeftGunOption_LeftGunDL_mesh_layer_1_vtx_1[54] = {
+Vtx sam_LeftGunOption_LeftGunDL_mesh_layer_1_vtx_1[54] = {
 	{{{49, -11, -16}, 0, {368, 1008}, {0xE7, 0xAA, 0x5A, 0xFF}}},
 	{{{29, -4, -34}, 0, {368, 801}, {0xC4, 0x9F, 0xC7, 0xFF}}},
 	{{{48, -12, -37}, 0, {368, 752}, {0xE1, 0xA7, 0xAB, 0xFF}}},
@@ -7742,8 +7742,8 @@ Vtx sam_yosemite_LeftGunOption_LeftGunDL_mesh_layer_1_vtx_1[54] = {
 	{{{39, 55, -17}, 0, {112, 283}, {0xD0, 0x76, 0xFF, 0xFF}}},
 };
 
-Gfx sam_yosemite_LeftGunOption_LeftGunDL_mesh_layer_1_tri_1[] = {
-	gsSPVertex(sam_yosemite_LeftGunOption_LeftGunDL_mesh_layer_1_vtx_1 + 0, 54, 0),
+Gfx sam_LeftGunOption_LeftGunDL_mesh_layer_1_tri_1[] = {
+	gsSPVertex(sam_LeftGunOption_LeftGunDL_mesh_layer_1_vtx_1 + 0, 54, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(3, 4, 1, 0, 3, 5, 4, 0),
 	gsSP2Triangles(5, 6, 4, 0, 5, 7, 6, 0),
@@ -7772,7 +7772,7 @@ Gfx sam_yosemite_LeftGunOption_LeftGunDL_mesh_layer_1_tri_1[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_LeftGunOption_LeftGunDL_mesh_layer_1_vtx_2[8] = {
+Vtx sam_LeftGunOption_LeftGunDL_mesh_layer_1_vtx_2[8] = {
 	{{{169, 39, -30}, 0, {535, 302}, {0x6D, 0x41, 0xFB, 0xFF}}},
 	{{{169, 38, -29}, 0, {555, 273}, {0x6D, 0x41, 0xFB, 0xFF}}},
 	{{{171, 36, -29}, 0, {565, 273}, {0x6D, 0x41, 0xFB, 0xFF}}},
@@ -7783,15 +7783,15 @@ Vtx sam_yosemite_LeftGunOption_LeftGunDL_mesh_layer_1_vtx_2[8] = {
 	{{{169, 39, -34}, 0, {535, 434}, {0x6D, 0x41, 0xFB, 0xFF}}},
 };
 
-Gfx sam_yosemite_LeftGunOption_LeftGunDL_mesh_layer_1_tri_2[] = {
-	gsSPVertex(sam_yosemite_LeftGunOption_LeftGunDL_mesh_layer_1_vtx_2 + 0, 8, 0),
+Gfx sam_LeftGunOption_LeftGunDL_mesh_layer_1_tri_2[] = {
+	gsSPVertex(sam_LeftGunOption_LeftGunDL_mesh_layer_1_vtx_2 + 0, 8, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 0, 2, 0),
 	gsSP2Triangles(2, 4, 3, 0, 2, 5, 4, 0),
 	gsSP2Triangles(4, 6, 3, 0, 3, 7, 0, 0),
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_vtx_0[26] = {
+Vtx sam_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_vtx_0[26] = {
 	{{{46, -21, -16}, 0, {0, 0}, {0x4B, 0xA4, 0xD4, 0x00}}},
 	{{{42, -4, 12}, 0, {0, 0}, {0x43, 0xC1, 0x58, 0x00}}},
 	{{{20, -14, 12}, 0, {0, 0}, {0x0A, 0xC2, 0x6E, 0x00}}},
@@ -7820,8 +7820,8 @@ Vtx sam_yosemite_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_vtx_0[
 	{{{0, 23, -24}, 0, {0, 0}, {0xDB, 0x1E, 0x8B, 0x00}}},
 };
 
-Gfx sam_yosemite_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_tri_0[] = {
-	gsSPVertex(sam_yosemite_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_vtx_0 + 0, 26, 0),
+Gfx sam_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_tri_0[] = {
+	gsSPVertex(sam_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_vtx_0 + 0, 26, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(4, 3, 0, 0, 0, 5, 4, 0),
 	gsSP2Triangles(6, 5, 0, 0, 7, 5, 6, 0),
@@ -7848,7 +7848,7 @@ Gfx sam_yosemite_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_tri_0[
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_Right_Arm_Color_mesh_layer_1_vtx_0[30] = {
+Vtx sam_Right_Arm_Color_mesh_layer_1_vtx_0[30] = {
 	{{{106, -18, -21}, 0, {524, 496}, {0x48, 0xB6, 0xB6, 0xFF}}},
 	{{{121, -2, -7}, 0, {524, 496}, {0x7E, 0xFC, 0xF5, 0xFF}}},
 	{{{108, -23, 0}, 0, {643, 512}, {0x50, 0x9F, 0x15, 0xFF}}},
@@ -7881,8 +7881,8 @@ Vtx sam_yosemite_Right_Arm_Color_mesh_layer_1_vtx_0[30] = {
 	{{{-3, 18, 22}, 0, {643, 224}, {0xA6, 0x3E, 0x40, 0xFF}}},
 };
 
-Gfx sam_yosemite_Right_Arm_Color_mesh_layer_1_tri_0[] = {
-	gsSPVertex(sam_yosemite_Right_Arm_Color_mesh_layer_1_vtx_0 + 0, 30, 0),
+Gfx sam_Right_Arm_Color_mesh_layer_1_tri_0[] = {
+	gsSPVertex(sam_Right_Arm_Color_mesh_layer_1_vtx_0 + 0, 30, 0),
 	gsSP2Triangles(0, 1, 2, 0, 2, 3, 0, 0),
 	gsSP2Triangles(2, 4, 3, 0, 5, 4, 2, 0),
 	gsSP2Triangles(2, 6, 5, 0, 5, 7, 4, 0),
@@ -7909,7 +7909,7 @@ Gfx sam_yosemite_Right_Arm_Color_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_Right_Forearm_mesh_layer_1_vtx_0[30] = {
+Vtx sam_Right_Forearm_mesh_layer_1_vtx_0[30] = {
 	{{{90, 14, -17}, 0, {524, 240}, {0x51, 0x5A, 0xDA, 0xFF}}},
 	{{{91, 9, 2}, 0, {643, 224}, {0x5B, 0x44, 0x39, 0xFF}}},
 	{{{89, -5, -11}, 0, {524, 240}, {0x7E, 0xFB, 0xF3, 0xFF}}},
@@ -7942,8 +7942,8 @@ Vtx sam_yosemite_Right_Forearm_mesh_layer_1_vtx_0[30] = {
 	{{{-21, -2, 2}, 0, {524, 240}, {0x81, 0x03, 0x08, 0xFF}}},
 };
 
-Gfx sam_yosemite_Right_Forearm_mesh_layer_1_tri_0[] = {
-	gsSPVertex(sam_yosemite_Right_Forearm_mesh_layer_1_vtx_0 + 0, 30, 0),
+Gfx sam_Right_Forearm_mesh_layer_1_tri_0[] = {
+	gsSPVertex(sam_Right_Forearm_mesh_layer_1_vtx_0 + 0, 30, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(3, 0, 4, 0, 4, 0, 5, 0),
 	gsSP2Triangles(5, 0, 6, 0, 4, 5, 7, 0),
@@ -7965,7 +7965,7 @@ Gfx sam_yosemite_Right_Forearm_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_Right_Hand_DL_mesh_layer_1_vtx_0[32] = {
+Vtx sam_Right_Hand_DL_mesh_layer_1_vtx_0[32] = {
 	{{{7, -9, -1}, 0, {112, 368}, {0xD5, 0x8A, 0x11, 0xFF}}},
 	{{{-8, -4, 0}, 0, {112, 240}, {0xA4, 0x42, 0xC6, 0xFF}}},
 	{{{6, -8, -9}, 0, {112, 240}, {0xBE, 0xAE, 0xB9, 0xFF}}},
@@ -8000,8 +8000,8 @@ Vtx sam_yosemite_Right_Hand_DL_mesh_layer_1_vtx_0[32] = {
 	{{{2, 9, 7}, 0, {910, 624}, {0xA3, 0x10, 0x55, 0xFF}}},
 };
 
-Gfx sam_yosemite_Right_Hand_DL_mesh_layer_1_tri_0[] = {
-	gsSPVertex(sam_yosemite_Right_Hand_DL_mesh_layer_1_vtx_0 + 0, 32, 0),
+Gfx sam_Right_Hand_DL_mesh_layer_1_tri_0[] = {
+	gsSPVertex(sam_Right_Hand_DL_mesh_layer_1_vtx_0 + 0, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(0, 3, 4, 0, 4, 3, 5, 0),
 	gsSP2Triangles(4, 5, 6, 0, 6, 5, 7, 0),
@@ -8022,7 +8022,7 @@ Gfx sam_yosemite_Right_Hand_DL_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_RightGunOption_RigntGunDL_mesh_layer_1_vtx_0[223] = {
+Vtx sam_RightGunOption_RigntGunDL_mesh_layer_1_vtx_0[223] = {
 	{{{68, 19, 19}, 0, {63, -237}, {0xF7, 0x78, 0xD7, 0xFF}}},
 	{{{61, 22, 18}, 0, {-4, -273}, {0x2A, 0x35, 0x94, 0xFF}}},
 	{{{66, 23, 19}, 0, {63, -237}, {0x27, 0x28, 0x8E, 0xFF}}},
@@ -8248,8 +8248,8 @@ Vtx sam_yosemite_RightGunOption_RigntGunDL_mesh_layer_1_vtx_0[223] = {
 	{{{83, -11, 8}, 0, {892, -529}, {0xD7, 0xA4, 0xB3, 0xFF}}},
 };
 
-Gfx sam_yosemite_RightGunOption_RigntGunDL_mesh_layer_1_tri_0[] = {
-	gsSPVertex(sam_yosemite_RightGunOption_RigntGunDL_mesh_layer_1_vtx_0 + 0, 64, 0),
+Gfx sam_RightGunOption_RigntGunDL_mesh_layer_1_tri_0[] = {
+	gsSPVertex(sam_RightGunOption_RigntGunDL_mesh_layer_1_vtx_0 + 0, 64, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(0, 4, 3, 0, 0, 5, 4, 0),
 	gsSP2Triangles(4, 5, 6, 0, 4, 6, 7, 0),
@@ -8282,7 +8282,7 @@ Gfx sam_yosemite_RightGunOption_RigntGunDL_mesh_layer_1_tri_0[] = {
 	gsSP2Triangles(57, 55, 58, 0, 58, 55, 59, 0),
 	gsSP2Triangles(55, 36, 59, 0, 58, 59, 60, 0),
 	gsSP1Triangle(61, 62, 63, 0),
-	gsSPVertex(sam_yosemite_RightGunOption_RigntGunDL_mesh_layer_1_vtx_0 + 64, 64, 0),
+	gsSPVertex(sam_RightGunOption_RigntGunDL_mesh_layer_1_vtx_0 + 64, 64, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(0, 4, 3, 0, 3, 4, 5, 0),
 	gsSP2Triangles(3, 5, 6, 0, 6, 5, 7, 0),
@@ -8311,7 +8311,7 @@ Gfx sam_yosemite_RightGunOption_RigntGunDL_mesh_layer_1_tri_0[] = {
 	gsSP2Triangles(58, 59, 57, 0, 60, 59, 58, 0),
 	gsSP2Triangles(60, 61, 59, 0, 62, 61, 60, 0),
 	gsSP1Triangle(62, 63, 61, 0),
-	gsSPVertex(sam_yosemite_RightGunOption_RigntGunDL_mesh_layer_1_vtx_0 + 128, 64, 0),
+	gsSPVertex(sam_RightGunOption_RigntGunDL_mesh_layer_1_vtx_0 + 128, 64, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(4, 5, 6, 0, 4, 6, 7, 0),
 	gsSP2Triangles(8, 9, 10, 0, 8, 10, 11, 0),
@@ -8340,7 +8340,7 @@ Gfx sam_yosemite_RightGunOption_RigntGunDL_mesh_layer_1_tri_0[] = {
 	gsSP2Triangles(59, 54, 56, 0, 60, 58, 59, 0),
 	gsSP2Triangles(58, 60, 61, 0, 60, 62, 61, 0),
 	gsSP2Triangles(60, 63, 62, 0, 60, 59, 63, 0),
-	gsSPVertex(sam_yosemite_RightGunOption_RigntGunDL_mesh_layer_1_vtx_0 + 192, 31, 0),
+	gsSPVertex(sam_RightGunOption_RigntGunDL_mesh_layer_1_vtx_0 + 192, 31, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 0, 3, 0),
 	gsSP2Triangles(4, 3, 0, 0, 4, 0, 5, 0),
 	gsSP2Triangles(0, 2, 5, 0, 6, 3, 4, 0),
@@ -8364,7 +8364,7 @@ Gfx sam_yosemite_RightGunOption_RigntGunDL_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_RightGunOption_RigntGunDL_mesh_layer_1_vtx_1[54] = {
+Vtx sam_RightGunOption_RigntGunDL_mesh_layer_1_vtx_1[54] = {
 	{{{49, -11, 9}, 0, {368, 1008}, {0xE7, 0xAA, 0xA6, 0xFF}}},
 	{{{49, -12, 31}, 0, {368, 752}, {0xE1, 0xA7, 0x55, 0xFF}}},
 	{{{29, -4, 28}, 0, {368, 801}, {0xC4, 0x9F, 0x39, 0xFF}}},
@@ -8421,8 +8421,8 @@ Vtx sam_yosemite_RightGunOption_RigntGunDL_mesh_layer_1_vtx_1[54] = {
 	{{{-3, 38, 30}, 0, {112, 454}, {0xD0, 0x76, 0x01, 0xFF}}},
 };
 
-Gfx sam_yosemite_RightGunOption_RigntGunDL_mesh_layer_1_tri_1[] = {
-	gsSPVertex(sam_yosemite_RightGunOption_RigntGunDL_mesh_layer_1_vtx_1 + 0, 54, 0),
+Gfx sam_RightGunOption_RigntGunDL_mesh_layer_1_tri_1[] = {
+	gsSPVertex(sam_RightGunOption_RigntGunDL_mesh_layer_1_vtx_1 + 0, 54, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(3, 2, 4, 0, 5, 4, 2, 0),
 	gsSP2Triangles(5, 6, 4, 0, 5, 7, 6, 0),
@@ -8451,7 +8451,7 @@ Gfx sam_yosemite_RightGunOption_RigntGunDL_mesh_layer_1_tri_1[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_RightGunOption_RigntGunDL_mesh_layer_1_vtx_2[8] = {
+Vtx sam_RightGunOption_RigntGunDL_mesh_layer_1_vtx_2[8] = {
 	{{{171, 36, 22}, 0, {565, 273}, {0x6D, 0x41, 0x05, 0xFF}}},
 	{{{170, 38, 22}, 0, {555, 273}, {0x6D, 0x41, 0x05, 0xFF}}},
 	{{{169, 39, 23}, 0, {535, 302}, {0x6D, 0x41, 0x05, 0xFF}}},
@@ -8462,15 +8462,15 @@ Vtx sam_yosemite_RightGunOption_RigntGunDL_mesh_layer_1_vtx_2[8] = {
 	{{{172, 35, 23}, 0, {585, 302}, {0x6D, 0x41, 0x05, 0xFF}}},
 };
 
-Gfx sam_yosemite_RightGunOption_RigntGunDL_mesh_layer_1_tri_2[] = {
-	gsSPVertex(sam_yosemite_RightGunOption_RigntGunDL_mesh_layer_1_vtx_2 + 0, 8, 0),
+Gfx sam_RightGunOption_RigntGunDL_mesh_layer_1_tri_2[] = {
+	gsSPVertex(sam_RightGunOption_RigntGunDL_mesh_layer_1_vtx_2 + 0, 8, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 0, 2, 0),
 	gsSP2Triangles(2, 4, 3, 0, 2, 5, 4, 0),
 	gsSP2Triangles(4, 6, 3, 0, 3, 7, 0, 0),
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_vtx_0[25] = {
+Vtx sam_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_vtx_0[25] = {
 	{{{73, 23, 13}, 0, {0, 0}, {0x51, 0xDD, 0x5B, 0x00}}},
 	{{{66, 47, 13}, 0, {0, 0}, {0x39, 0x46, 0x5A, 0x00}}},
 	{{{43, 41, 10}, 0, {0, 0}, {0xFD, 0x21, 0x7B, 0x00}}},
@@ -8498,8 +8498,8 @@ Vtx sam_yosemite_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_vtx_
 	{{{-4, 2, 0}, 0, {0, 0}, {0x8B, 0xCF, 0xFC, 0x00}}},
 };
 
-Gfx sam_yosemite_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_tri_0[] = {
-	gsSPVertex(sam_yosemite_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_vtx_0 + 0, 25, 0),
+Gfx sam_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_tri_0[] = {
+	gsSPVertex(sam_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_vtx_0 + 0, 25, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(4, 3, 0, 0, 4, 0, 5, 0),
 	gsSP2Triangles(5, 0, 2, 0, 5, 2, 6, 0),
@@ -8526,7 +8526,7 @@ Gfx sam_yosemite_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_tri_
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_vtx_0[81] = {
+Vtx sam_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_vtx_0[81] = {
 	{{{-8, 31, -5}, 0, {0, 0}, {0x8B, 0x2B, 0x19, 0xFE}}},
 	{{{-6, 21, 17}, 0, {0, 0}, {0xA7, 0x1A, 0x57, 0x00}}},
 	{{{5, 27, 19}, 0, {0, 0}, {0xC9, 0x2E, 0x69, 0x00}}},
@@ -8610,8 +8610,8 @@ Vtx sam_yosemite_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_vt
 	{{{53, -8, 4}, 0, {0, 0}, {0x47, 0x97, 0xFA, 0xFE}}},
 };
 
-Gfx sam_yosemite_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_tri_0[] = {
-	gsSPVertex(sam_yosemite_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_vtx_0 + 0, 64, 0),
+Gfx sam_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_tri_0[] = {
+	gsSPVertex(sam_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_vtx_0 + 0, 64, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 4, 5, 0),
 	gsSP2Triangles(6, 7, 8, 0, 9, 10, 11, 0),
 	gsSP2Triangles(4, 12, 13, 0, 14, 15, 16, 0),
@@ -8635,7 +8635,7 @@ Gfx sam_yosemite_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_tr
 	gsSP2Triangles(54, 57, 55, 0, 58, 59, 60, 0),
 	gsSP2Triangles(59, 58, 61, 0, 58, 62, 61, 0),
 	gsSP1Triangle(63, 62, 58, 0),
-	gsSPVertex(sam_yosemite_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_vtx_0 + 64, 17, 0),
+	gsSPVertex(sam_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_vtx_0 + 64, 17, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(2, 4, 3, 0, 5, 4, 2, 0),
 	gsSP2Triangles(1, 6, 7, 0, 8, 7, 6, 0),
@@ -8645,7 +8645,7 @@ Gfx sam_yosemite_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_tr
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_0[20] = {
+Vtx sam_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_0[20] = {
 	{{{-5, 23, 15}, 0, {0, 0}, {0x9E, 0x11, 0x4F, 0xFE}}},
 	{{{11, 13, 23}, 0, {0, 0}, {0xC0, 0xF9, 0x6E, 0xFE}}},
 	{{{11, 45, 15}, 0, {0, 0}, {0xCE, 0x59, 0x4B, 0xFE}}},
@@ -8668,8 +8668,8 @@ Vtx sam_yosemite_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_0[
 	{{{54, -5, -4}, 0, {0, 0}, {0x65, 0xBF, 0xD6, 0xFE}}},
 };
 
-Gfx sam_yosemite_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_0[] = {
-	gsSPVertex(sam_yosemite_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_0 + 0, 20, 0),
+Gfx sam_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_0[] = {
+	gsSPVertex(sam_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_0 + 0, 20, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 0, 3, 0),
 	gsSP2Triangles(3, 0, 4, 0, 4, 0, 5, 0),
 	gsSP2Triangles(6, 5, 0, 0, 2, 6, 0, 0),
@@ -8691,7 +8691,7 @@ Gfx sam_yosemite_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_0[
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_1[54] = {
+Vtx sam_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_1[54] = {
 	{{{-241, 25, 87}, 0, {-16, 1008}, {0xEF, 0x08, 0x7E, 0xFF}}},
 	{{{12, 30, 121}, 0, {-16, 667}, {0x1A, 0x09, 0x7C, 0xFF}}},
 	{{{-170, 165, 137}, 0, {1008, 880}, {0xF9, 0xE7, 0x7C, 0xFF}}},
@@ -8748,8 +8748,8 @@ Vtx sam_yosemite_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_1[
 	{{{88, 22, -8}, 0, {-16, 211}, {0xF0, 0xF7, 0x82, 0xFF}}},
 };
 
-Gfx sam_yosemite_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_1[] = {
-	gsSPVertex(sam_yosemite_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_1 + 0, 54, 0),
+Gfx sam_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_1[] = {
+	gsSPVertex(sam_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_1 + 0, 54, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(3, 4, 1, 0, 5, 1, 4, 0),
 	gsSP2Triangles(5, 6, 1, 0, 7, 6, 5, 0),
@@ -8785,7 +8785,7 @@ Gfx sam_yosemite_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_1[
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_0[20] = {
+Vtx sam_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_0[20] = {
 	{{{-5, 23, 15}, 0, {0, 0}, {0x9E, 0x11, 0x4F, 0xFE}}},
 	{{{11, 13, 23}, 0, {0, 0}, {0xC0, 0xF9, 0x6E, 0xFE}}},
 	{{{11, 45, 15}, 0, {0, 0}, {0xCE, 0x59, 0x4B, 0xFE}}},
@@ -8808,8 +8808,8 @@ Vtx sam_yosemite_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_laye
 	{{{54, -5, -4}, 0, {0, 0}, {0x65, 0xBF, 0xD6, 0xFE}}},
 };
 
-Gfx sam_yosemite_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_0[] = {
-	gsSPVertex(sam_yosemite_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_0 + 0, 20, 0),
+Gfx sam_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_0[] = {
+	gsSPVertex(sam_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_0 + 0, 20, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 0, 3, 0),
 	gsSP2Triangles(3, 0, 4, 0, 4, 0, 5, 0),
 	gsSP2Triangles(6, 5, 0, 0, 2, 6, 0, 0),
@@ -8831,7 +8831,7 @@ Gfx sam_yosemite_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_laye
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_1[54] = {
+Vtx sam_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_1[54] = {
 	{{{-241, 25, 87}, 0, {-16, 1008}, {0xEF, 0x08, 0x7E, 0xFF}}},
 	{{{12, 30, 121}, 0, {-16, 667}, {0x1A, 0x09, 0x7C, 0xFF}}},
 	{{{-170, 165, 137}, 0, {1008, 880}, {0xF9, 0xE7, 0x7C, 0xFF}}},
@@ -8888,8 +8888,8 @@ Vtx sam_yosemite_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_laye
 	{{{88, 22, -8}, 0, {-16, 211}, {0xF0, 0xF7, 0x82, 0xFF}}},
 };
 
-Gfx sam_yosemite_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_1[] = {
-	gsSPVertex(sam_yosemite_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_1 + 0, 54, 0),
+Gfx sam_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_1[] = {
+	gsSPVertex(sam_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_1 + 0, 54, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(3, 4, 1, 0, 5, 1, 4, 0),
 	gsSP2Triangles(5, 6, 1, 0, 7, 6, 5, 0),
@@ -8925,7 +8925,7 @@ Gfx sam_yosemite_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_laye
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_Right_Hand_Wing_Cap_Swtich_Option_Wings_mesh_layer_4_vtx_0[8] = {
+Vtx sam_Right_Hand_Wing_Cap_Swtich_Option_Wings_mesh_layer_4_vtx_0[8] = {
 	{{{171, -110, 30}, 0, {1008, 2032}, {0xBA, 0xA9, 0x3C, 0xFF}}},
 	{{{101, -52, 32}, 0, {-16, 2032}, {0xB9, 0xAA, 0x3C, 0xFF}}},
 	{{{113, -174, -129}, 0, {1008, -16}, {0xBA, 0xA9, 0x3C, 0xFF}}},
@@ -8936,14 +8936,14 @@ Vtx sam_yosemite_Right_Hand_Wing_Cap_Swtich_Option_Wings_mesh_layer_4_vtx_0[8] =
 	{{{40, 142, -144}, 0, {-16, -16}, {0xB8, 0x5C, 0x30, 0xFF}}},
 };
 
-Gfx sam_yosemite_Right_Hand_Wing_Cap_Swtich_Option_Wings_mesh_layer_4_tri_0[] = {
-	gsSPVertex(sam_yosemite_Right_Hand_Wing_Cap_Swtich_Option_Wings_mesh_layer_4_vtx_0 + 0, 8, 0),
+Gfx sam_Right_Hand_Wing_Cap_Swtich_Option_Wings_mesh_layer_4_tri_0[] = {
+	gsSPVertex(sam_Right_Hand_Wing_Cap_Swtich_Option_Wings_mesh_layer_4_vtx_0 + 0, 8, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
 	gsSP2Triangles(4, 5, 6, 0, 4, 7, 5, 0),
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_Right_Hand_Wing_Cap_Swtich_Option_Wings_mesh_layer_4_vtx_1[8] = {
+Vtx sam_Right_Hand_Wing_Cap_Swtich_Option_Wings_mesh_layer_4_vtx_1[8] = {
 	{{{101, -52, 32}, 0, {1008, 2032}, {0xB9, 0xAA, 0x3C, 0xFF}}},
 	{{{33, 6, 35}, 0, {-16, 2032}, {0xB9, 0xAA, 0x3C, 0xFF}}},
 	{{{43, -115, -127}, 0, {1008, -16}, {0xB9, 0xAA, 0x3C, 0xFF}}},
@@ -8954,14 +8954,14 @@ Vtx sam_yosemite_Right_Hand_Wing_Cap_Swtich_Option_Wings_mesh_layer_4_vtx_1[8] =
 	{{{-27, 84, -134}, 0, {-16, -16}, {0xB8, 0x5C, 0x31, 0xFF}}},
 };
 
-Gfx sam_yosemite_Right_Hand_Wing_Cap_Swtich_Option_Wings_mesh_layer_4_tri_1[] = {
-	gsSPVertex(sam_yosemite_Right_Hand_Wing_Cap_Swtich_Option_Wings_mesh_layer_4_vtx_1 + 0, 8, 0),
+Gfx sam_Right_Hand_Wing_Cap_Swtich_Option_Wings_mesh_layer_4_tri_1[] = {
+	gsSPVertex(sam_Right_Hand_Wing_Cap_Swtich_Option_Wings_mesh_layer_4_vtx_1 + 0, 8, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
 	gsSP2Triangles(4, 5, 6, 0, 4, 7, 5, 0),
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_Left_Thigh_Color_mesh_layer_1_vtx_0[30] = {
+Vtx sam_Left_Thigh_Color_mesh_layer_1_vtx_0[30] = {
 	{{{38, 1, -2}, 0, {643, 512}, {0x7F, 0x04, 0x08, 0xFF}}},
 	{{{35, 10, 1}, 0, {626, 509}, {0x5C, 0x53, 0x1D, 0xFF}}},
 	{{{35, 2, 8}, 0, {657, 388}, {0x5D, 0x15, 0x54, 0xFF}}},
@@ -8994,8 +8994,8 @@ Vtx sam_yosemite_Left_Thigh_Color_mesh_layer_1_vtx_0[30] = {
 	{{{-13, 11, 2}, 0, {643, 512}, {0xA4, 0x54, 0x19, 0xFF}}},
 };
 
-Gfx sam_yosemite_Left_Thigh_Color_mesh_layer_1_tri_0[] = {
-	gsSPVertex(sam_yosemite_Left_Thigh_Color_mesh_layer_1_vtx_0 + 0, 30, 0),
+Gfx sam_Left_Thigh_Color_mesh_layer_1_tri_0[] = {
+	gsSPVertex(sam_Left_Thigh_Color_mesh_layer_1_vtx_0 + 0, 30, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 2, 1, 0),
 	gsSP2Triangles(4, 3, 1, 0, 4, 1, 5, 0),
 	gsSP2Triangles(6, 5, 1, 0, 7, 4, 5, 0),
@@ -9022,7 +9022,7 @@ Gfx sam_yosemite_Left_Thigh_Color_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_Left_Leg_mesh_layer_1_vtx_0[12] = {
+Vtx sam_Left_Leg_mesh_layer_1_vtx_0[12] = {
 	{{{27, -1, -13}, 0, {524, 368}, {0xE8, 0xE1, 0x87, 0xFF}}},
 	{{{23, -12, -3}, 0, {524, 240}, {0xDD, 0x8E, 0xD6, 0xFF}}},
 	{{{17, -8, 11}, 0, {643, 224}, {0xBD, 0xA9, 0x40, 0xFF}}},
@@ -9037,8 +9037,8 @@ Vtx sam_yosemite_Left_Leg_mesh_layer_1_vtx_0[12] = {
 	{{{19, 18, 5}, 0, {643, 512}, {0xBF, 0x6C, 0x13, 0xFF}}},
 };
 
-Gfx sam_yosemite_Left_Leg_mesh_layer_1_tri_0[] = {
-	gsSPVertex(sam_yosemite_Left_Leg_mesh_layer_1_vtx_0 + 0, 12, 0),
+Gfx sam_Left_Leg_mesh_layer_1_tri_0[] = {
+	gsSPVertex(sam_Left_Leg_mesh_layer_1_vtx_0 + 0, 12, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 0, 3, 0),
 	gsSP2Triangles(0, 4, 3, 0, 0, 5, 4, 0),
 	gsSP2Triangles(5, 0, 6, 0, 0, 2, 6, 0),
@@ -9052,7 +9052,7 @@ Gfx sam_yosemite_Left_Leg_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_Left_Leg_mesh_layer_1_vtx_1[24] = {
+Vtx sam_Left_Leg_mesh_layer_1_vtx_1[24] = {
 	{{{-4, 3, 9}, 0, {657, 352}, {0xA4, 0x12, 0x55, 0xFF}}},
 	{{{-3, 10, 3}, 0, {645, 495}, {0xA4, 0x55, 0x15, 0xFF}}},
 	{{{-5, 1, 1}, 0, {659, 368}, {0x82, 0xFC, 0xF3, 0xFF}}},
@@ -9079,8 +9079,8 @@ Vtx sam_yosemite_Left_Leg_mesh_layer_1_vtx_1[24] = {
 	{{{27, 5, 7}, 0, {659, 368}, {0x13, 0x21, 0x79, 0xFF}}},
 };
 
-Gfx sam_yosemite_Left_Leg_mesh_layer_1_tri_1[] = {
-	gsSPVertex(sam_yosemite_Left_Leg_mesh_layer_1_vtx_1 + 0, 24, 0),
+Gfx sam_Left_Leg_mesh_layer_1_tri_1[] = {
+	gsSPVertex(sam_Left_Leg_mesh_layer_1_vtx_1 + 0, 24, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(4, 3, 0, 0, 4, 0, 5, 0),
 	gsSP2Triangles(5, 0, 6, 0, 7, 4, 5, 0),
@@ -9099,7 +9099,7 @@ Gfx sam_yosemite_Left_Leg_mesh_layer_1_tri_1[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_Left_Shoe_mesh_layer_1_vtx_0[29] = {
+Vtx sam_Left_Shoe_mesh_layer_1_vtx_0[29] = {
 	{{{-5, 0, 0}, 0, {643, 512}, {0x95, 0xBB, 0x04, 0xFF}}},
 	{{{2, -1, -1}, 0, {524, 240}, {0xEB, 0x83, 0xFF, 0xFF}}},
 	{{{1, -1, 3}, 0, {643, 224}, {0xEB, 0x8F, 0x36, 0xFF}}},
@@ -9131,8 +9131,8 @@ Vtx sam_yosemite_Left_Shoe_mesh_layer_1_vtx_0[29] = {
 	{{{-1, 12, -9}, 0, {524, 496}, {0xE0, 0x59, 0xAC, 0xFF}}},
 };
 
-Gfx sam_yosemite_Left_Shoe_mesh_layer_1_tri_0[] = {
-	gsSPVertex(sam_yosemite_Left_Shoe_mesh_layer_1_vtx_0 + 0, 29, 0),
+Gfx sam_Left_Shoe_mesh_layer_1_tri_0[] = {
+	gsSPVertex(sam_Left_Shoe_mesh_layer_1_vtx_0 + 0, 29, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(3, 0, 4, 0, 4, 0, 5, 0),
 	gsSP2Triangles(0, 6, 5, 0, 0, 7, 6, 0),
@@ -9163,7 +9163,7 @@ Gfx sam_yosemite_Left_Shoe_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_Right_Thigh_Color_mesh_layer_1_vtx_0[30] = {
+Vtx sam_Right_Thigh_Color_mesh_layer_1_vtx_0[30] = {
 	{{{38, 1, 2}, 0, {643, 512}, {0x7F, 0x04, 0xF8, 0xFF}}},
 	{{{35, 2, -8}, 0, {657, 388}, {0x5D, 0x15, 0xAC, 0xFF}}},
 	{{{35, 10, -1}, 0, {626, 509}, {0x5C, 0x53, 0xE3, 0xFF}}},
@@ -9196,8 +9196,8 @@ Vtx sam_yosemite_Right_Thigh_Color_mesh_layer_1_vtx_0[30] = {
 	{{{-13, -1, 11}, 0, {524, 368}, {0x9D, 0xF1, 0x4E, 0xFF}}},
 };
 
-Gfx sam_yosemite_Right_Thigh_Color_mesh_layer_1_tri_0[] = {
-	gsSPVertex(sam_yosemite_Right_Thigh_Color_mesh_layer_1_vtx_0 + 0, 30, 0),
+Gfx sam_Right_Thigh_Color_mesh_layer_1_tri_0[] = {
+	gsSPVertex(sam_Right_Thigh_Color_mesh_layer_1_vtx_0 + 0, 30, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 2, 1, 0),
 	gsSP2Triangles(3, 1, 4, 0, 4, 1, 5, 0),
 	gsSP2Triangles(6, 5, 1, 0, 4, 5, 7, 0),
@@ -9224,7 +9224,7 @@ Gfx sam_yosemite_Right_Thigh_Color_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_Right_Leg_mesh_layer_1_vtx_0[12] = {
+Vtx sam_Right_Leg_mesh_layer_1_vtx_0[12] = {
 	{{{27, -1, 13}, 0, {524, 368}, {0xE8, 0xE1, 0x79, 0xFF}}},
 	{{{15, 6, -15}, 0, {659, 368}, {0xAE, 0x17, 0xA2, 0xFF}}},
 	{{{17, -8, -11}, 0, {643, 224}, {0xBD, 0xA9, 0xC0, 0xFF}}},
@@ -9239,8 +9239,8 @@ Vtx sam_yosemite_Right_Leg_mesh_layer_1_vtx_0[12] = {
 	{{{43, 8, -1}, 0, {643, 512}, {0x5C, 0x52, 0xE0, 0xFF}}},
 };
 
-Gfx sam_yosemite_Right_Leg_mesh_layer_1_tri_0[] = {
-	gsSPVertex(sam_yosemite_Right_Leg_mesh_layer_1_vtx_0 + 0, 12, 0),
+Gfx sam_Right_Leg_mesh_layer_1_tri_0[] = {
+	gsSPVertex(sam_Right_Leg_mesh_layer_1_vtx_0 + 0, 12, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(0, 4, 3, 0, 0, 5, 4, 0),
 	gsSP2Triangles(6, 5, 0, 0, 0, 2, 6, 0),
@@ -9254,7 +9254,7 @@ Gfx sam_yosemite_Right_Leg_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_Right_Leg_mesh_layer_1_vtx_1[24] = {
+Vtx sam_Right_Leg_mesh_layer_1_vtx_1[24] = {
 	{{{-4, 3, -9}, 0, {657, 352}, {0xA4, 0x12, 0xAB, 0xFF}}},
 	{{{-5, 1, -1}, 0, {659, 368}, {0x82, 0xFC, 0x0D, 0xFF}}},
 	{{{-3, 10, -3}, 0, {645, 495}, {0xA4, 0x55, 0xEB, 0xFF}}},
@@ -9281,8 +9281,8 @@ Vtx sam_yosemite_Right_Leg_mesh_layer_1_vtx_1[24] = {
 	{{{28, -2, -5}, 0, {643, 224}, {0x1B, 0xA4, 0xAD, 0xFF}}},
 };
 
-Gfx sam_yosemite_Right_Leg_mesh_layer_1_tri_1[] = {
-	gsSPVertex(sam_yosemite_Right_Leg_mesh_layer_1_vtx_1 + 0, 24, 0),
+Gfx sam_Right_Leg_mesh_layer_1_tri_1[] = {
+	gsSPVertex(sam_Right_Leg_mesh_layer_1_vtx_1 + 0, 24, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 0, 2, 0),
 	gsSP2Triangles(3, 2, 4, 0, 4, 2, 5, 0),
 	gsSP2Triangles(2, 6, 5, 0, 4, 5, 7, 0),
@@ -9301,7 +9301,7 @@ Gfx sam_yosemite_Right_Leg_mesh_layer_1_tri_1[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_Right_Shoe_DL_mesh_layer_1_vtx_0[29] = {
+Vtx sam_Right_Shoe_DL_mesh_layer_1_vtx_0[29] = {
 	{{{-5, 0, 0}, 0, {643, 512}, {0x95, 0xBB, 0xFC, 0xFF}}},
 	{{{-3, 0, -3}, 0, {659, 368}, {0xB8, 0xA8, 0xC8, 0xFF}}},
 	{{{1, -1, -3}, 0, {643, 224}, {0xEB, 0x8F, 0xCA, 0xFF}}},
@@ -9333,8 +9333,8 @@ Vtx sam_yosemite_Right_Shoe_DL_mesh_layer_1_vtx_0[29] = {
 	{{{35, -8, -1}, 0, {643, 224}, {0x4B, 0xCF, 0xA6, 0xFF}}},
 };
 
-Gfx sam_yosemite_Right_Shoe_DL_mesh_layer_1_tri_0[] = {
-	gsSPVertex(sam_yosemite_Right_Shoe_DL_mesh_layer_1_vtx_0 + 0, 29, 0),
+Gfx sam_Right_Shoe_DL_mesh_layer_1_tri_0[] = {
+	gsSPVertex(sam_Right_Shoe_DL_mesh_layer_1_vtx_0 + 0, 29, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(0, 4, 3, 0, 5, 4, 0, 0),
 	gsSP2Triangles(6, 5, 0, 0, 6, 0, 7, 0),
@@ -9365,7 +9365,7 @@ Gfx sam_yosemite_Right_Shoe_DL_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_MetalSwitch_Butt_mesh_layer_1_vtx_0[43] = {
+Vtx sam_MetalSwitch_Butt_mesh_layer_1_vtx_0[43] = {
 	{{{35, 44, 35}, 0, {508, -273}, {0x3E, 0x56, 0x45, 0xFF}}},
 	{{{34, 15, 46}, 0, {508, -145}, {0x4C, 0x01, 0x65, 0xFF}}},
 	{{{46, 16, 0}, 0, {508, -273}, {0x7F, 0xFF, 0x00, 0xFF}}},
@@ -9411,8 +9411,8 @@ Vtx sam_yosemite_MetalSwitch_Butt_mesh_layer_1_vtx_0[43] = {
 	{{{41, 53, 13}, 0, {577, -349}, {0x20, 0x73, 0x2B, 0xFF}}},
 };
 
-Gfx sam_yosemite_MetalSwitch_Butt_mesh_layer_1_tri_0[] = {
-	gsSPVertex(sam_yosemite_MetalSwitch_Butt_mesh_layer_1_vtx_0 + 0, 43, 0),
+Gfx sam_MetalSwitch_Butt_mesh_layer_1_tri_0[] = {
+	gsSPVertex(sam_MetalSwitch_Butt_mesh_layer_1_vtx_0 + 0, 43, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 0, 3, 0),
 	gsSP2Triangles(0, 4, 3, 0, 0, 5, 4, 0),
 	gsSP2Triangles(5, 0, 6, 0, 5, 6, 7, 0),
@@ -9442,7 +9442,7 @@ Gfx sam_yosemite_MetalSwitch_Butt_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_MetalSwitch_Torso_mesh_layer_1_vtx_0[60] = {
+Vtx sam_MetalSwitch_Torso_mesh_layer_1_vtx_0[60] = {
 	{{{-16, 15, 49}, 0, {624, -145}, {0xA3, 0x0A, 0x56, 0xFF}}},
 	{{{-15, 50, 36}, 0, {602, -273}, {0xAC, 0x4A, 0x3D, 0xFF}}},
 	{{{-26, 15, 0}, 0, {596, -145}, {0x81, 0x05, 0x00, 0xFF}}},
@@ -9505,8 +9505,8 @@ Vtx sam_yosemite_MetalSwitch_Torso_mesh_layer_1_vtx_0[60] = {
 	{{{58, 71, -7}, 0, {-260, 495}, {0x4A, 0x46, 0xB4, 0xFF}}},
 };
 
-Gfx sam_yosemite_MetalSwitch_Torso_mesh_layer_1_tri_0[] = {
-	gsSPVertex(sam_yosemite_MetalSwitch_Torso_mesh_layer_1_vtx_0 + 0, 60, 0),
+Gfx sam_MetalSwitch_Torso_mesh_layer_1_tri_0[] = {
+	gsSPVertex(sam_MetalSwitch_Torso_mesh_layer_1_vtx_0 + 0, 60, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(0, 4, 3, 0, 5, 4, 0, 0),
 	gsSP2Triangles(5, 0, 6, 0, 5, 7, 4, 0),
@@ -9551,7 +9551,7 @@ Gfx sam_yosemite_MetalSwitch_Torso_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_MetalSwitch_Head_DL_mesh_layer_1_vtx_0[368] = {
+Vtx sam_MetalSwitch_Head_DL_mesh_layer_1_vtx_0[368] = {
 	{{{-14, -29, 58}, 0, {736, -17}, {0xB5, 0xB7, 0x48, 0xFF}}},
 	{{{-16, 19, 78}, 0, {753, -145}, {0xBA, 0xFF, 0x6A, 0xFF}}},
 	{{{-46, 22, 0}, 0, {736, -17}, {0x81, 0xFD, 0x00, 0xFF}}},
@@ -9922,8 +9922,8 @@ Vtx sam_yosemite_MetalSwitch_Head_DL_mesh_layer_1_vtx_0[368] = {
 	{{{100, -101, 0}, 0, {-260, -301}, {0x33, 0x8C, 0x00, 0xFF}}},
 };
 
-Gfx sam_yosemite_MetalSwitch_Head_DL_mesh_layer_1_tri_0[] = {
-	gsSPVertex(sam_yosemite_MetalSwitch_Head_DL_mesh_layer_1_vtx_0 + 0, 63, 0),
+Gfx sam_MetalSwitch_Head_DL_mesh_layer_1_tri_0[] = {
+	gsSPVertex(sam_MetalSwitch_Head_DL_mesh_layer_1_vtx_0 + 0, 63, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(0, 4, 3, 0, 0, 5, 4, 0),
 	gsSP2Triangles(5, 0, 6, 0, 5, 6, 7, 0),
@@ -9958,7 +9958,7 @@ Gfx sam_yosemite_MetalSwitch_Head_DL_mesh_layer_1_tri_0[] = {
 	gsSP2Triangles(53, 55, 58, 0, 55, 59, 58, 0),
 	gsSP2Triangles(59, 60, 58, 0, 53, 58, 61, 0),
 	gsSP2Triangles(61, 51, 53, 0, 61, 62, 51, 0),
-	gsSPVertex(sam_yosemite_MetalSwitch_Head_DL_mesh_layer_1_vtx_0 + 63, 64, 0),
+	gsSPVertex(sam_MetalSwitch_Head_DL_mesh_layer_1_vtx_0 + 63, 64, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(4, 5, 6, 0, 4, 6, 7, 0),
 	gsSP2Triangles(8, 4, 7, 0, 8, 9, 4, 0),
@@ -9995,7 +9995,7 @@ Gfx sam_yosemite_MetalSwitch_Head_DL_mesh_layer_1_tri_0[] = {
 	gsSP2Triangles(59, 50, 60, 0, 51, 60, 50, 0),
 	gsSP2Triangles(60, 51, 61, 0, 51, 62, 61, 0),
 	gsSP1Triangle(51, 63, 62, 0),
-	gsSPVertex(sam_yosemite_MetalSwitch_Head_DL_mesh_layer_1_vtx_0 + 127, 62, 0),
+	gsSPVertex(sam_MetalSwitch_Head_DL_mesh_layer_1_vtx_0 + 127, 62, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(0, 3, 4, 0, 0, 4, 5, 0),
 	gsSP2Triangles(4, 6, 5, 0, 4, 7, 6, 0),
@@ -10036,7 +10036,7 @@ Gfx sam_yosemite_MetalSwitch_Head_DL_mesh_layer_1_tri_0[] = {
 	gsSP2Triangles(58, 59, 57, 0, 58, 60, 59, 0),
 	gsSP2Triangles(60, 48, 59, 0, 60, 61, 48, 0),
 	gsSP1Triangle(46, 48, 61, 0),
-	gsSPVertex(sam_yosemite_MetalSwitch_Head_DL_mesh_layer_1_vtx_0 + 189, 64, 0),
+	gsSPVertex(sam_MetalSwitch_Head_DL_mesh_layer_1_vtx_0 + 189, 64, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(4, 3, 0, 0, 4, 0, 5, 0),
 	gsSP2Triangles(4, 5, 6, 0, 5, 7, 6, 0),
@@ -10082,7 +10082,7 @@ Gfx sam_yosemite_MetalSwitch_Head_DL_mesh_layer_1_tri_0[] = {
 	gsSP2Triangles(59, 60, 61, 0, 59, 61, 62, 0),
 	gsSP2Triangles(61, 40, 62, 0, 40, 47, 62, 0),
 	gsSP2Triangles(63, 47, 40, 0, 63, 40, 41, 0),
-	gsSPVertex(sam_yosemite_MetalSwitch_Head_DL_mesh_layer_1_vtx_0 + 253, 64, 0),
+	gsSPVertex(sam_MetalSwitch_Head_DL_mesh_layer_1_vtx_0 + 253, 64, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(1, 3, 4, 0, 1, 4, 5, 0),
 	gsSP2Triangles(4, 6, 5, 0, 4, 7, 6, 0),
@@ -10125,7 +10125,7 @@ Gfx sam_yosemite_MetalSwitch_Head_DL_mesh_layer_1_tri_0[] = {
 	gsSP2Triangles(57, 58, 59, 0, 57, 60, 58, 0),
 	gsSP2Triangles(60, 61, 58, 0, 62, 58, 61, 0),
 	gsSP1Triangle(62, 63, 58, 0),
-	gsSPVertex(sam_yosemite_MetalSwitch_Head_DL_mesh_layer_1_vtx_0 + 317, 51, 0),
+	gsSPVertex(sam_MetalSwitch_Head_DL_mesh_layer_1_vtx_0 + 317, 51, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 0, 3, 0),
 	gsSP2Triangles(1, 3, 4, 0, 4, 5, 1, 0),
 	gsSP2Triangles(5, 6, 1, 0, 5, 7, 6, 0),
@@ -10159,7 +10159,7 @@ Gfx sam_yosemite_MetalSwitch_Head_DL_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_MetalSwitch_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_vtx_0[366] = {
+Vtx sam_MetalSwitch_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_vtx_0[366] = {
 	{{{-14, -29, 58}, 0, {736, -17}, {0xB5, 0xB7, 0x48, 0xFF}}},
 	{{{-16, 19, 78}, 0, {753, -145}, {0xBA, 0xFF, 0x6A, 0xFF}}},
 	{{{-46, 22, 0}, 0, {736, -17}, {0x81, 0xFD, 0x00, 0xFF}}},
@@ -10528,8 +10528,8 @@ Vtx sam_yosemite_MetalSwitch_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_vtx_
 	{{{100, -101, 0}, 0, {-260, -301}, {0x33, 0x8C, 0x00, 0xFF}}},
 };
 
-Gfx sam_yosemite_MetalSwitch_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_0[] = {
-	gsSPVertex(sam_yosemite_MetalSwitch_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_vtx_0 + 0, 64, 0),
+Gfx sam_MetalSwitch_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_0[] = {
+	gsSPVertex(sam_MetalSwitch_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_vtx_0 + 0, 64, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(0, 4, 3, 0, 0, 5, 4, 0),
 	gsSP2Triangles(5, 0, 6, 0, 5, 6, 7, 0),
@@ -10565,7 +10565,7 @@ Gfx sam_yosemite_MetalSwitch_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_
 	gsSP2Triangles(60, 59, 57, 0, 60, 57, 61, 0),
 	gsSP2Triangles(57, 55, 61, 0, 61, 55, 62, 0),
 	gsSP1Triangle(60, 61, 63, 0),
-	gsSPVertex(sam_yosemite_MetalSwitch_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_vtx_0 + 64, 64, 0),
+	gsSPVertex(sam_MetalSwitch_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_vtx_0 + 64, 64, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 4, 0),
 	gsSP2Triangles(0, 5, 3, 0, 5, 0, 6, 0),
 	gsSP2Triangles(7, 3, 5, 0, 8, 3, 7, 0),
@@ -10602,7 +10602,7 @@ Gfx sam_yosemite_MetalSwitch_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_
 	gsSP2Triangles(42, 57, 41, 0, 58, 38, 36, 0),
 	gsSP2Triangles(4, 58, 36, 0, 59, 60, 61, 0),
 	gsSP2Triangles(59, 62, 60, 0, 62, 59, 63, 0),
-	gsSPVertex(sam_yosemite_MetalSwitch_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_vtx_0 + 128, 64, 0),
+	gsSPVertex(sam_MetalSwitch_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_vtx_0 + 128, 64, 0),
 	gsSP2Triangles(0, 1, 2, 0, 2, 1, 3, 0),
 	gsSP2Triangles(3, 1, 4, 0, 0, 2, 5, 0),
 	gsSP2Triangles(2, 6, 5, 0, 6, 7, 5, 0),
@@ -10633,7 +10633,7 @@ Gfx sam_yosemite_MetalSwitch_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_
 	gsSP2Triangles(61, 60, 62, 0, 60, 54, 62, 0),
 	gsSP2Triangles(60, 55, 54, 0, 62, 54, 63, 0),
 	gsSP1Triangle(56, 63, 54, 0),
-	gsSPVertex(sam_yosemite_MetalSwitch_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_vtx_0 + 192, 64, 0),
+	gsSPVertex(sam_MetalSwitch_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_vtx_0 + 192, 64, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(4, 3, 0, 0, 5, 3, 4, 0),
 	gsSP2Triangles(4, 6, 5, 0, 4, 7, 6, 0),
@@ -10680,7 +10680,7 @@ Gfx sam_yosemite_MetalSwitch_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_
 	gsSP2Triangles(56, 57, 58, 0, 59, 57, 56, 0),
 	gsSP2Triangles(59, 60, 57, 0, 61, 60, 59, 0),
 	gsSP2Triangles(61, 62, 60, 0, 63, 62, 61, 0),
-	gsSPVertex(sam_yosemite_MetalSwitch_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_vtx_0 + 256, 64, 0),
+	gsSPVertex(sam_MetalSwitch_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_vtx_0 + 256, 64, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(0, 4, 3, 0, 4, 5, 3, 0),
 	gsSP2Triangles(4, 6, 5, 0, 6, 7, 5, 0),
@@ -10723,7 +10723,7 @@ Gfx sam_yosemite_MetalSwitch_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_
 	gsSP2Triangles(58, 59, 54, 0, 60, 59, 58, 0),
 	gsSP2Triangles(59, 60, 61, 0, 59, 61, 62, 0),
 	gsSP2Triangles(62, 63, 59, 0, 63, 54, 59, 0),
-	gsSPVertex(sam_yosemite_MetalSwitch_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_vtx_0 + 320, 46, 0),
+	gsSPVertex(sam_MetalSwitch_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_vtx_0 + 320, 46, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 2, 1, 0),
 	gsSP2Triangles(4, 5, 6, 0, 5, 7, 6, 0),
 	gsSP2Triangles(5, 8, 7, 0, 8, 9, 7, 0),
@@ -10754,7 +10754,7 @@ Gfx sam_yosemite_MetalSwitch_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_0[310] = {
+Vtx sam_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_0[310] = {
 	{{{-14, -29, 58}, 0, {736, -17}, {0xB5, 0xB7, 0x48, 0xFF}}},
 	{{{-16, 19, 78}, 0, {753, -145}, {0xBA, 0xFF, 0x6A, 0xFF}}},
 	{{{-46, 22, 0}, 0, {736, -17}, {0x81, 0xFD, 0x00, 0xFF}}},
@@ -11067,8 +11067,8 @@ Vtx sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_
 	{{{164, 69, 41}, 0, {876, -167}, {0x53, 0xAD, 0xCF, 0xFF}}},
 };
 
-Gfx sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0[] = {
-	gsSPVertex(sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_0 + 0, 63, 0),
+Gfx sam_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0[] = {
+	gsSPVertex(sam_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_0 + 0, 63, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(0, 4, 3, 0, 0, 5, 4, 0),
 	gsSP2Triangles(5, 0, 6, 0, 5, 6, 7, 0),
@@ -11103,7 +11103,7 @@ Gfx sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_
 	gsSP2Triangles(53, 55, 58, 0, 55, 59, 58, 0),
 	gsSP2Triangles(59, 60, 58, 0, 53, 58, 61, 0),
 	gsSP2Triangles(61, 51, 53, 0, 61, 62, 51, 0),
-	gsSPVertex(sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_0 + 63, 64, 0),
+	gsSPVertex(sam_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_0 + 63, 64, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(4, 5, 6, 0, 4, 6, 7, 0),
 	gsSP2Triangles(8, 4, 7, 0, 8, 9, 4, 0),
@@ -11140,7 +11140,7 @@ Gfx sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_
 	gsSP2Triangles(59, 50, 60, 0, 51, 60, 50, 0),
 	gsSP2Triangles(60, 51, 61, 0, 51, 62, 61, 0),
 	gsSP1Triangle(51, 63, 62, 0),
-	gsSPVertex(sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_0 + 127, 62, 0),
+	gsSPVertex(sam_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_0 + 127, 62, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(0, 3, 4, 0, 0, 4, 5, 0),
 	gsSP2Triangles(4, 6, 5, 0, 4, 7, 6, 0),
@@ -11181,7 +11181,7 @@ Gfx sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_
 	gsSP2Triangles(58, 59, 57, 0, 58, 60, 59, 0),
 	gsSP2Triangles(60, 48, 59, 0, 60, 61, 48, 0),
 	gsSP1Triangle(46, 48, 61, 0),
-	gsSPVertex(sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_0 + 189, 64, 0),
+	gsSPVertex(sam_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_0 + 189, 64, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(4, 3, 0, 0, 4, 0, 5, 0),
 	gsSP2Triangles(4, 5, 6, 0, 5, 7, 6, 0),
@@ -11227,7 +11227,7 @@ Gfx sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_
 	gsSP2Triangles(59, 60, 61, 0, 59, 61, 62, 0),
 	gsSP2Triangles(61, 40, 62, 0, 40, 47, 62, 0),
 	gsSP2Triangles(63, 47, 40, 0, 63, 40, 41, 0),
-	gsSPVertex(sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_0 + 253, 57, 0),
+	gsSPVertex(sam_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_0 + 253, 57, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(1, 3, 4, 0, 1, 4, 5, 0),
 	gsSP2Triangles(4, 6, 5, 0, 4, 7, 6, 0),
@@ -11270,7 +11270,7 @@ Gfx sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_vtx_0[309] = {
+Vtx sam_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_vtx_0[309] = {
 	{{{-14, -29, 58}, 0, {736, -17}, {0xB5, 0xB7, 0x48, 0xFF}}},
 	{{{-16, 19, 78}, 0, {753, -145}, {0xBA, 0xFF, 0x6A, 0xFF}}},
 	{{{-46, 22, 0}, 0, {736, -17}, {0x81, 0xFD, 0x00, 0xFF}}},
@@ -11582,8 +11582,8 @@ Vtx sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_Dead_Switch
 	{{{164, 69, 41}, 0, {876, -167}, {0x53, 0xAD, 0xCF, 0xFF}}},
 };
 
-Gfx sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_0[] = {
-	gsSPVertex(sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_vtx_0 + 0, 64, 0),
+Gfx sam_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_0[] = {
+	gsSPVertex(sam_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_vtx_0 + 0, 64, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(0, 4, 3, 0, 0, 5, 4, 0),
 	gsSP2Triangles(5, 0, 6, 0, 5, 6, 7, 0),
@@ -11619,7 +11619,7 @@ Gfx sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_Dead_Switch
 	gsSP2Triangles(60, 59, 57, 0, 60, 57, 61, 0),
 	gsSP2Triangles(57, 55, 61, 0, 61, 55, 62, 0),
 	gsSP1Triangle(60, 61, 63, 0),
-	gsSPVertex(sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_vtx_0 + 64, 64, 0),
+	gsSPVertex(sam_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_vtx_0 + 64, 64, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 4, 0),
 	gsSP2Triangles(0, 5, 3, 0, 5, 0, 6, 0),
 	gsSP2Triangles(7, 3, 5, 0, 8, 3, 7, 0),
@@ -11656,7 +11656,7 @@ Gfx sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_Dead_Switch
 	gsSP2Triangles(42, 57, 41, 0, 58, 38, 36, 0),
 	gsSP2Triangles(4, 58, 36, 0, 59, 60, 61, 0),
 	gsSP2Triangles(59, 62, 60, 0, 62, 59, 63, 0),
-	gsSPVertex(sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_vtx_0 + 128, 64, 0),
+	gsSPVertex(sam_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_vtx_0 + 128, 64, 0),
 	gsSP2Triangles(0, 1, 2, 0, 2, 1, 3, 0),
 	gsSP2Triangles(3, 1, 4, 0, 0, 2, 5, 0),
 	gsSP2Triangles(2, 6, 5, 0, 6, 7, 5, 0),
@@ -11687,7 +11687,7 @@ Gfx sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_Dead_Switch
 	gsSP2Triangles(61, 60, 62, 0, 60, 54, 62, 0),
 	gsSP2Triangles(60, 55, 54, 0, 62, 54, 63, 0),
 	gsSP1Triangle(56, 63, 54, 0),
-	gsSPVertex(sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_vtx_0 + 192, 64, 0),
+	gsSPVertex(sam_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_vtx_0 + 192, 64, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(4, 3, 0, 0, 5, 3, 4, 0),
 	gsSP2Triangles(4, 6, 5, 0, 4, 7, 6, 0),
@@ -11734,7 +11734,7 @@ Gfx sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_Dead_Switch
 	gsSP2Triangles(56, 57, 58, 0, 59, 57, 56, 0),
 	gsSP2Triangles(59, 60, 57, 0, 61, 60, 59, 0),
 	gsSP2Triangles(61, 62, 60, 0, 63, 62, 61, 0),
-	gsSPVertex(sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_vtx_0 + 256, 53, 0),
+	gsSPVertex(sam_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_vtx_0 + 256, 53, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(0, 4, 3, 0, 4, 5, 3, 0),
 	gsSP2Triangles(4, 6, 5, 0, 6, 7, 5, 0),
@@ -11775,59 +11775,59 @@ Gfx sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_Dead_Switch
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_MetalSwitch_Left_Wing_DL_mesh_layer_4_vtx_0[4] = {
+Vtx sam_MetalSwitch_Left_Wing_DL_mesh_layer_4_vtx_0[4] = {
 	{{{130, 186, 52}, 0, {1008, -16}, {0xFB, 0x26, 0x87, 0xFF}}},
 	{{{159, 26, 0}, 0, {1008, 2032}, {0xFB, 0x26, 0x87, 0xFF}}},
 	{{{75, 11, -1}, 0, {-16, 2032}, {0xFB, 0x26, 0x87, 0xFF}}},
 	{{{46, 171, 51}, 0, {-16, -16}, {0xFB, 0x26, 0x87, 0xFF}}},
 };
 
-Gfx sam_yosemite_MetalSwitch_Left_Wing_DL_mesh_layer_4_tri_0[] = {
-	gsSPVertex(sam_yosemite_MetalSwitch_Left_Wing_DL_mesh_layer_4_vtx_0 + 0, 4, 0),
+Gfx sam_MetalSwitch_Left_Wing_DL_mesh_layer_4_tri_0[] = {
+	gsSPVertex(sam_MetalSwitch_Left_Wing_DL_mesh_layer_4_vtx_0 + 0, 4, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_MetalSwitch_Left_Wing_DL_mesh_layer_4_vtx_1[4] = {
+Vtx sam_MetalSwitch_Left_Wing_DL_mesh_layer_4_vtx_1[4] = {
 	{{{46, 171, 51}, 0, {1008, -16}, {0xFB, 0x26, 0x87, 0xFF}}},
 	{{{-8, -4, -2}, 0, {-16, 2032}, {0xFB, 0x26, 0x87, 0xFF}}},
 	{{{-37, 156, 50}, 0, {-16, -16}, {0xFB, 0x26, 0x87, 0xFF}}},
 	{{{75, 11, -1}, 0, {1008, 2032}, {0xFB, 0x26, 0x87, 0xFF}}},
 };
 
-Gfx sam_yosemite_MetalSwitch_Left_Wing_DL_mesh_layer_4_tri_1[] = {
-	gsSPVertex(sam_yosemite_MetalSwitch_Left_Wing_DL_mesh_layer_4_vtx_1 + 0, 4, 0),
+Gfx sam_MetalSwitch_Left_Wing_DL_mesh_layer_4_tri_1[] = {
+	gsSPVertex(sam_MetalSwitch_Left_Wing_DL_mesh_layer_4_vtx_1 + 0, 4, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_MetalSwitch_Right_Wing_DL_mesh_layer_4_vtx_0[4] = {
+Vtx sam_MetalSwitch_Right_Wing_DL_mesh_layer_4_vtx_0[4] = {
 	{{{130, 186, -52}, 0, {1008, -16}, {0xFB, 0x26, 0x79, 0xFF}}},
 	{{{46, 171, -51}, 0, {-16, -16}, {0xFB, 0x26, 0x79, 0xFF}}},
 	{{{75, 11, 1}, 0, {-16, 2032}, {0xFB, 0x26, 0x79, 0xFF}}},
 	{{{159, 26, 0}, 0, {1008, 2032}, {0xFB, 0x26, 0x79, 0xFF}}},
 };
 
-Gfx sam_yosemite_MetalSwitch_Right_Wing_DL_mesh_layer_4_tri_0[] = {
-	gsSPVertex(sam_yosemite_MetalSwitch_Right_Wing_DL_mesh_layer_4_vtx_0 + 0, 4, 0),
+Gfx sam_MetalSwitch_Right_Wing_DL_mesh_layer_4_tri_0[] = {
+	gsSPVertex(sam_MetalSwitch_Right_Wing_DL_mesh_layer_4_vtx_0 + 0, 4, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_MetalSwitch_Right_Wing_DL_mesh_layer_4_vtx_1[4] = {
+Vtx sam_MetalSwitch_Right_Wing_DL_mesh_layer_4_vtx_1[4] = {
 	{{{46, 171, -51}, 0, {1008, -16}, {0xFB, 0x26, 0x79, 0xFF}}},
 	{{{-37, 156, -50}, 0, {-16, -16}, {0xFB, 0x26, 0x79, 0xFF}}},
 	{{{-8, -4, 2}, 0, {-16, 2032}, {0xFB, 0x26, 0x79, 0xFF}}},
 	{{{75, 11, 1}, 0, {1008, 2032}, {0xFB, 0x26, 0x79, 0xFF}}},
 };
 
-Gfx sam_yosemite_MetalSwitch_Right_Wing_DL_mesh_layer_4_tri_1[] = {
-	gsSPVertex(sam_yosemite_MetalSwitch_Right_Wing_DL_mesh_layer_4_vtx_1 + 0, 4, 0),
+Gfx sam_MetalSwitch_Right_Wing_DL_mesh_layer_4_tri_1[] = {
+	gsSPVertex(sam_MetalSwitch_Right_Wing_DL_mesh_layer_4_vtx_1 + 0, 4, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_MetalSwitch_Left_Arm_Color_mesh_layer_1_vtx_0[30] = {
+Vtx sam_MetalSwitch_Left_Arm_Color_mesh_layer_1_vtx_0[30] = {
 	{{{107, -18, 20}, 0, {820, -17}, {0x48, 0xB6, 0x4A, 0xFF}}},
 	{{{109, -23, -1}, 0, {1058, -1}, {0x50, 0x9F, 0xEB, 0xFF}}},
 	{{{122, -2, 6}, 0, {820, -17}, {0x7E, 0xFC, 0x0B, 0xFF}}},
@@ -11860,8 +11860,8 @@ Vtx sam_yosemite_MetalSwitch_Left_Arm_Color_mesh_layer_1_vtx_0[30] = {
 	{{{-5, -21, -15}, 0, {1058, -1}, {0x9D, 0xB8, 0xDE, 0xFF}}},
 };
 
-Gfx sam_yosemite_MetalSwitch_Left_Arm_Color_mesh_layer_1_tri_0[] = {
-	gsSPVertex(sam_yosemite_MetalSwitch_Left_Arm_Color_mesh_layer_1_vtx_0 + 0, 30, 0),
+Gfx sam_MetalSwitch_Left_Arm_Color_mesh_layer_1_tri_0[] = {
+	gsSPVertex(sam_MetalSwitch_Left_Arm_Color_mesh_layer_1_vtx_0 + 0, 30, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 0, 3, 0),
 	gsSP2Triangles(0, 4, 3, 0, 0, 5, 4, 0),
 	gsSP2Triangles(5, 0, 6, 0, 5, 7, 4, 0),
@@ -11888,7 +11888,7 @@ Gfx sam_yosemite_MetalSwitch_Left_Arm_Color_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_MetalSwitch_Left_Forearm_mesh_layer_1_vtx_0[30] = {
+Vtx sam_MetalSwitch_Left_Forearm_mesh_layer_1_vtx_0[30] = {
 	{{{92, 9, -3}, 0, {1058, -288}, {0x5B, 0x44, 0xC7, 0xFF}}},
 	{{{91, 14, 16}, 0, {820, -273}, {0x51, 0x5A, 0x26, 0xFF}}},
 	{{{90, -5, 10}, 0, {1058, -288}, {0x7E, 0xFB, 0x0D, 0xFF}}},
@@ -11921,8 +11921,8 @@ Vtx sam_yosemite_MetalSwitch_Left_Forearm_mesh_layer_1_vtx_0[30] = {
 	{{{-20, -2, -3}, 0, {820, -273}, {0x81, 0x03, 0xF8, 0xFF}}},
 };
 
-Gfx sam_yosemite_MetalSwitch_Left_Forearm_mesh_layer_1_tri_0[] = {
-	gsSPVertex(sam_yosemite_MetalSwitch_Left_Forearm_mesh_layer_1_vtx_0 + 0, 30, 0),
+Gfx sam_MetalSwitch_Left_Forearm_mesh_layer_1_tri_0[] = {
+	gsSPVertex(sam_MetalSwitch_Left_Forearm_mesh_layer_1_vtx_0 + 0, 30, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(4, 3, 0, 0, 4, 0, 5, 0),
 	gsSP2Triangles(5, 0, 6, 0, 7, 4, 5, 0),
@@ -11944,7 +11944,7 @@ Gfx sam_yosemite_MetalSwitch_Left_Forearm_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_MetalSwitch_Left_Hand_DL_mesh_layer_1_vtx_0[32] = {
+Vtx sam_MetalSwitch_Left_Hand_DL_mesh_layer_1_vtx_0[32] = {
 	{{{7, -9, 0}, 0, {-4, -145}, {0xD5, 0x8A, 0xEF, 0xFF}}},
 	{{{6, -8, 8}, 0, {-4, -273}, {0xBE, 0xAE, 0x47, 0xFF}}},
 	{{{-8, -4, -1}, 0, {-4, -145}, {0xA4, 0x42, 0x39, 0xFF}}},
@@ -11979,8 +11979,8 @@ Vtx sam_yosemite_MetalSwitch_Left_Hand_DL_mesh_layer_1_vtx_0[32] = {
 	{{{-8, -4, -1}, 0, {508, -529}, {0xA4, 0x42, 0x39, 0xFF}}},
 };
 
-Gfx sam_yosemite_MetalSwitch_Left_Hand_DL_mesh_layer_1_tri_0[] = {
-	gsSPVertex(sam_yosemite_MetalSwitch_Left_Hand_DL_mesh_layer_1_vtx_0 + 0, 32, 0),
+Gfx sam_MetalSwitch_Left_Hand_DL_mesh_layer_1_tri_0[] = {
+	gsSPVertex(sam_MetalSwitch_Left_Hand_DL_mesh_layer_1_vtx_0 + 0, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(0, 4, 3, 0, 5, 4, 0, 0),
 	gsSP2Triangles(5, 0, 6, 0, 5, 7, 4, 0),
@@ -12001,7 +12001,7 @@ Gfx sam_yosemite_MetalSwitch_Left_Hand_DL_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_MetalSwitch_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_vtx_0[26] = {
+Vtx sam_MetalSwitch_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_vtx_0[26] = {
 	{{{46, -21, -16}, 0, {-228, -513}, {0x4B, 0xA4, 0xD4, 0x00}}},
 	{{{42, -4, 12}, 0, {-228, -513}, {0x43, 0xC1, 0x58, 0x00}}},
 	{{{20, -14, 12}, 0, {-228, -513}, {0x0A, 0xC2, 0x6E, 0x00}}},
@@ -12030,8 +12030,8 @@ Vtx sam_yosemite_MetalSwitch_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_la
 	{{{0, 23, -24}, 0, {-228, -513}, {0xDB, 0x1E, 0x8B, 0x00}}},
 };
 
-Gfx sam_yosemite_MetalSwitch_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_tri_0[] = {
-	gsSPVertex(sam_yosemite_MetalSwitch_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_vtx_0 + 0, 26, 0),
+Gfx sam_MetalSwitch_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_tri_0[] = {
+	gsSPVertex(sam_MetalSwitch_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_vtx_0 + 0, 26, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(4, 3, 0, 0, 0, 5, 4, 0),
 	gsSP2Triangles(6, 5, 0, 0, 7, 5, 6, 0),
@@ -12058,7 +12058,7 @@ Gfx sam_yosemite_MetalSwitch_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_la
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_MetalSwitch_Right_Arm_Color_mesh_layer_1_vtx_0[30] = {
+Vtx sam_MetalSwitch_Right_Arm_Color_mesh_layer_1_vtx_0[30] = {
 	{{{106, -18, -21}, 0, {820, -17}, {0x48, 0xB6, 0xB6, 0xFF}}},
 	{{{121, -2, -7}, 0, {820, -17}, {0x7E, 0xFC, 0xF5, 0xFF}}},
 	{{{108, -23, 0}, 0, {1058, -1}, {0x50, 0x9F, 0x15, 0xFF}}},
@@ -12091,8 +12091,8 @@ Vtx sam_yosemite_MetalSwitch_Right_Arm_Color_mesh_layer_1_vtx_0[30] = {
 	{{{-3, 18, 22}, 0, {1058, -288}, {0xA6, 0x3E, 0x40, 0xFF}}},
 };
 
-Gfx sam_yosemite_MetalSwitch_Right_Arm_Color_mesh_layer_1_tri_0[] = {
-	gsSPVertex(sam_yosemite_MetalSwitch_Right_Arm_Color_mesh_layer_1_vtx_0 + 0, 30, 0),
+Gfx sam_MetalSwitch_Right_Arm_Color_mesh_layer_1_tri_0[] = {
+	gsSPVertex(sam_MetalSwitch_Right_Arm_Color_mesh_layer_1_vtx_0 + 0, 30, 0),
 	gsSP2Triangles(0, 1, 2, 0, 2, 3, 0, 0),
 	gsSP2Triangles(2, 4, 3, 0, 5, 4, 2, 0),
 	gsSP2Triangles(2, 6, 5, 0, 5, 7, 4, 0),
@@ -12119,7 +12119,7 @@ Gfx sam_yosemite_MetalSwitch_Right_Arm_Color_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_MetalSwitch_Right_Forearm_mesh_layer_1_vtx_0[30] = {
+Vtx sam_MetalSwitch_Right_Forearm_mesh_layer_1_vtx_0[30] = {
 	{{{90, 14, -17}, 0, {820, -273}, {0x51, 0x5A, 0xDA, 0xFF}}},
 	{{{91, 9, 2}, 0, {1058, -288}, {0x5B, 0x44, 0x39, 0xFF}}},
 	{{{89, -5, -11}, 0, {820, -273}, {0x7E, 0xFB, 0xF3, 0xFF}}},
@@ -12152,8 +12152,8 @@ Vtx sam_yosemite_MetalSwitch_Right_Forearm_mesh_layer_1_vtx_0[30] = {
 	{{{-21, -2, 2}, 0, {820, -273}, {0x81, 0x03, 0x08, 0xFF}}},
 };
 
-Gfx sam_yosemite_MetalSwitch_Right_Forearm_mesh_layer_1_tri_0[] = {
-	gsSPVertex(sam_yosemite_MetalSwitch_Right_Forearm_mesh_layer_1_vtx_0 + 0, 30, 0),
+Gfx sam_MetalSwitch_Right_Forearm_mesh_layer_1_tri_0[] = {
+	gsSPVertex(sam_MetalSwitch_Right_Forearm_mesh_layer_1_vtx_0 + 0, 30, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(3, 0, 4, 0, 4, 0, 5, 0),
 	gsSP2Triangles(5, 0, 6, 0, 4, 5, 7, 0),
@@ -12175,7 +12175,7 @@ Gfx sam_yosemite_MetalSwitch_Right_Forearm_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_MetalSwitch_Right_Hand_DL_mesh_layer_1_vtx_0[32] = {
+Vtx sam_MetalSwitch_Right_Hand_DL_mesh_layer_1_vtx_0[32] = {
 	{{{7, -9, -1}, 0, {-4, -145}, {0xD5, 0x8A, 0x11, 0xFF}}},
 	{{{-8, -4, 0}, 0, {-4, -273}, {0xA4, 0x42, 0xC6, 0xFF}}},
 	{{{6, -8, -9}, 0, {-4, -273}, {0xBE, 0xAE, 0xB9, 0xFF}}},
@@ -12210,8 +12210,8 @@ Vtx sam_yosemite_MetalSwitch_Right_Hand_DL_mesh_layer_1_vtx_0[32] = {
 	{{{2, 9, 7}, 0, {1592, 111}, {0xA3, 0x10, 0x55, 0xFF}}},
 };
 
-Gfx sam_yosemite_MetalSwitch_Right_Hand_DL_mesh_layer_1_tri_0[] = {
-	gsSPVertex(sam_yosemite_MetalSwitch_Right_Hand_DL_mesh_layer_1_vtx_0 + 0, 32, 0),
+Gfx sam_MetalSwitch_Right_Hand_DL_mesh_layer_1_tri_0[] = {
+	gsSPVertex(sam_MetalSwitch_Right_Hand_DL_mesh_layer_1_vtx_0 + 0, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(0, 3, 4, 0, 4, 3, 5, 0),
 	gsSP2Triangles(4, 5, 6, 0, 6, 5, 7, 0),
@@ -12232,7 +12232,7 @@ Gfx sam_yosemite_MetalSwitch_Right_Hand_DL_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_MetalSwitch_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_vtx_0[25] = {
+Vtx sam_MetalSwitch_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_vtx_0[25] = {
 	{{{73, 23, 13}, 0, {-228, -513}, {0x51, 0xDD, 0x5B, 0x00}}},
 	{{{66, 47, 13}, 0, {-228, -513}, {0x39, 0x46, 0x5A, 0x00}}},
 	{{{43, 41, 10}, 0, {-228, -513}, {0xFD, 0x21, 0x7B, 0x00}}},
@@ -12260,8 +12260,8 @@ Vtx sam_yosemite_MetalSwitch_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_
 	{{{-4, 2, 0}, 0, {-228, -513}, {0x8B, 0xCF, 0xFC, 0x00}}},
 };
 
-Gfx sam_yosemite_MetalSwitch_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_tri_0[] = {
-	gsSPVertex(sam_yosemite_MetalSwitch_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_vtx_0 + 0, 25, 0),
+Gfx sam_MetalSwitch_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_tri_0[] = {
+	gsSPVertex(sam_MetalSwitch_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_vtx_0 + 0, 25, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(4, 3, 0, 0, 4, 0, 5, 0),
 	gsSP2Triangles(5, 0, 2, 0, 5, 2, 6, 0),
@@ -12288,7 +12288,7 @@ Gfx sam_yosemite_MetalSwitch_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_MetalSwitch_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_vtx_0[81] = {
+Vtx sam_MetalSwitch_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_vtx_0[81] = {
 	{{{-8, 31, -5}, 0, {-228, -513}, {0x8B, 0x2B, 0x19, 0xFE}}},
 	{{{-6, 21, 17}, 0, {-228, -513}, {0xA7, 0x1A, 0x57, 0x00}}},
 	{{{5, 27, 19}, 0, {-228, -513}, {0xC9, 0x2E, 0x69, 0x00}}},
@@ -12372,8 +12372,8 @@ Vtx sam_yosemite_MetalSwitch_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mes
 	{{{53, -8, 4}, 0, {-228, -513}, {0x47, 0x97, 0xFA, 0xFE}}},
 };
 
-Gfx sam_yosemite_MetalSwitch_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_tri_0[] = {
-	gsSPVertex(sam_yosemite_MetalSwitch_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_vtx_0 + 0, 64, 0),
+Gfx sam_MetalSwitch_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_tri_0[] = {
+	gsSPVertex(sam_MetalSwitch_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_vtx_0 + 0, 64, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 4, 5, 0),
 	gsSP2Triangles(6, 7, 8, 0, 9, 10, 11, 0),
 	gsSP2Triangles(4, 12, 13, 0, 14, 15, 16, 0),
@@ -12397,7 +12397,7 @@ Gfx sam_yosemite_MetalSwitch_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mes
 	gsSP2Triangles(54, 57, 55, 0, 58, 59, 60, 0),
 	gsSP2Triangles(59, 58, 61, 0, 58, 62, 61, 0),
 	gsSP1Triangle(63, 62, 58, 0),
-	gsSPVertex(sam_yosemite_MetalSwitch_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_vtx_0 + 64, 17, 0),
+	gsSPVertex(sam_MetalSwitch_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_vtx_0 + 64, 17, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(2, 4, 3, 0, 5, 4, 2, 0),
 	gsSP2Triangles(1, 6, 7, 0, 8, 7, 6, 0),
@@ -12407,7 +12407,7 @@ Gfx sam_yosemite_MetalSwitch_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mes
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_MetalSwitch_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_0[82] = {
+Vtx sam_MetalSwitch_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_0[82] = {
 	{{{-241, 25, 87}, 0, {-260, 495}, {0xEF, 0x08, 0x7E, 0xFF}}},
 	{{{12, 30, 121}, 0, {-260, 155}, {0x1A, 0x09, 0x7C, 0xFF}}},
 	{{{-170, 165, 137}, 0, {1788, 367}, {0xF9, 0xE7, 0x7C, 0xFF}}},
@@ -12492,8 +12492,8 @@ Vtx sam_yosemite_MetalSwitch_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_la
 	{{{54, -5, -4}, 0, {-228, -513}, {0x65, 0xBF, 0xD6, 0xFE}}},
 };
 
-Gfx sam_yosemite_MetalSwitch_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_0[] = {
-	gsSPVertex(sam_yosemite_MetalSwitch_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_0 + 0, 64, 0),
+Gfx sam_MetalSwitch_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_0[] = {
+	gsSPVertex(sam_MetalSwitch_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_0 + 0, 64, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(3, 4, 1, 0, 5, 1, 4, 0),
 	gsSP2Triangles(5, 6, 1, 0, 7, 6, 5, 0),
@@ -12531,7 +12531,7 @@ Gfx sam_yosemite_MetalSwitch_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_la
 	gsSP2Triangles(60, 59, 54, 0, 56, 60, 54, 0),
 	gsSP2Triangles(61, 60, 56, 0, 56, 62, 61, 0),
 	gsSP2Triangles(62, 56, 63, 0, 56, 55, 63, 0),
-	gsSPVertex(sam_yosemite_MetalSwitch_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_0 + 64, 18, 0),
+	gsSPVertex(sam_MetalSwitch_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_0 + 64, 18, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(4, 0, 3, 0, 3, 5, 4, 0),
 	gsSP2Triangles(5, 3, 6, 0, 6, 7, 5, 0),
@@ -12548,7 +12548,7 @@ Gfx sam_yosemite_MetalSwitch_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_la
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_MetalSwitch_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_0[82] = {
+Vtx sam_MetalSwitch_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_0[82] = {
 	{{{-241, 25, 87}, 0, {-260, 495}, {0xEF, 0x08, 0x7E, 0xFF}}},
 	{{{12, 30, 121}, 0, {-260, 155}, {0x1A, 0x09, 0x7C, 0xFF}}},
 	{{{-170, 165, 137}, 0, {1788, 367}, {0xF9, 0xE7, 0x7C, 0xFF}}},
@@ -12633,8 +12633,8 @@ Vtx sam_yosemite_MetalSwitch_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_C
 	{{{54, -5, -4}, 0, {-228, -513}, {0x65, 0xBF, 0xD6, 0xFE}}},
 };
 
-Gfx sam_yosemite_MetalSwitch_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_0[] = {
-	gsSPVertex(sam_yosemite_MetalSwitch_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_0 + 0, 64, 0),
+Gfx sam_MetalSwitch_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_0[] = {
+	gsSPVertex(sam_MetalSwitch_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_0 + 0, 64, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(3, 4, 1, 0, 5, 1, 4, 0),
 	gsSP2Triangles(5, 6, 1, 0, 7, 6, 5, 0),
@@ -12672,7 +12672,7 @@ Gfx sam_yosemite_MetalSwitch_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_C
 	gsSP2Triangles(60, 59, 54, 0, 56, 60, 54, 0),
 	gsSP2Triangles(61, 60, 56, 0, 56, 62, 61, 0),
 	gsSP2Triangles(62, 56, 63, 0, 56, 55, 63, 0),
-	gsSPVertex(sam_yosemite_MetalSwitch_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_0 + 64, 18, 0),
+	gsSPVertex(sam_MetalSwitch_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_0 + 64, 18, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(4, 0, 3, 0, 3, 5, 4, 0),
 	gsSP2Triangles(5, 3, 6, 0, 6, 7, 5, 0),
@@ -12689,7 +12689,7 @@ Gfx sam_yosemite_MetalSwitch_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_C
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_MetalSwitch_Right_Hand_Wing_Cap_Swtich_Option_Wings_mesh_layer_4_vtx_0[8] = {
+Vtx sam_MetalSwitch_Right_Hand_Wing_Cap_Swtich_Option_Wings_mesh_layer_4_vtx_0[8] = {
 	{{{171, -110, 30}, 0, {1008, 2032}, {0xBA, 0xA9, 0x3C, 0xFF}}},
 	{{{101, -52, 32}, 0, {-16, 2032}, {0xB9, 0xAA, 0x3C, 0xFF}}},
 	{{{113, -174, -129}, 0, {1008, -16}, {0xBA, 0xA9, 0x3C, 0xFF}}},
@@ -12700,14 +12700,14 @@ Vtx sam_yosemite_MetalSwitch_Right_Hand_Wing_Cap_Swtich_Option_Wings_mesh_layer_
 	{{{40, 142, -144}, 0, {-16, -16}, {0xB8, 0x5C, 0x30, 0xFF}}},
 };
 
-Gfx sam_yosemite_MetalSwitch_Right_Hand_Wing_Cap_Swtich_Option_Wings_mesh_layer_4_tri_0[] = {
-	gsSPVertex(sam_yosemite_MetalSwitch_Right_Hand_Wing_Cap_Swtich_Option_Wings_mesh_layer_4_vtx_0 + 0, 8, 0),
+Gfx sam_MetalSwitch_Right_Hand_Wing_Cap_Swtich_Option_Wings_mesh_layer_4_tri_0[] = {
+	gsSPVertex(sam_MetalSwitch_Right_Hand_Wing_Cap_Swtich_Option_Wings_mesh_layer_4_vtx_0 + 0, 8, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
 	gsSP2Triangles(4, 5, 6, 0, 4, 7, 5, 0),
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_MetalSwitch_Right_Hand_Wing_Cap_Swtich_Option_Wings_mesh_layer_4_vtx_1[8] = {
+Vtx sam_MetalSwitch_Right_Hand_Wing_Cap_Swtich_Option_Wings_mesh_layer_4_vtx_1[8] = {
 	{{{101, -52, 32}, 0, {1008, 2032}, {0xB9, 0xAA, 0x3C, 0xFF}}},
 	{{{33, 6, 35}, 0, {-16, 2032}, {0xB9, 0xAA, 0x3C, 0xFF}}},
 	{{{43, -115, -127}, 0, {1008, -16}, {0xB9, 0xAA, 0x3C, 0xFF}}},
@@ -12718,14 +12718,14 @@ Vtx sam_yosemite_MetalSwitch_Right_Hand_Wing_Cap_Swtich_Option_Wings_mesh_layer_
 	{{{-27, 84, -134}, 0, {-16, -16}, {0xB8, 0x5C, 0x31, 0xFF}}},
 };
 
-Gfx sam_yosemite_MetalSwitch_Right_Hand_Wing_Cap_Swtich_Option_Wings_mesh_layer_4_tri_1[] = {
-	gsSPVertex(sam_yosemite_MetalSwitch_Right_Hand_Wing_Cap_Swtich_Option_Wings_mesh_layer_4_vtx_1 + 0, 8, 0),
+Gfx sam_MetalSwitch_Right_Hand_Wing_Cap_Swtich_Option_Wings_mesh_layer_4_tri_1[] = {
+	gsSPVertex(sam_MetalSwitch_Right_Hand_Wing_Cap_Swtich_Option_Wings_mesh_layer_4_vtx_1 + 0, 8, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
 	gsSP2Triangles(4, 5, 6, 0, 4, 7, 5, 0),
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_MetalSwitch_Left_Thigh_Color_mesh_layer_1_vtx_0[30] = {
+Vtx sam_MetalSwitch_Left_Thigh_Color_mesh_layer_1_vtx_0[30] = {
 	{{{38, 1, -2}, 0, {1058, -1}, {0x7F, 0x04, 0x08, 0xFF}}},
 	{{{35, 10, 1}, 0, {1025, -3}, {0x5C, 0x53, 0x1D, 0xFF}}},
 	{{{35, 2, 8}, 0, {1085, -124}, {0x5D, 0x15, 0x54, 0xFF}}},
@@ -12758,8 +12758,8 @@ Vtx sam_yosemite_MetalSwitch_Left_Thigh_Color_mesh_layer_1_vtx_0[30] = {
 	{{{-13, 11, 2}, 0, {1058, -1}, {0xA4, 0x54, 0x19, 0xFF}}},
 };
 
-Gfx sam_yosemite_MetalSwitch_Left_Thigh_Color_mesh_layer_1_tri_0[] = {
-	gsSPVertex(sam_yosemite_MetalSwitch_Left_Thigh_Color_mesh_layer_1_vtx_0 + 0, 30, 0),
+Gfx sam_MetalSwitch_Left_Thigh_Color_mesh_layer_1_tri_0[] = {
+	gsSPVertex(sam_MetalSwitch_Left_Thigh_Color_mesh_layer_1_vtx_0 + 0, 30, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 2, 1, 0),
 	gsSP2Triangles(4, 3, 1, 0, 4, 1, 5, 0),
 	gsSP2Triangles(6, 5, 1, 0, 7, 4, 5, 0),
@@ -12786,7 +12786,7 @@ Gfx sam_yosemite_MetalSwitch_Left_Thigh_Color_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_MetalSwitch_Left_Leg_mesh_layer_1_vtx_0[36] = {
+Vtx sam_MetalSwitch_Left_Leg_mesh_layer_1_vtx_0[36] = {
 	{{{-4, 3, 9}, 0, {1086, -161}, {0xA4, 0x12, 0x55, 0xFF}}},
 	{{{-3, 10, 3}, 0, {1062, -17}, {0xA4, 0x55, 0x15, 0xFF}}},
 	{{{-5, 1, 1}, 0, {1089, -145}, {0x82, 0xFC, 0xF3, 0xFF}}},
@@ -12825,8 +12825,8 @@ Vtx sam_yosemite_MetalSwitch_Left_Leg_mesh_layer_1_vtx_0[36] = {
 	{{{19, 18, 5}, 0, {1058, -1}, {0xBF, 0x6C, 0x13, 0xFF}}},
 };
 
-Gfx sam_yosemite_MetalSwitch_Left_Leg_mesh_layer_1_tri_0[] = {
-	gsSPVertex(sam_yosemite_MetalSwitch_Left_Leg_mesh_layer_1_vtx_0 + 0, 36, 0),
+Gfx sam_MetalSwitch_Left_Leg_mesh_layer_1_tri_0[] = {
+	gsSPVertex(sam_MetalSwitch_Left_Leg_mesh_layer_1_vtx_0 + 0, 36, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(4, 3, 0, 0, 4, 0, 5, 0),
 	gsSP2Triangles(5, 0, 6, 0, 7, 4, 5, 0),
@@ -12855,7 +12855,7 @@ Gfx sam_yosemite_MetalSwitch_Left_Leg_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_MetalSwitch_Left_Shoe_mesh_layer_1_vtx_0[29] = {
+Vtx sam_MetalSwitch_Left_Shoe_mesh_layer_1_vtx_0[29] = {
 	{{{-5, 0, 0}, 0, {1058, -1}, {0x95, 0xBB, 0x04, 0xFF}}},
 	{{{2, -1, -1}, 0, {820, -273}, {0xEB, 0x83, 0xFF, 0xFF}}},
 	{{{1, -1, 3}, 0, {1058, -288}, {0xEB, 0x8F, 0x36, 0xFF}}},
@@ -12887,8 +12887,8 @@ Vtx sam_yosemite_MetalSwitch_Left_Shoe_mesh_layer_1_vtx_0[29] = {
 	{{{-1, 12, -9}, 0, {820, -17}, {0xE0, 0x59, 0xAC, 0xFF}}},
 };
 
-Gfx sam_yosemite_MetalSwitch_Left_Shoe_mesh_layer_1_tri_0[] = {
-	gsSPVertex(sam_yosemite_MetalSwitch_Left_Shoe_mesh_layer_1_vtx_0 + 0, 29, 0),
+Gfx sam_MetalSwitch_Left_Shoe_mesh_layer_1_tri_0[] = {
+	gsSPVertex(sam_MetalSwitch_Left_Shoe_mesh_layer_1_vtx_0 + 0, 29, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(3, 0, 4, 0, 4, 0, 5, 0),
 	gsSP2Triangles(0, 6, 5, 0, 0, 7, 6, 0),
@@ -12919,7 +12919,7 @@ Gfx sam_yosemite_MetalSwitch_Left_Shoe_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_MetalSwitch_Right_Thigh_Color_mesh_layer_1_vtx_0[30] = {
+Vtx sam_MetalSwitch_Right_Thigh_Color_mesh_layer_1_vtx_0[30] = {
 	{{{38, 1, 2}, 0, {1058, -1}, {0x7F, 0x04, 0xF8, 0xFF}}},
 	{{{35, 2, -8}, 0, {1085, -124}, {0x5D, 0x15, 0xAC, 0xFF}}},
 	{{{35, 10, -1}, 0, {1025, -3}, {0x5C, 0x53, 0xE3, 0xFF}}},
@@ -12952,8 +12952,8 @@ Vtx sam_yosemite_MetalSwitch_Right_Thigh_Color_mesh_layer_1_vtx_0[30] = {
 	{{{-13, -1, 11}, 0, {820, -145}, {0x9D, 0xF1, 0x4E, 0xFF}}},
 };
 
-Gfx sam_yosemite_MetalSwitch_Right_Thigh_Color_mesh_layer_1_tri_0[] = {
-	gsSPVertex(sam_yosemite_MetalSwitch_Right_Thigh_Color_mesh_layer_1_vtx_0 + 0, 30, 0),
+Gfx sam_MetalSwitch_Right_Thigh_Color_mesh_layer_1_tri_0[] = {
+	gsSPVertex(sam_MetalSwitch_Right_Thigh_Color_mesh_layer_1_vtx_0 + 0, 30, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 2, 1, 0),
 	gsSP2Triangles(3, 1, 4, 0, 4, 1, 5, 0),
 	gsSP2Triangles(6, 5, 1, 0, 4, 5, 7, 0),
@@ -12980,7 +12980,7 @@ Gfx sam_yosemite_MetalSwitch_Right_Thigh_Color_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_MetalSwitch_Right_Leg_mesh_layer_1_vtx_0[36] = {
+Vtx sam_MetalSwitch_Right_Leg_mesh_layer_1_vtx_0[36] = {
 	{{{-4, 3, -9}, 0, {1086, -161}, {0xA4, 0x12, 0xAB, 0xFF}}},
 	{{{-5, 1, -1}, 0, {1089, -145}, {0x82, 0xFC, 0x0D, 0xFF}}},
 	{{{-3, 10, -3}, 0, {1062, -17}, {0xA4, 0x55, 0xEB, 0xFF}}},
@@ -13019,8 +13019,8 @@ Vtx sam_yosemite_MetalSwitch_Right_Leg_mesh_layer_1_vtx_0[36] = {
 	{{{43, 8, -1}, 0, {1058, -1}, {0x5C, 0x52, 0xE0, 0xFF}}},
 };
 
-Gfx sam_yosemite_MetalSwitch_Right_Leg_mesh_layer_1_tri_0[] = {
-	gsSPVertex(sam_yosemite_MetalSwitch_Right_Leg_mesh_layer_1_vtx_0 + 0, 36, 0),
+Gfx sam_MetalSwitch_Right_Leg_mesh_layer_1_tri_0[] = {
+	gsSPVertex(sam_MetalSwitch_Right_Leg_mesh_layer_1_vtx_0 + 0, 36, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 0, 2, 0),
 	gsSP2Triangles(3, 2, 4, 0, 4, 2, 5, 0),
 	gsSP2Triangles(2, 6, 5, 0, 4, 5, 7, 0),
@@ -13049,7 +13049,7 @@ Gfx sam_yosemite_MetalSwitch_Right_Leg_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx sam_yosemite_MetalSwitch_Right_Shoe_DL_mesh_layer_1_vtx_0[29] = {
+Vtx sam_MetalSwitch_Right_Shoe_DL_mesh_layer_1_vtx_0[29] = {
 	{{{-5, 0, 0}, 0, {1058, -1}, {0x95, 0xBB, 0xFC, 0xFF}}},
 	{{{-3, 0, -3}, 0, {1089, -145}, {0xB8, 0xA8, 0xC8, 0xFF}}},
 	{{{1, -1, -3}, 0, {1058, -288}, {0xEB, 0x8F, 0xCA, 0xFF}}},
@@ -13081,8 +13081,8 @@ Vtx sam_yosemite_MetalSwitch_Right_Shoe_DL_mesh_layer_1_vtx_0[29] = {
 	{{{35, -8, -1}, 0, {1058, -288}, {0x4B, 0xCF, 0xA6, 0xFF}}},
 };
 
-Gfx sam_yosemite_MetalSwitch_Right_Shoe_DL_mesh_layer_1_tri_0[] = {
-	gsSPVertex(sam_yosemite_MetalSwitch_Right_Shoe_DL_mesh_layer_1_vtx_0 + 0, 29, 0),
+Gfx sam_MetalSwitch_Right_Shoe_DL_mesh_layer_1_tri_0[] = {
+	gsSPVertex(sam_MetalSwitch_Right_Shoe_DL_mesh_layer_1_vtx_0 + 0, 29, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(0, 4, 3, 0, 5, 4, 0, 0),
 	gsSP2Triangles(6, 5, 0, 0, 6, 0, 7, 0),
@@ -13114,7 +13114,7 @@ Gfx sam_yosemite_MetalSwitch_Right_Shoe_DL_mesh_layer_1_tri_0[] = {
 };
 
 
-Gfx mat_sam_yosemite_Pants__PANTS_[] = {
+Gfx mat_sam_Pants__PANTS_[] = {
 	gsSPCopyLightsPlayerPart(PANTS),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
@@ -13123,15 +13123,15 @@ Gfx mat_sam_yosemite_Pants__PANTS_[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_sam_yosemite_Pants__PANTS_[] = {
+Gfx mat_revert_sam_Pants__PANTS_[] = {
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_sam_yosemite_Belt[] = {
+Gfx mat_sam_Belt[] = {
 	gsSPClearGeometryMode(G_CULL_BACK),
-	gsSPSetLights1(sam_yosemite_Belt_lights),
+	gsSPSetLights1(sam_Belt_lights),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
@@ -13139,14 +13139,14 @@ Gfx mat_sam_yosemite_Belt[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_sam_yosemite_Belt[] = {
+Gfx mat_revert_sam_Belt[] = {
 	gsSPSetGeometryMode(G_CULL_BACK),
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_sam_yosemite_Logo__EMBLEM_[] = {
+Gfx mat_sam_Logo__EMBLEM_[] = {
 	gsSPClearGeometryMode(G_CULL_BACK),
 	gsSPCopyLightsPlayerPart(EMBLEM),
 	gsDPPipeSync(),
@@ -13156,14 +13156,14 @@ Gfx mat_sam_yosemite_Logo__EMBLEM_[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_sam_yosemite_Logo__EMBLEM_[] = {
+Gfx mat_revert_sam_Logo__EMBLEM_[] = {
 	gsSPSetGeometryMode(G_CULL_BACK),
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_sam_yosemite_Shirt__SHIRT_[] = {
+Gfx mat_sam_Shirt__SHIRT_[] = {
 	gsSPCopyLightsPlayerPart(SHIRT),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
@@ -13172,13 +13172,13 @@ Gfx mat_sam_yosemite_Shirt__SHIRT_[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_sam_yosemite_Shirt__SHIRT_[] = {
+Gfx mat_revert_sam_Shirt__SHIRT_[] = {
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_sam_yosemite_Skin__SKIN_[] = {
+Gfx mat_sam_Skin__SKIN_[] = {
 	gsSPCopyLightsPlayerPart(SKIN),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
@@ -13187,15 +13187,15 @@ Gfx mat_sam_yosemite_Skin__SKIN_[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_sam_yosemite_Skin__SKIN_[] = {
+Gfx mat_revert_sam_Skin__SKIN_[] = {
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_sam_yosemite_black[] = {
+Gfx mat_sam_black[] = {
 	gsSPClearGeometryMode(G_CULL_BACK),
-	gsSPSetLights1(sam_yosemite_black_lights),
+	gsSPSetLights1(sam_black_lights),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
@@ -13203,24 +13203,24 @@ Gfx mat_sam_yosemite_black[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_sam_yosemite_black[] = {
+Gfx mat_revert_sam_black[] = {
 	gsSPSetGeometryMode(G_CULL_BACK),
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_sam_yosemite_Open_Eyes__SKIN_[] = {
+Gfx mat_sam_Open_Eyes__SKIN_[] = {
 	gsSPCopyLightsPlayerPart(HAIR),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
 	gsDPSetTextureLUT(G_TT_RGBA16),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, sam_yosemite_sameyes_pal_rgba16),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, sam_sameyes_pal_rgba16),
 	gsDPSetTile(0, 0, 0, 256, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadTLUTCmd(5, 9),
-	gsDPSetTextureImage(G_IM_FMT_CI, G_IM_SIZ_16b, 1, sam_yosemite_sameyes_ci4),
+	gsDPSetTextureImage(G_IM_FMT_CI, G_IM_SIZ_16b, 1, sam_sameyes_ci4),
 	gsDPSetTile(G_IM_FMT_CI, G_IM_SIZ_16b, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 511, 512),
 	gsDPSetTile(G_IM_FMT_CI, G_IM_SIZ_4b, 4, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 6, 0),
@@ -13228,14 +13228,14 @@ Gfx mat_sam_yosemite_Open_Eyes__SKIN_[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_sam_yosemite_Open_Eyes__SKIN_[] = {
+Gfx mat_revert_sam_Open_Eyes__SKIN_[] = {
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsDPSetTextureLUT(G_TT_NONE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_sam_yosemite_Cap__CAP_[] = {
+Gfx mat_sam_Cap__CAP_[] = {
 	gsSPCopyLightsPlayerPart(CAP),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
@@ -13244,19 +13244,19 @@ Gfx mat_sam_yosemite_Cap__CAP_[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_sam_yosemite_Cap__CAP_[] = {
+Gfx mat_revert_sam_Cap__CAP_[] = {
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_sam_yosemite_Half_Closed_Eyes__SKIN_[] = {
+Gfx mat_sam_Half_Closed_Eyes__SKIN_[] = {
 	gsSPCopyLightsPlayerPart(HAIR),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 1, sam_yosemite_sameyeshalfclosed_ia8),
+	gsDPSetTextureImage(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 1, sam_sameyeshalfclosed_ia8),
 	gsDPSetTile(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 1023, 256),
 	gsDPSetTile(G_IM_FMT_IA, G_IM_SIZ_8b, 8, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 6, 0),
@@ -13264,19 +13264,19 @@ Gfx mat_sam_yosemite_Half_Closed_Eyes__SKIN_[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_sam_yosemite_Half_Closed_Eyes__SKIN_[] = {
+Gfx mat_revert_sam_Half_Closed_Eyes__SKIN_[] = {
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_sam_yosemite_Closed_Eyes__SKIN_[] = {
+Gfx mat_sam_Closed_Eyes__SKIN_[] = {
 	gsSPCopyLightsPlayerPart(HAIR),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 1, sam_yosemite_sameyesclosed_ia8),
+	gsDPSetTextureImage(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 1, sam_sameyesclosed_ia8),
 	gsDPSetTile(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 1023, 256),
 	gsDPSetTile(G_IM_FMT_IA, G_IM_SIZ_8b, 8, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 6, 0),
@@ -13284,23 +13284,23 @@ Gfx mat_sam_yosemite_Closed_Eyes__SKIN_[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_sam_yosemite_Closed_Eyes__SKIN_[] = {
+Gfx mat_revert_sam_Closed_Eyes__SKIN_[] = {
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_sam_yosemite_Left_Eyes__SKIN_[] = {
+Gfx mat_sam_Left_Eyes__SKIN_[] = {
 	gsSPCopyLightsPlayerPart(HAIR),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
 	gsDPSetTextureLUT(G_TT_RGBA16),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, sam_yosemite_sameyesLeft_pal_rgba16),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, sam_sameyesLeft_pal_rgba16),
 	gsDPSetTile(0, 0, 0, 256, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadTLUTCmd(5, 9),
-	gsDPSetTextureImage(G_IM_FMT_CI, G_IM_SIZ_16b, 1, sam_yosemite_sameyesLeft_ci4),
+	gsDPSetTextureImage(G_IM_FMT_CI, G_IM_SIZ_16b, 1, sam_sameyesLeft_ci4),
 	gsDPSetTile(G_IM_FMT_CI, G_IM_SIZ_16b, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 511, 512),
 	gsDPSetTile(G_IM_FMT_CI, G_IM_SIZ_4b, 4, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 6, 0),
@@ -13308,24 +13308,24 @@ Gfx mat_sam_yosemite_Left_Eyes__SKIN_[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_sam_yosemite_Left_Eyes__SKIN_[] = {
+Gfx mat_revert_sam_Left_Eyes__SKIN_[] = {
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsDPSetTextureLUT(G_TT_NONE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_sam_yosemite_Right_Eyes__SKIN_[] = {
+Gfx mat_sam_Right_Eyes__SKIN_[] = {
 	gsSPCopyLightsPlayerPart(HAIR),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
 	gsDPSetTextureLUT(G_TT_RGBA16),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, sam_yosemite_sameyesRight_pal_rgba16),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, sam_sameyesRight_pal_rgba16),
 	gsDPSetTile(0, 0, 0, 256, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadTLUTCmd(5, 9),
-	gsDPSetTextureImage(G_IM_FMT_CI, G_IM_SIZ_16b, 1, sam_yosemite_sameyesRight_ci4),
+	gsDPSetTextureImage(G_IM_FMT_CI, G_IM_SIZ_16b, 1, sam_sameyesRight_ci4),
 	gsDPSetTile(G_IM_FMT_CI, G_IM_SIZ_16b, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 511, 512),
 	gsDPSetTile(G_IM_FMT_CI, G_IM_SIZ_4b, 4, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 6, 0),
@@ -13333,24 +13333,24 @@ Gfx mat_sam_yosemite_Right_Eyes__SKIN_[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_sam_yosemite_Right_Eyes__SKIN_[] = {
+Gfx mat_revert_sam_Right_Eyes__SKIN_[] = {
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsDPSetTextureLUT(G_TT_NONE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_sam_yosemite_Up_Eyes__SKIN_[] = {
+Gfx mat_sam_Up_Eyes__SKIN_[] = {
 	gsSPCopyLightsPlayerPart(HAIR),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
 	gsDPSetTextureLUT(G_TT_RGBA16),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, sam_yosemite_sameyesup_pal_rgba16),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, sam_sameyesup_pal_rgba16),
 	gsDPSetTile(0, 0, 0, 256, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadTLUTCmd(5, 9),
-	gsDPSetTextureImage(G_IM_FMT_CI, G_IM_SIZ_16b, 1, sam_yosemite_sameyesup_ci4),
+	gsDPSetTextureImage(G_IM_FMT_CI, G_IM_SIZ_16b, 1, sam_sameyesup_ci4),
 	gsDPSetTile(G_IM_FMT_CI, G_IM_SIZ_16b, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 511, 512),
 	gsDPSetTile(G_IM_FMT_CI, G_IM_SIZ_4b, 4, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 6, 0),
@@ -13358,20 +13358,20 @@ Gfx mat_sam_yosemite_Up_Eyes__SKIN_[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_sam_yosemite_Up_Eyes__SKIN_[] = {
+Gfx mat_revert_sam_Up_Eyes__SKIN_[] = {
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsDPSetTextureLUT(G_TT_NONE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_sam_yosemite_Down_Eyes__SKIN_[] = {
+Gfx mat_sam_Down_Eyes__SKIN_[] = {
 	gsSPCopyLightsPlayerPart(HAIR),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, sam_yosemite_custom_wario_eyes_down_unused_rgba16),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, sam_custom_wario_eyes_down_unused_rgba16),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 2047, 128),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 16, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 6, 0),
@@ -13379,23 +13379,23 @@ Gfx mat_sam_yosemite_Down_Eyes__SKIN_[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_sam_yosemite_Down_Eyes__SKIN_[] = {
+Gfx mat_revert_sam_Down_Eyes__SKIN_[] = {
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_sam_yosemite_Dead_Eyes__SKIN_[] = {
+Gfx mat_sam_Dead_Eyes__SKIN_[] = {
 	gsSPCopyLightsPlayerPart(HAIR),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
 	gsDPSetTextureLUT(G_TT_RGBA16),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, sam_yosemite_sameyesded_pal_rgba16),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, sam_sameyesded_pal_rgba16),
 	gsDPSetTile(0, 0, 0, 256, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadTLUTCmd(5, 20),
-	gsDPSetTextureImage(G_IM_FMT_CI, G_IM_SIZ_8b_LOAD_BLOCK, 1, sam_yosemite_sameyesded_ci8),
+	gsDPSetTextureImage(G_IM_FMT_CI, G_IM_SIZ_8b_LOAD_BLOCK, 1, sam_sameyesded_ci8),
 	gsDPSetTile(G_IM_FMT_CI, G_IM_SIZ_8b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 1023, 256),
 	gsDPSetTile(G_IM_FMT_CI, G_IM_SIZ_8b, 8, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 6, 0),
@@ -13403,20 +13403,20 @@ Gfx mat_sam_yosemite_Dead_Eyes__SKIN_[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_sam_yosemite_Dead_Eyes__SKIN_[] = {
+Gfx mat_revert_sam_Dead_Eyes__SKIN_[] = {
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsDPSetTextureLUT(G_TT_NONE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_sam_yosemite_Wing_Tip[] = {
+Gfx mat_sam_Wing_Tip[] = {
 	gsSPClearGeometryMode(G_CULL_BACK),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0),
 	gsDPSetAlphaDither(G_AD_NOISE),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, sam_yosemite_wing_2_rgba16),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, sam_wing_2_rgba16),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 2047, 256),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 6, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
@@ -13424,20 +13424,20 @@ Gfx mat_sam_yosemite_Wing_Tip[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_sam_yosemite_Wing_Tip[] = {
+Gfx mat_revert_sam_Wing_Tip[] = {
 	gsSPSetGeometryMode(G_CULL_BACK),
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_sam_yosemite_Wing_Base[] = {
+Gfx mat_sam_Wing_Base[] = {
 	gsSPClearGeometryMode(G_CULL_BACK),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0),
 	gsDPSetAlphaDither(G_AD_NOISE),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, sam_yosemite_wing1_rgba16),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, sam_wing1_rgba16),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 2047, 256),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 6, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
@@ -13445,14 +13445,14 @@ Gfx mat_sam_yosemite_Wing_Base[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_sam_yosemite_Wing_Base[] = {
+Gfx mat_revert_sam_Wing_Base[] = {
 	gsSPSetGeometryMode(G_CULL_BACK),
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_sam_yosemite_Gloves__GLOVES_[] = {
+Gfx mat_sam_Gloves__GLOVES_[] = {
 	gsSPCopyLightsPlayerPart(GLOVES),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
@@ -13461,20 +13461,20 @@ Gfx mat_sam_yosemite_Gloves__GLOVES_[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_sam_yosemite_Gloves__GLOVES_[] = {
+Gfx mat_revert_sam_Gloves__GLOVES_[] = {
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_sam_yosemite_Metal__METAL__001[] = {
+Gfx mat_sam_Metal__METAL__001[] = {
 	gsSPGeometryMode(G_CULL_BACK, G_TEXTURE_GEN),
-	gsSPSetLights1(sam_yosemite_Metal__METAL__001_lights),
+	gsSPSetLights1(sam_Metal__METAL__001_lights),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT, TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
 	gsSPTexture(4032, 1984, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, sam_yosemite_Metal_Shade_rgba16_rgba16),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, sam_Metal_Shade_rgba16_rgba16),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 2047, 128),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 16, 0, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 6, 0),
@@ -13482,16 +13482,16 @@ Gfx mat_sam_yosemite_Metal__METAL__001[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_sam_yosemite_Metal__METAL__001[] = {
+Gfx mat_revert_sam_Metal__METAL__001[] = {
 	gsSPGeometryMode(G_TEXTURE_GEN, G_CULL_BACK),
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_sam_yosemite_Brown[] = {
+Gfx mat_sam_Brown[] = {
 	gsSPClearGeometryMode(G_CULL_BACK),
-	gsSPSetLights1(sam_yosemite_Brown_lights),
+	gsSPSetLights1(sam_Brown_lights),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
@@ -13499,14 +13499,14 @@ Gfx mat_sam_yosemite_Brown[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_sam_yosemite_Brown[] = {
+Gfx mat_revert_sam_Brown[] = {
 	gsSPSetGeometryMode(G_CULL_BACK),
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_sam_yosemite_Shoes__SHOES_[] = {
+Gfx mat_sam_Shoes__SHOES_[] = {
 	gsSPCopyLightsPlayerPart(SHOES),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
@@ -13515,20 +13515,22 @@ Gfx mat_sam_yosemite_Shoes__SHOES_[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_sam_yosemite_Shoes__SHOES_[] = {
+Gfx mat_revert_sam_Shoes__SHOES_[] = {
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_sam_yosemite_Metal__METAL_[] = {
+Gfx mat_sam_Metal__METAL_[] = {
 	gsSPGeometryMode(G_CULL_BACK, G_TEXTURE_GEN),
-	gsSPCopyLightsPlayerPart(SHIRT),
+	gsSPLight(&sam_Metal__METAL__lights.l, 1),
+    gsSPLight(&sam_Metal__METAL__lights.a, 2),
+    gsSPCopyLightEXT(2, 5),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT, TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
 	gsSPTexture(4032, 1984, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, sam_yosemite_Metal_Shade_rgba16_rgba16),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, sam_Metal_Shade_rgba16_rgba16),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 2047, 128),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 16, 0, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 6, 0),
@@ -13536,21 +13538,23 @@ Gfx mat_sam_yosemite_Metal__METAL_[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_sam_yosemite_Metal__METAL_[] = {
+Gfx mat_revert_sam_Metal__METAL_[] = {
 	gsSPGeometryMode(G_TEXTURE_GEN, G_CULL_BACK),
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_sam_yosemite_Metal_Wing_Tip__METAL_[] = {
+Gfx mat_sam_Metal_Wing_Tip__METAL_[] = {
 	gsSPClearGeometryMode(G_CULL_BACK),
-	gsSPCopyLightsPlayerPart(SHIRT),
+	gsSPLight(&sam_Metal_Wing_Tip__METAL__lights.l, 1),
+    gsSPLight(&sam_Metal_Wing_Tip__METAL__lights.a, 2),
+    gsSPCopyLightEXT(2, 5),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, TEXEL0, 0, ENVIRONMENT, 0, TEXEL0, 0, SHADE, 0, TEXEL0, 0, ENVIRONMENT, 0),
 	gsDPSetAlphaDither(G_AD_NOISE),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, sam_yosemite_custom_mario_metal_wing_tip_shade_rgba16),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, sam_custom_mario_metal_wing_tip_shade_rgba16),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 2047, 256),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 6, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
@@ -13558,21 +13562,23 @@ Gfx mat_sam_yosemite_Metal_Wing_Tip__METAL_[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_sam_yosemite_Metal_Wing_Tip__METAL_[] = {
+Gfx mat_revert_sam_Metal_Wing_Tip__METAL_[] = {
 	gsSPSetGeometryMode(G_CULL_BACK),
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_sam_yosemite_Metal_Wing_Base__METAL_[] = {
+Gfx mat_sam_Metal_Wing_Base__METAL_[] = {
 	gsSPClearGeometryMode(G_CULL_BACK),
-	gsSPCopyLightsPlayerPart(SHIRT),
+	gsSPLight(&sam_Metal_Wing_Base__METAL__lights.l, 1),
+    gsSPLight(&sam_Metal_Wing_Base__METAL__lights.a, 2),
+    gsSPCopyLightEXT(2, 5),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, TEXEL0, 0, ENVIRONMENT, 0, TEXEL0, 0, SHADE, 0, TEXEL0, 0, ENVIRONMENT, 0),
 	gsDPSetAlphaDither(G_AD_NOISE),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, sam_yosemite_custom_mario_metal_wing_shade_rgba16),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, sam_custom_mario_metal_wing_shade_rgba16),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 2047, 256),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 6, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
@@ -13580,578 +13586,578 @@ Gfx mat_sam_yosemite_Metal_Wing_Base__METAL_[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_sam_yosemite_Metal_Wing_Base__METAL_[] = {
+Gfx mat_revert_sam_Metal_Wing_Base__METAL_[] = {
 	gsSPSetGeometryMode(G_CULL_BACK),
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_Butt_mesh_layer_1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Pants__PANTS_),
-	gsSPDisplayList(sam_yosemite_Butt_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Pants__PANTS_),
-	gsSPDisplayList(mat_sam_yosemite_Belt),
-	gsSPDisplayList(sam_yosemite_Butt_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_sam_yosemite_Belt),
-	gsSPDisplayList(mat_sam_yosemite_Logo__EMBLEM_),
-	gsSPDisplayList(sam_yosemite_Butt_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_sam_yosemite_Logo__EMBLEM_),
+Gfx sam_Butt_mesh_layer_1[] = {
+	gsSPDisplayList(mat_sam_Pants__PANTS_),
+	gsSPDisplayList(sam_Butt_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Pants__PANTS_),
+	gsSPDisplayList(mat_sam_Belt),
+	gsSPDisplayList(sam_Butt_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_sam_Belt),
+	gsSPDisplayList(mat_sam_Logo__EMBLEM_),
+	gsSPDisplayList(sam_Butt_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_sam_Logo__EMBLEM_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_Torso_mesh_layer_1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Shirt__SHIRT_),
-	gsSPDisplayList(sam_yosemite_Torso_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Shirt__SHIRT_),
-	gsSPDisplayList(mat_sam_yosemite_Logo__EMBLEM_),
-	gsSPDisplayList(sam_yosemite_Torso_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_sam_yosemite_Logo__EMBLEM_),
+Gfx sam_Torso_mesh_layer_1[] = {
+	gsSPDisplayList(mat_sam_Shirt__SHIRT_),
+	gsSPDisplayList(sam_Torso_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Shirt__SHIRT_),
+	gsSPDisplayList(mat_sam_Logo__EMBLEM_),
+	gsSPDisplayList(sam_Torso_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_sam_Logo__EMBLEM_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_Head_DL_mesh_layer_1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(sam_yosemite_Head_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(mat_sam_yosemite_black),
-	gsSPDisplayList(sam_yosemite_Head_DL_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_sam_yosemite_black),
-	gsSPDisplayList(mat_sam_yosemite_Open_Eyes__SKIN_),
-	gsSPDisplayList(sam_yosemite_Head_DL_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_sam_yosemite_Open_Eyes__SKIN_),
-	gsSPDisplayList(mat_sam_yosemite_Cap__CAP_),
-	gsSPDisplayList(sam_yosemite_Head_DL_mesh_layer_1_tri_3),
-	gsSPDisplayList(mat_revert_sam_yosemite_Cap__CAP_),
+Gfx sam_Head_DL_mesh_layer_1[] = {
+	gsSPDisplayList(mat_sam_Skin__SKIN_),
+	gsSPDisplayList(sam_Head_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Skin__SKIN_),
+	gsSPDisplayList(mat_sam_black),
+	gsSPDisplayList(sam_Head_DL_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_sam_black),
+	gsSPDisplayList(mat_sam_Open_Eyes__SKIN_),
+	gsSPDisplayList(sam_Head_DL_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_sam_Open_Eyes__SKIN_),
+	gsSPDisplayList(mat_sam_Cap__CAP_),
+	gsSPDisplayList(sam_Head_DL_mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_revert_sam_Cap__CAP_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_Head_DL_mesh_layer_1_mat_override_Half_Closed_Eyes__SKIN__0[] = {
-	gsSPDisplayList(mat_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(sam_yosemite_Head_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(mat_sam_yosemite_black),
-	gsSPDisplayList(sam_yosemite_Head_DL_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_sam_yosemite_black),
-	gsSPDisplayList(mat_sam_yosemite_Half_Closed_Eyes__SKIN_),
-	gsSPDisplayList(sam_yosemite_Head_DL_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_sam_yosemite_Half_Closed_Eyes__SKIN_),
-	gsSPDisplayList(mat_sam_yosemite_Cap__CAP_),
-	gsSPDisplayList(sam_yosemite_Head_DL_mesh_layer_1_tri_3),
-	gsSPDisplayList(mat_revert_sam_yosemite_Cap__CAP_),
+Gfx sam_Head_DL_mesh_layer_1_mat_override_Half_Closed_Eyes__SKIN__0[] = {
+	gsSPDisplayList(mat_sam_Skin__SKIN_),
+	gsSPDisplayList(sam_Head_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Skin__SKIN_),
+	gsSPDisplayList(mat_sam_black),
+	gsSPDisplayList(sam_Head_DL_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_sam_black),
+	gsSPDisplayList(mat_sam_Half_Closed_Eyes__SKIN_),
+	gsSPDisplayList(sam_Head_DL_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_sam_Half_Closed_Eyes__SKIN_),
+	gsSPDisplayList(mat_sam_Cap__CAP_),
+	gsSPDisplayList(sam_Head_DL_mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_revert_sam_Cap__CAP_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_Head_DL_mesh_layer_1_mat_override_Closed_Eyes__SKIN__1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(sam_yosemite_Head_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(mat_sam_yosemite_black),
-	gsSPDisplayList(sam_yosemite_Head_DL_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_sam_yosemite_black),
-	gsSPDisplayList(mat_sam_yosemite_Closed_Eyes__SKIN_),
-	gsSPDisplayList(sam_yosemite_Head_DL_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_sam_yosemite_Closed_Eyes__SKIN_),
-	gsSPDisplayList(mat_sam_yosemite_Cap__CAP_),
-	gsSPDisplayList(sam_yosemite_Head_DL_mesh_layer_1_tri_3),
-	gsSPDisplayList(mat_revert_sam_yosemite_Cap__CAP_),
+Gfx sam_Head_DL_mesh_layer_1_mat_override_Closed_Eyes__SKIN__1[] = {
+	gsSPDisplayList(mat_sam_Skin__SKIN_),
+	gsSPDisplayList(sam_Head_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Skin__SKIN_),
+	gsSPDisplayList(mat_sam_black),
+	gsSPDisplayList(sam_Head_DL_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_sam_black),
+	gsSPDisplayList(mat_sam_Closed_Eyes__SKIN_),
+	gsSPDisplayList(sam_Head_DL_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_sam_Closed_Eyes__SKIN_),
+	gsSPDisplayList(mat_sam_Cap__CAP_),
+	gsSPDisplayList(sam_Head_DL_mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_revert_sam_Cap__CAP_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_Head_DL_mesh_layer_1_mat_override_Left_Eyes__SKIN__2[] = {
-	gsSPDisplayList(mat_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(sam_yosemite_Head_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(mat_sam_yosemite_black),
-	gsSPDisplayList(sam_yosemite_Head_DL_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_sam_yosemite_black),
-	gsSPDisplayList(mat_sam_yosemite_Left_Eyes__SKIN_),
-	gsSPDisplayList(sam_yosemite_Head_DL_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_sam_yosemite_Left_Eyes__SKIN_),
-	gsSPDisplayList(mat_sam_yosemite_Cap__CAP_),
-	gsSPDisplayList(sam_yosemite_Head_DL_mesh_layer_1_tri_3),
-	gsSPDisplayList(mat_revert_sam_yosemite_Cap__CAP_),
+Gfx sam_Head_DL_mesh_layer_1_mat_override_Left_Eyes__SKIN__2[] = {
+	gsSPDisplayList(mat_sam_Skin__SKIN_),
+	gsSPDisplayList(sam_Head_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Skin__SKIN_),
+	gsSPDisplayList(mat_sam_black),
+	gsSPDisplayList(sam_Head_DL_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_sam_black),
+	gsSPDisplayList(mat_sam_Left_Eyes__SKIN_),
+	gsSPDisplayList(sam_Head_DL_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_sam_Left_Eyes__SKIN_),
+	gsSPDisplayList(mat_sam_Cap__CAP_),
+	gsSPDisplayList(sam_Head_DL_mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_revert_sam_Cap__CAP_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_Head_DL_mesh_layer_1_mat_override_Right_Eyes__SKIN__3[] = {
-	gsSPDisplayList(mat_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(sam_yosemite_Head_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(mat_sam_yosemite_black),
-	gsSPDisplayList(sam_yosemite_Head_DL_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_sam_yosemite_black),
-	gsSPDisplayList(mat_sam_yosemite_Right_Eyes__SKIN_),
-	gsSPDisplayList(sam_yosemite_Head_DL_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_sam_yosemite_Right_Eyes__SKIN_),
-	gsSPDisplayList(mat_sam_yosemite_Cap__CAP_),
-	gsSPDisplayList(sam_yosemite_Head_DL_mesh_layer_1_tri_3),
-	gsSPDisplayList(mat_revert_sam_yosemite_Cap__CAP_),
+Gfx sam_Head_DL_mesh_layer_1_mat_override_Right_Eyes__SKIN__3[] = {
+	gsSPDisplayList(mat_sam_Skin__SKIN_),
+	gsSPDisplayList(sam_Head_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Skin__SKIN_),
+	gsSPDisplayList(mat_sam_black),
+	gsSPDisplayList(sam_Head_DL_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_sam_black),
+	gsSPDisplayList(mat_sam_Right_Eyes__SKIN_),
+	gsSPDisplayList(sam_Head_DL_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_sam_Right_Eyes__SKIN_),
+	gsSPDisplayList(mat_sam_Cap__CAP_),
+	gsSPDisplayList(sam_Head_DL_mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_revert_sam_Cap__CAP_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_Head_DL_mesh_layer_1_mat_override_Up_Eyes__SKIN__4[] = {
-	gsSPDisplayList(mat_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(sam_yosemite_Head_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(mat_sam_yosemite_black),
-	gsSPDisplayList(sam_yosemite_Head_DL_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_sam_yosemite_black),
-	gsSPDisplayList(mat_sam_yosemite_Up_Eyes__SKIN_),
-	gsSPDisplayList(sam_yosemite_Head_DL_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_sam_yosemite_Up_Eyes__SKIN_),
-	gsSPDisplayList(mat_sam_yosemite_Cap__CAP_),
-	gsSPDisplayList(sam_yosemite_Head_DL_mesh_layer_1_tri_3),
-	gsSPDisplayList(mat_revert_sam_yosemite_Cap__CAP_),
+Gfx sam_Head_DL_mesh_layer_1_mat_override_Up_Eyes__SKIN__4[] = {
+	gsSPDisplayList(mat_sam_Skin__SKIN_),
+	gsSPDisplayList(sam_Head_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Skin__SKIN_),
+	gsSPDisplayList(mat_sam_black),
+	gsSPDisplayList(sam_Head_DL_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_sam_black),
+	gsSPDisplayList(mat_sam_Up_Eyes__SKIN_),
+	gsSPDisplayList(sam_Head_DL_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_sam_Up_Eyes__SKIN_),
+	gsSPDisplayList(mat_sam_Cap__CAP_),
+	gsSPDisplayList(sam_Head_DL_mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_revert_sam_Cap__CAP_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_Head_DL_mesh_layer_1_mat_override_Down_Eyes__SKIN__5[] = {
-	gsSPDisplayList(mat_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(sam_yosemite_Head_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(mat_sam_yosemite_black),
-	gsSPDisplayList(sam_yosemite_Head_DL_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_sam_yosemite_black),
-	gsSPDisplayList(mat_sam_yosemite_Down_Eyes__SKIN_),
-	gsSPDisplayList(sam_yosemite_Head_DL_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_sam_yosemite_Down_Eyes__SKIN_),
-	gsSPDisplayList(mat_sam_yosemite_Cap__CAP_),
-	gsSPDisplayList(sam_yosemite_Head_DL_mesh_layer_1_tri_3),
-	gsSPDisplayList(mat_revert_sam_yosemite_Cap__CAP_),
+Gfx sam_Head_DL_mesh_layer_1_mat_override_Down_Eyes__SKIN__5[] = {
+	gsSPDisplayList(mat_sam_Skin__SKIN_),
+	gsSPDisplayList(sam_Head_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Skin__SKIN_),
+	gsSPDisplayList(mat_sam_black),
+	gsSPDisplayList(sam_Head_DL_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_sam_black),
+	gsSPDisplayList(mat_sam_Down_Eyes__SKIN_),
+	gsSPDisplayList(sam_Head_DL_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_sam_Down_Eyes__SKIN_),
+	gsSPDisplayList(mat_sam_Cap__CAP_),
+	gsSPDisplayList(sam_Head_DL_mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_revert_sam_Cap__CAP_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(mat_sam_yosemite_black),
-	gsSPDisplayList(sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_sam_yosemite_black),
-	gsSPDisplayList(mat_sam_yosemite_Dead_Eyes__SKIN_),
-	gsSPDisplayList(sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_sam_yosemite_Dead_Eyes__SKIN_),
-	gsSPDisplayList(mat_sam_yosemite_Cap__CAP_),
-	gsSPDisplayList(sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_3),
-	gsSPDisplayList(mat_revert_sam_yosemite_Cap__CAP_),
+Gfx sam_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1[] = {
+	gsSPDisplayList(mat_sam_Skin__SKIN_),
+	gsSPDisplayList(sam_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Skin__SKIN_),
+	gsSPDisplayList(mat_sam_black),
+	gsSPDisplayList(sam_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_sam_black),
+	gsSPDisplayList(mat_sam_Dead_Eyes__SKIN_),
+	gsSPDisplayList(sam_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_sam_Dead_Eyes__SKIN_),
+	gsSPDisplayList(mat_sam_Cap__CAP_),
+	gsSPDisplayList(sam_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_revert_sam_Cap__CAP_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_mat_override_Half_Closed_Eyes__SKIN__0[] = {
-	gsSPDisplayList(mat_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(mat_sam_yosemite_black),
-	gsSPDisplayList(sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_sam_yosemite_black),
-	gsSPDisplayList(mat_sam_yosemite_Dead_Eyes__SKIN_),
-	gsSPDisplayList(sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_sam_yosemite_Dead_Eyes__SKIN_),
-	gsSPDisplayList(mat_sam_yosemite_Cap__CAP_),
-	gsSPDisplayList(sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_3),
-	gsSPDisplayList(mat_revert_sam_yosemite_Cap__CAP_),
+Gfx sam_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_mat_override_Half_Closed_Eyes__SKIN__0[] = {
+	gsSPDisplayList(mat_sam_Skin__SKIN_),
+	gsSPDisplayList(sam_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Skin__SKIN_),
+	gsSPDisplayList(mat_sam_black),
+	gsSPDisplayList(sam_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_sam_black),
+	gsSPDisplayList(mat_sam_Dead_Eyes__SKIN_),
+	gsSPDisplayList(sam_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_sam_Dead_Eyes__SKIN_),
+	gsSPDisplayList(mat_sam_Cap__CAP_),
+	gsSPDisplayList(sam_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_revert_sam_Cap__CAP_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_mat_override_Closed_Eyes__SKIN__1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(mat_sam_yosemite_black),
-	gsSPDisplayList(sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_sam_yosemite_black),
-	gsSPDisplayList(mat_sam_yosemite_Dead_Eyes__SKIN_),
-	gsSPDisplayList(sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_sam_yosemite_Dead_Eyes__SKIN_),
-	gsSPDisplayList(mat_sam_yosemite_Cap__CAP_),
-	gsSPDisplayList(sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_3),
-	gsSPDisplayList(mat_revert_sam_yosemite_Cap__CAP_),
+Gfx sam_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_mat_override_Closed_Eyes__SKIN__1[] = {
+	gsSPDisplayList(mat_sam_Skin__SKIN_),
+	gsSPDisplayList(sam_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Skin__SKIN_),
+	gsSPDisplayList(mat_sam_black),
+	gsSPDisplayList(sam_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_sam_black),
+	gsSPDisplayList(mat_sam_Dead_Eyes__SKIN_),
+	gsSPDisplayList(sam_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_sam_Dead_Eyes__SKIN_),
+	gsSPDisplayList(mat_sam_Cap__CAP_),
+	gsSPDisplayList(sam_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_revert_sam_Cap__CAP_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_mat_override_Left_Eyes__SKIN__2[] = {
-	gsSPDisplayList(mat_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(mat_sam_yosemite_black),
-	gsSPDisplayList(sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_sam_yosemite_black),
-	gsSPDisplayList(mat_sam_yosemite_Dead_Eyes__SKIN_),
-	gsSPDisplayList(sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_sam_yosemite_Dead_Eyes__SKIN_),
-	gsSPDisplayList(mat_sam_yosemite_Cap__CAP_),
-	gsSPDisplayList(sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_3),
-	gsSPDisplayList(mat_revert_sam_yosemite_Cap__CAP_),
+Gfx sam_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_mat_override_Left_Eyes__SKIN__2[] = {
+	gsSPDisplayList(mat_sam_Skin__SKIN_),
+	gsSPDisplayList(sam_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Skin__SKIN_),
+	gsSPDisplayList(mat_sam_black),
+	gsSPDisplayList(sam_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_sam_black),
+	gsSPDisplayList(mat_sam_Dead_Eyes__SKIN_),
+	gsSPDisplayList(sam_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_sam_Dead_Eyes__SKIN_),
+	gsSPDisplayList(mat_sam_Cap__CAP_),
+	gsSPDisplayList(sam_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_revert_sam_Cap__CAP_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_mat_override_Right_Eyes__SKIN__3[] = {
-	gsSPDisplayList(mat_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(mat_sam_yosemite_black),
-	gsSPDisplayList(sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_sam_yosemite_black),
-	gsSPDisplayList(mat_sam_yosemite_Dead_Eyes__SKIN_),
-	gsSPDisplayList(sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_sam_yosemite_Dead_Eyes__SKIN_),
-	gsSPDisplayList(mat_sam_yosemite_Cap__CAP_),
-	gsSPDisplayList(sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_3),
-	gsSPDisplayList(mat_revert_sam_yosemite_Cap__CAP_),
+Gfx sam_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_mat_override_Right_Eyes__SKIN__3[] = {
+	gsSPDisplayList(mat_sam_Skin__SKIN_),
+	gsSPDisplayList(sam_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Skin__SKIN_),
+	gsSPDisplayList(mat_sam_black),
+	gsSPDisplayList(sam_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_sam_black),
+	gsSPDisplayList(mat_sam_Dead_Eyes__SKIN_),
+	gsSPDisplayList(sam_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_sam_Dead_Eyes__SKIN_),
+	gsSPDisplayList(mat_sam_Cap__CAP_),
+	gsSPDisplayList(sam_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_revert_sam_Cap__CAP_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_mat_override_Up_Eyes__SKIN__4[] = {
-	gsSPDisplayList(mat_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(mat_sam_yosemite_black),
-	gsSPDisplayList(sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_sam_yosemite_black),
-	gsSPDisplayList(mat_sam_yosemite_Dead_Eyes__SKIN_),
-	gsSPDisplayList(sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_sam_yosemite_Dead_Eyes__SKIN_),
-	gsSPDisplayList(mat_sam_yosemite_Cap__CAP_),
-	gsSPDisplayList(sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_3),
-	gsSPDisplayList(mat_revert_sam_yosemite_Cap__CAP_),
+Gfx sam_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_mat_override_Up_Eyes__SKIN__4[] = {
+	gsSPDisplayList(mat_sam_Skin__SKIN_),
+	gsSPDisplayList(sam_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Skin__SKIN_),
+	gsSPDisplayList(mat_sam_black),
+	gsSPDisplayList(sam_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_sam_black),
+	gsSPDisplayList(mat_sam_Dead_Eyes__SKIN_),
+	gsSPDisplayList(sam_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_sam_Dead_Eyes__SKIN_),
+	gsSPDisplayList(mat_sam_Cap__CAP_),
+	gsSPDisplayList(sam_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_revert_sam_Cap__CAP_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_mat_override_Down_Eyes__SKIN__5[] = {
-	gsSPDisplayList(mat_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(mat_sam_yosemite_black),
-	gsSPDisplayList(sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_sam_yosemite_black),
-	gsSPDisplayList(mat_sam_yosemite_Dead_Eyes__SKIN_),
-	gsSPDisplayList(sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_sam_yosemite_Dead_Eyes__SKIN_),
-	gsSPDisplayList(mat_sam_yosemite_Cap__CAP_),
-	gsSPDisplayList(sam_yosemite_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_3),
-	gsSPDisplayList(mat_revert_sam_yosemite_Cap__CAP_),
+Gfx sam_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_mat_override_Down_Eyes__SKIN__5[] = {
+	gsSPDisplayList(mat_sam_Skin__SKIN_),
+	gsSPDisplayList(sam_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Skin__SKIN_),
+	gsSPDisplayList(mat_sam_black),
+	gsSPDisplayList(sam_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_sam_black),
+	gsSPDisplayList(mat_sam_Dead_Eyes__SKIN_),
+	gsSPDisplayList(sam_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_sam_Dead_Eyes__SKIN_),
+	gsSPDisplayList(mat_sam_Cap__CAP_),
+	gsSPDisplayList(sam_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_revert_sam_Cap__CAP_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(mat_sam_yosemite_black),
-	gsSPDisplayList(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_sam_yosemite_black),
-	gsSPDisplayList(mat_sam_yosemite_Open_Eyes__SKIN_),
-	gsSPDisplayList(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_sam_yosemite_Open_Eyes__SKIN_),
+Gfx sam_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1[] = {
+	gsSPDisplayList(mat_sam_Skin__SKIN_),
+	gsSPDisplayList(sam_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Skin__SKIN_),
+	gsSPDisplayList(mat_sam_black),
+	gsSPDisplayList(sam_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_sam_black),
+	gsSPDisplayList(mat_sam_Open_Eyes__SKIN_),
+	gsSPDisplayList(sam_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_sam_Open_Eyes__SKIN_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Half_Closed_Eyes__SKIN__0[] = {
-	gsSPDisplayList(mat_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(mat_sam_yosemite_black),
-	gsSPDisplayList(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_sam_yosemite_black),
-	gsSPDisplayList(mat_sam_yosemite_Half_Closed_Eyes__SKIN_),
-	gsSPDisplayList(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_sam_yosemite_Half_Closed_Eyes__SKIN_),
+Gfx sam_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Half_Closed_Eyes__SKIN__0[] = {
+	gsSPDisplayList(mat_sam_Skin__SKIN_),
+	gsSPDisplayList(sam_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Skin__SKIN_),
+	gsSPDisplayList(mat_sam_black),
+	gsSPDisplayList(sam_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_sam_black),
+	gsSPDisplayList(mat_sam_Half_Closed_Eyes__SKIN_),
+	gsSPDisplayList(sam_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_sam_Half_Closed_Eyes__SKIN_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Closed_Eyes__SKIN__1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(mat_sam_yosemite_black),
-	gsSPDisplayList(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_sam_yosemite_black),
-	gsSPDisplayList(mat_sam_yosemite_Closed_Eyes__SKIN_),
-	gsSPDisplayList(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_sam_yosemite_Closed_Eyes__SKIN_),
+Gfx sam_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Closed_Eyes__SKIN__1[] = {
+	gsSPDisplayList(mat_sam_Skin__SKIN_),
+	gsSPDisplayList(sam_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Skin__SKIN_),
+	gsSPDisplayList(mat_sam_black),
+	gsSPDisplayList(sam_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_sam_black),
+	gsSPDisplayList(mat_sam_Closed_Eyes__SKIN_),
+	gsSPDisplayList(sam_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_sam_Closed_Eyes__SKIN_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Left_Eyes__SKIN__2[] = {
-	gsSPDisplayList(mat_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(mat_sam_yosemite_black),
-	gsSPDisplayList(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_sam_yosemite_black),
-	gsSPDisplayList(mat_sam_yosemite_Left_Eyes__SKIN_),
-	gsSPDisplayList(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_sam_yosemite_Left_Eyes__SKIN_),
+Gfx sam_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Left_Eyes__SKIN__2[] = {
+	gsSPDisplayList(mat_sam_Skin__SKIN_),
+	gsSPDisplayList(sam_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Skin__SKIN_),
+	gsSPDisplayList(mat_sam_black),
+	gsSPDisplayList(sam_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_sam_black),
+	gsSPDisplayList(mat_sam_Left_Eyes__SKIN_),
+	gsSPDisplayList(sam_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_sam_Left_Eyes__SKIN_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Right_Eyes__SKIN__3[] = {
-	gsSPDisplayList(mat_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(mat_sam_yosemite_black),
-	gsSPDisplayList(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_sam_yosemite_black),
-	gsSPDisplayList(mat_sam_yosemite_Right_Eyes__SKIN_),
-	gsSPDisplayList(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_sam_yosemite_Right_Eyes__SKIN_),
+Gfx sam_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Right_Eyes__SKIN__3[] = {
+	gsSPDisplayList(mat_sam_Skin__SKIN_),
+	gsSPDisplayList(sam_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Skin__SKIN_),
+	gsSPDisplayList(mat_sam_black),
+	gsSPDisplayList(sam_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_sam_black),
+	gsSPDisplayList(mat_sam_Right_Eyes__SKIN_),
+	gsSPDisplayList(sam_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_sam_Right_Eyes__SKIN_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Up_Eyes__SKIN__4[] = {
-	gsSPDisplayList(mat_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(mat_sam_yosemite_black),
-	gsSPDisplayList(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_sam_yosemite_black),
-	gsSPDisplayList(mat_sam_yosemite_Up_Eyes__SKIN_),
-	gsSPDisplayList(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_sam_yosemite_Up_Eyes__SKIN_),
+Gfx sam_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Up_Eyes__SKIN__4[] = {
+	gsSPDisplayList(mat_sam_Skin__SKIN_),
+	gsSPDisplayList(sam_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Skin__SKIN_),
+	gsSPDisplayList(mat_sam_black),
+	gsSPDisplayList(sam_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_sam_black),
+	gsSPDisplayList(mat_sam_Up_Eyes__SKIN_),
+	gsSPDisplayList(sam_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_sam_Up_Eyes__SKIN_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Down_Eyes__SKIN__5[] = {
-	gsSPDisplayList(mat_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(mat_sam_yosemite_black),
-	gsSPDisplayList(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_sam_yosemite_black),
-	gsSPDisplayList(mat_sam_yosemite_Down_Eyes__SKIN_),
-	gsSPDisplayList(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_sam_yosemite_Down_Eyes__SKIN_),
+Gfx sam_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Down_Eyes__SKIN__5[] = {
+	gsSPDisplayList(mat_sam_Skin__SKIN_),
+	gsSPDisplayList(sam_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Skin__SKIN_),
+	gsSPDisplayList(mat_sam_black),
+	gsSPDisplayList(sam_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_sam_black),
+	gsSPDisplayList(mat_sam_Down_Eyes__SKIN_),
+	gsSPDisplayList(sam_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_sam_Down_Eyes__SKIN_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(mat_sam_yosemite_black),
-	gsSPDisplayList(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_sam_yosemite_black),
-	gsSPDisplayList(mat_sam_yosemite_Dead_Eyes__SKIN_),
-	gsSPDisplayList(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_sam_yosemite_Dead_Eyes__SKIN_),
+Gfx sam_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1[] = {
+	gsSPDisplayList(mat_sam_Skin__SKIN_),
+	gsSPDisplayList(sam_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Skin__SKIN_),
+	gsSPDisplayList(mat_sam_black),
+	gsSPDisplayList(sam_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_sam_black),
+	gsSPDisplayList(mat_sam_Dead_Eyes__SKIN_),
+	gsSPDisplayList(sam_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_sam_Dead_Eyes__SKIN_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_mat_override_Half_Closed_Eyes__SKIN__0[] = {
-	gsSPDisplayList(mat_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(mat_sam_yosemite_black),
-	gsSPDisplayList(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_sam_yosemite_black),
-	gsSPDisplayList(mat_sam_yosemite_Dead_Eyes__SKIN_),
-	gsSPDisplayList(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_sam_yosemite_Dead_Eyes__SKIN_),
+Gfx sam_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_mat_override_Half_Closed_Eyes__SKIN__0[] = {
+	gsSPDisplayList(mat_sam_Skin__SKIN_),
+	gsSPDisplayList(sam_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Skin__SKIN_),
+	gsSPDisplayList(mat_sam_black),
+	gsSPDisplayList(sam_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_sam_black),
+	gsSPDisplayList(mat_sam_Dead_Eyes__SKIN_),
+	gsSPDisplayList(sam_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_sam_Dead_Eyes__SKIN_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_mat_override_Closed_Eyes__SKIN__1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(mat_sam_yosemite_black),
-	gsSPDisplayList(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_sam_yosemite_black),
-	gsSPDisplayList(mat_sam_yosemite_Dead_Eyes__SKIN_),
-	gsSPDisplayList(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_sam_yosemite_Dead_Eyes__SKIN_),
+Gfx sam_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_mat_override_Closed_Eyes__SKIN__1[] = {
+	gsSPDisplayList(mat_sam_Skin__SKIN_),
+	gsSPDisplayList(sam_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Skin__SKIN_),
+	gsSPDisplayList(mat_sam_black),
+	gsSPDisplayList(sam_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_sam_black),
+	gsSPDisplayList(mat_sam_Dead_Eyes__SKIN_),
+	gsSPDisplayList(sam_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_sam_Dead_Eyes__SKIN_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_mat_override_Left_Eyes__SKIN__2[] = {
-	gsSPDisplayList(mat_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(mat_sam_yosemite_black),
-	gsSPDisplayList(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_sam_yosemite_black),
-	gsSPDisplayList(mat_sam_yosemite_Dead_Eyes__SKIN_),
-	gsSPDisplayList(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_sam_yosemite_Dead_Eyes__SKIN_),
+Gfx sam_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_mat_override_Left_Eyes__SKIN__2[] = {
+	gsSPDisplayList(mat_sam_Skin__SKIN_),
+	gsSPDisplayList(sam_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Skin__SKIN_),
+	gsSPDisplayList(mat_sam_black),
+	gsSPDisplayList(sam_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_sam_black),
+	gsSPDisplayList(mat_sam_Dead_Eyes__SKIN_),
+	gsSPDisplayList(sam_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_sam_Dead_Eyes__SKIN_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_mat_override_Right_Eyes__SKIN__3[] = {
-	gsSPDisplayList(mat_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(mat_sam_yosemite_black),
-	gsSPDisplayList(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_sam_yosemite_black),
-	gsSPDisplayList(mat_sam_yosemite_Dead_Eyes__SKIN_),
-	gsSPDisplayList(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_sam_yosemite_Dead_Eyes__SKIN_),
+Gfx sam_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_mat_override_Right_Eyes__SKIN__3[] = {
+	gsSPDisplayList(mat_sam_Skin__SKIN_),
+	gsSPDisplayList(sam_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Skin__SKIN_),
+	gsSPDisplayList(mat_sam_black),
+	gsSPDisplayList(sam_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_sam_black),
+	gsSPDisplayList(mat_sam_Dead_Eyes__SKIN_),
+	gsSPDisplayList(sam_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_sam_Dead_Eyes__SKIN_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_mat_override_Up_Eyes__SKIN__4[] = {
-	gsSPDisplayList(mat_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(mat_sam_yosemite_black),
-	gsSPDisplayList(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_sam_yosemite_black),
-	gsSPDisplayList(mat_sam_yosemite_Dead_Eyes__SKIN_),
-	gsSPDisplayList(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_sam_yosemite_Dead_Eyes__SKIN_),
+Gfx sam_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_mat_override_Up_Eyes__SKIN__4[] = {
+	gsSPDisplayList(mat_sam_Skin__SKIN_),
+	gsSPDisplayList(sam_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Skin__SKIN_),
+	gsSPDisplayList(mat_sam_black),
+	gsSPDisplayList(sam_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_sam_black),
+	gsSPDisplayList(mat_sam_Dead_Eyes__SKIN_),
+	gsSPDisplayList(sam_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_sam_Dead_Eyes__SKIN_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_mat_override_Down_Eyes__SKIN__5[] = {
-	gsSPDisplayList(mat_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Skin__SKIN_),
-	gsSPDisplayList(mat_sam_yosemite_black),
-	gsSPDisplayList(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_sam_yosemite_black),
-	gsSPDisplayList(mat_sam_yosemite_Dead_Eyes__SKIN_),
-	gsSPDisplayList(sam_yosemite_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_sam_yosemite_Dead_Eyes__SKIN_),
+Gfx sam_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_mat_override_Down_Eyes__SKIN__5[] = {
+	gsSPDisplayList(mat_sam_Skin__SKIN_),
+	gsSPDisplayList(sam_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Skin__SKIN_),
+	gsSPDisplayList(mat_sam_black),
+	gsSPDisplayList(sam_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_sam_black),
+	gsSPDisplayList(mat_sam_Dead_Eyes__SKIN_),
+	gsSPDisplayList(sam_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_sam_Dead_Eyes__SKIN_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_Left_Wing_DL_mesh_layer_4[] = {
-	gsSPDisplayList(mat_sam_yosemite_Wing_Tip),
-	gsSPDisplayList(sam_yosemite_Left_Wing_DL_mesh_layer_4_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Wing_Tip),
-	gsSPDisplayList(mat_sam_yosemite_Wing_Base),
-	gsSPDisplayList(sam_yosemite_Left_Wing_DL_mesh_layer_4_tri_1),
-	gsSPDisplayList(mat_revert_sam_yosemite_Wing_Base),
+Gfx sam_Left_Wing_DL_mesh_layer_4[] = {
+	gsSPDisplayList(mat_sam_Wing_Tip),
+	gsSPDisplayList(sam_Left_Wing_DL_mesh_layer_4_tri_0),
+	gsSPDisplayList(mat_revert_sam_Wing_Tip),
+	gsSPDisplayList(mat_sam_Wing_Base),
+	gsSPDisplayList(sam_Left_Wing_DL_mesh_layer_4_tri_1),
+	gsSPDisplayList(mat_revert_sam_Wing_Base),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_Right_Wing_DL_mesh_layer_4[] = {
-	gsSPDisplayList(mat_sam_yosemite_Wing_Tip),
-	gsSPDisplayList(sam_yosemite_Right_Wing_DL_mesh_layer_4_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Wing_Tip),
-	gsSPDisplayList(mat_sam_yosemite_Wing_Base),
-	gsSPDisplayList(sam_yosemite_Right_Wing_DL_mesh_layer_4_tri_1),
-	gsSPDisplayList(mat_revert_sam_yosemite_Wing_Base),
+Gfx sam_Right_Wing_DL_mesh_layer_4[] = {
+	gsSPDisplayList(mat_sam_Wing_Tip),
+	gsSPDisplayList(sam_Right_Wing_DL_mesh_layer_4_tri_0),
+	gsSPDisplayList(mat_revert_sam_Wing_Tip),
+	gsSPDisplayList(mat_sam_Wing_Base),
+	gsSPDisplayList(sam_Right_Wing_DL_mesh_layer_4_tri_1),
+	gsSPDisplayList(mat_revert_sam_Wing_Base),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_Left_Arm_Color_mesh_layer_1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Shirt__SHIRT_),
-	gsSPDisplayList(sam_yosemite_Left_Arm_Color_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Shirt__SHIRT_),
+Gfx sam_Left_Arm_Color_mesh_layer_1[] = {
+	gsSPDisplayList(mat_sam_Shirt__SHIRT_),
+	gsSPDisplayList(sam_Left_Arm_Color_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Shirt__SHIRT_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_Left_Forearm_mesh_layer_1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Shirt__SHIRT_),
-	gsSPDisplayList(sam_yosemite_Left_Forearm_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Shirt__SHIRT_),
+Gfx sam_Left_Forearm_mesh_layer_1[] = {
+	gsSPDisplayList(mat_sam_Shirt__SHIRT_),
+	gsSPDisplayList(sam_Left_Forearm_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Shirt__SHIRT_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_Left_Hand_DL_mesh_layer_1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Gloves__GLOVES_),
-	gsSPDisplayList(sam_yosemite_Left_Hand_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Gloves__GLOVES_),
+Gfx sam_Left_Hand_DL_mesh_layer_1[] = {
+	gsSPDisplayList(mat_sam_Gloves__GLOVES_),
+	gsSPDisplayList(sam_Left_Hand_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Gloves__GLOVES_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_LeftGunOption_LeftGunDL_mesh_layer_1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal__METAL__001),
-	gsSPDisplayList(sam_yosemite_LeftGunOption_LeftGunDL_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal__METAL__001),
-	gsSPDisplayList(mat_sam_yosemite_Brown),
-	gsSPDisplayList(sam_yosemite_LeftGunOption_LeftGunDL_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_sam_yosemite_Brown),
-	gsSPDisplayList(mat_sam_yosemite_black),
-	gsSPDisplayList(sam_yosemite_LeftGunOption_LeftGunDL_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_sam_yosemite_black),
+Gfx sam_LeftGunOption_LeftGunDL_mesh_layer_1[] = {
+	gsSPDisplayList(mat_sam_Metal__METAL__001),
+	gsSPDisplayList(sam_LeftGunOption_LeftGunDL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal__METAL__001),
+	gsSPDisplayList(mat_sam_Brown),
+	gsSPDisplayList(sam_LeftGunOption_LeftGunDL_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_sam_Brown),
+	gsSPDisplayList(mat_sam_black),
+	gsSPDisplayList(sam_LeftGunOption_LeftGunDL_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_sam_black),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Gloves__GLOVES_),
-	gsSPDisplayList(sam_yosemite_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Gloves__GLOVES_),
+Gfx sam_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1[] = {
+	gsSPDisplayList(mat_sam_Gloves__GLOVES_),
+	gsSPDisplayList(sam_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Gloves__GLOVES_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_Right_Arm_Color_mesh_layer_1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Shirt__SHIRT_),
-	gsSPDisplayList(sam_yosemite_Right_Arm_Color_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Shirt__SHIRT_),
+Gfx sam_Right_Arm_Color_mesh_layer_1[] = {
+	gsSPDisplayList(mat_sam_Shirt__SHIRT_),
+	gsSPDisplayList(sam_Right_Arm_Color_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Shirt__SHIRT_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_Right_Forearm_mesh_layer_1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Shirt__SHIRT_),
-	gsSPDisplayList(sam_yosemite_Right_Forearm_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Shirt__SHIRT_),
+Gfx sam_Right_Forearm_mesh_layer_1[] = {
+	gsSPDisplayList(mat_sam_Shirt__SHIRT_),
+	gsSPDisplayList(sam_Right_Forearm_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Shirt__SHIRT_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_Right_Hand_DL_mesh_layer_1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Gloves__GLOVES_),
-	gsSPDisplayList(sam_yosemite_Right_Hand_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Gloves__GLOVES_),
+Gfx sam_Right_Hand_DL_mesh_layer_1[] = {
+	gsSPDisplayList(mat_sam_Gloves__GLOVES_),
+	gsSPDisplayList(sam_Right_Hand_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Gloves__GLOVES_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_RightGunOption_RigntGunDL_mesh_layer_1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal__METAL__001),
-	gsSPDisplayList(sam_yosemite_RightGunOption_RigntGunDL_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal__METAL__001),
-	gsSPDisplayList(mat_sam_yosemite_Brown),
-	gsSPDisplayList(sam_yosemite_RightGunOption_RigntGunDL_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_sam_yosemite_Brown),
-	gsSPDisplayList(mat_sam_yosemite_black),
-	gsSPDisplayList(sam_yosemite_RightGunOption_RigntGunDL_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_sam_yosemite_black),
+Gfx sam_RightGunOption_RigntGunDL_mesh_layer_1[] = {
+	gsSPDisplayList(mat_sam_Metal__METAL__001),
+	gsSPDisplayList(sam_RightGunOption_RigntGunDL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal__METAL__001),
+	gsSPDisplayList(mat_sam_Brown),
+	gsSPDisplayList(sam_RightGunOption_RigntGunDL_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_sam_Brown),
+	gsSPDisplayList(mat_sam_black),
+	gsSPDisplayList(sam_RightGunOption_RigntGunDL_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_revert_sam_black),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Gloves__GLOVES_),
-	gsSPDisplayList(sam_yosemite_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Gloves__GLOVES_),
+Gfx sam_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1[] = {
+	gsSPDisplayList(mat_sam_Gloves__GLOVES_),
+	gsSPDisplayList(sam_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Gloves__GLOVES_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Gloves__GLOVES_),
-	gsSPDisplayList(sam_yosemite_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Gloves__GLOVES_),
+Gfx sam_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1[] = {
+	gsSPDisplayList(mat_sam_Gloves__GLOVES_),
+	gsSPDisplayList(sam_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Gloves__GLOVES_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Gloves__GLOVES_),
-	gsSPDisplayList(sam_yosemite_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Gloves__GLOVES_),
-	gsSPDisplayList(mat_sam_yosemite_Cap__CAP_),
-	gsSPDisplayList(sam_yosemite_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_sam_yosemite_Cap__CAP_),
+Gfx sam_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1[] = {
+	gsSPDisplayList(mat_sam_Gloves__GLOVES_),
+	gsSPDisplayList(sam_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Gloves__GLOVES_),
+	gsSPDisplayList(mat_sam_Cap__CAP_),
+	gsSPDisplayList(sam_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_sam_Cap__CAP_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Gloves__GLOVES_),
-	gsSPDisplayList(sam_yosemite_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Gloves__GLOVES_),
-	gsSPDisplayList(mat_sam_yosemite_Cap__CAP_),
-	gsSPDisplayList(sam_yosemite_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_sam_yosemite_Cap__CAP_),
+Gfx sam_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1[] = {
+	gsSPDisplayList(mat_sam_Gloves__GLOVES_),
+	gsSPDisplayList(sam_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Gloves__GLOVES_),
+	gsSPDisplayList(mat_sam_Cap__CAP_),
+	gsSPDisplayList(sam_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_sam_Cap__CAP_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_Right_Hand_Wing_Cap_Swtich_Option_Wings_mesh_layer_4[] = {
-	gsSPDisplayList(mat_sam_yosemite_Wing_Tip),
-	gsSPDisplayList(sam_yosemite_Right_Hand_Wing_Cap_Swtich_Option_Wings_mesh_layer_4_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Wing_Tip),
-	gsSPDisplayList(mat_sam_yosemite_Wing_Base),
-	gsSPDisplayList(sam_yosemite_Right_Hand_Wing_Cap_Swtich_Option_Wings_mesh_layer_4_tri_1),
-	gsSPDisplayList(mat_revert_sam_yosemite_Wing_Base),
+Gfx sam_Right_Hand_Wing_Cap_Swtich_Option_Wings_mesh_layer_4[] = {
+	gsSPDisplayList(mat_sam_Wing_Tip),
+	gsSPDisplayList(sam_Right_Hand_Wing_Cap_Swtich_Option_Wings_mesh_layer_4_tri_0),
+	gsSPDisplayList(mat_revert_sam_Wing_Tip),
+	gsSPDisplayList(mat_sam_Wing_Base),
+	gsSPDisplayList(sam_Right_Hand_Wing_Cap_Swtich_Option_Wings_mesh_layer_4_tri_1),
+	gsSPDisplayList(mat_revert_sam_Wing_Base),
 	gsDPPipeSync(),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPClearGeometryMode(G_TEXTURE_GEN),
@@ -14162,51 +14168,51 @@ Gfx sam_yosemite_Right_Hand_Wing_Cap_Swtich_Option_Wings_mesh_layer_4[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_Left_Thigh_Color_mesh_layer_1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Pants__PANTS_),
-	gsSPDisplayList(sam_yosemite_Left_Thigh_Color_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Pants__PANTS_),
+Gfx sam_Left_Thigh_Color_mesh_layer_1[] = {
+	gsSPDisplayList(mat_sam_Pants__PANTS_),
+	gsSPDisplayList(sam_Left_Thigh_Color_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Pants__PANTS_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_Left_Leg_mesh_layer_1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Shoes__SHOES_),
-	gsSPDisplayList(sam_yosemite_Left_Leg_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Shoes__SHOES_),
-	gsSPDisplayList(mat_sam_yosemite_Pants__PANTS_),
-	gsSPDisplayList(sam_yosemite_Left_Leg_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_sam_yosemite_Pants__PANTS_),
+Gfx sam_Left_Leg_mesh_layer_1[] = {
+	gsSPDisplayList(mat_sam_Shoes__SHOES_),
+	gsSPDisplayList(sam_Left_Leg_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Shoes__SHOES_),
+	gsSPDisplayList(mat_sam_Pants__PANTS_),
+	gsSPDisplayList(sam_Left_Leg_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_sam_Pants__PANTS_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_Left_Shoe_mesh_layer_1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Shoes__SHOES_),
-	gsSPDisplayList(sam_yosemite_Left_Shoe_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Shoes__SHOES_),
+Gfx sam_Left_Shoe_mesh_layer_1[] = {
+	gsSPDisplayList(mat_sam_Shoes__SHOES_),
+	gsSPDisplayList(sam_Left_Shoe_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Shoes__SHOES_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_Right_Thigh_Color_mesh_layer_1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Pants__PANTS_),
-	gsSPDisplayList(sam_yosemite_Right_Thigh_Color_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Pants__PANTS_),
+Gfx sam_Right_Thigh_Color_mesh_layer_1[] = {
+	gsSPDisplayList(mat_sam_Pants__PANTS_),
+	gsSPDisplayList(sam_Right_Thigh_Color_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Pants__PANTS_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_Right_Leg_mesh_layer_1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Shoes__SHOES_),
-	gsSPDisplayList(sam_yosemite_Right_Leg_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Shoes__SHOES_),
-	gsSPDisplayList(mat_sam_yosemite_Pants__PANTS_),
-	gsSPDisplayList(sam_yosemite_Right_Leg_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_sam_yosemite_Pants__PANTS_),
+Gfx sam_Right_Leg_mesh_layer_1[] = {
+	gsSPDisplayList(mat_sam_Shoes__SHOES_),
+	gsSPDisplayList(sam_Right_Leg_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Shoes__SHOES_),
+	gsSPDisplayList(mat_sam_Pants__PANTS_),
+	gsSPDisplayList(sam_Right_Leg_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_sam_Pants__PANTS_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_Right_Shoe_DL_mesh_layer_1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Shoes__SHOES_),
-	gsSPDisplayList(sam_yosemite_Right_Shoe_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Shoes__SHOES_),
+Gfx sam_Right_Shoe_DL_mesh_layer_1[] = {
+	gsSPDisplayList(mat_sam_Shoes__SHOES_),
+	gsSPDisplayList(sam_Right_Shoe_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Shoes__SHOES_),
 	gsDPPipeSync(),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPClearGeometryMode(G_TEXTURE_GEN),
@@ -14217,320 +14223,320 @@ Gfx sam_yosemite_Right_Shoe_DL_mesh_layer_1[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_MetalSwitch_Butt_mesh_layer_1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Butt_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal__METAL_),
+Gfx sam_MetalSwitch_Butt_mesh_layer_1[] = {
+	gsSPDisplayList(mat_sam_Metal__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Butt_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_MetalSwitch_Torso_mesh_layer_1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Torso_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal__METAL_),
+Gfx sam_MetalSwitch_Torso_mesh_layer_1[] = {
+	gsSPDisplayList(mat_sam_Metal__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Torso_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_MetalSwitch_Head_DL_mesh_layer_1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Head_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal__METAL_),
+Gfx sam_MetalSwitch_Head_DL_mesh_layer_1[] = {
+	gsSPDisplayList(mat_sam_Metal__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Head_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_MetalSwitch_Head_DL_mesh_layer_1_mat_override_Half_Closed_Eyes__SKIN__0[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Head_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal__METAL_),
+Gfx sam_MetalSwitch_Head_DL_mesh_layer_1_mat_override_Half_Closed_Eyes__SKIN__0[] = {
+	gsSPDisplayList(mat_sam_Metal__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Head_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_MetalSwitch_Head_DL_mesh_layer_1_mat_override_Closed_Eyes__SKIN__1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Head_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal__METAL_),
+Gfx sam_MetalSwitch_Head_DL_mesh_layer_1_mat_override_Closed_Eyes__SKIN__1[] = {
+	gsSPDisplayList(mat_sam_Metal__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Head_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_MetalSwitch_Head_DL_mesh_layer_1_mat_override_Left_Eyes__SKIN__2[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Head_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal__METAL_),
+Gfx sam_MetalSwitch_Head_DL_mesh_layer_1_mat_override_Left_Eyes__SKIN__2[] = {
+	gsSPDisplayList(mat_sam_Metal__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Head_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_MetalSwitch_Head_DL_mesh_layer_1_mat_override_Right_Eyes__SKIN__3[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Head_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal__METAL_),
+Gfx sam_MetalSwitch_Head_DL_mesh_layer_1_mat_override_Right_Eyes__SKIN__3[] = {
+	gsSPDisplayList(mat_sam_Metal__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Head_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_MetalSwitch_Head_DL_mesh_layer_1_mat_override_Up_Eyes__SKIN__4[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Head_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal__METAL_),
+Gfx sam_MetalSwitch_Head_DL_mesh_layer_1_mat_override_Up_Eyes__SKIN__4[] = {
+	gsSPDisplayList(mat_sam_Metal__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Head_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_MetalSwitch_Head_DL_mesh_layer_1_mat_override_Down_Eyes__SKIN__5[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Head_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal__METAL_),
+Gfx sam_MetalSwitch_Head_DL_mesh_layer_1_mat_override_Down_Eyes__SKIN__5[] = {
+	gsSPDisplayList(mat_sam_Metal__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Head_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_MetalSwitch_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal__METAL_),
+Gfx sam_MetalSwitch_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1[] = {
+	gsSPDisplayList(mat_sam_Metal__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_MetalSwitch_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_mat_override_Half_Closed_Eyes__SKIN__0[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal__METAL_),
+Gfx sam_MetalSwitch_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_mat_override_Half_Closed_Eyes__SKIN__0[] = {
+	gsSPDisplayList(mat_sam_Metal__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_MetalSwitch_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_mat_override_Closed_Eyes__SKIN__1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal__METAL_),
+Gfx sam_MetalSwitch_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_mat_override_Closed_Eyes__SKIN__1[] = {
+	gsSPDisplayList(mat_sam_Metal__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_MetalSwitch_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_mat_override_Left_Eyes__SKIN__2[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal__METAL_),
+Gfx sam_MetalSwitch_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_mat_override_Left_Eyes__SKIN__2[] = {
+	gsSPDisplayList(mat_sam_Metal__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_MetalSwitch_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_mat_override_Right_Eyes__SKIN__3[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal__METAL_),
+Gfx sam_MetalSwitch_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_mat_override_Right_Eyes__SKIN__3[] = {
+	gsSPDisplayList(mat_sam_Metal__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_MetalSwitch_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_mat_override_Up_Eyes__SKIN__4[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal__METAL_),
+Gfx sam_MetalSwitch_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_mat_override_Up_Eyes__SKIN__4[] = {
+	gsSPDisplayList(mat_sam_Metal__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_MetalSwitch_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_mat_override_Down_Eyes__SKIN__5[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal__METAL_),
+Gfx sam_MetalSwitch_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_mat_override_Down_Eyes__SKIN__5[] = {
+	gsSPDisplayList(mat_sam_Metal__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Head_Dead_Switch_Option_Head_Dead_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal__METAL_),
+Gfx sam_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1[] = {
+	gsSPDisplayList(mat_sam_Metal__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Half_Closed_Eyes__SKIN__0[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal__METAL_),
+Gfx sam_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Half_Closed_Eyes__SKIN__0[] = {
+	gsSPDisplayList(mat_sam_Metal__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Closed_Eyes__SKIN__1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal__METAL_),
+Gfx sam_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Closed_Eyes__SKIN__1[] = {
+	gsSPDisplayList(mat_sam_Metal__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Left_Eyes__SKIN__2[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal__METAL_),
+Gfx sam_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Left_Eyes__SKIN__2[] = {
+	gsSPDisplayList(mat_sam_Metal__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Right_Eyes__SKIN__3[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal__METAL_),
+Gfx sam_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Right_Eyes__SKIN__3[] = {
+	gsSPDisplayList(mat_sam_Metal__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Up_Eyes__SKIN__4[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal__METAL_),
+Gfx sam_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Up_Eyes__SKIN__4[] = {
+	gsSPDisplayList(mat_sam_Metal__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Down_Eyes__SKIN__5[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal__METAL_),
+Gfx sam_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Down_Eyes__SKIN__5[] = {
+	gsSPDisplayList(mat_sam_Metal__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal__METAL_),
+Gfx sam_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1[] = {
+	gsSPDisplayList(mat_sam_Metal__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_mat_override_Half_Closed_Eyes__SKIN__0[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal__METAL_),
+Gfx sam_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_mat_override_Half_Closed_Eyes__SKIN__0[] = {
+	gsSPDisplayList(mat_sam_Metal__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_mat_override_Closed_Eyes__SKIN__1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal__METAL_),
+Gfx sam_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_mat_override_Closed_Eyes__SKIN__1[] = {
+	gsSPDisplayList(mat_sam_Metal__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_mat_override_Left_Eyes__SKIN__2[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal__METAL_),
+Gfx sam_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_mat_override_Left_Eyes__SKIN__2[] = {
+	gsSPDisplayList(mat_sam_Metal__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_mat_override_Right_Eyes__SKIN__3[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal__METAL_),
+Gfx sam_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_mat_override_Right_Eyes__SKIN__3[] = {
+	gsSPDisplayList(mat_sam_Metal__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_mat_override_Up_Eyes__SKIN__4[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal__METAL_),
+Gfx sam_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_mat_override_Up_Eyes__SKIN__4[] = {
+	gsSPDisplayList(mat_sam_Metal__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_mat_override_Down_Eyes__SKIN__5[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal__METAL_),
+Gfx sam_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_mat_override_Down_Eyes__SKIN__5[] = {
+	gsSPDisplayList(mat_sam_Metal__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Capless_Head_Switch_Option_Capless_Head_Dead_Switch_Option_Capless_Head_Dead_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_MetalSwitch_Left_Wing_DL_mesh_layer_4[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal_Wing_Tip__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Left_Wing_DL_mesh_layer_4_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal_Wing_Tip__METAL_),
-	gsSPDisplayList(mat_sam_yosemite_Metal_Wing_Base__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Left_Wing_DL_mesh_layer_4_tri_1),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal_Wing_Base__METAL_),
+Gfx sam_MetalSwitch_Left_Wing_DL_mesh_layer_4[] = {
+	gsSPDisplayList(mat_sam_Metal_Wing_Tip__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Left_Wing_DL_mesh_layer_4_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal_Wing_Tip__METAL_),
+	gsSPDisplayList(mat_sam_Metal_Wing_Base__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Left_Wing_DL_mesh_layer_4_tri_1),
+	gsSPDisplayList(mat_revert_sam_Metal_Wing_Base__METAL_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_MetalSwitch_Right_Wing_DL_mesh_layer_4[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal_Wing_Tip__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Right_Wing_DL_mesh_layer_4_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal_Wing_Tip__METAL_),
-	gsSPDisplayList(mat_sam_yosemite_Metal_Wing_Base__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Right_Wing_DL_mesh_layer_4_tri_1),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal_Wing_Base__METAL_),
+Gfx sam_MetalSwitch_Right_Wing_DL_mesh_layer_4[] = {
+	gsSPDisplayList(mat_sam_Metal_Wing_Tip__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Right_Wing_DL_mesh_layer_4_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal_Wing_Tip__METAL_),
+	gsSPDisplayList(mat_sam_Metal_Wing_Base__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Right_Wing_DL_mesh_layer_4_tri_1),
+	gsSPDisplayList(mat_revert_sam_Metal_Wing_Base__METAL_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_MetalSwitch_Left_Arm_Color_mesh_layer_1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Left_Arm_Color_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal__METAL_),
+Gfx sam_MetalSwitch_Left_Arm_Color_mesh_layer_1[] = {
+	gsSPDisplayList(mat_sam_Metal__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Left_Arm_Color_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_MetalSwitch_Left_Forearm_mesh_layer_1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Left_Forearm_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal__METAL_),
+Gfx sam_MetalSwitch_Left_Forearm_mesh_layer_1[] = {
+	gsSPDisplayList(mat_sam_Metal__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Left_Forearm_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_MetalSwitch_Left_Hand_DL_mesh_layer_1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Left_Hand_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal__METAL_),
+Gfx sam_MetalSwitch_Left_Hand_DL_mesh_layer_1[] = {
+	gsSPDisplayList(mat_sam_Metal__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Left_Hand_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_MetalSwitch_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal__METAL_),
+Gfx sam_MetalSwitch_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1[] = {
+	gsSPDisplayList(mat_sam_Metal__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_MetalSwitch_Right_Arm_Color_mesh_layer_1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Right_Arm_Color_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal__METAL_),
+Gfx sam_MetalSwitch_Right_Arm_Color_mesh_layer_1[] = {
+	gsSPDisplayList(mat_sam_Metal__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Right_Arm_Color_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_MetalSwitch_Right_Forearm_mesh_layer_1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Right_Forearm_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal__METAL_),
+Gfx sam_MetalSwitch_Right_Forearm_mesh_layer_1[] = {
+	gsSPDisplayList(mat_sam_Metal__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Right_Forearm_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_MetalSwitch_Right_Hand_DL_mesh_layer_1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Right_Hand_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal__METAL_),
+Gfx sam_MetalSwitch_Right_Hand_DL_mesh_layer_1[] = {
+	gsSPDisplayList(mat_sam_Metal__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Right_Hand_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_MetalSwitch_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal__METAL_),
+Gfx sam_MetalSwitch_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1[] = {
+	gsSPDisplayList(mat_sam_Metal__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_MetalSwitch_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal__METAL_),
+Gfx sam_MetalSwitch_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1[] = {
+	gsSPDisplayList(mat_sam_Metal__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_MetalSwitch_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal__METAL_),
+Gfx sam_MetalSwitch_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1[] = {
+	gsSPDisplayList(mat_sam_Metal__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_MetalSwitch_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal__METAL_),
+Gfx sam_MetalSwitch_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1[] = {
+	gsSPDisplayList(mat_sam_Metal__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_MetalSwitch_Right_Hand_Wing_Cap_Swtich_Option_Wings_mesh_layer_4[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal_Wing_Tip__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Right_Hand_Wing_Cap_Swtich_Option_Wings_mesh_layer_4_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal_Wing_Tip__METAL_),
-	gsSPDisplayList(mat_sam_yosemite_Metal_Wing_Base__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Right_Hand_Wing_Cap_Swtich_Option_Wings_mesh_layer_4_tri_1),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal_Wing_Base__METAL_),
+Gfx sam_MetalSwitch_Right_Hand_Wing_Cap_Swtich_Option_Wings_mesh_layer_4[] = {
+	gsSPDisplayList(mat_sam_Metal_Wing_Tip__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Right_Hand_Wing_Cap_Swtich_Option_Wings_mesh_layer_4_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal_Wing_Tip__METAL_),
+	gsSPDisplayList(mat_sam_Metal_Wing_Base__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Right_Hand_Wing_Cap_Swtich_Option_Wings_mesh_layer_4_tri_1),
+	gsSPDisplayList(mat_revert_sam_Metal_Wing_Base__METAL_),
 	gsDPPipeSync(),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPClearGeometryMode(G_TEXTURE_GEN),
@@ -14541,45 +14547,45 @@ Gfx sam_yosemite_MetalSwitch_Right_Hand_Wing_Cap_Swtich_Option_Wings_mesh_layer_
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_MetalSwitch_Left_Thigh_Color_mesh_layer_1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Left_Thigh_Color_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal__METAL_),
+Gfx sam_MetalSwitch_Left_Thigh_Color_mesh_layer_1[] = {
+	gsSPDisplayList(mat_sam_Metal__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Left_Thigh_Color_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_MetalSwitch_Left_Leg_mesh_layer_1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Left_Leg_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal__METAL_),
+Gfx sam_MetalSwitch_Left_Leg_mesh_layer_1[] = {
+	gsSPDisplayList(mat_sam_Metal__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Left_Leg_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_MetalSwitch_Left_Shoe_mesh_layer_1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Left_Shoe_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal__METAL_),
+Gfx sam_MetalSwitch_Left_Shoe_mesh_layer_1[] = {
+	gsSPDisplayList(mat_sam_Metal__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Left_Shoe_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_MetalSwitch_Right_Thigh_Color_mesh_layer_1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Right_Thigh_Color_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal__METAL_),
+Gfx sam_MetalSwitch_Right_Thigh_Color_mesh_layer_1[] = {
+	gsSPDisplayList(mat_sam_Metal__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Right_Thigh_Color_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_MetalSwitch_Right_Leg_mesh_layer_1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Right_Leg_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal__METAL_),
+Gfx sam_MetalSwitch_Right_Leg_mesh_layer_1[] = {
+	gsSPDisplayList(mat_sam_Metal__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Right_Leg_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 
-Gfx sam_yosemite_MetalSwitch_Right_Shoe_DL_mesh_layer_1[] = {
-	gsSPDisplayList(mat_sam_yosemite_Metal__METAL_),
-	gsSPDisplayList(sam_yosemite_MetalSwitch_Right_Shoe_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_sam_yosemite_Metal__METAL_),
+Gfx sam_MetalSwitch_Right_Shoe_DL_mesh_layer_1[] = {
+	gsSPDisplayList(mat_sam_Metal__METAL_),
+	gsSPDisplayList(sam_MetalSwitch_Right_Shoe_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_sam_Metal__METAL_),
 	gsDPPipeSync(),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPClearGeometryMode(G_TEXTURE_GEN),

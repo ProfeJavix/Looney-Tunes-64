@@ -43,8 +43,12 @@ Lights1 marvin_the_martian_Dead_Eyes__SKIN__lights = gdSPDefLights1(
 	0xFF, 0xFF, 0xFF, 0x28, 0x28, 0x28);
 
 Lights1 marvin_the_martian_Cap__GLOVES__lights = gdSPDefLights1(
-	0x7F, 0x7F, 0x7F,
+	0x80, 0x7F, 0x7F,
 	0xFF, 0xFF, 0xFF, 0x28, 0x28, 0x28);
+
+Lights1 marvin_the_martian_Gun__EMBLEM__lights = gdSPDefLights1(
+	0x7F, 0x50, 0x16,
+	0xFE, 0xA5, 0x36, 0x28, 0x28, 0x28);
 
 Lights1 marvin_the_martian_black_lights = gdSPDefLights1(
 	0x0, 0x0, 0x0,
@@ -9044,7 +9048,7 @@ Vtx marvin_the_martian_RailgunSwitchOption_RailgunDL_mesh_layer_1_vtx_0[202] = {
 	{{{66, -18, 8}, 0, {27, 875}, {0x44, 0x95, 0x00, 0xFF}}},
 	{{{53, -27, -1}, 0, {240, 998}, {0x44, 0x95, 0x00, 0xFF}}},
 	{{{66, -18, 26}, 0, {27, 629}, {0x44, 0x95, 0x00, 0xFF}}},
-	{{{18, -3, 8}, 0, {667, 240}, {0x9B, 0xD1, 0xC2, 0xFF}}},
+	{{{18, -3, 8}, 0, {667, 240}, {0x9C, 0xD1, 0xC2, 0xFF}}},
 	{{{78, -30, 32}, 0, {1008, 496}, {0x00, 0x00, 0x7F, 0xFF}}},
 	{{{171, -42, 24}, 0, {837, -16}, {0x00, 0x92, 0x3F, 0xFF}}},
 	{{{171, -30, 32}, 0, {1008, -16}, {0x00, 0x00, 0x7F, 0xFF}}},
@@ -9512,7 +9516,7 @@ Vtx marvin_the_martian_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_
 	{{{141, -100, 244}, 0, {-16, 1008}, {0x0E, 0x0E, 0x7E, 0xFF}}},
 	{{{88, -114, 250}, 0, {-16, 1008}, {0x13, 0xED, 0x7C, 0xFF}}},
 	{{{83, -99, 253}, 0, {-16, 1008}, {0x13, 0xED, 0x7C, 0xFF}}},
-	{{{169, -115, 141}, 0, {-16, 1008}, {0x41, 0x9E, 0xCF, 0xFF}}},
+	{{{169, -115, 141}, 0, {-16, 1008}, {0x40, 0x9E, 0xCF, 0xFF}}},
 	{{{84, -130, 117}, 0, {-16, 1008}, {0x17, 0x9F, 0xB2, 0xFF}}},
 	{{{58, -86, 72}, 0, {-16, 1008}, {0xF9, 0xB1, 0x9D, 0xFF}}},
 	{{{208, -50, 54}, 0, {-16, 1008}, {0x4E, 0xBD, 0xB5, 0xFF}}},
@@ -9880,7 +9884,7 @@ Vtx marvin_the_martian_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mes
 	{{{141, -100, 244}, 0, {-16, 1008}, {0x0E, 0x0E, 0x7E, 0xFF}}},
 	{{{88, -114, 250}, 0, {-16, 1008}, {0x13, 0xED, 0x7C, 0xFF}}},
 	{{{83, -99, 253}, 0, {-16, 1008}, {0x13, 0xED, 0x7C, 0xFF}}},
-	{{{169, -115, 141}, 0, {-16, 1008}, {0x41, 0x9E, 0xCF, 0xFF}}},
+	{{{169, -115, 141}, 0, {-16, 1008}, {0x40, 0x9E, 0xCF, 0xFF}}},
 	{{{84, -130, 117}, 0, {-16, 1008}, {0x17, 0x9F, 0xB2, 0xFF}}},
 	{{{58, -86, 72}, 0, {-16, 1008}, {0xF9, 0xB1, 0x9D, 0xFF}}},
 	{{{208, -50, 54}, 0, {-16, 1008}, {0x4E, 0xBD, 0xB5, 0xFF}}},
@@ -11541,7 +11545,7 @@ Vtx marvin_the_martian_Metal_Toad_Switch_Option_MetalRailgunSwitchOption_Railgun
 	{{{66, -18, 8}, 0, {-174, 362}, {0x44, 0x95, 0x00, 0xFF}}},
 	{{{53, -27, -1}, 0, {252, 485}, {0x44, 0x95, 0x00, 0xFF}}},
 	{{{66, -18, 26}, 0, {-174, 117}, {0x44, 0x95, 0x00, 0xFF}}},
-	{{{18, -3, 8}, 0, {1105, -273}, {0x9B, 0xD1, 0xC2, 0xFF}}},
+	{{{18, -3, 8}, 0, {1105, -273}, {0x9C, 0xD1, 0xC2, 0xFF}}},
 	{{{78, -30, 32}, 0, {1788, -17}, {0x00, 0x00, 0x7F, 0xFF}}},
 	{{{171, -42, 24}, 0, {1447, -529}, {0x00, 0x92, 0x3F, 0xFF}}},
 	{{{171, -30, 32}, 0, {1788, -529}, {0x00, 0x00, 0x7F, 0xFF}}},
@@ -12303,7 +12307,7 @@ Vtx marvin_the_martian_Metal_Toad_Switch_Option_Right_Hand_Wing_Cap_Switch_Optio
 	{{{141, -100, 244}, 0, {-260, 495}, {0x0E, 0x0E, 0x7E, 0xFF}}},
 	{{{88, -114, 250}, 0, {-260, 495}, {0x13, 0xED, 0x7C, 0xFF}}},
 	{{{83, -99, 253}, 0, {-260, 495}, {0x13, 0xED, 0x7C, 0xFF}}},
-	{{{169, -115, 141}, 0, {-260, 495}, {0x41, 0x9E, 0xCF, 0xFF}}},
+	{{{169, -115, 141}, 0, {-260, 495}, {0x40, 0x9E, 0xCF, 0xFF}}},
 	{{{84, -130, 117}, 0, {-260, 495}, {0x17, 0x9F, 0xB2, 0xFF}}},
 	{{{58, -86, 72}, 0, {-260, 495}, {0xF9, 0xB1, 0x9D, 0xFF}}},
 	{{{208, -50, 54}, 0, {-260, 495}, {0x4E, 0xBD, 0xB5, 0xFF}}},
@@ -13136,6 +13140,21 @@ Gfx mat_revert_marvin_the_martian_Cap__GLOVES_[] = {
 	gsSPEndDisplayList(),
 };
 
+Gfx mat_marvin_the_martian_Gun__EMBLEM_[] = {
+	gsSPCopyLightsPlayerPart(EMBLEM),
+	gsDPPipeSync(),
+	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
+	gsDPSetAlphaDither(G_AD_NOISE),
+	gsSPTexture(65535, 65535, 0, 0, 1),
+	gsSPEndDisplayList(),
+};
+
+Gfx mat_revert_marvin_the_martian_Gun__EMBLEM_[] = {
+	gsDPPipeSync(),
+	gsDPSetAlphaDither(G_AD_DISABLE),
+	gsSPEndDisplayList(),
+};
+
 Gfx mat_marvin_the_martian_black[] = {
 	gsSPSetLights1(marvin_the_martian_black_lights),
 	gsDPPipeSync(),
@@ -13388,9 +13407,9 @@ Gfx marvin_the_martian_Right_Hand_DL_mesh_layer_1[] = {
 };
 
 Gfx marvin_the_martian_RailgunSwitchOption_RailgunDL_mesh_layer_1[] = {
-	gsSPDisplayList(mat_marvin_the_martian_Skin__SKIN_),
+	gsSPDisplayList(mat_marvin_the_martian_Gun__EMBLEM_),
 	gsSPDisplayList(marvin_the_martian_RailgunSwitchOption_RailgunDL_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_marvin_the_martian_Skin__SKIN_),
+	gsSPDisplayList(mat_revert_marvin_the_martian_Gun__EMBLEM_),
 	gsSPDisplayList(mat_marvin_the_martian_black),
 	gsSPDisplayList(marvin_the_martian_RailgunSwitchOption_RailgunDL_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_marvin_the_martian_black),

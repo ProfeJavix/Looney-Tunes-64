@@ -5,7 +5,7 @@ local playerTable = gPlayerSyncTable
 local acts = {}
 
 ---@param m MarioState
-function acts.act_bugs_hover(m)
+function acts.act_bugs_lola_hover(m)
     if m.input & INPUT_B_PRESSED ~= 0 then
         return set_mario_action(m, ACT_DIVE, 0)
     end
@@ -16,8 +16,7 @@ function acts.act_bugs_hover(m)
 
     play_mario_sound(m, SOUND_ACTION_TERRAIN_JUMP, CHAR_SOUND_YAHOO)
 
-    common_air_action_step(m, ACT_TRIPLE_JUMP_LAND,
-        ternary(m.actionState == 0, CHAR_ANIM_TRIPLE_JUMP, CHAR_ANIM_GENERAL_FALL), 0)
+    common_air_action_step(m, ACT_TRIPLE_JUMP_LAND, ternary(m.actionState == 0, CHAR_ANIM_TRIPLE_JUMP, CHAR_ANIM_GENERAL_FALL), 0)
 
     if m.action == ACT_TRIPLE_JUMP_LAND then
         queue_rumble_data_mario(m, 5, 40)
@@ -31,15 +30,6 @@ function acts.act_bugs_hover(m)
 
         play_flip_sounds(m, 2, 8, 20)
     elseif m.actionState == 1 then
-        if m.playerIndex == 0 and m.actionArg == 0 then
-            spawn_sync_object(id_bhvBugsHelicopterEars, E_MODEL_BUGS_EARS, m.pos.x, m.pos.y, m.pos.z, function(o)
-                o.oOwner = nps[0].globalIndex
-            end)
-            m.actionArg = 1
-        end
-
-        m.marioBodyState.allowPartRotation = 1
-        m.marioBodyState.headAngle.x = -0x2000
 
         m.faceAngle.y = approach_s16_symmetric(m.faceAngle.y, m.intendedYaw, 0x200)
         m.vel.y = -8

@@ -18,6 +18,10 @@ Lights1 taz_devil_Black_lights = gdSPDefLights1(
 	0x7, 0x7, 0x7,
 	0x19, 0x19, 0x19, 0x28, 0x28, 0x28);
 
+Lights1 taz_devil_Mouth__EMBLEM__lights = gdSPDefLights1(
+	0x4C, 0x25, 0x29,
+	0x9D, 0x53, 0x5A, 0x28, 0x28, 0x28);
+
 Lights1 taz_devil_Open_Eyes__SKIN__lights = gdSPDefLights1(
 	0x0, 0x0, 0x0,
 	0x0, 0x0, 0x0, 0x28, 0x28, 0x28);
@@ -6227,7 +6231,7 @@ Gfx taz_devil_Head_DL_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx taz_devil_Head_DL_mesh_layer_1_vtx_1[116] = {
+Vtx taz_devil_Head_DL_mesh_layer_1_vtx_1[106] = {
 	{{{-7, -91, 83}, 0, {372, 496}, {0xB5, 0xAE, 0x3E, 0xFF}}},
 	{{{-25, -1, 113}, 0, {372, 368}, {0xA5, 0xF8, 0x58, 0xFF}}},
 	{{{-59, -8, -3}, 0, {372, 496}, {0x81, 0xF6, 0x00, 0xFF}}},
@@ -6332,18 +6336,8 @@ Vtx taz_devil_Head_DL_mesh_layer_1_vtx_1[116] = {
 	{{{307, 58, -3}, 0, {753, 267}, {0x03, 0x7F, 0x00, 0xFF}}},
 	{{{243, 77, -3}, 0, {756, 238}, {0x27, 0x79, 0x00, 0xFF}}},
 	{{{208, 84, 109}, 0, {567, 240}, {0x01, 0x52, 0x61, 0xFF}}},
-	{{{199, 56, -3}, 0, {-16, 1008}, {0x9E, 0x51, 0x00, 0xFF}}},
-	{{{189, 8, 183}, 0, {496, 342}, {0x06, 0x7D, 0x17, 0xFF}}},
 	{{{152, 104, 105}, 0, {525, 240}, {0xB4, 0xFC, 0x66, 0xFF}}},
-	{{{136, 125, 36}, 0, {524, 112}, {0x83, 0x16, 0xF7, 0xFF}}},
-	{{{160, 137, -3}, 0, {564, 112}, {0xB6, 0x67, 0x00, 0xFF}}},
-	{{{136, 125, -42}, 0, {524, 112}, {0x83, 0x16, 0x09, 0xFF}}},
-	{{{152, 104, -110}, 0, {525, 240}, {0xB4, 0xFC, 0x9A, 0xFF}}},
-	{{{208, 84, -114}, 0, {567, 240}, {0x01, 0x52, 0x9F, 0xFF}}},
-	{{{189, 8, -189}, 0, {496, 342}, {0x06, 0x7D, 0xE9, 0xFF}}},
-	{{{100, 106, -121}, 0, {481, 238}, {0x4C, 0x64, 0xEB, 0xFF}}},
-	{{{68, 139, -3}, 0, {476, 112}, {0x4D, 0x65, 0x00, 0xFF}}},
-	{{{100, 106, 116}, 0, {481, 238}, {0x4C, 0x64, 0x15, 0xFF}}},
+	{{{199, 56, -3}, 0, {-16, 1008}, {0x9E, 0x51, 0x00, 0xFF}}},
 };
 
 Gfx taz_devil_Head_DL_mesh_layer_1_tri_1[] = {
@@ -6387,7 +6381,7 @@ Gfx taz_devil_Head_DL_mesh_layer_1_tri_1[] = {
 	gsSP2Triangles(56, 58, 60, 0, 60, 58, 61, 0),
 	gsSP2Triangles(60, 61, 62, 0, 60, 62, 28, 0),
 	gsSP2Triangles(62, 38, 28, 0, 62, 63, 38, 0),
-	gsSPVertex(taz_devil_Head_DL_mesh_layer_1_vtx_1 + 64, 52, 0),
+	gsSPVertex(taz_devil_Head_DL_mesh_layer_1_vtx_1 + 64, 42, 0),
 	gsSP2Triangles(0, 1, 2, 0, 2, 1, 3, 0),
 	gsSP2Triangles(4, 5, 6, 0, 7, 8, 9, 0),
 	gsSP2Triangles(10, 9, 8, 0, 8, 11, 10, 0),
@@ -6402,12 +6396,7 @@ Gfx taz_devil_Head_DL_mesh_layer_1_tri_1[] = {
 	gsSP2Triangles(30, 31, 32, 0, 31, 30, 33, 0),
 	gsSP2Triangles(34, 33, 35, 0, 35, 36, 34, 0),
 	gsSP2Triangles(37, 38, 16, 0, 2, 38, 37, 0),
-	gsSP2Triangles(39, 40, 41, 0, 39, 42, 40, 0),
-	gsSP2Triangles(43, 40, 42, 0, 40, 43, 44, 0),
-	gsSP2Triangles(40, 44, 45, 0, 45, 46, 40, 0),
-	gsSP2Triangles(47, 40, 46, 0, 47, 48, 40, 0),
-	gsSP2Triangles(40, 48, 49, 0, 40, 49, 50, 0),
-	gsSP2Triangles(40, 50, 51, 0, 40, 51, 41, 0),
+	gsSP1Triangle(39, 40, 41, 0),
 	gsSPEndDisplayList(),
 };
 
@@ -6480,7 +6469,34 @@ Gfx taz_devil_Head_DL_mesh_layer_1_tri_2[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx taz_devil_Head_DL_mesh_layer_1_vtx_3[10] = {
+Vtx taz_devil_Head_DL_mesh_layer_1_vtx_3[13] = {
+	{{{208, 84, 109}, 0, {567, 240}, {0x01, 0x52, 0x61, 0xFF}}},
+	{{{199, 56, -3}, 0, {-16, 1008}, {0x9E, 0x51, 0x00, 0xFF}}},
+	{{{189, 8, 183}, 0, {496, 342}, {0x06, 0x7D, 0x17, 0xFF}}},
+	{{{100, 106, 116}, 0, {481, 238}, {0x4C, 0x64, 0x15, 0xFF}}},
+	{{{68, 139, -3}, 0, {476, 112}, {0x4D, 0x65, 0x00, 0xFF}}},
+	{{{100, 106, -121}, 0, {481, 238}, {0x4C, 0x64, 0xEB, 0xFF}}},
+	{{{189, 8, -189}, 0, {496, 342}, {0x06, 0x7D, 0xE9, 0xFF}}},
+	{{{208, 84, -114}, 0, {567, 240}, {0x01, 0x52, 0x9F, 0xFF}}},
+	{{{152, 104, -110}, 0, {525, 240}, {0xB4, 0xFC, 0x9A, 0xFF}}},
+	{{{136, 125, -42}, 0, {524, 112}, {0x83, 0x16, 0x09, 0xFF}}},
+	{{{160, 137, -3}, 0, {564, 112}, {0xB6, 0x67, 0x00, 0xFF}}},
+	{{{136, 125, 36}, 0, {524, 112}, {0x83, 0x16, 0xF7, 0xFF}}},
+	{{{152, 104, 105}, 0, {525, 240}, {0xB4, 0xFC, 0x66, 0xFF}}},
+};
+
+Gfx taz_devil_Head_DL_mesh_layer_1_tri_3[] = {
+	gsSPVertex(taz_devil_Head_DL_mesh_layer_1_vtx_3 + 0, 13, 0),
+	gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
+	gsSP2Triangles(1, 4, 3, 0, 1, 5, 4, 0),
+	gsSP2Triangles(1, 6, 5, 0, 7, 6, 1, 0),
+	gsSP2Triangles(7, 1, 8, 0, 9, 8, 1, 0),
+	gsSP2Triangles(1, 10, 9, 0, 1, 11, 10, 0),
+	gsSP1Triangle(11, 1, 12, 0),
+	gsSPEndDisplayList(),
+};
+
+Vtx taz_devil_Head_DL_mesh_layer_1_vtx_4[10] = {
 	{{{234, 66, 47}, 0, {1585, 703}, {0x15, 0x69, 0x44, 0xFF}}},
 	{{{250, 26, 67}, 0, {2123, 428}, {0x14, 0x37, 0x71, 0xFF}}},
 	{{{279, 26, 58}, 0, {2013, 72}, {0x14, 0x37, 0x71, 0xFF}}},
@@ -6493,8 +6509,8 @@ Vtx taz_devil_Head_DL_mesh_layer_1_vtx_3[10] = {
 	{{{250, 26, -73}, 0, {-202, 406}, {0x14, 0x37, 0x8F, 0xFF}}},
 };
 
-Gfx taz_devil_Head_DL_mesh_layer_1_tri_3[] = {
-	gsSPVertex(taz_devil_Head_DL_mesh_layer_1_vtx_3 + 0, 10, 0),
+Gfx taz_devil_Head_DL_mesh_layer_1_tri_4[] = {
+	gsSPVertex(taz_devil_Head_DL_mesh_layer_1_vtx_4 + 0, 10, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(4, 0, 3, 0, 4, 3, 5, 0),
 	gsSP2Triangles(4, 5, 6, 0, 4, 6, 7, 0),
@@ -12259,6 +12275,21 @@ Gfx mat_revert_taz_devil_Black[] = {
 	gsSPEndDisplayList(),
 };
 
+Gfx mat_taz_devil_Mouth__EMBLEM_[] = {
+	gsSPCopyLightsPlayerPart(EMBLEM),
+	gsDPPipeSync(),
+	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
+	gsDPSetAlphaDither(G_AD_NOISE),
+	gsSPTexture(65535, 65535, 0, 0, 1),
+	gsSPEndDisplayList(),
+};
+
+Gfx mat_revert_taz_devil_Mouth__EMBLEM_[] = {
+	gsDPPipeSync(),
+	gsDPSetAlphaDither(G_AD_DISABLE),
+	gsSPEndDisplayList(),
+};
+
 Gfx mat_taz_devil_Open_Eyes__SKIN_[] = {
 	gsSPSetLights1(taz_devil_Open_Eyes__SKIN__lights),
 	gsDPPipeSync(),
@@ -12809,8 +12840,11 @@ Gfx taz_devil_Head_DL_mesh_layer_1[] = {
 	gsSPDisplayList(mat_taz_devil_Black),
 	gsSPDisplayList(taz_devil_Head_DL_mesh_layer_1_tri_2),
 	gsSPDisplayList(mat_revert_taz_devil_Black),
-	gsSPDisplayList(mat_taz_devil_Open_Eyes__SKIN_),
+	gsSPDisplayList(mat_taz_devil_Mouth__EMBLEM_),
 	gsSPDisplayList(taz_devil_Head_DL_mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_revert_taz_devil_Mouth__EMBLEM_),
+	gsSPDisplayList(mat_taz_devil_Open_Eyes__SKIN_),
+	gsSPDisplayList(taz_devil_Head_DL_mesh_layer_1_tri_4),
 	gsSPDisplayList(mat_revert_taz_devil_Open_Eyes__SKIN_),
 	gsSPEndDisplayList(),
 };
@@ -12825,8 +12859,11 @@ Gfx taz_devil_Head_DL_mesh_layer_1_mat_override_Half_Closed_Eyes__SKIN__0[] = {
 	gsSPDisplayList(mat_taz_devil_Black),
 	gsSPDisplayList(taz_devil_Head_DL_mesh_layer_1_tri_2),
 	gsSPDisplayList(mat_revert_taz_devil_Black),
-	gsSPDisplayList(mat_taz_devil_Half_Closed_Eyes__SKIN_),
+	gsSPDisplayList(mat_taz_devil_Mouth__EMBLEM_),
 	gsSPDisplayList(taz_devil_Head_DL_mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_revert_taz_devil_Mouth__EMBLEM_),
+	gsSPDisplayList(mat_taz_devil_Half_Closed_Eyes__SKIN_),
+	gsSPDisplayList(taz_devil_Head_DL_mesh_layer_1_tri_4),
 	gsSPDisplayList(mat_revert_taz_devil_Half_Closed_Eyes__SKIN_),
 	gsSPEndDisplayList(),
 };
@@ -12841,8 +12878,11 @@ Gfx taz_devil_Head_DL_mesh_layer_1_mat_override_Closed_Eyes__SKIN__1[] = {
 	gsSPDisplayList(mat_taz_devil_Black),
 	gsSPDisplayList(taz_devil_Head_DL_mesh_layer_1_tri_2),
 	gsSPDisplayList(mat_revert_taz_devil_Black),
-	gsSPDisplayList(mat_taz_devil_Closed_Eyes__SKIN_),
+	gsSPDisplayList(mat_taz_devil_Mouth__EMBLEM_),
 	gsSPDisplayList(taz_devil_Head_DL_mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_revert_taz_devil_Mouth__EMBLEM_),
+	gsSPDisplayList(mat_taz_devil_Closed_Eyes__SKIN_),
+	gsSPDisplayList(taz_devil_Head_DL_mesh_layer_1_tri_4),
 	gsSPDisplayList(mat_revert_taz_devil_Closed_Eyes__SKIN_),
 	gsSPEndDisplayList(),
 };
@@ -12857,8 +12897,11 @@ Gfx taz_devil_Head_DL_mesh_layer_1_mat_override_Left_Eyes__SKIN__2[] = {
 	gsSPDisplayList(mat_taz_devil_Black),
 	gsSPDisplayList(taz_devil_Head_DL_mesh_layer_1_tri_2),
 	gsSPDisplayList(mat_revert_taz_devil_Black),
-	gsSPDisplayList(mat_taz_devil_Left_Eyes__SKIN_),
+	gsSPDisplayList(mat_taz_devil_Mouth__EMBLEM_),
 	gsSPDisplayList(taz_devil_Head_DL_mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_revert_taz_devil_Mouth__EMBLEM_),
+	gsSPDisplayList(mat_taz_devil_Left_Eyes__SKIN_),
+	gsSPDisplayList(taz_devil_Head_DL_mesh_layer_1_tri_4),
 	gsSPDisplayList(mat_revert_taz_devil_Left_Eyes__SKIN_),
 	gsSPEndDisplayList(),
 };
@@ -12873,8 +12916,11 @@ Gfx taz_devil_Head_DL_mesh_layer_1_mat_override_Right_Eyes__SKIN__3[] = {
 	gsSPDisplayList(mat_taz_devil_Black),
 	gsSPDisplayList(taz_devil_Head_DL_mesh_layer_1_tri_2),
 	gsSPDisplayList(mat_revert_taz_devil_Black),
-	gsSPDisplayList(mat_taz_devil_Right_Eyes__SKIN_),
+	gsSPDisplayList(mat_taz_devil_Mouth__EMBLEM_),
 	gsSPDisplayList(taz_devil_Head_DL_mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_revert_taz_devil_Mouth__EMBLEM_),
+	gsSPDisplayList(mat_taz_devil_Right_Eyes__SKIN_),
+	gsSPDisplayList(taz_devil_Head_DL_mesh_layer_1_tri_4),
 	gsSPDisplayList(mat_revert_taz_devil_Right_Eyes__SKIN_),
 	gsSPEndDisplayList(),
 };
@@ -12889,8 +12935,11 @@ Gfx taz_devil_Head_DL_mesh_layer_1_mat_override_Up_Eyes__SKIN__4[] = {
 	gsSPDisplayList(mat_taz_devil_Black),
 	gsSPDisplayList(taz_devil_Head_DL_mesh_layer_1_tri_2),
 	gsSPDisplayList(mat_revert_taz_devil_Black),
-	gsSPDisplayList(mat_taz_devil_Up_Eyes__SKIN_),
+	gsSPDisplayList(mat_taz_devil_Mouth__EMBLEM_),
 	gsSPDisplayList(taz_devil_Head_DL_mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_revert_taz_devil_Mouth__EMBLEM_),
+	gsSPDisplayList(mat_taz_devil_Up_Eyes__SKIN_),
+	gsSPDisplayList(taz_devil_Head_DL_mesh_layer_1_tri_4),
 	gsSPDisplayList(mat_revert_taz_devil_Up_Eyes__SKIN_),
 	gsSPEndDisplayList(),
 };
@@ -12905,8 +12954,11 @@ Gfx taz_devil_Head_DL_mesh_layer_1_mat_override_Open_Eyes__SKIN__5[] = {
 	gsSPDisplayList(mat_taz_devil_Black),
 	gsSPDisplayList(taz_devil_Head_DL_mesh_layer_1_tri_2),
 	gsSPDisplayList(mat_revert_taz_devil_Black),
-	gsSPDisplayList(mat_taz_devil_Open_Eyes__SKIN_),
+	gsSPDisplayList(mat_taz_devil_Mouth__EMBLEM_),
 	gsSPDisplayList(taz_devil_Head_DL_mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_revert_taz_devil_Mouth__EMBLEM_),
+	gsSPDisplayList(mat_taz_devil_Open_Eyes__SKIN_),
+	gsSPDisplayList(taz_devil_Head_DL_mesh_layer_1_tri_4),
 	gsSPDisplayList(mat_revert_taz_devil_Open_Eyes__SKIN_),
 	gsSPEndDisplayList(),
 };

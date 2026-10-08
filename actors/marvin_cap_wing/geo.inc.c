@@ -1,8 +1,8 @@
-const GeoLayout helmetwing_6_Cap_Anim_State_Switch_opt1[] = {
+const GeoLayout marvin_wing_6_Cap_Anim_State_Switch_opt1[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, helmetwing_Wing_Cap_DL_mesh_layer_4),
-		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, helmetwing_Wing_Cap_DL_mesh_layer_1),
+		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, marvin_wing_Wing_Cap_DL_mesh_layer_4),
+		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, marvin_wing_Wing_Cap_DL_mesh_layer_1),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
@@ -23,10 +23,10 @@ const GeoLayout marvin_cap_wing_geo[] = {
 				GEO_OPEN_NODE(),
 					GEO_NODE_START(),
 					GEO_OPEN_NODE(),
-						GEO_DISPLAY_LIST(LAYER_ALPHA, helmetwing_Wing_Cap_DL_mesh_layer_4),
-						GEO_DISPLAY_LIST(LAYER_OPAQUE, helmetwing_Wing_Cap_DL_mesh_layer_1),
+						GEO_DISPLAY_LIST(LAYER_ALPHA, marvin_wing_Wing_Cap_DL_mesh_layer_4),
+						GEO_DISPLAY_LIST(LAYER_OPAQUE, marvin_wing_Wing_Cap_DL_mesh_layer_1),
 					GEO_CLOSE_NODE(),
-					GEO_BRANCH(1, helmetwing_6_Cap_Anim_State_Switch_opt1),
+					GEO_BRANCH(1, marvin_wing_6_Cap_Anim_State_Switch_opt1),
 				GEO_CLOSE_NODE(),
 			GEO_CLOSE_NODE(),
 		GEO_CLOSE_NODE(),

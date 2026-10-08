@@ -4,31 +4,6 @@ local states = gMarioStates
 local bhvs = {}
 
 ---@param o Object
-function bhvs.bhv_bugs_helicopter_ears_init(o)
-    o.oFlags = o.oFlags | OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE
-end
-
----@param o Object
-function bhvs.bhv_bugs_helicopter_ears_loop(o)
-    local m = states[getLocalFromGlobalIdx(o.oOwner)]
-
-    if not m or m.action ~= ACT_BUGS_HOVER then
-        obj_mark_for_deletion(o)
-        return
-    end
-
-    o.oAction = m.marioBodyState.modelState >> 8
-    o.oOpacity = ternary(m.marioBodyState.modelState & MODEL_STATE_NOISE_ALPHA ~= 0, 100, 255)
-
-    o.oPosX = m.pos.x
-    o.oPosY = m.pos.y + 132
-    o.oPosZ = m.pos.z
-    obj_set_gfx_pos_from_pos(o)
-
-    o.oFaceAngleYaw = o.oFaceAngleYaw + 0x2000
-end
-
----@param o Object
 function bhvs.bhv_bugs_dirt_hole_init(o)
     o.oFlags = o.oFlags | (OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE | OBJ_FLAG_SET_FACE_ANGLE_TO_MOVE_ANGLE)
     cur_obj_scale(0)
@@ -133,11 +108,12 @@ function bhvs.bhv_tweety_init(o)
     o.oFlags = o.oFlags | (OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE | OBJ_FLAG_SET_FACE_YAW_TO_MOVE_YAW)
     smlua_anim_util_set_animation(o, ANIM_SYLVESTER_TWEETY_FLYING)
     o.oFaceAnglePitch = 0
+    o.oOwner = o.globalPlayerIndex
 end
 
 ---@param o Object
 function bhvs.bhv_tweety_loop(o)
-    local m = states[getLocalFromGlobalIdx(o.oOwner)]
+    local m = states[getLocalFromGlobalIdx(o.globalPlayerIndex)]
     if is_player_active(m) == 0 or
     m.flags & MARIO_CAP_ON_HEAD == 0 or
     _G.charSelect.character_get_current_number(m.playerIndex) ~= CT_SYLVESTER then
