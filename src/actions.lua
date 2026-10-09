@@ -1106,6 +1106,50 @@ function acts.act_slapped_by_foghorn(m)
 end
 
 ---@param m MarioState
+function acts.act_lola_slam_dunk(m)
+    if m.actionState == 0 then
+        play_character_sound_if_no_flag(m, CHAR_SOUND_YAH_WAH_HOO, MARIO_MARIO_SOUND_PLAYED)
+        set_character_animation(m, CHAR_ANIM_JUMP_WITH_LIGHT_OBJ)
+        update_air_with_turn(m)
+        
+        if m.playerIndex == 0 and m.actionArg == 0 then
+            spawn_sync_object(id_bhvBasketBall, E_MODEL_BASKET_BALL, m.pos.x, m.pos.y, m.pos.z, function (o)
+                o.oOwner = nps[0].globalIndex
+            end)
+            m.actionArg = 1
+        end
+
+        if m.vel.y < 20 then
+            m.actionState = 1
+        end
+    else
+        set_character_anim_with_accel(m, CHAR_ANIM_FALL_WITH_LIGHT_OBJ, 0x10000 * 1.2)
+
+        if m.actionState == 1 then
+            update_air_with_turn(m)
+            if is_anim_past_frame(m, 18) ~= 0 then
+                play_character_sound(m, CHAR_SOUND_PUNCH_YAH)
+                m.actionState = 2
+            end
+        end
+
+        if m.actionState == 1 then
+            m.vel.y = math.max(5, m.vel.y)
+        end
+    end
+
+    if m.actionState == 2 then
+        mario_set_forward_vel(m, approach_f32_symmetric(m.forwardVel, 0, 1))
+    else
+        mario_set_forward_vel(m, math.min(m.forwardVel, 10))
+    end
+
+    if perform_air_step(m, 0) == AIR_STEP_LANDED then
+        return set_mario_action(m, ACT_FREEFALL_LAND, 0)
+    end
+end
+
+---@param m MarioState
 function acts.act_sam_shoot_pistol(m)
 
     if m.input & INPUT_UNKNOWN_10 ~= 0 then

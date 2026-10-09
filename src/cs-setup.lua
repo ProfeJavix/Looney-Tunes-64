@@ -934,7 +934,12 @@ CT_LOLA = addLooneyTunesChar({
     },
     animData = {
         animTable = {
-            [_G.charSelect.CS_ANIM_MENU] = ANIM_LOLA_CS_MENU
+            [_G.charSelect.CS_ANIM_MENU] = ANIM_LOLA_CS_MENU,
+            [CHAR_ANIM_FALL_WITH_LIGHT_OBJ] = function (m)
+                if m.action == ACT_LOLA_SLAM_DUNK then
+                    return ANIM_LOLA_SLAM_DUNK
+                end
+            end
         }
     },
     voices = {
@@ -987,13 +992,18 @@ CT_LOLA = addLooneyTunesChar({
         [CHAR_SOUND_MAMA_MIA] = 'Lola Mama Mia.ogg'                                                -- Booted out of level
     },
     replaceActs = {
-        acts = { ACT_BUGS_LOLA_HOVER },
+        acts = { ACT_BUGS_LOLA_HOVER, ACT_LOLA_SLAM_DUNK },
         param = function(m, incAct)
 
             if incAct == ACT_TRIPLE_JUMP then
                 set_mario_y_vel_based_on_fspeed(m, 69, 0)
                 m.forwardVel = m.forwardVel * 0.8
                 return 1
+            end
+
+            if incAct == ACT_BACKFLIP then
+                m.vel.y = 60
+                return 2
             end
 
             return -1

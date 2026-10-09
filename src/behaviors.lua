@@ -522,6 +522,80 @@ function bhvs.bhv_taz_caught_obj_loop(o)
 end
 
 ---@param o Object
+function bhvs.bhv_basket_ball_init(o)
+    o.oFlags = o.oFlags | (OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE | OBJ_FLAG_SET_FACE_YAW_TO_MOVE_YAW)
+
+    o.hitboxDownOffset = 50
+    cur_obj_set_hitbox_radius_and_height(50, 100)
+    o.oWallHitboxRadius = 50
+    cur_obj_scale(0.5)
+
+    o.oGravity = -2
+    o.oBounciness = -2
+    o.hookRender = 1
+
+    network_init_object(o, true, { 'oAction', 'oMoveAngleYaw', 'oMoveAnglePitch' })
+end
+
+---@param o Object
+function bhvs.bhv_basket_ball_loop(o)
+    if o.oAction == 0 then
+        local m = states[getLocalFromGlobalIdx(o.oOwner)]
+
+        if is_player_active(m) == 0 then
+            o.oAction = 1
+            return
+        elseif m.playerIndex == 0 and (m.action ~= ACT_LOLA_SLAM_DUNK or m.actionState > 1) then
+
+            local target, pitch = getAutoTarget(m, { x = o.oPosX, y = o.oPosY, z = o.oPosZ}, 0x6000, 2000, 0x8000)
+            if target and pitch >= 0 then
+                o.oMoveAnglePitch = pitch
+                o.oMoveAngleYaw = obj_angle_to_object(o, target)
+            else
+                o.oMoveAnglePitch = 0x2000
+                o.oMoveAngleYaw = m.faceAngle.y
+            end
+
+            o.oAction = 1
+            network_send_object(o, true)
+            return
+        end
+    else
+        o.oFaceAnglePitch = o.oFaceAnglePitch + 0x2000
+
+        if o.oSubAction ~= 0 then
+            o.oVelY = o.oVelY + o.oGravity * (o.oSubAction + 1)
+            o.oMoveAnglePitch = math.min(obj_get_pitch_from_vel(), 0x2555)
+        end
+
+        local hit = moveProjectile(o, 100 - (30 * o.oSubAction), OBJ_MOVE_MASK_ON_GROUND | OBJ_MOVE_UNDERWATER_ON_GROUND, function (projectile)
+            return affectAllObjects(o, obj_check_hitbox_overlap, true)
+        end)
+
+        if hit ~= 0 then
+            spawn_non_sync_object(id_bhvMistCircParticleSpawner, E_MODEL_NONE, o.oPosX, o.oPosY, o.oPosZ, function()end)
+
+            if hit == 2 and o.oMoveFlags & (OBJ_MOVE_ABOVE_LAVA | OBJ_MOVE_ABOVE_DEATH_BARRIER) ~= 0 then
+                hit = 1
+            end
+
+            if o.oMoveFlags & OBJ_MOVE_BOUNCE ~= 0 then
+                o.oSubAction = o.oSubAction + 1
+            end
+
+            if hit == 1 or o.oMoveFlags & OBJ_MOVE_BOUNCE == 0 or o.oSubAction >= 3 then
+                cur_obj_play_sound_2(ternary(hit == 1, SOUND_ACTION_HIT, SOUND_ACTION_HIT_2))
+                obj_mark_for_deletion(o)
+            end
+        elseif o.oMoveFlags & OBJ_MOVE_HIT_WALL ~= 0 then
+            o.oMoveAngleYaw = cur_obj_reflect_move_angle_off_wall()
+            cur_obj_play_sound_2(SOUND_ACTION_HIT_2)
+            spawn_non_sync_object(id_bhvTriangleParticleSpawner, E_MODEL_NONE, o.oPosX, o.oPosY, o.oPosZ, function()end)
+        end
+    end
+end
+
+---@param o Object
 function bhvs.bhv_lt_explosion_init(o)
 
     o.oFlags = o.oFlags | OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE

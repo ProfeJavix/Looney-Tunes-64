@@ -142,6 +142,27 @@ function hooks.on_play_sound(soundId, pos)
     end
 end
 
+---@param o Object
+function hooks.on_object_render(o)
+    if obj_has_behavior_id(o, id_bhvBasketBall) ~= 0 and o.oAction == 0 then
+        local m = states[getLocalFromGlobalIdx(o.oOwner)]
+
+        o.oPosX = get_hand_foot_pos_x(m, 0) + 25 * sins(math.s16(m.faceAngle.y + 0x4000))
+        o.oPosY = get_hand_foot_pos_y(m, 0)
+        o.oPosZ = get_hand_foot_pos_z(m, 0) + 25 * coss(math.s16(m.faceAngle.y + 0x4000))
+
+        m.marioObj.oPosY = m.marioObj.oPosY + 100
+        
+        local yaw, pitch = obj_angle_to_object(m.marioObj, o), obj_pitch_to_object(m.marioObj, o)
+        o.oPosX = o.oPosX + 20 * sins(yaw) * coss(pitch)
+        o.oPosY = o.oPosY - 30 * coss(yaw) * sins(pitch)
+        o.oPosZ = o.oPosZ + 20 * coss(yaw) * coss(pitch)
+        m.marioObj.oPosY = m.marioObj.oPosY - 100
+
+        obj_set_gfx_pos_from_pos(o)
+    end
+end
+
 function hooks.allow_menu_open()
     local noMenuActs = {
         [ACT_BUGS_LOLA_HOVER] = true,

@@ -5,8 +5,9 @@ local states = gMarioStates
 ---@param pPos Vec3f
 ---@param range integer
 ---@param minDist? number
+---@param maxPitch? integer
 ---@return Object|nil, integer
-function getAutoTarget(m, pPos, range, minDist)
+function getAutoTarget(m, pPos, range, minDist, maxPitch)
     local targetBhvs = {
         id_bhvMario,
         id_bhvBalconyBigBoo,
@@ -50,6 +51,7 @@ function getAutoTarget(m, pPos, range, minDist)
     }
 
     minDist = minDist or 2000
+    maxPitch = maxPitch or 0x2200
     local target = nil
     local pitch = 0
 
@@ -60,7 +62,7 @@ function getAutoTarget(m, pPos, range, minDist)
             (curO.oBehParams - 1 ~= m.playerIndex and is_player_active(states[curO.oBehParams - 1]) ~= 0)) then
                 local dist = dist_between_objects(m.marioObj, curO)
                 if dist < minDist and
-                math.abs(obj_pitch_to_object(m.marioObj, curO)) < 0x2200 and
+                math.abs(obj_pitch_to_object(m.marioObj, curO)) < maxPitch and
                 abs_angle_diff(obj_angle_to_object(m.marioObj, curO), m.faceAngle.y) < range then
                     minDist = dist
                     target = curO
@@ -174,16 +176,53 @@ function moveProjectile(o, speed, stopFlags, hitFunc)
 
         obj_compute_vel_from_move_pitch(fVel)
         cur_obj_compute_vel_xz()
+        cur_obj_move_xz(78, 0)
+
+        o.oMoveFlags = o.oMoveFlags & ~OBJ_MOVE_LEFT_GROUND
+
+        if o.oMoveFlags & OBJ_MOVE_AT_WATER_SURFACE ~= 0 then
+            if o.oVelY > 5 then
+                o.oMoveFlags = o.oMoveFlags & ~OBJ_MOVE_MASK_IN_WATER
+                o.oMoveFlags = o.oMoveFlags | OBJ_MOVE_LEAVING_WATER
+            end
+        end
+
+        o.oPosY = o.oPosY + o.oVelY
+        local waterLevel = find_water_level(o.oPosX, o.oPosZ)
+        if o.oMoveFlags & OBJ_MOVE_MASK_IN_WATER == 0 then
+            if o.oPosY > waterLevel then
+                cur_obj_move_update_ground_air_flags(o.oGravity, o.oBounciness)
+            else
+                o.oMoveFlags = o.oMoveFlags | OBJ_MOVE_ENTERED_WATER
+                o.oMoveFlags = o.oMoveFlags & ~OBJ_MOVE_MASK_ON_GROUND
+            end
+        else
+            o.oMoveFlags = o.oMoveFlags & ~OBJ_MOVE_ENTERED_WATER
+
+            if o.oPosY < waterLevel then
+                cur_obj_move_update_underwater_flags()
+            else
+                if o.oPosY < o.oFloorHeight then
+                    o.oPosY = o.oFloorHeight
+                    o.oMoveFlags = o.oMoveFlags & ~OBJ_MOVE_MASK_IN_WATER
+                else
+                    o.oMoveFlags = o.oMoveFlags & ~(OBJ_MOVE_UNDERWATER_OFF_GROUND | OBJ_MOVE_UNDERWATER_ON_GROUND);
+                    o.oMoveFlags = o.oMoveFlags | OBJ_MOVE_AT_WATER_SURFACE
+                end
+            end
+        end
+
+        if o.oMoveFlags & (OBJ_MOVE_MASK_ON_GROUND | OBJ_MOVE_AT_WATER_SURFACE | OBJ_MOVE_UNDERWATER_OFF_GROUND) ~= 0 then
+            o.oMoveFlags = o.oMoveFlags & ~OBJ_MOVE_IN_AIR
+        else
+            o.oMoveFlags = o.oMoveFlags | OBJ_MOVE_IN_AIR
+        end
 
         if hitFunc and hitFunc(o) then
             return 1
         elseif o.oMoveFlags & stopFlags ~= 0 then
             return 2
         end
-
-        o.oPosX = o.oPosX + o.oVelX
-        o.oPosY = o.oPosY + o.oVelY
-        o.oPosZ = o.oPosZ + o.oVelZ
     end
 
     return 0
