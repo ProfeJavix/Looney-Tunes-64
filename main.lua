@@ -1,4 +1,5 @@
 -- name: [CS] Looney Tunes 64
+-- description: Play as the iconic Looney Tunes, complete with classic cartoon-inspired movesets and original voice acting!\n\n\\#333\\Profe\\#ff0\\Javix\\#fff\\: coding, movesets, some models setup and custom animations\nLotsaSpaget: character icons and end screen\nDrahnokks: Daffy's mallet animations\n\nModellers: Tilly, Tanooki and LotsaSpaget\n\nVoice Actors:\n-MarcusShawVA: Bugs Bunny\n-Gonz: Daffy Duck, Porky Pig, Elmer Fudd, Foghorn Leghorn\n-Chu-Pay: Marvin the Martian, Tasmanian Devil\n-Mr.VoiceBox: Yosemite Sam\n-Anniemaniac: Lola Bunny\n-ToonTone: Sylvester, Wile E. Coyote\n\nCustom Music:\n-Teraok: Merrily We Roll Along/The Merry-Go-Round Broke Down\n-Gonz: Smile Darn Ya Smile/Medley
 -- incompatible: cs
 
 if not _G.charSelectExists then
@@ -74,3 +75,5 @@ _G.charSelect.character_hook_moveset(CT_MARVIN, HOOK_MARIO_UPDATE, hooks.marvin_
 _G.charSelect.character_hook_moveset(CT_LOLA, HOOK_ON_SET_MARIO_ACTION, hooks.bugs_lola_on_set_mario_action)
 _G.charSelect.character_hook_moveset(CT_LOLA, HOOK_BEFORE_PHYS_STEP, hooks.lola_before_phys_step)
 _G.charSelect.character_hook_moveset(CT_SAM, HOOK_MARIO_UPDATE, hooks.sam_mario_update)
+
+hook_chat_command('lt_controls', 'Display the current LT64 character controls.', hooks.cmd_lt_controls)

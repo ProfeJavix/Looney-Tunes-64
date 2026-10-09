@@ -18,7 +18,7 @@
 ---@field animData? AnimData
 ---@field voices? table
 ---@field replaceActs? ReplaceActInfo
----@field hasPowerMeter? boolean
+---@field controls string[]
 
 ---@class PaletteData
 ---@field palette table
@@ -34,6 +34,10 @@
 ---@field actsSet? table
 ---@field param? fun(m: MarioState, incAct: integer): integer
 ---@field canGrab? fun(m: MarioState): boolean
+
+---@class ControlsInfo
+---@field name string
+---@field controls string[]
 
 local playerTable = gPlayerSyncTable
 

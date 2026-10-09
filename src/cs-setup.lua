@@ -5,6 +5,7 @@ local defaultLifeIcon = get_texture_info("exclamation-icon")
 CT_THANKS_FOR_PLAYING_CLIPS = {}
 CT_REPLACE_ACTS = {} ---@type ReplaceActInfo[]
 LT_64_CHARS = {}
+LT_64_CONTROLS = {} ---@type ControlsInfo[]
 
 ---@param data LTData
 ---@return integer
@@ -61,31 +62,13 @@ local function addLooneyTunesChar(data)
         CT_REPLACE_ACTS[ct] = data.replaceActs
     end
 
-    if data.hasPowerMeter then
-        _G.charSelect.character_add_health_meter(
-            ct,
-            {
-                label = {
-                    left = get_texture_info(data.id .. "health_left"),
-                    right = get_texture_info(data.id .. "health_right"),
-                },
-                pie = {
-                    [1] = get_texture_info(data.id .. "pie1"),
-                    [2] = get_texture_info(data.id .. "pie2"),
-                    [3] = get_texture_info(data.id .. "pie3"),
-                    [4] = get_texture_info(data.id .. "pie4"),
-                    [5] = get_texture_info(data.id .. "pie5"),
-                    [6] = get_texture_info(data.id .. "pie6"),
-                    [7] = get_texture_info(data.id .. "pie7"),
-                    [8] = get_texture_info(data.id .. "pie8"),
-                }
-            }
-        )
-    end
-
     _G.charSelect.character_set_category(ct, LOONEY_TUNES_64)
 
     LT_64_CHARS[ct] = true
+    LT_64_CONTROLS[ct] = {
+        name = '\\#' .. data.menuColor .. '\\' .. string.upper(data.name),
+        controls = data.controls
+    }
 
     return ct
 end
@@ -194,6 +177,11 @@ CT_BUGS = addLooneyTunesChar({
 
             return -1
         end
+    },
+    controls = {
+        'Jumps higher.',
+        'Hold \\#5168f4\\A Button\\#ffffff\\ after a triple jump to hover.',
+        'Press \\#888\\Z Trigger\\#fff\\ in air to dive into ground. Press \\#5168f4\\A Button\\#ffffff\\ to exit.'
     }
 })
 
@@ -301,6 +289,11 @@ CT_DAFFY = addLooneyTunesChar({
         canGrab = function (m)
             return m.action == ACT_DAFFY_MALLET_SWING and m.actionArg == 0
         end
+    },
+    controls = {
+        'Swims Faster.',
+        'Press \\#7ad939\\B Button\\#fff\\ to swing a mallet. Press it again to perform a mallet pound.',
+        'Press \\#888\\Z Trigger\\#fff\\ in air to perform a bounce pound. Hold it to keep moving and bouncing.'
     }
 })
 
@@ -379,6 +372,9 @@ CT_PORKY = addLooneyTunesChar({
         [CHAR_SOUND_DROWNING] = 'Porky Drowning.ogg',                                                 -- Running out of air underwater
         [CHAR_SOUND_MAMA_MIA] =
         'Porky Mama Mia.ogg'                                                                          -- Booted out of level
+    },
+    controls = {
+        'T-t-thats all folks!'
     }
 })
 
@@ -480,6 +476,9 @@ CT_ELMER = addLooneyTunesChar({
         canGrab = function (m)
             return m.floorHeight == m.pos.y
         end
+    },
+    controls = {
+        'Press \\#7ad939\\B Button\\#fff\\ to shoot the shotgun. Can be done in air.'
     }
 })
 
@@ -586,6 +585,11 @@ CT_SYLVESTER = addLooneyTunesChar({
 
             return -1
         end
+    },
+    controls = {
+        'Jump into a wall to crawl and climb it. Press \\#5168f4\\A Button\\#ffffff\\ to jump out of it.',
+        'Crouch and press \\#5168f4\\A Button\\#ffffff\\ to hover with Tweety.',
+        'If Tweety flies over an enemy head, press \\#37c2ff\\X Button\\#fff\\ to try eating that bird!'
     }
 })
 
@@ -687,6 +691,10 @@ CT_MARVIN = addLooneyTunesChar({
         canGrab = function (m)
             return m.floorHeight == m.pos.y
         end
+    },
+    controls = {
+        'Press \\#7ad939\\B Button\\#fff\\ to shoot the railgun. Can be done in air.',
+        'Press \\#37c2ff\\X Button\\#fff\\ to throw a TNT.'
     }
 })
 
@@ -798,6 +806,9 @@ CT_TAZ = addLooneyTunesChar({
         canGrab = function (m)
             return m.action == ACT_TAZ_TORNADO_START or (m.action == ACT_TAZ_TORNADO_ATTACK and m.actionTimer <= 10)
         end
+    },
+    controls = {
+        'Press \\#7ad939\\B Button\\#fff\\ to turn into a tornado. Caught enemies will fly above you and will be sent flying in the end.'
     }
 })
 
@@ -907,6 +918,9 @@ CT_FOGHORN = addLooneyTunesChar({
         canGrab = function (m)
             return true
         end
+    },
+    controls = {
+        'Hold \\#7ad939\\B Button\\#fff\\ to charge a slap. Move the stick to walk around and release \\#7ad939\\B Button\\#fff\\ to slap enemies. More Charge = More Power.'
     }
 })
 
@@ -1008,6 +1022,12 @@ CT_LOLA = addLooneyTunesChar({
 
             return -1
         end
+    },
+    controls = {
+        'Jumps a bit higher.',
+        'Moves faster.',
+        'Hold \\#5168f4\\A Button\\#ffffff\\ after a triple jump to hover.',
+        'Crouch and press \\#5168f4\\A Button\\#fff\\ to get a basket ball and perform a slam dunk to hit enemies.'
     }
 })
 
@@ -1135,6 +1155,11 @@ CT_SAM = addLooneyTunesChar({
         canGrab = function (m)
             return m.action == ACT_SAM_SHOOT_PISTOL and m.actionState == 0
         end
+    },
+    controls = {
+        'Press \\#7ad939\\B Button\\#fff\\ repeatedly to shoot the pistols.',
+        'Press \\#7ad939\\B Button\\#fff\\ during a ground pound to shoot the pistols below and take a boost in air.',
+        'Press \\#888\\Z Trigger\\#fff\\ and \\#7ad939\\B Button\\#fff\\ while running to perform a shoulder bash and hit everything in the way!'
     }
 })
 
@@ -1258,10 +1283,46 @@ CT_WILE = addLooneyTunesChar({
 
             return -1
         end
+    },
+    controls = {
+        'Sometimes if you run off a cliff, you may notice the lack of floor later.',
+        'Crouch and press \\#5168f4\\A Button\\#fff\\ to use an ACME rocket and boost into the air. Press \\#5168f4\\A Button\\#fff\\ again to take more boosts (up to two). ACME guarantees that nothing bad will happen if consecutive uses are exceeded.'
     }
 })
 
-_G.charSelect.credit_add(LOONEY_TUNES_64, "ThaGurlTilly", "Models")
-_G.charSelect.credit_add(LOONEY_TUNES_64, "ProfeJavix", "Movesets")
-_G.charSelect.credit_add(LOONEY_TUNES_64, "LotsaSpaget", "Character Icons")
-_G.charSelect.credit_add(LOONEY_TUNES_64, "Warner", "Making the guy")
+_G.charSelect.credit_add(LOONEY_TUNES_64,{
+    {"ProfeJavix", "Code"},
+    {"ProfeJavix", "Movesets"},
+    {"ProfeJavix", "Some Models Setup"},
+    {"ProfeJavix", "Custom Animations"},
+
+    {"ThaGurlTilly", "Models"},
+
+    {"Tanooki", "Models"},
+
+    {"LotsaSpaget", "Lola's Model"},
+    {"LotsaSpaget", "Character Icons"},
+    {"LotsaSpaget", "End Screen"},
+
+    {"MarcusShawVA", "Bugs's Voice"},
+
+    {"Gonz", "Daffy's Voice"},
+    {"Gonz", "Porky's Voice"},
+    {"Gonz", "Elmer's Voice"},
+    {"Gonz", "Foghorn's Voice"},
+    {"Gonz", "Custom Music"},
+
+    {"Chu-Pay", "Marvin's Voice"},
+    {"Chu-Pay", "Taz's Voice"},
+
+    {"Mr.VoiceBox", "Sam's Voice"},
+
+    {"Anniemaniac", "Lola's Voice"},
+
+    {"ToonTone", "Sylvester's Voice"},
+    {"ToonTone", "Wile's Voice"},
+
+    {"Teraok", "Custom Music"},
+
+    {"Drahnokks", "Custom Animations"}
+})

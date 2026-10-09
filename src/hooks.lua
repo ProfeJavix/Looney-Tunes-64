@@ -172,6 +172,8 @@ function hooks.allow_menu_open()
         [ACT_DAFFY_POUND_LAND] = true,
         [ACT_DAFFY_POUND_BOUNCE] = true,
         [ACT_DAFFY_MALLET_SWING] = true,
+        [ACT_DAFFY_MALLET_POUND] = true,
+        [ACT_DAFFY_MALLET_POUND_LAND] = true,
         [ACT_ELMER_SHOOT_SHOTGUN] = true,
         [ACT_ELMER_AIR_SHOOT_SHOTGUN] = true,
         [ACT_SYLVESTER_TWEETY_GLIDE] = true,
@@ -186,6 +188,10 @@ function hooks.allow_menu_open()
         [ACT_FOGHORN_SLAP_CHARGE] = true,
         [ACT_FOGHORN_SLAP_RELEASE] = true,
         [ACT_SLAPPED_BY_FOGHORN] = true,
+        [ACT_LOLA_SLAM_DUNK] = true,
+        [ACT_SAM_SHOOT_PISTOL] = true,
+        [ACT_SAM_AIR_SHOOT_PISTOL] = true,
+        [ACT_SAM_SHOULDER_BASH] = true,
         [ACT_WILE_AIR_WALK] = true,
         [ACT_WILE_ROCKET_EXPLODE] = true,
         [ACT_WILE_ROCKET_JUMP] = true
@@ -334,6 +340,26 @@ function hooks.sam_mario_update(m)
     if m.action == ACT_GROUND_POUND and m.controller.buttonPressed & B_BUTTON ~= 0 then
         return set_mario_action(m, ACT_SAM_AIR_SHOOT_PISTOL, 0)
     end
+end
+
+function hooks.cmd_lt_controls(_)
+
+    if isLT64Char() then
+        local ct = _G.charSelect.character_get_current_number()
+        local controls = LT_64_CONTROLS[ct].controls
+        if controls and #controls > 0 then
+            djui_chat_message_create(LT_64_CONTROLS[ct].name .. ':')
+            for _, control in ipairs(controls) do
+                djui_chat_message_create('-' .. control)
+            end
+        else
+            djui_chat_message_create('No controls found.')
+        end
+    else
+        djui_chat_message_create('\\#df0000\\This is not a [CS] Looney Tunes 64 character.')
+    end
+
+    return true
 end
 
 return hooks
