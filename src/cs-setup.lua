@@ -91,7 +91,7 @@ CT_BUGS = addLooneyTunesChar({
                 [HAIR]   = "8b8b8b",
                 [SKIN]   = "ffffff",
                 [CAP]    = "ff6f00",
-                [EMBLEM] = "fec179"
+                [EMBLEM] = "fe98a3"
             }
         }
     },
@@ -501,7 +501,7 @@ CT_SYLVESTER = addLooneyTunesChar({
                 [HAIR]   = "0d0d0d",
                 [SKIN]   = "ffffff",
                 [CAP]    = "ff6f00",
-                [EMBLEM] = "730600"
+                [EMBLEM] = "fe412d"
             }
         }
     },
