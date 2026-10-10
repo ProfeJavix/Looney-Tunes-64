@@ -84,14 +84,14 @@ CT_BUGS = addLooneyTunesChar({
     palettes = {
         {
             palette = {
-                [PANTS]  = "11ff00",
-                [SHIRT]  = "ffffff",
+                [PANTS]  = "8b8b8b",
+                [SHIRT]  = "8b8b8b",
                 [GLOVES] = "ffffff",
                 [SHOES]  = "ffffff",
                 [HAIR]   = "8b8b8b",
-                [SKIN]   = "fe98a3",
+                [SKIN]   = "ffffff",
                 [CAP]    = "ff6f00",
-                [EMBLEM] = "ffffff"
+                [EMBLEM] = "fec179"
             }
         }
     },
@@ -165,7 +165,7 @@ CT_BUGS = addLooneyTunesChar({
                 m.invincTimer = 0
             end
 
-            if incAct == ACT_TRIPLE_JUMP then
+            if incAct == ACT_TRIPLE_JUMP and m.controller.buttonDown & A_BUTTON ~= 0 then
                 set_mario_y_vel_based_on_fspeed(m, 69, 0)
                 m.forwardVel = m.forwardVel * 0.8
                 return 1
@@ -310,11 +310,11 @@ CT_PORKY = addLooneyTunesChar({
             palette = {
                 [PANTS]  = "ff0000",
                 [SHIRT]  = "163fb5",
-                [GLOVES] = "202020",
+                [GLOVES] = "feafa7",
                 [SHOES]  = "ffffff",
                 [HAIR]   = "0d0d0d",
                 [SKIN]   = "feafa7",
-                [CAP]    = "ff6f00",
+                [CAP]    = "163fb5",
                 [EMBLEM] = "ffffff"
             }
         }
@@ -1009,7 +1009,7 @@ CT_LOLA = addLooneyTunesChar({
         acts = { ACT_BUGS_LOLA_HOVER, ACT_LOLA_SLAM_DUNK },
         param = function(m, incAct)
 
-            if incAct == ACT_TRIPLE_JUMP then
+            if incAct == ACT_TRIPLE_JUMP and m.controller.buttonDown & A_BUTTON ~= 0 then
                 set_mario_y_vel_based_on_fspeed(m, 69, 0)
                 m.forwardVel = m.forwardVel * 0.8
                 return 1

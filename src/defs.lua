@@ -186,7 +186,7 @@ function geo_rotate_ears(node)
 
     if m.action == ACT_BUGS_LOLA_HOVER and m.actionState == 1 then
         if gn.parameter == 1 then
-            rot.rotation.x = 0x2500
+            rot.rotation.x = 0x3000
         end
         rot.rotation.y = rot.rotation.y + 0x4000
     else
