@@ -14,9 +14,9 @@ Lights1 lola_bunny_Open_Eyes__SKIN__lights = gdSPDefLights1(
 	0x64, 0x36, 0x23,
 	0xCB, 0x73, 0x50, 0x28, 0x28, 0x28);
 
-Lights1 lola_bunny_Hair__HAIR__lights = gdSPDefLights1(
-	0x71, 0x5C, 0x29,
-	0xE4, 0xBC, 0x5A, 0x28, 0x28, 0x28);
+Lights1 lola_bunny_Logo__EMBLEM__lights = gdSPDefLights1(
+	0x7F, 0x49, 0x4F,
+	0xFE, 0x98, 0xA3, 0x28, 0x28, 0x28);
 
 Lights1 lola_bunny_Half_Closed_Eyes__SKIN__lights = gdSPDefLights1(
 	0x42, 0x42, 0x42,
@@ -38,6 +38,10 @@ Lights1 lola_bunny_Up_Eyes__SKIN__lights = gdSPDefLights1(
 	0x42, 0x42, 0x42,
 	0x8B, 0x8B, 0x8B, 0x28, 0x28, 0x28);
 
+Lights1 lola_bunny_Hair__HAIR__lights = gdSPDefLights1(
+	0x71, 0x5C, 0x29,
+	0xE4, 0xBC, 0x5A, 0x28, 0x28, 0x28);
+
 Lights1 lola_bunny_Dead_Eyes__SKIN__lights = gdSPDefLights1(
 	0x64, 0x36, 0x23,
 	0xCB, 0x73, 0x50, 0x28, 0x28, 0x28);
@@ -45,10 +49,6 @@ Lights1 lola_bunny_Dead_Eyes__SKIN__lights = gdSPDefLights1(
 Lights1 lola_bunny_Dead_Muzzle_lights = gdSPDefLights1(
 	0x7F, 0x70, 0x56,
 	0xFE, 0xE2, 0xB0, 0x28, 0x28, 0x28);
-
-Lights1 lola_bunny_Logo__EMBLEM__lights = gdSPDefLights1(
-	0x7F, 0x49, 0x4F,
-	0xFE, 0x98, 0xA3, 0x28, 0x28, 0x28);
 
 Lights1 lola_bunny_Gloves__GLOVES__lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
@@ -5091,6 +5091,84 @@ Gfx lola_bunny_Torso_mesh_layer_1_tri_2[] = {
 	gsSPEndDisplayList(),
 };
 
+Vtx lola_bunny_Ears_DL_mesh_layer_1_vtx_0[26] = {
+	{{{3, 15, 61}, 0, {-16, 1008}, {0xD1, 0xA4, 0x49, 0xFF}}},
+	{{{-39, 37, 64}, 0, {-16, 1008}, {0x8F, 0x11, 0x37, 0xFF}}},
+	{{{0, 0, 0}, 0, {-16, 1008}, {0xDD, 0xD1, 0x90, 0xFF}}},
+	{{{49, 21, 85}, 0, {-16, 1008}, {0xD9, 0xB9, 0x62, 0xFF}}},
+	{{{54, 54, 109}, 0, {-16, 1008}, {0xF2, 0x3D, 0x6E, 0xFF}}},
+	{{{157, -28, 91}, 0, {-16, 1008}, {0xE0, 0x89, 0x21, 0xFF}}},
+	{{{178, -26, 105}, 0, {-16, 1008}, {0x4D, 0xDF, 0x5F, 0xFF}}},
+	{{{161, -26, 79}, 0, {-16, 1008}, {0x00, 0x9A, 0xB4, 0xFF}}},
+	{{{186, -24, 82}, 0, {-16, 1008}, {0x77, 0xEB, 0xD9, 0xFF}}},
+	{{{63, 25, 46}, 0, {-16, 1008}, {0x21, 0xDC, 0x8B, 0xFF}}},
+	{{{79, 62, 38}, 0, {-16, 1008}, {0x30, 0x5A, 0xB4, 0xFF}}},
+	{{{14, 21, 27}, 0, {-16, 1008}, {0x3C, 0xFA, 0x90, 0xFF}}},
+	{{{-21, 47, 8}, 0, {-16, 1008}, {0xC3, 0x3F, 0xA4, 0xFF}}},
+	{{{19, 20, -57}, 0, {-16, 1008}, {0xE7, 0xAB, 0xA5, 0xFF}}},
+	{{{0, 0, 0}, 0, {-16, 1008}, {0xC1, 0xC8, 0x5F, 0xFF}}},
+	{{{-21, 43, -69}, 0, {-16, 1008}, {0xA1, 0x17, 0xAF, 0xFF}}},
+	{{{-19, 47, -9}, 0, {-16, 1008}, {0xAD, 0x37, 0x4E, 0xFF}}},
+	{{{20, 23, -20}, 0, {-16, 1008}, {0x1D, 0xF0, 0x7B, 0xFF}}},
+	{{{85, 65, -11}, 0, {-16, 1008}, {0x19, 0x53, 0x5D, 0xFF}}},
+	{{{72, 28, -25}, 0, {-16, 1008}, {0x01, 0xD2, 0x76, 0xFF}}},
+	{{{201, -19, -33}, 0, {-16, 1008}, {0x69, 0xE7, 0x42, 0xFF}}},
+	{{{176, -21, -37}, 0, {-16, 1008}, {0xEE, 0x94, 0x40, 0xFF}}},
+	{{{199, -19, -56}, 0, {-16, 1008}, {0x64, 0xE6, 0xB6, 0xFF}}},
+	{{{175, -22, -49}, 0, {-16, 1008}, {0xEB, 0x8D, 0xCE, 0xFF}}},
+	{{{80, 62, -86}, 0, {-16, 1008}, {0x0F, 0x47, 0x98, 0xFF}}},
+	{{{69, 27, -68}, 0, {-16, 1008}, {0xF5, 0xC2, 0x92, 0xFF}}},
+};
+
+Gfx lola_bunny_Ears_DL_mesh_layer_1_tri_0[] = {
+	gsSPVertex(lola_bunny_Ears_DL_mesh_layer_1_vtx_0 + 0, 26, 0),
+	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
+	gsSP2Triangles(3, 4, 1, 0, 5, 4, 3, 0),
+	gsSP2Triangles(5, 6, 4, 0, 6, 5, 7, 0),
+	gsSP2Triangles(6, 7, 8, 0, 8, 7, 9, 0),
+	gsSP2Triangles(8, 9, 10, 0, 10, 9, 11, 0),
+	gsSP2Triangles(10, 11, 12, 0, 12, 11, 2, 0),
+	gsSP2Triangles(1, 12, 2, 0, 4, 12, 1, 0),
+	gsSP2Triangles(4, 10, 12, 0, 6, 10, 4, 0),
+	gsSP2Triangles(6, 8, 10, 0, 13, 14, 15, 0),
+	gsSP2Triangles(15, 14, 16, 0, 16, 14, 17, 0),
+	gsSP2Triangles(18, 16, 17, 0, 18, 17, 19, 0),
+	gsSP2Triangles(20, 18, 19, 0, 20, 19, 21, 0),
+	gsSP2Triangles(22, 20, 21, 0, 22, 21, 23, 0),
+	gsSP2Triangles(23, 24, 22, 0, 23, 25, 24, 0),
+	gsSP2Triangles(25, 15, 24, 0, 25, 13, 15, 0),
+	gsSP2Triangles(24, 15, 16, 0, 24, 16, 18, 0),
+	gsSP2Triangles(22, 24, 18, 0, 22, 18, 20, 0),
+	gsSPEndDisplayList(),
+};
+
+Vtx lola_bunny_Ears_DL_mesh_layer_1_vtx_1[14] = {
+	{{{14, 21, 27}, 0, {-16, 1008}, {0x43, 0x94, 0x04, 0xFF}}},
+	{{{3, 15, 61}, 0, {-16, 1008}, {0x26, 0x87, 0xFA, 0xFF}}},
+	{{{0, 0, 0}, 0, {-16, 1008}, {0x5F, 0xAD, 0x10, 0xFF}}},
+	{{{63, 25, 46}, 0, {-16, 1008}, {0xF1, 0x84, 0xEA, 0xFF}}},
+	{{{49, 21, 85}, 0, {-16, 1008}, {0xF1, 0x84, 0xEA, 0xFF}}},
+	{{{161, -26, 79}, 0, {-16, 1008}, {0x00, 0x9A, 0xB4, 0xFF}}},
+	{{{157, -28, 91}, 0, {-16, 1008}, {0xE0, 0x89, 0x21, 0xFF}}},
+	{{{20, 23, -20}, 0, {-16, 1008}, {0x43, 0x94, 0x04, 0xFF}}},
+	{{{0, 0, 0}, 0, {-16, 1008}, {0x61, 0xAE, 0x03, 0xFF}}},
+	{{{19, 20, -57}, 0, {-16, 1008}, {0x25, 0x87, 0x05, 0xFF}}},
+	{{{72, 28, -25}, 0, {-16, 1008}, {0xED, 0x83, 0x06, 0xFF}}},
+	{{{69, 27, -68}, 0, {-16, 1008}, {0xED, 0x83, 0x06, 0xFF}}},
+	{{{176, -21, -37}, 0, {-16, 1008}, {0xEE, 0x94, 0x40, 0xFF}}},
+	{{{175, -22, -49}, 0, {-16, 1008}, {0xEB, 0x8D, 0xCE, 0xFF}}},
+};
+
+Gfx lola_bunny_Ears_DL_mesh_layer_1_tri_1[] = {
+	gsSPVertex(lola_bunny_Ears_DL_mesh_layer_1_vtx_1 + 0, 14, 0),
+	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
+	gsSP2Triangles(3, 4, 1, 0, 5, 4, 3, 0),
+	gsSP2Triangles(5, 6, 4, 0, 7, 8, 9, 0),
+	gsSP2Triangles(10, 7, 9, 0, 10, 9, 11, 0),
+	gsSP2Triangles(12, 10, 11, 0, 12, 11, 13, 0),
+	gsSPEndDisplayList(),
+};
+
 Vtx lola_bunny_Head_DL_mesh_layer_1_vtx_0[23] = {
 	{{{76, -47, -70}, 0, {-16, 1008}, {0x22, 0xA8, 0xAB, 0xFF}}},
 	{{{68, 27, -77}, 0, {-16, 1008}, {0x24, 0x25, 0x8C, 0xFF}}},
@@ -5489,84 +5567,6 @@ Vtx lola_bunny_Right_Wing_DL_mesh_layer_4_vtx_1[4] = {
 Gfx lola_bunny_Right_Wing_DL_mesh_layer_4_tri_1[] = {
 	gsSPVertex(lola_bunny_Right_Wing_DL_mesh_layer_4_vtx_1 + 0, 4, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
-	gsSPEndDisplayList(),
-};
-
-Vtx lola_bunny_Ears_DL_mesh_layer_1_vtx_0[26] = {
-	{{{3, 15, 61}, 0, {-16, 1008}, {0xD1, 0xA4, 0x49, 0xFF}}},
-	{{{-39, 37, 64}, 0, {-16, 1008}, {0x8F, 0x11, 0x37, 0xFF}}},
-	{{{0, 0, 0}, 0, {-16, 1008}, {0xDD, 0xD1, 0x90, 0xFF}}},
-	{{{49, 21, 85}, 0, {-16, 1008}, {0xD9, 0xB9, 0x62, 0xFF}}},
-	{{{54, 54, 109}, 0, {-16, 1008}, {0xF2, 0x3D, 0x6E, 0xFF}}},
-	{{{157, -28, 91}, 0, {-16, 1008}, {0xE0, 0x89, 0x21, 0xFF}}},
-	{{{178, -26, 105}, 0, {-16, 1008}, {0x4D, 0xDF, 0x5F, 0xFF}}},
-	{{{161, -26, 79}, 0, {-16, 1008}, {0x00, 0x9A, 0xB4, 0xFF}}},
-	{{{186, -24, 82}, 0, {-16, 1008}, {0x77, 0xEB, 0xD9, 0xFF}}},
-	{{{63, 25, 46}, 0, {-16, 1008}, {0x21, 0xDC, 0x8B, 0xFF}}},
-	{{{79, 62, 38}, 0, {-16, 1008}, {0x30, 0x5A, 0xB4, 0xFF}}},
-	{{{14, 21, 27}, 0, {-16, 1008}, {0x3C, 0xFA, 0x90, 0xFF}}},
-	{{{-21, 47, 8}, 0, {-16, 1008}, {0xC3, 0x3F, 0xA4, 0xFF}}},
-	{{{19, 20, -57}, 0, {-16, 1008}, {0xE7, 0xAB, 0xA5, 0xFF}}},
-	{{{0, 0, 0}, 0, {-16, 1008}, {0xC1, 0xC8, 0x5F, 0xFF}}},
-	{{{-21, 43, -69}, 0, {-16, 1008}, {0xA1, 0x17, 0xAF, 0xFF}}},
-	{{{-19, 47, -9}, 0, {-16, 1008}, {0xAD, 0x37, 0x4E, 0xFF}}},
-	{{{20, 23, -20}, 0, {-16, 1008}, {0x1D, 0xF0, 0x7B, 0xFF}}},
-	{{{85, 65, -11}, 0, {-16, 1008}, {0x19, 0x53, 0x5D, 0xFF}}},
-	{{{72, 28, -25}, 0, {-16, 1008}, {0x01, 0xD2, 0x76, 0xFF}}},
-	{{{201, -19, -33}, 0, {-16, 1008}, {0x69, 0xE7, 0x42, 0xFF}}},
-	{{{176, -21, -37}, 0, {-16, 1008}, {0xEE, 0x94, 0x40, 0xFF}}},
-	{{{199, -19, -56}, 0, {-16, 1008}, {0x64, 0xE6, 0xB6, 0xFF}}},
-	{{{175, -22, -49}, 0, {-16, 1008}, {0xEB, 0x8D, 0xCE, 0xFF}}},
-	{{{80, 62, -86}, 0, {-16, 1008}, {0x0F, 0x47, 0x98, 0xFF}}},
-	{{{69, 27, -68}, 0, {-16, 1008}, {0xF5, 0xC2, 0x92, 0xFF}}},
-};
-
-Gfx lola_bunny_Ears_DL_mesh_layer_1_tri_0[] = {
-	gsSPVertex(lola_bunny_Ears_DL_mesh_layer_1_vtx_0 + 0, 26, 0),
-	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
-	gsSP2Triangles(3, 4, 1, 0, 5, 4, 3, 0),
-	gsSP2Triangles(5, 6, 4, 0, 6, 5, 7, 0),
-	gsSP2Triangles(6, 7, 8, 0, 8, 7, 9, 0),
-	gsSP2Triangles(8, 9, 10, 0, 10, 9, 11, 0),
-	gsSP2Triangles(10, 11, 12, 0, 12, 11, 2, 0),
-	gsSP2Triangles(1, 12, 2, 0, 4, 12, 1, 0),
-	gsSP2Triangles(4, 10, 12, 0, 6, 10, 4, 0),
-	gsSP2Triangles(6, 8, 10, 0, 13, 14, 15, 0),
-	gsSP2Triangles(15, 14, 16, 0, 16, 14, 17, 0),
-	gsSP2Triangles(18, 16, 17, 0, 18, 17, 19, 0),
-	gsSP2Triangles(20, 18, 19, 0, 20, 19, 21, 0),
-	gsSP2Triangles(22, 20, 21, 0, 22, 21, 23, 0),
-	gsSP2Triangles(23, 24, 22, 0, 23, 25, 24, 0),
-	gsSP2Triangles(25, 15, 24, 0, 25, 13, 15, 0),
-	gsSP2Triangles(24, 15, 16, 0, 24, 16, 18, 0),
-	gsSP2Triangles(22, 24, 18, 0, 22, 18, 20, 0),
-	gsSPEndDisplayList(),
-};
-
-Vtx lola_bunny_Ears_DL_mesh_layer_1_vtx_1[14] = {
-	{{{14, 21, 27}, 0, {-16, 1008}, {0x43, 0x94, 0x04, 0xFF}}},
-	{{{3, 15, 61}, 0, {-16, 1008}, {0x26, 0x87, 0xFA, 0xFF}}},
-	{{{0, 0, 0}, 0, {-16, 1008}, {0x5F, 0xAD, 0x10, 0xFF}}},
-	{{{63, 25, 46}, 0, {-16, 1008}, {0xF1, 0x84, 0xEA, 0xFF}}},
-	{{{49, 21, 85}, 0, {-16, 1008}, {0xF1, 0x84, 0xEA, 0xFF}}},
-	{{{161, -26, 79}, 0, {-16, 1008}, {0x00, 0x9A, 0xB4, 0xFF}}},
-	{{{157, -28, 91}, 0, {-16, 1008}, {0xE0, 0x89, 0x21, 0xFF}}},
-	{{{20, 23, -20}, 0, {-16, 1008}, {0x43, 0x94, 0x04, 0xFF}}},
-	{{{0, 0, 0}, 0, {-16, 1008}, {0x61, 0xAE, 0x03, 0xFF}}},
-	{{{19, 20, -57}, 0, {-16, 1008}, {0x25, 0x87, 0x05, 0xFF}}},
-	{{{72, 28, -25}, 0, {-16, 1008}, {0xED, 0x83, 0x06, 0xFF}}},
-	{{{69, 27, -68}, 0, {-16, 1008}, {0xED, 0x83, 0x06, 0xFF}}},
-	{{{176, -21, -37}, 0, {-16, 1008}, {0xEE, 0x94, 0x40, 0xFF}}},
-	{{{175, -22, -49}, 0, {-16, 1008}, {0xEB, 0x8D, 0xCE, 0xFF}}},
-};
-
-Gfx lola_bunny_Ears_DL_mesh_layer_1_tri_1[] = {
-	gsSPVertex(lola_bunny_Ears_DL_mesh_layer_1_vtx_1 + 0, 14, 0),
-	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
-	gsSP2Triangles(3, 4, 1, 0, 5, 4, 3, 0),
-	gsSP2Triangles(5, 6, 4, 0, 7, 8, 9, 0),
-	gsSP2Triangles(10, 7, 9, 0, 10, 9, 11, 0),
-	gsSP2Triangles(12, 10, 11, 0, 12, 11, 13, 0),
 	gsSPEndDisplayList(),
 };
 
@@ -7009,6 +7009,76 @@ Gfx lola_bunny_Metal_Switch_Option_Torso_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
+Vtx lola_bunny_Metal_Switch_Option_Ears_DL_mesh_layer_1_vtx_0[40] = {
+	{{{14, 21, 27}, 0, {-260, 495}, {0x43, 0x94, 0x04, 0xFF}}},
+	{{{3, 15, 61}, 0, {-260, 495}, {0x26, 0x87, 0xFA, 0xFF}}},
+	{{{0, 0, 0}, 0, {-260, 495}, {0x5F, 0xAD, 0x10, 0xFF}}},
+	{{{63, 25, 46}, 0, {-260, 495}, {0xF1, 0x84, 0xEA, 0xFF}}},
+	{{{49, 21, 85}, 0, {-260, 495}, {0xF1, 0x84, 0xEA, 0xFF}}},
+	{{{161, -26, 79}, 0, {-260, 495}, {0xCF, 0x8F, 0xE2, 0xFF}}},
+	{{{157, -28, 91}, 0, {-260, 495}, {0xCF, 0x8F, 0xE2, 0xFF}}},
+	{{{20, 23, -20}, 0, {-260, 495}, {0x43, 0x94, 0x04, 0xFF}}},
+	{{{0, 0, 0}, 0, {-260, 495}, {0x61, 0xAE, 0x03, 0xFF}}},
+	{{{19, 20, -57}, 0, {-260, 495}, {0x25, 0x87, 0x05, 0xFF}}},
+	{{{72, 28, -25}, 0, {-260, 495}, {0xED, 0x83, 0x06, 0xFF}}},
+	{{{69, 27, -68}, 0, {-260, 495}, {0xED, 0x83, 0x06, 0xFF}}},
+	{{{176, -21, -37}, 0, {-260, 495}, {0xCA, 0x8D, 0x07, 0xFF}}},
+	{{{175, -22, -49}, 0, {-260, 495}, {0xCA, 0x8D, 0x07, 0xFF}}},
+	{{{79, 62, 38}, 0, {-260, 495}, {0x30, 0x5A, 0xB4, 0xFF}}},
+	{{{63, 25, 46}, 0, {-260, 495}, {0x21, 0xDC, 0x8B, 0xFF}}},
+	{{{14, 21, 27}, 0, {-260, 495}, {0x3C, 0xFA, 0x90, 0xFF}}},
+	{{{186, -24, 82}, 0, {-260, 495}, {0x77, 0xEB, 0xD9, 0xFF}}},
+	{{{178, -26, 105}, 0, {-260, 495}, {0x4D, 0xDF, 0x5F, 0xFF}}},
+	{{{54, 54, 109}, 0, {-260, 495}, {0xF2, 0x3D, 0x6E, 0xFF}}},
+	{{{-21, 47, 8}, 0, {-260, 495}, {0xC3, 0x3F, 0xA4, 0xFF}}},
+	{{{0, 0, 0}, 0, {-260, 495}, {0xDD, 0xD1, 0x90, 0xFF}}},
+	{{{-39, 37, 64}, 0, {-260, 495}, {0x8F, 0x11, 0x37, 0xFF}}},
+	{{{3, 15, 61}, 0, {-260, 495}, {0xD1, 0xA4, 0x49, 0xFF}}},
+	{{{49, 21, 85}, 0, {-260, 495}, {0xD9, 0xB9, 0x62, 0xFF}}},
+	{{{157, -28, 91}, 0, {-260, 495}, {0xEC, 0x92, 0x3D, 0xFF}}},
+	{{{161, -26, 79}, 0, {-260, 495}, {0x16, 0xA8, 0xA7, 0xFF}}},
+	{{{19, 20, -57}, 0, {-260, 495}, {0xE7, 0xAB, 0xA5, 0xFF}}},
+	{{{0, 0, 0}, 0, {-260, 495}, {0xC1, 0xC8, 0x5F, 0xFF}}},
+	{{{-21, 43, -69}, 0, {-260, 495}, {0xA1, 0x17, 0xAF, 0xFF}}},
+	{{{-19, 47, -9}, 0, {-260, 495}, {0xAD, 0x37, 0x4E, 0xFF}}},
+	{{{20, 23, -20}, 0, {-260, 495}, {0x1D, 0xF0, 0x7B, 0xFF}}},
+	{{{85, 65, -11}, 0, {-260, 495}, {0x19, 0x53, 0x5D, 0xFF}}},
+	{{{72, 28, -25}, 0, {-260, 495}, {0x01, 0xD2, 0x76, 0xFF}}},
+	{{{201, -19, -33}, 0, {-260, 495}, {0x69, 0xE7, 0x42, 0xFF}}},
+	{{{176, -21, -37}, 0, {-260, 495}, {0xFF, 0xA1, 0x54, 0xFF}}},
+	{{{199, -19, -56}, 0, {-260, 495}, {0x64, 0xE6, 0xB6, 0xFF}}},
+	{{{175, -22, -49}, 0, {-260, 495}, {0xFE, 0x98, 0xB7, 0xFF}}},
+	{{{80, 62, -86}, 0, {-260, 495}, {0x0F, 0x47, 0x98, 0xFF}}},
+	{{{69, 27, -68}, 0, {-260, 495}, {0xF5, 0xC2, 0x92, 0xFF}}},
+};
+
+Gfx lola_bunny_Metal_Switch_Option_Ears_DL_mesh_layer_1_tri_0[] = {
+	gsSPVertex(lola_bunny_Metal_Switch_Option_Ears_DL_mesh_layer_1_vtx_0 + 0, 40, 0),
+	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
+	gsSP2Triangles(3, 4, 1, 0, 5, 4, 3, 0),
+	gsSP2Triangles(5, 6, 4, 0, 7, 8, 9, 0),
+	gsSP2Triangles(10, 7, 9, 0, 10, 9, 11, 0),
+	gsSP2Triangles(12, 10, 11, 0, 12, 11, 13, 0),
+	gsSP2Triangles(14, 15, 16, 0, 17, 15, 14, 0),
+	gsSP2Triangles(18, 17, 14, 0, 18, 14, 19, 0),
+	gsSP2Triangles(19, 14, 20, 0, 14, 16, 20, 0),
+	gsSP2Triangles(20, 16, 21, 0, 22, 20, 21, 0),
+	gsSP2Triangles(23, 22, 21, 0, 24, 22, 23, 0),
+	gsSP2Triangles(24, 19, 22, 0, 25, 19, 24, 0),
+	gsSP2Triangles(25, 18, 19, 0, 18, 25, 26, 0),
+	gsSP2Triangles(18, 26, 17, 0, 17, 26, 15, 0),
+	gsSP2Triangles(19, 20, 22, 0, 27, 28, 29, 0),
+	gsSP2Triangles(29, 28, 30, 0, 30, 28, 31, 0),
+	gsSP2Triangles(32, 30, 31, 0, 32, 31, 33, 0),
+	gsSP2Triangles(34, 32, 33, 0, 34, 33, 35, 0),
+	gsSP2Triangles(36, 34, 35, 0, 36, 35, 37, 0),
+	gsSP2Triangles(37, 38, 36, 0, 37, 39, 38, 0),
+	gsSP2Triangles(39, 29, 38, 0, 39, 27, 29, 0),
+	gsSP2Triangles(38, 29, 30, 0, 38, 30, 32, 0),
+	gsSP2Triangles(36, 38, 32, 0, 36, 32, 34, 0),
+	gsSPEndDisplayList(),
+};
+
 Vtx lola_bunny_Metal_Switch_Option_Head_DL_mesh_layer_1_vtx_0[68] = {
 	{{{46, 63, 76}, 0, {-260, 495}, {0xFD, 0x4F, 0x63, 0xFF}}},
 	{{{68, 27, 77}, 0, {-260, 495}, {0x3A, 0x1F, 0x6C, 0xFF}}},
@@ -7174,76 +7244,6 @@ Vtx lola_bunny_Metal_Switch_Option_Right_Wing_DL_mesh_layer_4_vtx_1[4] = {
 Gfx lola_bunny_Metal_Switch_Option_Right_Wing_DL_mesh_layer_4_tri_1[] = {
 	gsSPVertex(lola_bunny_Metal_Switch_Option_Right_Wing_DL_mesh_layer_4_vtx_1 + 0, 4, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
-	gsSPEndDisplayList(),
-};
-
-Vtx lola_bunny_Metal_Switch_Option_Ears_DL_mesh_layer_1_vtx_0[40] = {
-	{{{14, 21, 27}, 0, {-260, 495}, {0x43, 0x94, 0x04, 0xFF}}},
-	{{{3, 15, 61}, 0, {-260, 495}, {0x26, 0x87, 0xFA, 0xFF}}},
-	{{{0, 0, 0}, 0, {-260, 495}, {0x5F, 0xAD, 0x10, 0xFF}}},
-	{{{63, 25, 46}, 0, {-260, 495}, {0xF1, 0x84, 0xEA, 0xFF}}},
-	{{{49, 21, 85}, 0, {-260, 495}, {0xF1, 0x84, 0xEA, 0xFF}}},
-	{{{161, -26, 79}, 0, {-260, 495}, {0xCF, 0x8F, 0xE2, 0xFF}}},
-	{{{157, -28, 91}, 0, {-260, 495}, {0xCF, 0x8F, 0xE2, 0xFF}}},
-	{{{20, 23, -20}, 0, {-260, 495}, {0x43, 0x94, 0x04, 0xFF}}},
-	{{{0, 0, 0}, 0, {-260, 495}, {0x61, 0xAE, 0x03, 0xFF}}},
-	{{{19, 20, -57}, 0, {-260, 495}, {0x25, 0x87, 0x05, 0xFF}}},
-	{{{72, 28, -25}, 0, {-260, 495}, {0xED, 0x83, 0x06, 0xFF}}},
-	{{{69, 27, -68}, 0, {-260, 495}, {0xED, 0x83, 0x06, 0xFF}}},
-	{{{176, -21, -37}, 0, {-260, 495}, {0xCA, 0x8D, 0x07, 0xFF}}},
-	{{{175, -22, -49}, 0, {-260, 495}, {0xCA, 0x8D, 0x07, 0xFF}}},
-	{{{79, 62, 38}, 0, {-260, 495}, {0x30, 0x5A, 0xB4, 0xFF}}},
-	{{{63, 25, 46}, 0, {-260, 495}, {0x21, 0xDC, 0x8B, 0xFF}}},
-	{{{14, 21, 27}, 0, {-260, 495}, {0x3C, 0xFA, 0x90, 0xFF}}},
-	{{{186, -24, 82}, 0, {-260, 495}, {0x77, 0xEB, 0xD9, 0xFF}}},
-	{{{178, -26, 105}, 0, {-260, 495}, {0x4D, 0xDF, 0x5F, 0xFF}}},
-	{{{54, 54, 109}, 0, {-260, 495}, {0xF2, 0x3D, 0x6E, 0xFF}}},
-	{{{-21, 47, 8}, 0, {-260, 495}, {0xC3, 0x3F, 0xA4, 0xFF}}},
-	{{{0, 0, 0}, 0, {-260, 495}, {0xDD, 0xD1, 0x90, 0xFF}}},
-	{{{-39, 37, 64}, 0, {-260, 495}, {0x8F, 0x11, 0x37, 0xFF}}},
-	{{{3, 15, 61}, 0, {-260, 495}, {0xD1, 0xA4, 0x49, 0xFF}}},
-	{{{49, 21, 85}, 0, {-260, 495}, {0xD9, 0xB9, 0x62, 0xFF}}},
-	{{{157, -28, 91}, 0, {-260, 495}, {0xEC, 0x92, 0x3D, 0xFF}}},
-	{{{161, -26, 79}, 0, {-260, 495}, {0x16, 0xA8, 0xA7, 0xFF}}},
-	{{{19, 20, -57}, 0, {-260, 495}, {0xE7, 0xAB, 0xA5, 0xFF}}},
-	{{{0, 0, 0}, 0, {-260, 495}, {0xC1, 0xC8, 0x5F, 0xFF}}},
-	{{{-21, 43, -69}, 0, {-260, 495}, {0xA1, 0x17, 0xAF, 0xFF}}},
-	{{{-19, 47, -9}, 0, {-260, 495}, {0xAD, 0x37, 0x4E, 0xFF}}},
-	{{{20, 23, -20}, 0, {-260, 495}, {0x1D, 0xF0, 0x7B, 0xFF}}},
-	{{{85, 65, -11}, 0, {-260, 495}, {0x19, 0x53, 0x5D, 0xFF}}},
-	{{{72, 28, -25}, 0, {-260, 495}, {0x01, 0xD2, 0x76, 0xFF}}},
-	{{{201, -19, -33}, 0, {-260, 495}, {0x69, 0xE7, 0x42, 0xFF}}},
-	{{{176, -21, -37}, 0, {-260, 495}, {0xFF, 0xA1, 0x54, 0xFF}}},
-	{{{199, -19, -56}, 0, {-260, 495}, {0x64, 0xE6, 0xB6, 0xFF}}},
-	{{{175, -22, -49}, 0, {-260, 495}, {0xFE, 0x98, 0xB7, 0xFF}}},
-	{{{80, 62, -86}, 0, {-260, 495}, {0x0F, 0x47, 0x98, 0xFF}}},
-	{{{69, 27, -68}, 0, {-260, 495}, {0xF5, 0xC2, 0x92, 0xFF}}},
-};
-
-Gfx lola_bunny_Metal_Switch_Option_Ears_DL_mesh_layer_1_tri_0[] = {
-	gsSPVertex(lola_bunny_Metal_Switch_Option_Ears_DL_mesh_layer_1_vtx_0 + 0, 40, 0),
-	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
-	gsSP2Triangles(3, 4, 1, 0, 5, 4, 3, 0),
-	gsSP2Triangles(5, 6, 4, 0, 7, 8, 9, 0),
-	gsSP2Triangles(10, 7, 9, 0, 10, 9, 11, 0),
-	gsSP2Triangles(12, 10, 11, 0, 12, 11, 13, 0),
-	gsSP2Triangles(14, 15, 16, 0, 17, 15, 14, 0),
-	gsSP2Triangles(18, 17, 14, 0, 18, 14, 19, 0),
-	gsSP2Triangles(19, 14, 20, 0, 14, 16, 20, 0),
-	gsSP2Triangles(20, 16, 21, 0, 22, 20, 21, 0),
-	gsSP2Triangles(23, 22, 21, 0, 24, 22, 23, 0),
-	gsSP2Triangles(24, 19, 22, 0, 25, 19, 24, 0),
-	gsSP2Triangles(25, 18, 19, 0, 18, 25, 26, 0),
-	gsSP2Triangles(18, 26, 17, 0, 17, 26, 15, 0),
-	gsSP2Triangles(19, 20, 22, 0, 27, 28, 29, 0),
-	gsSP2Triangles(29, 28, 30, 0, 30, 28, 31, 0),
-	gsSP2Triangles(32, 30, 31, 0, 32, 31, 33, 0),
-	gsSP2Triangles(34, 32, 33, 0, 34, 33, 35, 0),
-	gsSP2Triangles(36, 34, 35, 0, 36, 35, 37, 0),
-	gsSP2Triangles(37, 38, 36, 0, 37, 39, 38, 0),
-	gsSP2Triangles(39, 29, 38, 0, 39, 27, 29, 0),
-	gsSP2Triangles(38, 29, 30, 0, 38, 30, 32, 0),
-	gsSP2Triangles(36, 38, 32, 0, 36, 32, 34, 0),
 	gsSPEndDisplayList(),
 };
 
@@ -8486,8 +8486,8 @@ Gfx mat_revert_lola_bunny_Open_Eyes__SKIN_[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_lola_bunny_Hair__HAIR_[] = {
-	gsSPCopyLightsPlayerPart(HAIR),
+Gfx mat_lola_bunny_Logo__EMBLEM_[] = {
+	gsSPCopyLightsPlayerPart(EMBLEM),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
@@ -8495,7 +8495,7 @@ Gfx mat_lola_bunny_Hair__HAIR_[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_lola_bunny_Hair__HAIR_[] = {
+Gfx mat_revert_lola_bunny_Logo__EMBLEM_[] = {
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
@@ -8601,6 +8601,21 @@ Gfx mat_revert_lola_bunny_Up_Eyes__SKIN_[] = {
 	gsSPEndDisplayList(),
 };
 
+Gfx mat_lola_bunny_Hair__HAIR_[] = {
+	gsSPCopyLightsPlayerPart(HAIR),
+	gsDPPipeSync(),
+	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
+	gsDPSetAlphaDither(G_AD_NOISE),
+	gsSPTexture(65535, 65535, 0, 0, 1),
+	gsSPEndDisplayList(),
+};
+
+Gfx mat_revert_lola_bunny_Hair__HAIR_[] = {
+	gsDPPipeSync(),
+	gsDPSetAlphaDither(G_AD_DISABLE),
+	gsSPEndDisplayList(),
+};
+
 Gfx mat_lola_bunny_Dead_Eyes__SKIN_[] = {
 	gsSPCopyLightsPlayerPart(SKIN),
 	gsDPPipeSync(),
@@ -8636,21 +8651,6 @@ Gfx mat_lola_bunny_Dead_Muzzle[] = {
 };
 
 Gfx mat_revert_lola_bunny_Dead_Muzzle[] = {
-	gsDPPipeSync(),
-	gsDPSetAlphaDither(G_AD_DISABLE),
-	gsSPEndDisplayList(),
-};
-
-Gfx mat_lola_bunny_Logo__EMBLEM_[] = {
-	gsSPCopyLightsPlayerPart(EMBLEM),
-	gsDPPipeSync(),
-	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
-	gsDPSetAlphaDither(G_AD_NOISE),
-	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsSPEndDisplayList(),
-};
-
-Gfx mat_revert_lola_bunny_Logo__EMBLEM_[] = {
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
@@ -8842,6 +8842,76 @@ Gfx lola_bunny_Torso_mesh_layer_1[] = {
 	gsSPDisplayList(mat_lola_bunny_Open_Eyes__SKIN_),
 	gsSPDisplayList(lola_bunny_Torso_mesh_layer_1_tri_2),
 	gsSPDisplayList(mat_revert_lola_bunny_Open_Eyes__SKIN_),
+	gsSPEndDisplayList(),
+};
+
+Gfx lola_bunny_Ears_DL_mesh_layer_1[] = {
+	gsSPDisplayList(mat_lola_bunny_Open_Eyes__SKIN_),
+	gsSPDisplayList(lola_bunny_Ears_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_lola_bunny_Open_Eyes__SKIN_),
+	gsSPDisplayList(mat_lola_bunny_Logo__EMBLEM_),
+	gsSPDisplayList(lola_bunny_Ears_DL_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_lola_bunny_Logo__EMBLEM_),
+	gsSPEndDisplayList(),
+};
+
+Gfx lola_bunny_Ears_DL_mesh_layer_1_mat_override_Half_Closed_Eyes__SKIN__0[] = {
+	gsSPDisplayList(mat_lola_bunny_Half_Closed_Eyes__SKIN_),
+	gsSPDisplayList(lola_bunny_Ears_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_lola_bunny_Half_Closed_Eyes__SKIN_),
+	gsSPDisplayList(mat_lola_bunny_Logo__EMBLEM_),
+	gsSPDisplayList(lola_bunny_Ears_DL_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_lola_bunny_Logo__EMBLEM_),
+	gsSPEndDisplayList(),
+};
+
+Gfx lola_bunny_Ears_DL_mesh_layer_1_mat_override_Closed_Eyes__SKIN__1[] = {
+	gsSPDisplayList(mat_lola_bunny_Closed_Eyes__SKIN_),
+	gsSPDisplayList(lola_bunny_Ears_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_lola_bunny_Closed_Eyes__SKIN_),
+	gsSPDisplayList(mat_lola_bunny_Logo__EMBLEM_),
+	gsSPDisplayList(lola_bunny_Ears_DL_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_lola_bunny_Logo__EMBLEM_),
+	gsSPEndDisplayList(),
+};
+
+Gfx lola_bunny_Ears_DL_mesh_layer_1_mat_override_Left_Eyes__SKIN__2[] = {
+	gsSPDisplayList(mat_lola_bunny_Left_Eyes__SKIN_),
+	gsSPDisplayList(lola_bunny_Ears_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_lola_bunny_Left_Eyes__SKIN_),
+	gsSPDisplayList(mat_lola_bunny_Logo__EMBLEM_),
+	gsSPDisplayList(lola_bunny_Ears_DL_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_lola_bunny_Logo__EMBLEM_),
+	gsSPEndDisplayList(),
+};
+
+Gfx lola_bunny_Ears_DL_mesh_layer_1_mat_override_Right_Eyes__SKIN__3[] = {
+	gsSPDisplayList(mat_lola_bunny_Right_Eyes__SKIN_),
+	gsSPDisplayList(lola_bunny_Ears_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_lola_bunny_Right_Eyes__SKIN_),
+	gsSPDisplayList(mat_lola_bunny_Logo__EMBLEM_),
+	gsSPDisplayList(lola_bunny_Ears_DL_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_lola_bunny_Logo__EMBLEM_),
+	gsSPEndDisplayList(),
+};
+
+Gfx lola_bunny_Ears_DL_mesh_layer_1_mat_override_Up_Eyes__SKIN__4[] = {
+	gsSPDisplayList(mat_lola_bunny_Up_Eyes__SKIN_),
+	gsSPDisplayList(lola_bunny_Ears_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_lola_bunny_Up_Eyes__SKIN_),
+	gsSPDisplayList(mat_lola_bunny_Logo__EMBLEM_),
+	gsSPDisplayList(lola_bunny_Ears_DL_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_lola_bunny_Logo__EMBLEM_),
+	gsSPEndDisplayList(),
+};
+
+Gfx lola_bunny_Ears_DL_mesh_layer_1_mat_override_Open_Eyes__SKIN__5[] = {
+	gsSPDisplayList(mat_lola_bunny_Open_Eyes__SKIN_),
+	gsSPDisplayList(lola_bunny_Ears_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_lola_bunny_Open_Eyes__SKIN_),
+	gsSPDisplayList(mat_lola_bunny_Logo__EMBLEM_),
+	gsSPDisplayList(lola_bunny_Ears_DL_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_lola_bunny_Logo__EMBLEM_),
 	gsSPEndDisplayList(),
 };
 
@@ -9110,16 +9180,6 @@ Gfx lola_bunny_Right_Wing_DL_mesh_layer_4[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx lola_bunny_Ears_DL_mesh_layer_1[] = {
-	gsSPDisplayList(mat_lola_bunny_Open_Eyes__SKIN_),
-	gsSPDisplayList(lola_bunny_Ears_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lola_bunny_Open_Eyes__SKIN_),
-	gsSPDisplayList(mat_lola_bunny_Logo__EMBLEM_),
-	gsSPDisplayList(lola_bunny_Ears_DL_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_lola_bunny_Logo__EMBLEM_),
-	gsSPEndDisplayList(),
-};
-
 Gfx lola_bunny_Left_Arm_Color_mesh_layer_1[] = {
 	gsSPDisplayList(mat_lola_bunny_Open_Eyes__SKIN_),
 	gsSPDisplayList(lola_bunny_Left_Arm_Color_mesh_layer_1_tri_0),
@@ -9281,6 +9341,62 @@ Gfx lola_bunny_Metal_Switch_Option_Torso_mesh_layer_1[] = {
 	gsSPEndDisplayList(),
 };
 
+Gfx lola_bunny_Metal_Switch_Option_Ears_DL_mesh_layer_1[] = {
+	gsSPDisplayList(mat_lola_bunny_Metal__METAL_),
+	gsSPDisplayList(lola_bunny_Metal_Switch_Option_Ears_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_lola_bunny_Metal__METAL_),
+	gsSPEndDisplayList(),
+};
+
+Gfx lola_bunny_Metal_Switch_Option_Ears_DL_mesh_layer_1_mat_override_Half_Closed_Eyes__SKIN__0[] = {
+	gsSPDisplayList(mat_lola_bunny_Metal__METAL_),
+	gsSPDisplayList(lola_bunny_Metal_Switch_Option_Ears_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_lola_bunny_Metal__METAL_),
+	gsSPEndDisplayList(),
+};
+
+Gfx lola_bunny_Metal_Switch_Option_Ears_DL_mesh_layer_1_mat_override_Closed_Eyes__SKIN__1[] = {
+	gsSPDisplayList(mat_lola_bunny_Metal__METAL_),
+	gsSPDisplayList(lola_bunny_Metal_Switch_Option_Ears_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_lola_bunny_Metal__METAL_),
+	gsSPEndDisplayList(),
+};
+
+Gfx lola_bunny_Metal_Switch_Option_Ears_DL_mesh_layer_1_mat_override_Left_Eyes__SKIN__2[] = {
+	gsSPDisplayList(mat_lola_bunny_Metal__METAL_),
+	gsSPDisplayList(lola_bunny_Metal_Switch_Option_Ears_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_lola_bunny_Metal__METAL_),
+	gsSPEndDisplayList(),
+};
+
+Gfx lola_bunny_Metal_Switch_Option_Ears_DL_mesh_layer_1_mat_override_Right_Eyes__SKIN__3[] = {
+	gsSPDisplayList(mat_lola_bunny_Metal__METAL_),
+	gsSPDisplayList(lola_bunny_Metal_Switch_Option_Ears_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_lola_bunny_Metal__METAL_),
+	gsSPEndDisplayList(),
+};
+
+Gfx lola_bunny_Metal_Switch_Option_Ears_DL_mesh_layer_1_mat_override_Up_Eyes__SKIN__4[] = {
+	gsSPDisplayList(mat_lola_bunny_Metal__METAL_),
+	gsSPDisplayList(lola_bunny_Metal_Switch_Option_Ears_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_lola_bunny_Metal__METAL_),
+	gsSPEndDisplayList(),
+};
+
+Gfx lola_bunny_Metal_Switch_Option_Ears_DL_mesh_layer_1_mat_override_Open_Eyes__SKIN__5[] = {
+	gsSPDisplayList(mat_lola_bunny_Metal__METAL_),
+	gsSPDisplayList(lola_bunny_Metal_Switch_Option_Ears_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_lola_bunny_Metal__METAL_),
+	gsSPEndDisplayList(),
+};
+
+Gfx lola_bunny_Metal_Switch_Option_Ears_DL_mesh_layer_1_mat_override_Dead_Eyes__SKIN__6[] = {
+	gsSPDisplayList(mat_lola_bunny_Metal__METAL_),
+	gsSPDisplayList(lola_bunny_Metal_Switch_Option_Ears_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_lola_bunny_Metal__METAL_),
+	gsSPEndDisplayList(),
+};
+
 Gfx lola_bunny_Metal_Switch_Option_Head_DL_mesh_layer_1[] = {
 	gsSPDisplayList(mat_lola_bunny_Metal__METAL_),
 	gsSPDisplayList(lola_bunny_Metal_Switch_Option_Head_DL_mesh_layer_1_tri_0),
@@ -9354,13 +9470,6 @@ Gfx lola_bunny_Metal_Switch_Option_Right_Wing_DL_mesh_layer_4[] = {
 	gsSPDisplayList(mat_lola_bunny_Metal_Wing_Base__METAL_),
 	gsSPDisplayList(lola_bunny_Metal_Switch_Option_Right_Wing_DL_mesh_layer_4_tri_1),
 	gsSPDisplayList(mat_revert_lola_bunny_Metal_Wing_Base__METAL_),
-	gsSPEndDisplayList(),
-};
-
-Gfx lola_bunny_Metal_Switch_Option_Ears_DL_mesh_layer_1[] = {
-	gsSPDisplayList(mat_lola_bunny_Metal__METAL_),
-	gsSPDisplayList(lola_bunny_Metal_Switch_Option_Ears_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_lola_bunny_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 
