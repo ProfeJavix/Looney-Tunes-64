@@ -25,10 +25,23 @@ function acts.act_bugs_lola_hover(m)
 
     if m.actionState == 0 then
         if m.vel.y <= -20 then
+            m.actionTimer = 0
             m.actionState = 1
+            return
         end
 
+        if m.actionTimer < 10 and m.controller.buttonReleased & A_BUTTON ~= 0 then
+            local curY = m.vel.y
+            local curFVel = m.forwardVel
+            set_mario_action(m, ACT_TRIPLE_JUMP, 1)
+            m.vel.y = curY
+            m.forwardVel = curFVel
+            return 1
+        end
+        m.actionTimer = m.actionTimer + 1
+
         play_flip_sounds(m, 2, 8, 20)
+
     elseif m.actionState == 1 then
 
         m.faceAngle.y = approach_s16_symmetric(m.faceAngle.y, m.intendedYaw, 0x200)
@@ -500,7 +513,7 @@ function acts.act_sylvester_tweety_fight(m)
 
     local tweety = obj_get_first_with_behavior_id(id_bhvTweety)
     while tweety do
-        if tweety.oOwner == m.playerIndex then
+        if tweety.oOwner == nps[m.playerIndex].globalIndex then
             break
         end
 

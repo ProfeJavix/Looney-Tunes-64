@@ -42,7 +42,8 @@ end
 
 ---@param m MarioState
 ---@param incAct integer
-function hooks.before_set_mario_action(m, incAct)
+---@param incArg integer
+function hooks.before_set_mario_action(m, incAct, incArg)
 
     if m.action == ACT_CAUGHT_IN_TAZ_TORNADO then
         vec3s_copy(m.angleVel, gVec3sZero())
@@ -57,7 +58,7 @@ function hooks.before_set_mario_action(m, incAct)
     if repData then
         local param = 1
         if repData.param then
-            param = repData.param(m, incAct)
+            param = repData.param(m, incAct, incArg)
         end
 
         if repData.acts[param] then
@@ -328,7 +329,8 @@ local LAND_ACTIONS = {
 
 ---@param m MarioState
 function hooks.lola_before_phys_step(m)
-    if m.action & (ACT_FLAG_INVULNERABLE | ACT_FLAG_THROWING | ACT_FLAG_BUTT_OR_STOMACH_SLIDE) == 0 and
+    if is_player_active(m) ~= 0 and
+    m.action & (ACT_FLAG_INVULNERABLE | ACT_FLAG_THROWING | ACT_FLAG_BUTT_OR_STOMACH_SLIDE) == 0 and
     m.action & ACT_GROUP_MASK ~= ACT_GROUP_CUTSCENE and not LAND_ACTIONS[m.action] then
         m.vel.x = m.vel.x * 1.5
         m.vel.z = m.vel.z * 1.5

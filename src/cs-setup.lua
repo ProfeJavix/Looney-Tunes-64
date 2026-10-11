@@ -1,5 +1,3 @@
-local nps = gNetworkPlayers
-
 local LOONEY_TUNES_64 = get_active_mod().name
 local defaultLifeIcon = get_texture_info("exclamation-icon")
 CT_THANKS_FOR_PLAYING_CLIPS = {}
@@ -151,7 +149,7 @@ CT_BUGS = addLooneyTunesChar({
     },
     replaceActs = {
         acts = { ACT_BUGS_LOLA_HOVER, ACT_BUGS_DIVE_POUND },
-        param = function(m, incAct)
+        param = function(m, incAct, incArg)
             if m.action == ACT_BUGS_LOLA_HOVER then
                 m.marioBodyState.allowPartRotation = 0
             end
@@ -165,7 +163,7 @@ CT_BUGS = addLooneyTunesChar({
                 m.invincTimer = 0
             end
 
-            if incAct == ACT_TRIPLE_JUMP and m.controller.buttonDown & A_BUTTON ~= 0 then
+            if incAct == ACT_TRIPLE_JUMP and incArg == 0 and m.controller.buttonDown & A_BUTTON ~= 0 then
                 set_mario_y_vel_based_on_fspeed(m, 69, 0)
                 m.forwardVel = m.forwardVel * 0.8
                 return 1
@@ -1007,9 +1005,9 @@ CT_LOLA = addLooneyTunesChar({
     },
     replaceActs = {
         acts = { ACT_BUGS_LOLA_HOVER, ACT_LOLA_SLAM_DUNK },
-        param = function(m, incAct)
+        param = function(m, incAct, incArg)
 
-            if incAct == ACT_TRIPLE_JUMP and m.controller.buttonDown & A_BUTTON ~= 0 then
+            if incAct == ACT_TRIPLE_JUMP and incArg == 0 and m.controller.buttonDown & A_BUTTON ~= 0 then
                 set_mario_y_vel_based_on_fspeed(m, 69, 0)
                 m.forwardVel = m.forwardVel * 0.8
                 return 1

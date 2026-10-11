@@ -167,7 +167,7 @@ function bhvs.bhv_tweety_loop(o)
                 o.oForwardVel = 100
                 targetPos.y = targetPos.y + coss(0x400 * o.oFlyGuyOscTimer) * 10
 
-                if canAttack and m.playerIndex == 0 and m.controller.buttonPressed & X_BUTTON ~= 0 and
+                if canAttack and m.controller.buttonPressed & X_BUTTON ~= 0 and
                 m.action ~= ACT_SYLVESTER_TWEETY_FIGHT and m.action & PREVENT_ACT_FLAGS == 0 and
                 not PREVENT_ACT_GROUPS[m.action & ACT_GROUP_MASK] then
                     m.vel.y = 20

@@ -32,7 +32,7 @@
 ---@class ReplaceActInfo
 ---@field acts integer[]
 ---@field actsSet? table
----@field param? fun(m: MarioState, incAct: integer): integer
+---@field param? fun(m: MarioState, incAct: integer, incArg?:integer): integer
 ---@field canGrab? fun(m: MarioState): boolean
 
 ---@class ControlsInfo
