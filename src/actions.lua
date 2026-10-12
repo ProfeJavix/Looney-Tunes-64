@@ -1,3 +1,94 @@
+--#region Localizations ---------------------------------------------------------------------
+
+local abs = math.abs
+local abs_angle_diff = abs_angle_diff
+local apply_slope_accel = apply_slope_accel
+local apply_slope_decel = apply_slope_decel
+local approach_f32_symmetric = approach_f32_symmetric
+local approach_s16_symmetric = approach_s16_symmetric
+local atan2s = atan2s
+local check_fall_damage_or_get_stuck = check_fall_damage_or_get_stuck
+local clamp = math.clamp
+local common_air_action_step = common_air_action_step
+local common_air_knockback_step = common_air_knockback_step
+local coss = coss
+local cur_obj_check_anim_frame_in_range = cur_obj_check_anim_frame_in_range
+local cur_obj_play_sound_1 = cur_obj_play_sound_1
+local cur_obj_reflect_move_angle_off_wall = cur_obj_reflect_move_angle_off_wall
+local cur_obj_scale = cur_obj_scale
+local dist_between_object_and_point = dist_between_object_and_point
+local dist_between_objects = dist_between_objects
+local drop_and_set_mario_action = drop_and_set_mario_action
+local get_global_timer = get_global_timer
+local get_hand_foot_pos_x = get_hand_foot_pos_x
+local get_hand_foot_pos_y = get_hand_foot_pos_y
+local get_hand_foot_pos_z = get_hand_foot_pos_z
+local get_id_from_behavior = get_id_from_behavior
+local get_object_list_from_behavior = get_object_list_from_behavior
+local hurt_and_set_mario_action = hurt_and_set_mario_action
+local is_anim_at_end = is_anim_at_end
+local is_anim_past_end = is_anim_past_end
+local is_anim_past_frame = is_anim_past_frame
+local is_player_active = is_player_active
+local landing_step = landing_step
+local lava_boost_on_wall = lava_boost_on_wall
+local linear_mtxf_mul_vec3f = linear_mtxf_mul_vec3f
+local mario_check_object_grab = mario_check_object_grab
+local mario_grab_used_object = mario_grab_used_object
+local mario_obj_angle_to_object = mario_obj_angle_to_object
+local mario_set_forward_vel = mario_set_forward_vel
+local mario_throw_held_object = mario_throw_held_object
+local max = math.max
+local min = math.min
+local mtxf_rotate_zxy_and_translate = mtxf_rotate_zxy_and_translate
+local network_send_object = network_send_object
+local obj_angle_to_object = obj_angle_to_object
+local obj_angle_to_point = obj_angle_to_point
+local obj_check_hitbox_overlap = obj_check_hitbox_overlap
+local obj_get_first_with_behavior_id = obj_get_first_with_behavior_id
+local obj_get_model_id_extended = obj_get_model_id_extended
+local obj_get_next_with_same_behavior_id = obj_get_next_with_same_behavior_id
+local obj_has_behavior_id = obj_has_behavior_id
+local obj_mark_for_deletion = obj_mark_for_deletion
+local obj_pitch_to_object = obj_pitch_to_object
+local perform_air_step = perform_air_step
+local perform_ground_step = perform_ground_step
+local play_character_sound = play_character_sound
+local play_character_sound_if_no_flag = play_character_sound_if_no_flag
+local play_flip_sounds = play_flip_sounds
+local play_mario_heavy_landing_sound = play_mario_heavy_landing_sound
+local play_mario_landing_sound = play_mario_landing_sound
+local play_mario_sound = play_mario_sound
+local play_sound = play_sound
+local play_sound_if_no_flag = play_sound_if_no_flag
+local play_step_sound = play_step_sound
+local queue_rumble_data_mario = queue_rumble_data_mario
+local random = math.random
+local random_sign = random_sign
+local s16 = math.s16
+local set_anim_to_frame = set_anim_to_frame
+local set_camera_shake_from_hit = set_camera_shake_from_hit
+local set_camera_shake_from_point = set_camera_shake_from_point
+local set_character_anim_with_accel = set_character_anim_with_accel
+local set_character_animation = set_character_animation
+local set_environmental_camera_shake = set_environmental_camera_shake
+local set_mario_action = set_mario_action
+local set_mario_particle_flags = set_mario_particle_flags
+local should_begin_sliding = should_begin_sliding
+local sins = sins
+local spawn_non_sync_object = spawn_non_sync_object
+local spawn_sync_object = spawn_sync_object
+local spawn_triangle_break_particles = spawn_triangle_break_particles
+local sqrt = math.sqrt
+local stationary_ground_step = stationary_ground_step
+local take_damage_and_knock_back = take_damage_and_knock_back
+local update_air_with_turn = update_air_with_turn
+local update_air_without_turn = update_air_without_turn
+local vec3f_copy = vec3f_copy
+local vec3s_copy = vec3s_copy
+
+--#endregion --------------------------------------------------------------------------------
+
 local nps = gNetworkPlayers
 local states = gMarioStates
 local playerTable = gPlayerSyncTable
@@ -103,9 +194,9 @@ function acts.act_bugs_move_underground(m)
         play_sound(SOUND_MOVING_TERRAIN_SLIDE, m.marioObj.header.gfx.cameraToObject)
         for _ = 1, 3 do
             local pos = {
-                x = m.pos.x + random_sign() * math.random(0, 60),
+                x = m.pos.x + random_sign() * random(0, 60),
                 y = m.pos.y,
-                z = m.pos.z + random_sign() * math.random(0, 60)
+                z = m.pos.z + random_sign() * random(0, 60)
             }
             spawn_non_sync_object(id_bhvDirtParticleSpawner, E_MODEL_DIRT_ANIMATION, pos.x, pos.y, pos.z, function() end)
         end
@@ -117,7 +208,7 @@ function acts.act_bugs_move_underground(m)
 
     local step = perform_ground_step(m)
     if step == GROUND_STEP_LEFT_GROUND then
-        mario_set_forward_vel(m, math.min(m.forwardVel, 20))
+        mario_set_forward_vel(m, min(m.forwardVel, 20))
         return set_mario_action(m, ACT_FREEFALL, 0)
     elseif m.controller.buttonPressed & A_BUTTON ~= 0 then
         return set_mario_action(m, ACT_JUMP, 0)
@@ -230,16 +321,16 @@ function acts.act_daffy_mallet_swing(m)
                 local startAngle = m.faceAngle.y
 
                 if frame < 12 then
-                    startAngle = math.s16(startAngle + 0x71C)
+                    startAngle = s16(startAngle + 0x71C)
                 elseif frame < 22 then
-                    startAngle = math.s16(startAngle - 0x1C71)
+                    startAngle = s16(startAngle - 0x1C71)
                 else
-                    startAngle = math.s16(startAngle - 0x4000)
+                    startAngle = s16(startAngle - 0x4000)
                 end
 
                 local angleDiff = abs_angle_diff(angleToVic, startAngle)
 
-                if angleDiff <= 0x38E3 and math.s16(startAngle + angleDiff) == angleToVic then
+                if angleDiff <= 0x38E3 and s16(startAngle + angleDiff) == angleToVic then
                     play_sound(SOUND_ACTION_HIT, vic.header.gfx.cameraToObject)
 
                     if obj_has_behavior_id(vic, id_bhvMario) ~= 0 then
@@ -248,7 +339,7 @@ function acts.act_daffy_mallet_swing(m)
                         if abs_angle_diff(angleToVic, nm.faceAngle.y) > 0x4000 then
                             act = ternary(nm.floorHeight == nm.pos.y, ACT_HARD_BACKWARD_GROUND_KB,
                                 ACT_HARD_BACKWARD_AIR_KB)
-                            nm.faceAngle.y = math.s16(angleToVic - 0x8000)
+                            nm.faceAngle.y = s16(angleToVic - 0x8000)
                         else
                             act = ternary(nm.floorHeight == nm.pos.y, ACT_HARD_FORWARD_GROUND_KB, ACT_HARD_FORWARD_AIR_KB)
                             nm.faceAngle.y = angleToVic
@@ -300,7 +391,7 @@ function acts.act_daffy_mallet_pound(m)
     if frame >= 15 then
         affectAllObjects(m.marioObj, function(att, vic)
             if dist_between_object_and_point(vic, poundPos.x, vic.oPosY, poundPos.z) < 300 and
-            math.abs(poundPos.y - vic.oPosY) < 80 then
+            abs(poundPos.y - vic.oPosY) < 80 then
                 play_sound(SOUND_ACTION_HIT_3, vic.header.gfx.cameraToObject)
                 if obj_has_behavior_id(vic, id_bhvMario) ~= 0 then
                     local nm = states[vic.oBehParams - 1]
@@ -454,7 +545,7 @@ function acts.act_elmer_shoot_shotgun(m)
                 if target then
                     o.oSubAction = 1
                     o.oMoveAnglePitch = pitch
-                    o.oMoveAngleYaw = math.s16(obj_angle_to_point(target, bulletPos.x, bulletPos.z) - 0x8000)
+                    o.oMoveAngleYaw = s16(obj_angle_to_point(target, bulletPos.x, bulletPos.z) - 0x8000)
                 else
                     o.oMoveAnglePitch = 0
                     o.oMoveAngleYaw = m.faceAngle.y
@@ -543,7 +634,7 @@ function acts.act_sylvester_tweety_fight(m)
         m.faceAngle.x = obj_pitch_to_object(m.marioObj, m.usedObj)
         m.faceAngle.y = obj_angle_to_object(m.marioObj, m.usedObj)
 
-        m.pos.y = math.max(m.floorHeight + 10, m.pos.y)
+        m.pos.y = max(m.floorHeight + 10, m.pos.y)
 
         m.forwardVel = 80
         m.vel.x = m.forwardVel * sins(m.faceAngle.y) * coss(m.faceAngle.x)
@@ -619,7 +710,7 @@ function acts.act_sylvester_wall_crawl(m)
     local curVel = m.forwardVel
     mario_set_forward_vel(m, 6)
 
-    m.faceAngle.y = math.s16(atan2s(m.wall.normal.z, m.wall.normal.x) - 0x8000)
+    m.faceAngle.y = s16(atan2s(m.wall.normal.z, m.wall.normal.x) - 0x8000)
 
     if m.controller.buttonPressed & A_BUTTON ~= 0 then
         m.faceAngle.y = m.faceAngle.y + 0x8000
@@ -636,29 +727,29 @@ function acts.act_sylvester_wall_crawl(m)
     if m.intendedMag > 0 then
         curVel = approach_f32_symmetric(curVel, 45 * (m.intendedMag / 64), 2)
 
-        if math.abs(m.controller.stickX) > 0 then
+        if abs(m.controller.stickX) > 0 then
             local yaw = m.faceAngle.y
-            local hVel = curVel * math.abs(m.controller.stickX / 64)
+            local hVel = curVel * abs(m.controller.stickX / 64)
 
             if m.controller.stickX > 0 then
                 yaw = yaw - 0x3999
             elseif m.controller.stickX < 0 then
                 yaw = yaw + 0x3999
             end
-            yaw = math.s16(yaw)
+            yaw = s16(yaw)
 
             m.vel.x = hVel * sins(yaw)
             m.vel.z = hVel * coss(yaw)
         end
 
-        if math.abs(m.controller.stickY) > 0 then
+        if abs(m.controller.stickY) > 0 then
             m.vel.y = curVel * (m.controller.stickY / 64)
         end
     else
         curVel = 0
     end
 
-    set_character_anim_with_accel(m, CHAR_ANIM_CRAWLING, math.clamp(curVel, 5, 20) * 0x10000)
+    set_character_anim_with_accel(m, CHAR_ANIM_CRAWLING, clamp(curVel, 5, 20) * 0x10000)
     if curVel > 0 and m.vel ~= gVec3fZero() then
         play_step_sound(m, 26, 79)
     else
@@ -705,7 +796,7 @@ function acts.act_marvin_shoot_laser(m)
                 if target then
                     o.oSubAction = 1
                     o.oMoveAnglePitch = pitch
-                    o.oMoveAngleYaw = math.s16(obj_angle_to_point(target, laserPos.x, laserPos.z) - 0x8000)
+                    o.oMoveAngleYaw = s16(obj_angle_to_point(target, laserPos.x, laserPos.z) - 0x8000)
                 else
                     o.oMoveAnglePitch = 0
                     o.oMoveAngleYaw = m.faceAngle.y
@@ -839,7 +930,7 @@ function acts.act_taz_tornado(m)
         set_character_animation(m, CHAR_ANIM_A_POSE)
         m.invincTimer = -1
 
-        mario_set_forward_vel(m, approach_f32_symmetric(m.forwardVel, math.max(m.intendedMag / 32 * 40, 10), 0.7))
+        mario_set_forward_vel(m, approach_f32_symmetric(m.forwardVel, max(m.intendedMag / 32 * 40, 10), 0.7))
         m.faceAngle.y = approach_s16_symmetric(m.faceAngle.y, m.intendedYaw, 0x400)
 
         m.actionTimer = m.actionTimer + 1
@@ -921,7 +1012,7 @@ function acts.act_taz_tornado(m)
         end
 
         m.marioObj.header.gfx.angle.y = m.twirlYaw
-        m.twirlYaw = math.s16(m.twirlYaw + 0x2100)
+        m.twirlYaw = s16(m.twirlYaw + 0x2100)
     end
 end
 
@@ -931,9 +1022,9 @@ function acts.act_caught_in_taz_tornado(m)
         local tornadoM = states[getLocalFromGlobalIdx(m.actionArg)]
         if is_player_active(tornadoM) == 0 or tornadoM.action ~= ACT_TAZ_TORNADO_ATTACK then
             if m.playerIndex == 0 then
-                m.faceAngle.y = math.random(-0x7FFF, 0x8000)
-                mario_set_forward_vel(m, math.random(30, 60))
-                m.vel.y = math.random(20, 80)
+                m.faceAngle.y = random(-0x7FFF, 0x8000)
+                mario_set_forward_vel(m, random(30, 60))
+                m.vel.y = random(20, 80)
                 m.flags = m.flags & ~MARIO_MARIO_SOUND_PLAYED
                 m.actionState = 2
             end
@@ -942,19 +1033,19 @@ function acts.act_caught_in_taz_tornado(m)
 
         if m.playerIndex == 0 and m.actionState == 0 then
             m.vel.y = 0
-            m.twirlYaw = math.random(-0x7FFF, 0x8000)
-            m.angleVel.x = math.random(0x300, 0x1000)
-            m.angleVel.y = math.random(170, 220)
-            m.angleVel.z = math.random(50, 150)
+            m.twirlYaw = random(-0x7FFF, 0x8000)
+            m.angleVel.x = random(0x300, 0x1000)
+            m.angleVel.y = random(170, 220)
+            m.angleVel.z = random(50, 150)
             m.actionState = 1
         end
 
-        m.faceAngle.y = m.faceAngle.y - math.s16(m.angleVel.x)
+        m.faceAngle.y = m.faceAngle.y - s16(m.angleVel.x)
 
         set_character_animation(m, CHAR_ANIM_BEING_GRABBED)
         play_character_sound_if_no_flag(m, CHAR_SOUND_WHOA, MARIO_MARIO_SOUND_PLAYED)
 
-        m.vel.y = math.min(m.vel.y + 10, m.angleVel.y)
+        m.vel.y = min(m.vel.y + 10, m.angleVel.y)
 
         m.pos.x = tornadoM.pos.x + m.angleVel.z * sins(m.twirlYaw)
         m.pos.y = tornadoM.pos.y + m.vel.y
@@ -1031,10 +1122,10 @@ function acts.act_foghorn_slap(m)
                 return set_mario_action(m, ACT_FOGHORN_SLAP_RELEASE, m.actionTimer)
             end
 
-            m.actionTimer = math.min(m.actionTimer + 5, 150)
+            m.actionTimer = min(m.actionTimer + 5, 150)
 
             local accel = ternary(m.forwardVel == 0, (1 + m.actionTimer / 50), 3 * (m.forwardVel / 15))
-            set_character_anim_with_accel(m, CHAR_ANIM_SECOND_PUNCH, math.max(0x1000, 0x10000 * accel))
+            set_character_anim_with_accel(m, CHAR_ANIM_SECOND_PUNCH, max(0x1000, 0x10000 * accel))
         end
         perform_ground_step(m)
     else
@@ -1147,14 +1238,14 @@ function acts.act_lola_slam_dunk(m)
         end
 
         if m.actionState == 1 then
-            m.vel.y = math.max(5, m.vel.y)
+            m.vel.y = max(5, m.vel.y)
         end
     end
 
     if m.actionState == 2 then
         mario_set_forward_vel(m, approach_f32_symmetric(m.forwardVel, 0, 1))
     else
-        mario_set_forward_vel(m, math.min(m.forwardVel, 10))
+        mario_set_forward_vel(m, min(m.forwardVel, 10))
     end
 
     if perform_air_step(m, 0) == AIR_STEP_LANDED then
@@ -1235,7 +1326,7 @@ function acts.act_sam_shoot_pistol(m)
                     if target then
                         o.oSubAction = 1
                         o.oMoveAnglePitch = pitch
-                        o.oMoveAngleYaw = math.s16(obj_angle_to_point(target, bulletPos.x, bulletPos.z) - 0x8000)
+                        o.oMoveAngleYaw = s16(obj_angle_to_point(target, bulletPos.x, bulletPos.z) - 0x8000)
                     else
                         o.oMoveAnglePitch = 0
                         o.oMoveAngleYaw = m.faceAngle.y
@@ -1291,7 +1382,7 @@ function acts.act_sam_air_shoot_pistol(m)
                         if target and pitch <= 0x4000 and pitch > 0x1000 then
                             o.oSubAction = 1
                             o.oMoveAnglePitch = pitch
-                            o.oMoveAngleYaw = math.s16(obj_angle_to_point(target, bulletPos.x, bulletPos.z) - 0x8000)
+                            o.oMoveAngleYaw = s16(obj_angle_to_point(target, bulletPos.x, bulletPos.z) - 0x8000)
                         else
                             o.oMoveAnglePitch = 0x4000
                             o.oMoveAngleYaw = m.faceAngle.y
@@ -1403,8 +1494,8 @@ function acts.act_sam_shoulder_bash(m)
         end
     end
     if shake then
-        m.marioObj.header.gfx.pos.x = m.pos.x + random_sign() * math.random(3)
-        m.marioObj.header.gfx.pos.z = m.pos.z + random_sign() * math.random(3)
+        m.marioObj.header.gfx.pos.x = m.pos.x + random_sign() * random(3)
+        m.marioObj.header.gfx.pos.z = m.pos.z + random_sign() * random(3)
     end
 end
 
@@ -1439,7 +1530,7 @@ function acts.act_wile_air_walk(m)
         end
 
         m.forwardVel = approach_f32_symmetric(m.forwardVel, 0, 0.4)
-        set_character_anim_with_accel(m, CHAR_ANIM_RUNNING, 0x10000 * math.max(m.forwardVel / 3, 1.5))
+        set_character_anim_with_accel(m, CHAR_ANIM_RUNNING, 0x10000 * max(m.forwardVel / 3, 1.5))
     elseif m.actionState == 1 then
 
         if cur_obj_check_anim_frame_in_range(50, 70) ~= 0 then
@@ -1488,8 +1579,8 @@ function acts.act_wile_rocket_jump(m)
             if frame > 14 then
                 boost = true
             elseif frame < 12 then
-                m.marioObj.header.gfx.pos.x = m.pos.x + math.random(-10, 10)
-                m.marioObj.header.gfx.pos.z = m.pos.z + math.random(-10, 10)
+                m.marioObj.header.gfx.pos.x = m.pos.x + random(-10, 10)
+                m.marioObj.header.gfx.pos.z = m.pos.z + random(-10, 10)
             end
         else
             if m.actionTimer > 8 then
@@ -1498,7 +1589,7 @@ function acts.act_wile_rocket_jump(m)
                         m.faceAngle.y = m.intendedYaw
                         dir.x = 1
                     end
-                    speed = math.sqrt(dir.x * dir.x + dir.y * dir.y) * speed
+                    speed = sqrt(dir.x * dir.x + dir.y * dir.y) * speed
                 else
                     dir.y = 1
                 end
@@ -1506,9 +1597,9 @@ function acts.act_wile_rocket_jump(m)
                 boost = true
             else
                 m.actionTimer = m.actionTimer + 1
-                m.marioObj.header.gfx.pos.x = m.pos.x + math.random(-10, 10)
-                m.marioObj.header.gfx.pos.y = m.pos.y + math.random(-10, 10)
-                m.marioObj.header.gfx.pos.z = m.pos.z + math.random(-10, 10)
+                m.marioObj.header.gfx.pos.x = m.pos.x + random(-10, 10)
+                m.marioObj.header.gfx.pos.y = m.pos.y + random(-10, 10)
+                m.marioObj.header.gfx.pos.z = m.pos.z + random(-10, 10)
             end
         end
 

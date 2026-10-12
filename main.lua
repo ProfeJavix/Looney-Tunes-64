@@ -2,6 +2,17 @@
 -- description: Play as the iconic Looney Tunes, complete with classic cartoon-inspired movesets and original voice acting!\n\n\\#333\\Profe\\#ff0\\Javix\\#fff\\: coding, movesets, some models setup and custom animations\nLotsaSpaget: character icons and end screen\nDrahnokks: Daffy's mallet animations\n\nModellers: Tilly, Tanooki and LotsaSpaget\n\nVoice Actors:\n-MarcusShawVA: Bugs Bunny\n-Gonz: Daffy Duck, Porky Pig, Elmer Fudd, Foghorn Leghorn\n-Chu-Pay: Marvin the Martian, Tasmanian Devil\n-Mr.VoiceBox: Yosemite Sam\n-Anniemaniac: Lola Bunny\n-ToonTone: Sylvester, Wile E. Coyote\n\nCustom Music:\n-Teraok: Merrily We Roll Along/The Merry-Go-Round Broke Down\n-Gonz: Smile Darn Ya Smile/Medley
 -- incompatible: cs
 
+--#region Localizations ---------------------------------------------------------------------
+
+local djui_popup_create = djui_popup_create
+local hook_behavior = hook_behavior
+local hook_chat_command = hook_chat_command
+local hook_event = hook_event
+local hook_mario_action = hook_mario_action
+local require = require
+
+--#endregion --------------------------------------------------------------------------------
+
 if not _G.charSelectExists then
     djui_popup_create("\\#ffffdc\\\n[CS] Looney Tunes 64\nRequires the Character Select Mod\nto use as a Library!\n\nPlease turn on the Character Select Mod\nand Restart the Room!", 6)
     return

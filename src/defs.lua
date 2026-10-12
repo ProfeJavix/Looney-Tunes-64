@@ -1,6 +1,13 @@
----@class _G
----@field charSelect? table
----@field charSelectExists? boolean
+--#region Localizations ---------------------------------------------------------------------
+
+local allocate_mario_action = allocate_mario_action
+local cast_graph_node = cast_graph_node
+local define_custom_obj_fields = define_custom_obj_fields
+local geo_get_current_object = geo_get_current_object
+local geo_get_mario_state = geo_get_mario_state
+local smlua_model_util_get_id = smlua_model_util_get_id
+
+--#endregion --------------------------------------------------------------------------------
 
 ---@class Object
 ---@field oOwner integer

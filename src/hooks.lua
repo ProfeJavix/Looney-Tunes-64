@@ -1,3 +1,39 @@
+--#region Localizations ---------------------------------------------------------------------
+
+local audio_sample_play = audio_sample_play
+local audio_stream_load = audio_stream_load
+local audio_stream_play = audio_stream_play
+local audio_stream_set_loop_points = audio_stream_set_loop_points
+local audio_stream_set_looping = audio_stream_set_looping
+local audio_stream_set_volume = audio_stream_set_volume
+local audio_stream_stop = audio_stream_stop
+local coss = coss
+local djui_chat_message_create = djui_chat_message_create
+local get_current_background_music = get_current_background_music
+local get_hand_foot_pos_x = get_hand_foot_pos_x
+local get_hand_foot_pos_y = get_hand_foot_pos_y
+local get_hand_foot_pos_z = get_hand_foot_pos_z
+local ipairs = ipairs
+local is_player_active = is_player_active
+local network_send_object = network_send_object
+local obj_angle_to_object = obj_angle_to_object
+local obj_get_first_with_behavior_id = obj_get_first_with_behavior_id
+local obj_get_next_with_same_behavior_id = obj_get_next_with_same_behavior_id
+local obj_has_behavior_id = obj_has_behavior_id
+local obj_pitch_to_object = obj_pitch_to_object
+local obj_set_gfx_pos_from_pos = obj_set_gfx_pos_from_pos
+local pairs = pairs
+local play_music = play_music
+local s16 = math.s16
+local sequence_player_get_volume = sequence_player_get_volume
+local set_mario_action = set_mario_action
+local sins = sins
+local spawn_non_sync_object = spawn_non_sync_object
+local vec3f_mul = vec3f_mul
+local vec3s_copy = vec3s_copy
+
+--#endregion --------------------------------------------------------------------------------
+
 local states = gMarioStates
 local playerTable = gPlayerSyncTable
 
@@ -148,9 +184,9 @@ function hooks.on_object_render(o)
     if obj_has_behavior_id(o, id_bhvBasketBall) ~= 0 and o.oAction == 0 then
         local m = states[getLocalFromGlobalIdx(o.oOwner)]
 
-        o.oPosX = get_hand_foot_pos_x(m, 0) + 25 * sins(math.s16(m.faceAngle.y + 0x4000))
+        o.oPosX = get_hand_foot_pos_x(m, 0) + 25 * sins(s16(m.faceAngle.y + 0x4000))
         o.oPosY = get_hand_foot_pos_y(m, 0)
-        o.oPosZ = get_hand_foot_pos_z(m, 0) + 25 * coss(math.s16(m.faceAngle.y + 0x4000))
+        o.oPosZ = get_hand_foot_pos_z(m, 0) + 25 * coss(s16(m.faceAngle.y + 0x4000))
 
         m.marioObj.oPosY = m.marioObj.oPosY + 100
         

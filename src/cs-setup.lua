@@ -1,3 +1,22 @@
+--#region Localizations ---------------------------------------------------------------------
+
+local abs_angle_diff = abs_angle_diff
+local atan2s = atan2s
+local audio_sample_load = audio_sample_load
+local collision_get_temp_wall_collision_data = collision_get_temp_wall_collision_data
+local find_floor = find_floor
+local find_wall_collisions = find_wall_collisions
+local get_active_mod = get_active_mod
+local get_texture_info = get_texture_info
+local ipairs = ipairs
+local mario_set_forward_vel = mario_set_forward_vel
+local mod_file_exists = mod_file_exists
+local set_mario_y_vel_based_on_fspeed = set_mario_y_vel_based_on_fspeed
+local smlua_model_util_get_id = smlua_model_util_get_id
+local upper = string.upper
+
+--#endregion --------------------------------------------------------------------------------
+
 local LOONEY_TUNES_64 = get_active_mod().name
 local defaultLifeIcon = get_texture_info("exclamation-icon")
 CT_THANKS_FOR_PLAYING_CLIPS = {}
@@ -64,7 +83,7 @@ local function addLooneyTunesChar(data)
 
     LT_64_CHARS[ct] = true
     LT_64_CONTROLS[ct] = {
-        name = '\\#' .. data.menuColor .. '\\' .. string.upper(data.name),
+        name = '\\#' .. data.menuColor .. '\\' .. upper(data.name),
         controls = data.controls
     }
 

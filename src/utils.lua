@@ -1,3 +1,44 @@
+--#region Localizations ---------------------------------------------------------------------
+
+local abs = math.abs
+local abs_angle_diff = abs_angle_diff
+local ceil = math.ceil
+local collision_get_temp_wall_collision_data = collision_get_temp_wall_collision_data
+local concat = table.concat
+local cur_obj_compute_vel_xz = cur_obj_compute_vel_xz
+local cur_obj_move_update_ground_air_flags = cur_obj_move_update_ground_air_flags
+local cur_obj_move_update_underwater_flags = cur_obj_move_update_underwater_flags
+local cur_obj_move_xz = cur_obj_move_xz
+local cur_obj_update_floor_and_walls = cur_obj_update_floor_and_walls
+local dist_between_objects = dist_between_objects
+local djui_chat_message_create = djui_chat_message_create
+local find_wall_collisions = find_wall_collisions
+local find_water_level = find_water_level
+local get_current_save_file_num = get_current_save_file_num
+local insert = table.insert
+local interact_damage = interact_damage
+local ipairs = ipairs
+local is_player_active = is_player_active
+local obj_angle_to_object = obj_angle_to_object
+local obj_compute_vel_from_move_pitch = obj_compute_vel_from_move_pitch
+local obj_get_first = obj_get_first
+local obj_get_first_with_behavior_id = obj_get_first_with_behavior_id
+local obj_get_next = obj_get_next
+local obj_get_next_with_same_behavior_id = obj_get_next_with_same_behavior_id
+local obj_has_behavior_id = obj_has_behavior_id
+local obj_is_attackable = obj_is_attackable
+local obj_is_bully = obj_is_bully
+local obj_is_valid_for_interaction = obj_is_valid_for_interaction
+local obj_pitch_to_object = obj_pitch_to_object
+local object_pos_to_vec3f = object_pos_to_vec3f
+local save_file_get_flags = save_file_get_flags
+local save_file_get_total_star_count = save_file_get_total_star_count
+local select = select
+local tostring = tostring
+local vec3f_to_object_pos = vec3f_to_object_pos
+
+--#endregion --------------------------------------------------------------------------------
+
 local nps = gNetworkPlayers
 local states = gMarioStates
 
@@ -62,7 +103,7 @@ function getAutoTarget(m, pPos, range, minDist, maxPitch)
             (curO.oBehParams - 1 ~= m.playerIndex and is_player_active(states[curO.oBehParams - 1]) ~= 0)) then
                 local dist = dist_between_objects(m.marioObj, curO)
                 if dist < minDist and
-                math.abs(obj_pitch_to_object(m.marioObj, curO)) < maxPitch and
+                abs(obj_pitch_to_object(m.marioObj, curO)) < maxPitch and
                 abs_angle_diff(obj_angle_to_object(m.marioObj, curO), m.faceAngle.y) < range then
                     minDist = dist
                     target = curO
@@ -170,7 +211,7 @@ end
 ---@param hitFunc? fun(projectile: Object): boolean
 ---@return integer
 function moveProjectile(o, speed, stopFlags, hitFunc)
-    for i = 1, math.ceil(speed / 40) do
+    for i = 1, ceil(speed / 40) do
         local fVel = ternary(i * 40 <= speed, 40, speed - (40 * (i - 1)))
         cur_obj_update_floor_and_walls()
 
@@ -286,10 +327,10 @@ function debugLog(msg, ...)
 
     for i = 1, select("#", ...) do
         local arg = select(i, ...)
-        table.insert(parts, tostring(arg))
+        insert(parts, tostring(arg))
     end
 
-    djui_chat_message_create(table.concat(parts, " "))
+    djui_chat_message_create(concat(parts, " "))
 end
 
 return {}

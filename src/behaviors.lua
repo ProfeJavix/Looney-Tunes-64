@@ -1,3 +1,63 @@
+--#region Localizations ---------------------------------------------------------------------
+
+local abs = math.abs
+local approach_f32_symmetric = approach_f32_symmetric
+local approach_s16_symmetric = approach_s16_symmetric
+local bhv_dust_smoke_loop = bhv_dust_smoke_loop
+local bhv_explosion_init = bhv_explosion_init
+local coss = coss
+local cur_obj_align_gfx_with_floor = cur_obj_align_gfx_with_floor
+local cur_obj_become_intangible = cur_obj_become_intangible
+local cur_obj_become_tangible = cur_obj_become_tangible
+local cur_obj_compute_vel_xz = cur_obj_compute_vel_xz
+local cur_obj_disable = cur_obj_disable
+local cur_obj_hide = cur_obj_hide
+local cur_obj_init_animation = cur_obj_init_animation
+local cur_obj_move_standard = cur_obj_move_standard
+local cur_obj_move_using_fvel_and_gravity = cur_obj_move_using_fvel_and_gravity
+local cur_obj_play_sound_1 = cur_obj_play_sound_1
+local cur_obj_play_sound_2 = cur_obj_play_sound_2
+local cur_obj_reflect_move_angle_off_wall = cur_obj_reflect_move_angle_off_wall
+local cur_obj_scale = cur_obj_scale
+local cur_obj_set_hitbox_radius_and_height = cur_obj_set_hitbox_radius_and_height
+local cur_obj_unhide = cur_obj_unhide
+local cur_obj_update_floor = cur_obj_update_floor
+local cur_obj_update_floor_and_walls = cur_obj_update_floor_and_walls
+local dist_between_object_and_point = dist_between_object_and_point
+local find_floor_height = find_floor_height
+local find_water_level = find_water_level
+local get_hand_foot_pos_x = get_hand_foot_pos_x
+local get_hand_foot_pos_y = get_hand_foot_pos_y
+local get_hand_foot_pos_z = get_hand_foot_pos_z
+local is_player_active = is_player_active
+local lerp = math.lerp
+local max = math.max
+local min = math.min
+local nearest_mario_state_to_object = nearest_mario_state_to_object
+local network_init_object = network_init_object
+local network_send_object = network_send_object
+local obj_angle_to_object = obj_angle_to_object
+local obj_angle_to_point = obj_angle_to_point
+local obj_check_hitbox_overlap = obj_check_hitbox_overlap
+local obj_copy_pos = obj_copy_pos
+local obj_forward_vel_approach = obj_forward_vel_approach
+local obj_get_pitch_from_vel = obj_get_pitch_from_vel
+local obj_mark_for_deletion = obj_mark_for_deletion
+local obj_set_billboard = obj_set_billboard
+local obj_set_gfx_pos_from_pos = obj_set_gfx_pos_from_pos
+local obj_set_pos = obj_set_pos
+local obj_spawn_loot_yellow_coins = obj_spawn_loot_yellow_coins
+local obj_translate_xz_random = obj_translate_xz_random
+local random = math.random
+local s16 = math.s16
+local set_mario_action = set_mario_action
+local sins = sins
+local smlua_anim_util_set_animation = smlua_anim_util_set_animation
+local spawn_mist_particles_with_sound = spawn_mist_particles_with_sound
+local spawn_non_sync_object = spawn_non_sync_object
+
+--#endregion --------------------------------------------------------------------------------
+
 local nps = gNetworkPlayers
 local states = gMarioStates
 
@@ -60,7 +120,7 @@ function bhvs.bhv_common_bullet_init(o)
     cur_obj_set_hitbox_radius_and_height(param, param * 2)
     o.hitboxDownOffset = param
     o.oGraphYOffset = param
-    o.oWallHitboxRadius = math.max(30, param)
+    o.oWallHitboxRadius = max(30, param)
 
     obj_set_billboard(o)
     cur_obj_scale(param / 100)
@@ -123,9 +183,9 @@ function bhvs.bhv_tweety_loop(o)
 
     if m.action == ACT_SYLVESTER_TWEETY_GLIDE and m.actionState == 1 then
         o.oMoveAngleYaw = m.faceAngle.y
-        o.oPosX = m.pos.x - 10 * sins(m.faceAngle.y) + 10 * sins(math.s16(m.faceAngle.y + 0x4000))
+        o.oPosX = m.pos.x - 10 * sins(m.faceAngle.y) + 10 * sins(s16(m.faceAngle.y + 0x4000))
         o.oPosY = m.pos.y + 125
-        o.oPosZ = m.pos.z - 10 * coss(m.faceAngle.y) + 10 * coss(math.s16(m.faceAngle.y + 0x4000))
+        o.oPosZ = m.pos.z - 10 * coss(m.faceAngle.y) + 10 * coss(s16(m.faceAngle.y + 0x4000))
         obj_set_gfx_pos_from_pos(o)
         return
     end
@@ -163,7 +223,7 @@ function bhvs.bhv_tweety_loop(o)
         if targetFVel == 0 and targetYVel == 0 and dist < 150 then
 
             if dist <= target.hitboxRadius + 50 then
-                o.oAngleVelYaw = math.s16(o.oAngleVelYaw + 0x300)
+                o.oAngleVelYaw = s16(o.oAngleVelYaw + 0x300)
                 o.oForwardVel = 100
                 targetPos.y = targetPos.y + coss(0x400 * o.oFlyGuyOscTimer) * 10
 
@@ -174,7 +234,7 @@ function bhvs.bhv_tweety_loop(o)
                     set_mario_action(m, ACT_SYLVESTER_TWEETY_FIGHT, 0)
                 end
             else
-                o.oAngleVelYaw = math.s16(obj_angle_to_object(target, o) + 0x300)
+                o.oAngleVelYaw = s16(obj_angle_to_object(target, o) + 0x300)
                 o.oForwardVel = approach_f32_symmetric(o.oForwardVel, 20, 1)
             end
 
@@ -191,7 +251,7 @@ function bhvs.bhv_tweety_loop(o)
             end
 
             if targetFVel ~= 0 then
-                o.oForwardVel = math.min(o.oForwardVel, math.abs(targetFVel) - 5)
+                o.oForwardVel = min(o.oForwardVel, abs(targetFVel) - 5)
             elseif dist < 100 then
                 o.oForwardVel = approach_f32_symmetric(o.oForwardVel, 10, 1)
             end
@@ -203,13 +263,13 @@ function bhvs.bhv_tweety_loop(o)
 
         cur_obj_compute_vel_xz()
 
-        targetPos.x = approach_f32_symmetric(o.oPosX, targetPos.x, math.abs(o.oVelX))
-        targetPos.y = approach_f32_symmetric(o.oPosY, targetPos.y, math.abs(target.oVelY) + 10)
-        targetPos.z = approach_f32_symmetric(o.oPosZ, targetPos.z, math.abs(o.oVelZ))
+        targetPos.x = approach_f32_symmetric(o.oPosX, targetPos.x, abs(o.oVelX))
+        targetPos.y = approach_f32_symmetric(o.oPosY, targetPos.y, abs(target.oVelY) + 10)
+        targetPos.z = approach_f32_symmetric(o.oPosZ, targetPos.z, abs(o.oVelZ))
     end
 
     cur_obj_update_floor()
-    obj_set_pos(o, targetPos.x, math.max(targetPos.y, o.oFloorHeight), targetPos.z)
+    obj_set_pos(o, targetPos.x, max(targetPos.y, o.oFloorHeight), targetPos.z)
 
     o.oFlyGuyOscTimer = o.oFlyGuyOscTimer + 1
 end
@@ -222,7 +282,7 @@ function bhvs.bhv_sylvester_fight_dust_init(o)
     cur_obj_scale(6)
 
     obj_translate_xz_random(o, 300)
-    o.oPosY = o.oPosY + math.random(0, 300)
+    o.oPosY = o.oPosY + random(0, 300)
 end
 
 ---@param o Object
@@ -244,10 +304,10 @@ end
 ---@param o Object
 function bhvs.bhv_marvin_laser_loop(o)
 
-    local t = math.min(1, o.oTimer / 4)
+    local t = min(1, o.oTimer / 4)
 
     if o.oAction == 0 then
-        o.header.gfx.scale.z = math.lerp(0, 1, t)
+        o.header.gfx.scale.z = lerp(0, 1, t)
 
         local m = states[getLocalFromGlobalIdx(o.oOwner)]
 
@@ -278,7 +338,7 @@ function bhvs.bhv_marvin_laser_loop(o)
         end
     else
         spawn_non_sync_object(id_bhvSmoke, E_MODEL_SMOKE, o.oPosX, o.oPosY, o.oPosZ, function() end)
-        o.header.gfx.scale.z = math.lerp(1, 0, t)
+        o.header.gfx.scale.z = lerp(1, 0, t)
         if o.header.gfx.scale.z == 0 then
             obj_mark_for_deletion(o)
         end
@@ -360,9 +420,9 @@ function bhvs.bhv_marvin_tnt_smoke_init(o)
     obj_set_billboard(o)
     o.oAnimState = -1
 
-    o.oPosX = o.oPosX + (math.random() * 40) - 20
-    o.oPosY = o.oPosY + (math.random() * 40) + 40
-    o.oPosZ = o.oPosZ + (math.random() * 40) - 20
+    o.oPosX = o.oPosX + (random() * 40) - 20
+    o.oPosY = o.oPosY + (random() * 40) + 40
+    o.oPosZ = o.oPosZ + (random() * 40) - 20
     cur_obj_scale(0.5)
 end
 
@@ -453,11 +513,11 @@ function bhvs.bhv_taz_caught_obj_init(o)
     end
 
     if nearest_mario_state_to_object(o).playerIndex == 0 then
-        o.oMoveAngleYaw = math.random(-0x7FFF, 0x8000)
-        o.oFaceAnglePitch = math.random(-0x7FFF, 0x8000)
-        o.oSnufitYOffset = math.random(170, 220)
-        o.oSnufitZOffset = math.random(50, 150)
-        o.oBirdTargetYaw = math.random(0x300, 0x1000)
+        o.oMoveAngleYaw = random(-0x7FFF, 0x8000)
+        o.oFaceAnglePitch = random(-0x7FFF, 0x8000)
+        o.oSnufitYOffset = random(170, 220)
+        o.oSnufitZOffset = random(50, 150)
+        o.oBirdTargetYaw = random(0x300, 0x1000)
     end
 
     network_init_object(o, true, {
@@ -503,15 +563,15 @@ function bhvs.bhv_taz_caught_obj_loop(o)
     if is_player_active(m) == 0 or m.action ~= ACT_TAZ_TORNADO_ATTACK then
         if nearest_mario_state_to_object(o).playerIndex == 0 then
             o.oAction = 1
-            o.oForwardVel = math.random(30, 60)
-            o.oVelY = math.random(20, 80)
-            o.oMoveAngleYaw = math.random(-0x7FFF, 0x8000)
+            o.oForwardVel = random(30, 60)
+            o.oVelY = random(20, 80)
+            o.oMoveAngleYaw = random(-0x7FFF, 0x8000)
             network_send_object(o, true)
         end
         return
     end
 
-    o.oVelY = math.min(o.oVelY + 10, o.oSnufitYOffset)
+    o.oVelY = min(o.oVelY + 10, o.oSnufitYOffset)
 
     o.oPosX = m.pos.x + o.oSnufitZOffset * sins(o.oMoveAngleYaw)
     o.oPosY = m.pos.y + o.oVelY
@@ -565,7 +625,7 @@ function bhvs.bhv_basket_ball_loop(o)
 
         if o.oSubAction ~= 0 then
             o.oVelY = o.oVelY + o.oGravity * (o.oSubAction + 1)
-            o.oMoveAnglePitch = math.min(obj_get_pitch_from_vel(), 0x2555)
+            o.oMoveAnglePitch = min(obj_get_pitch_from_vel(), 0x2555)
         end
 
         local hit = moveProjectile(o, 100 - (30 * o.oSubAction), OBJ_MOVE_MASK_ON_GROUND | OBJ_MOVE_UNDERWATER_ON_GROUND, function (projectile)
