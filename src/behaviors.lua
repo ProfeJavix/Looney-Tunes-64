@@ -94,7 +94,7 @@ function bhvs.bhv_bugs_dirt_hole_loop(o)
             end
         elseif o.oAction == 1 then
             o.oForwardVel = m.forwardVel
-            if m.action ~= ACT_BUGS_MOVE_UNDERGROUND then
+            if is_player_active(m) == 0 or m.action ~= ACT_BUGS_MOVE_UNDERGROUND then
                 o.oAction = 2
                 return
             end
