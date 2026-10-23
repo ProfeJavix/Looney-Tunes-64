@@ -18,7 +18,6 @@ local upper = string.upper
 --#endregion --------------------------------------------------------------------------------
 
 local LOONEY_TUNES_64 = get_active_mod().name
-local defaultLifeIcon = get_texture_info("exclamation-icon")
 CT_THANKS_FOR_PLAYING_CLIPS = {}
 CT_REPLACE_ACTS = {} ---@type ReplaceActInfo[]
 LT_64_CHARS = {}
@@ -27,20 +26,16 @@ LT_64_CONTROLS = {} ---@type ControlsInfo[]
 ---@param data LTData
 ---@return integer
 local function addLooneyTunesChar(data)
-    local icon = defaultLifeIcon
-    if mod_file_exists('textures/' .. data.id .. '-icon.tex') then
-        icon = get_texture_info(data.id .. '-icon')
-    end
 
     local ct = _G.charSelect.character_add(
-        data.name,                 -- Character Name
-        data.description,          -- Description
-        data.author,               -- Credits
-        data.menuColor,            -- Menu Color
-        data.model,                -- Character Model
-        data.charType or CT_MARIO, -- Override Character
-        icon,                      -- Life Icon
-        data.camScale or 1         -- Camera Scale
+        data.name,                            -- Character Name
+        data.description,                     -- Description
+        data.author,                          -- Credits
+        data.menuColor,                       -- Menu Color
+        data.model,                           -- Character Model
+        data.charType or CT_MARIO,            -- Override Character
+        get_texture_info(data.id .. '-icon'), -- Life Icon
+        data.camScale or 1                    -- Camera Scale
     )
 
     _G.charSelect.character_add_caps(
