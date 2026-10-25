@@ -9,12 +9,19 @@ local audio_stream_set_volume = audio_stream_set_volume
 local audio_stream_stop = audio_stream_stop
 local coss = coss
 local djui_chat_message_create = djui_chat_message_create
+local djui_hud_get_screen_height = djui_hud_get_screen_height
+local djui_hud_get_screen_width = djui_hud_get_screen_width
+local djui_hud_render_rect = djui_hud_render_rect
+local djui_hud_render_texture_tile = djui_hud_render_texture_tile
+local djui_hud_set_color = djui_hud_set_color
 local get_current_background_music = get_current_background_music
 local get_hand_foot_pos_x = get_hand_foot_pos_x
 local get_hand_foot_pos_y = get_hand_foot_pos_y
 local get_hand_foot_pos_z = get_hand_foot_pos_z
+local get_texture_info = get_texture_info
 local ipairs = ipairs
 local is_player_active = is_player_active
+local min = math.min
 local network_send_object = network_send_object
 local obj_angle_to_object = obj_angle_to_object
 local obj_get_first_with_behavior_id = obj_get_first_with_behavior_id
@@ -34,6 +41,7 @@ local vec3s_copy = vec3s_copy
 
 --#endregion --------------------------------------------------------------------------------
 
+local nps = gNetworkPlayers
 local states = gMarioStates
 local playerTable = gPlayerSyncTable
 
@@ -189,7 +197,7 @@ function hooks.on_object_render(o)
         o.oPosZ = get_hand_foot_pos_z(m, 0) + 25 * coss(s16(m.faceAngle.y + 0x4000))
 
         m.marioObj.oPosY = m.marioObj.oPosY + 100
-        
+
         local yaw, pitch = obj_angle_to_object(m.marioObj, o), obj_pitch_to_object(m.marioObj, o)
         o.oPosX = o.oPosX + 20 * sins(yaw) * coss(pitch)
         o.oPosY = o.oPosY - 30 * coss(yaw) * sins(pitch)
@@ -198,6 +206,31 @@ function hooks.on_object_render(o)
 
         obj_set_gfx_pos_from_pos(o)
     end
+end
+
+local endScreenAlpha = 0
+local endScreenTex = get_texture_info('end-screen')
+
+function hooks.on_hud_render_behind()
+
+    if not isLT64Char() or nps[0].currLevelNum ~= LEVEL_ENDING then
+        endScreenAlpha = 0
+        return
+    end
+
+    local w, h = djui_hud_get_screen_width(), djui_hud_get_screen_height()
+
+    djui_hud_set_color(0, 0, 0, 255)
+    djui_hud_render_rect(0, 0, w, h)
+
+    local scale = h / 270
+    local scaleW = scale / (360 / 270)
+    local x = (w / 2) - (360 * scale / 2)
+
+    djui_hud_set_color(255, 255, 255, endScreenAlpha)
+    djui_hud_render_texture_tile(endScreenTex, x, 0, scaleW, scale, 0, 0, 360, 270)
+
+    endScreenAlpha = min(endScreenAlpha + 2, 255)
 end
 
 function hooks.allow_menu_open()

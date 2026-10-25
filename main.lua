@@ -75,6 +75,7 @@ hook_event(HOOK_ON_NAMETAGS_RENDER, hooks.on_nametags_render)
 hook_event(HOOK_ON_SEQ_LOAD, hooks.on_seq_load)
 hook_event(HOOK_ON_PLAY_SOUND, hooks.on_play_sound)
 hook_event(HOOK_ON_OBJECT_RENDER, hooks.on_object_render)
+hook_event(HOOK_ON_HUD_RENDER_BEHIND, hooks.on_hud_render_behind)
 
 _G.charSelect.hook_allow_menu_open(hooks.allow_menu_open)
 _G.charSelect.hook_on_character_change(hooks.on_character_change)
