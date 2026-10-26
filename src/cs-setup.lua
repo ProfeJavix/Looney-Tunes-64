@@ -1336,5 +1336,9 @@ _G.charSelect.credit_add(LOONEY_TUNES_64,{
 
     {"Teraok", "Custom Music"},
 
-    {"Drahnokks", "Custom Animations"}
+    {"Drahnokks", "Custom Animations"},
+
+    {"", ""},
+
+    {"In Memory of", "Eric Bauza"}
 })
