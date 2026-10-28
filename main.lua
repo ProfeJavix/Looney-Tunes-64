@@ -88,4 +88,4 @@ _G.charSelect.character_hook_moveset(CT_LOLA, HOOK_ON_SET_MARIO_ACTION, hooks.bu
 _G.charSelect.character_hook_moveset(CT_LOLA, HOOK_BEFORE_PHYS_STEP, hooks.lola_before_phys_step)
 _G.charSelect.character_hook_moveset(CT_SAM, HOOK_MARIO_UPDATE, hooks.sam_mario_update)
 
-hook_chat_command('lt_controls', 'Display the current LT64 character controls.', hooks.cmd_lt_controls)
+hook_chat_command('lt-controls', 'Display the current LT64 character controls.', hooks.cmd_lt_controls)
